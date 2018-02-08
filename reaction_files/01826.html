@@ -1,0 +1,229 @@
+<!doctype html>
+<html><head>
+<title>KEGG REACTION: R01826</title>
+<link type="text/css" rel="stylesheet" href="/css/gn2.css">
+<link rel="stylesheet" href="/css/bget.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="/css/bgetm.css" media="only screen and (max-width: 768px)">
+<style>.kcfd{display:none;}</style>
+<script>
+<!--
+var getElementsByClassName = document.getElementsByClassName ?
+  function (cl){
+    return document.getElementsByClassName(cl);
+  } :
+  function (cl){
+    var elms = [];
+    var objs = document.getElementsByTagName('*');
+    for(var i=0;i<objs.length;i++){
+      var obj = objs[i];
+      if(obj.className == cl){
+        elms.push(obj);
+      }
+    }
+    return elms;
+  };
+function toggleField(clk,cl,show,hide){
+  var objs = getElementsByClassName(cl);
+  for(var i=0;i<objs.length;i++){
+    var obj = objs[i];
+    if(!obj.style.display||obj.style.display == 'none'){
+      obj.style.display = 'block';
+      clk.innerHTML = '&nbsp;&laquo; '+hide;
+    }
+    else{
+      obj.style.display = 'none';
+      clk.innerHTML = '&nbsp;&raquo; '+show;
+    }
+  }
+}
+function toggleData(bobj,e){
+  var id = bobj.id.replace(/[^0-9]/g,'');
+  var dt = document.getElementById('kcfd'+id);
+  if(!dt.style.display||dt.style.display == 'none'){
+    bobj.name = 'hide_kcf';
+    bobj.alt = 'Hide';
+    bobj.src = '/Fig/bget/button_Hib.gif';
+    dt.style.display = 'block';
+  }
+  else{
+    bobj.name = 'show_kcf';
+    bobj.alt = 'Show';
+    bobj.src = '/Fig/bget/button_Sb.gif';
+    dt.style.display = 'none';
+  }
+}
+function btn(bobj,img) {
+  bobj.src = "/Fig/bget/button_" + img + ".gif";
+}
+function btn_e(e) {
+  e = e || event;
+  var obj = e.target;
+  var img = e.target.src;
+  var img_base = img.replace(/\\/g,'/').replace(/(b|bd|bh)\.gif$/,'');
+  if(e.type == 'mousedown'||e.type == 'touchstart'){
+    obj.src = img_base +'bd.gif';
+  }
+  else if(e.type == 'mouseover'){
+    obj.src = img_base +'bh.gif';
+  }
+  else if(e.type == 'mouseup'||e.type == 'touchend'){
+    obj.src = img_base +'b.gif';
+  }
+  else if(e.type == 'mouseout'){
+    obj.src = img_base +'b.gif';
+  }
+}
+function init(){
+  for(var i=1;i<=1;i++){
+    if(document.getElementById('kcfb'+i)){
+      document.getElementById('kcfb'+i).onclick = function(e){toggleData(this,e);};
+      document.getElementById('kcfb'+i).onmousedown = function(e){btn_e(e);};
+      document.getElementById('kcfb'+i).onmouseover = function(e){btn_e(e);};
+      document.getElementById('kcfb'+i).onmouseout = function(e){btn_e(e);};
+      document.getElementById('kcfb'+i).onmouseup = function(e){btn_e(e);};
+      document.getElementById('kcfb'+i).ontouchstart = function(e){btn_e(e);};
+      document.getElementById('kcfb'+i).ontouchend = function(e){btn_e(e);};
+    }
+  }
+}
+function Link_XtrctSeq2(form) {
+    var dna_from;
+    var dna_to;
+    var dna_len;
+    var plus_up   = Number(form.XtrctSeq_UP.value) ;
+    var plus_down = Number(form.XtrctSeq_DOWN.value);
+    var vector    = Number(form.VECTOR.value);
+    var org       = form.ORG.value;
+    var chr       = form.CHR.value;
+    var kid       = form.KEGGID.value;
+    var url;
+
+    if (plus_up == 0 && plus_down == 0) {
+	url = "/dbget-bin/www_bget?-f+-n+n+" + kid;
+    }
+    else {
+	if (vector == 1) {
+	    dna_from  = Number(form.FROM.value)  - plus_up;
+	    dna_to    = Number(form.TO.value) + plus_down;
+	} else {
+	    dna_from  = Number(form.FROM.value)  - plus_down;
+	    dna_to    = Number(form.TO.value) + plus_up;
+	}
+
+	url = "/dbget-bin/cut_sequence_genes.pl?FROM=" + dna_from + "&TO=" + dna_to +"&VECTOR=" + vector + "&ORG=" + org;
+	if (chr) url += "&CHR=" + chr;
+    }
+    //window.open( url, "_self" );
+    location.href = url;
+}
+function go_taxonomy(form,params){
+  for(var key in params){
+    if(form[key]){
+      form.setAttribute(key,params[key]);
+    }
+    else{
+      var obj = document.createElement('input');
+      obj.setAttribute('type','hidden');
+      obj.setAttribute('name',key);
+      obj.setAttribute('value',params[key]);
+      form.appendChild(obj);
+    }
+  }
+  form.submit();
+}
+window.onload=function(){window.focus();init();};
+//--->
+</script>
+
+</head>
+<body>
+<div>
+
+<table border=0 cellpadding=0 cellspacing=0><tr><td>
+<table border=0 cellpadding=0 cellspacing=0 width="650"><tr><td width=70><a href="/kegg/kegg2.html"><img align="middle" alt="KEGG" border=0 src="/Fig/bget/kegg2.gif"></a></td><td>&nbsp;&nbsp;&nbsp;</td><td><a name="reaction:R01826"></a><font class="title2">REACTION: R01826</font></td><td align="right" valign="bottom"><a href="javascript:void(window.open('/kegg/document/help_bget_reaction.html','KEGG_Help','toolbar=no,location=no,directories=no,width=720,height=640,resizable=yes,scrollbars=yes'))"><img align="middle" alt="Help" border="0" name="help" onmousedown="btn(this,'Hbd')" onmouseout="btn(this,'Hb')" onmouseover="btn(this,'Hbh')" onmouseup="btn(this,'Hb')" ontouchend="btn(this,'Hb')" ontouchstart="btn(this,'Hbd')" src="/Fig/bget/button_Hb.gif"></a></td></tr></table><form method="post" action="/dbget-bin/www_bget" enctype="application/x-www-form-urlencoded" name="form1"><table border=0 cellpadding=1 cellspacing=0 width="650">
+<tr>
+<td class="fr2">
+<table border=0 cellpadding=2 cellspacing=0 width="650" style="border-bottom:#000 1px solid">
+
+<tr><th class="th20" align="left" valign="middle" style="border-color:#000; border-width: 1px 0px 0px 1px; border-style: solid"><nobr>Entry</nobr></th>
+<td class="td20" style="border-color:#000; border-width: 1px 1px 0px 1px; border-style: solid"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="left"><code><nobr>R01826&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reaction&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+</nobr></code></td><td align="right"><br></td></tr></table></td></tr>
+
+
+<tr><th class="th21" align="left" valign="top" style="border-color:#000; border-width: 1px 0px 0px 1px; border-style: solid"><nobr>Name</nobr></th>
+<td class="td21" style="border-color:#000; border-width: 1px 1px 0px 1px; border-style: solid"><div style="width:555px;overflow-x:auto;overflow-y:hidden"><div style="width:555px;overflow-x:auto;overflow-y:hidden">Phosphoenolpyruvate:D-erythrose-4-phosphate C-(1-carboxyvinyl)transferase (phosphate hydrolysing, 2-carboxy-2-oxoethyl-forming)<br>
+</div></div></td></tr>
+
+
+<tr><th class="th20" align="left" valign="top" style="border-color:#000; border-width: 1px 0px 0px 1px; border-style: solid"><nobr>Definition</nobr></th>
+<td class="td20" style="border-color:#000; border-width: 1px 1px 0px 1px; border-style: solid"><div style="width:555px;overflow-x:auto;overflow-y:hidden"><div style="width:555px;overflow-x:auto;overflow-y:hidden">Phosphoenolpyruvate + D-Erythrose 4-phosphate + H2O &lt;=> 2-Dehydro-3-deoxy-D-arabino-heptonate 7-phosphate + Orthophosphate<br>
+</div></div></td></tr>
+
+
+<tr><th class="th21" align="left" valign="top" style="border-color:#000; border-width: 1px 0px 0px 1px; border-style: solid"><nobr>Equation</nobr></th>
+<td class="td21" style="border-color:#000; border-width: 1px 1px 0px 1px; border-style: solid"><div style="width:555px;overflow-x:auto;overflow-y:hidden"><a href="/dbget-bin/www_bget?cpd:C00074">C00074</a> + <a href="/dbget-bin/www_bget?cpd:C00279">C00279</a> + <a href="/dbget-bin/www_bget?cpd:C00001">C00001</a> &lt;=> <a href="/dbget-bin/www_bget?cpd:C04691">C04691</a> + <a href="/dbget-bin/www_bget?cpd:C00009">C00009</a><br>
+</div></td></tr>
+
+
+<tr><th class="th20" align="left" valign="top" style="border-color:#000; border-width: 1px 0px 0px 1px; border-style: solid"><nobr></nobr></th>
+<td class="td20" style="border-color:#000; border-width: 1px 1px 0px 1px; border-style: solid"><a href="/Fig/reaction/R01826.gif"><img border=0 name="img0" align="bottom" src="/Fig/reaction_small/R01826.gif"></a></td></tr>
+
+
+<tr><th class="th21" align="left" valign="top" style="border-color:#000; border-width: 1px 0px 0px 1px; border-style: solid"><nobr>Comment</nobr></th>
+<td class="td21" style="border-color:#000; border-width: 1px 1px 0px 1px; border-style: solid"><div style="width:555px;overflow-x:auto;overflow-y:hidden">multi-step reaction<br>
+</div></td></tr>
+
+
+<tr><th class="th20" align="left" valign="top" style="border-color:#000; border-width: 1px 0px 0px 1px; border-style: solid"><nobr>Reaction class</nobr></th>
+<td class="td20" style="border-color:#000; border-width: 1px 1px 0px 1px; border-style: solid"><table width=555 border=0 cellspacing=0 cellpadding=0><tr><td align="left" valign="top" style="width:5em"><div><nobr><a href="/dbget-bin/www_bget?rc:RC00435">RC00435</a>&nbsp;&nbsp;</nobr></div></td><td align="left"><div>C00279_C04691</div></td></tr></table></td></tr>
+
+
+<tr><th class="th21" align="left" valign="top" style="border-color:#000; border-width: 1px 0px 0px 1px; border-style: solid"><nobr>Enzyme</nobr></th>
+<td class="td21" style="border-color:#000; border-width: 1px 1px 0px 1px; border-style: solid"><div style="width:555px;overflow-x:auto;overflow-y:hidden"><a href="/dbget-bin/www_bget?ec:2.5.1.54">2.5.1.54</a><br>
+</div></td></tr>
+
+
+<tr><th class="th20" align="left" valign="top" style="border-color:#000; border-width: 1px 0px 0px 1px; border-style: solid"><nobr>Pathway</nobr></th>
+<td class="td20" style="border-color:#000; border-width: 1px 1px 0px 1px; border-style: solid"><table width=555 border=0 cellspacing=0 cellpadding=0><tr><td align="left" valign="top" style="width:5em"><div><nobr><a href="/kegg-bin/show_pathway?rn00400+R01826">rn00400</a>&nbsp;&nbsp;</nobr></div></td><td align="left"><div>Phenylalanine, tyrosine and tryptophan biosynthesis</div></td></tr><tr><td align="left" valign="top" style="width:5em"><div><nobr><a href="/kegg-bin/show_pathway?rn01100+R01826">rn01100</a>&nbsp;&nbsp;</nobr></div></td><td align="left"><div>Metabolic pathways</div></td></tr><tr><td align="left" valign="top" style="width:5em"><div><nobr><a href="/kegg-bin/show_pathway?rn01110+R01826">rn01110</a>&nbsp;&nbsp;</nobr></div></td><td align="left"><div>Biosynthesis of secondary metabolites</div></td></tr><tr><td align="left" valign="top" style="width:5em"><div><nobr><a href="/kegg-bin/show_pathway?rn01130+R01826">rn01130</a>&nbsp;&nbsp;</nobr></div></td><td align="left"><div>Biosynthesis of antibiotics</div></td></tr><tr><td align="left" valign="top" style="width:5em"><div><nobr><a href="/kegg-bin/show_pathway?rn01230+R01826">rn01230</a>&nbsp;&nbsp;</nobr></div></td><td align="left"><div>Biosynthesis of amino acids</div></td></tr></table></td></tr>
+
+
+<tr><th class="th21" align="left" valign="top" style="border-color:#000; border-width: 1px 0px 0px 1px; border-style: solid"><nobr>Module</nobr></th>
+<td class="td21" style="border-color:#000; border-width: 1px 1px 0px 1px; border-style: solid"><table width=555 border=0 cellspacing=0 cellpadding=0><tr><td align="left" valign="top" style="width:4.5em"><div><nobr><a href="/kegg-bin/show_module?M00022+R01826">M00022</a>&nbsp;&nbsp;</nobr></div></td><td align="left"><div>Shikimate pathway, phosphoenolpyruvate + erythrose-4P => chorismate</div></td></tr></table></td></tr>
+
+
+<tr><th class="th20" align="left" valign="top" style="border-color:#000; border-width: 1px 0px 0px 1px; border-style: solid"><nobr>Orthology</nobr></th>
+<td class="td20" style="border-color:#000; border-width: 1px 1px 0px 1px; border-style: solid"><table width=555 border=0 cellspacing=0 cellpadding=0><tr><td align="left" valign="top" style="width:4.5em"><div><nobr><a href="/dbget-bin/www_bget?ko:K01626">K01626</a>&nbsp;&nbsp;</nobr></div></td><td align="left"><div>3-deoxy-7-phosphoheptulonate synthase [EC:<a href="/dbget-bin/www_bget?ec:2.5.1.54">2.5.1.54</a>]</div></td></tr><tr><td align="left" valign="top" style="width:4.5em"><div><nobr><a href="/dbget-bin/www_bget?ko:K03856">K03856</a>&nbsp;&nbsp;</nobr></div></td><td align="left"><div>3-deoxy-7-phosphoheptulonate synthase [EC:<a href="/dbget-bin/www_bget?ec:2.5.1.54">2.5.1.54</a>]</div></td></tr><tr><td align="left" valign="top" style="width:4.5em"><div><nobr><a href="/dbget-bin/www_bget?ko:K13853">K13853</a>&nbsp;&nbsp;</nobr></div></td><td align="left"><div>3-deoxy-7-phosphoheptulonate synthase / chorismate mutase [EC:<a href="/dbget-bin/www_bget?ec:2.5.1.54">2.5.1.54</a> <a href="/dbget-bin/www_bget?ec:5.4.99.5">5.4.99.5</a>]</div></td></tr></table></td></tr>
+
+
+<tr><th class="th21" align="left" valign="top" style="border-color:#000; border-width: 1px 0px 0px 1px; border-style: solid"><nobr>Other DBs</nobr></th>
+<td class="td21" style="border-color:#000; border-width: 1px 1px 0px 1px; border-style: solid"><div style="width:555px;overflow-x:auto;overflow-y:hidden"><div style="float:left">RHEA:&nbsp;</div><div style="margin-left:3.5em"><a href="http://www.rhea-db.org/reaction?id=14720">14720</a></div></div></td></tr>
+
+</table></td></tr></table>
+<br></form></td><td valign="top"><div style="margin-top:46px;margin-left:1em;border:#ddd 1px solid"><div class="th20" style="font-weight:bold;line-height:1.5em">&nbsp;&nbsp;All links&nbsp;&nbsp;</div>
+<pre style="margin-left:1em">
+<span style="color:#006"><a href="/dbget-bin/get_linkdb?-t+1+rn:R01826">Ontology (1)</a></span>   
+   <a href="/dbget-bin/get_linkdb?-t+brite+rn:R01826">KEGG BRITE (1)</a>   
+<span style="color:#006"><a href="/dbget-bin/get_linkdb?-t+2+rn:R01826">Pathway (11)</a></span>   
+   <a href="/dbget-bin/get_linkdb?-t+pathway+rn:R01826">KEGG PATHWAY (10)</a>   
+   <a href="/dbget-bin/get_linkdb?-t+module+rn:R01826">KEGG MODULE (1)</a>   
+<span style="color:#006"><a href="/dbget-bin/get_linkdb?-t+6+rn:R01826">Chemical substance (5)</a></span>   
+   <a href="/dbget-bin/get_linkdb?-t+compound+rn:R01826">KEGG COMPOUND (5)</a>   
+<span style="color:#006"><a href="/dbget-bin/get_linkdb?-t+7+rn:R01826">Chemical reaction (3)</a></span>   
+   <a href="/dbget-bin/get_linkdb?-t+enzyme+rn:R01826">KEGG ENZYME (1)</a>   
+   <a href="/dbget-bin/get_linkdb?-t+rclass+rn:R01826">KEGG RCLASS (1)</a>   
+   <a href="/dbget-bin/get_linkdb?-t+sabio-rk+rn:R01826">SABIO-RK (1)</a>   
+<span style="color:#006"><a href="/dbget-bin/get_linkdb?-t+9+rn:R01826">Gene (7396)</a></span>   
+   <a href="/dbget-bin/get_linkdb?-t+orthology+rn:R01826">KEGG ORTHOLOGY (3)</a>   
+   <a href="/dbget-bin/get_linkdb?-t+genes+rn:R01826">KEGG GENES (7393)</a>   
+<a href="/dbget-bin/get_linkdb?-t+alldb+rn:R01826">All databases (7416)</a>   
+<br><a href="/dbget-bin/get_linkdb?-N+rn:R01826">Download RDF</a>   
+</pre>
+</div>
+</td></tr></table>
+
+
+<a href="/dbget/">DBGET</a> integrated database retrieval system</div>
+
+</body>
+</html>

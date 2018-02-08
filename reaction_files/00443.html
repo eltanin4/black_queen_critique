@@ -1,0 +1,225 @@
+<!doctype html>
+<html><head>
+<title>KEGG REACTION: R00443</title>
+<link type="text/css" rel="stylesheet" href="/css/gn2.css">
+<link rel="stylesheet" href="/css/bget.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="/css/bgetm.css" media="only screen and (max-width: 768px)">
+<style>.kcfd{display:none;}</style>
+<script>
+<!--
+var getElementsByClassName = document.getElementsByClassName ?
+  function (cl){
+    return document.getElementsByClassName(cl);
+  } :
+  function (cl){
+    var elms = [];
+    var objs = document.getElementsByTagName('*');
+    for(var i=0;i<objs.length;i++){
+      var obj = objs[i];
+      if(obj.className == cl){
+        elms.push(obj);
+      }
+    }
+    return elms;
+  };
+function toggleField(clk,cl,show,hide){
+  var objs = getElementsByClassName(cl);
+  for(var i=0;i<objs.length;i++){
+    var obj = objs[i];
+    if(!obj.style.display||obj.style.display == 'none'){
+      obj.style.display = 'block';
+      clk.innerHTML = '&nbsp;&laquo; '+hide;
+    }
+    else{
+      obj.style.display = 'none';
+      clk.innerHTML = '&nbsp;&raquo; '+show;
+    }
+  }
+}
+function toggleData(bobj,e){
+  var id = bobj.id.replace(/[^0-9]/g,'');
+  var dt = document.getElementById('kcfd'+id);
+  if(!dt.style.display||dt.style.display == 'none'){
+    bobj.name = 'hide_kcf';
+    bobj.alt = 'Hide';
+    bobj.src = '/Fig/bget/button_Hib.gif';
+    dt.style.display = 'block';
+  }
+  else{
+    bobj.name = 'show_kcf';
+    bobj.alt = 'Show';
+    bobj.src = '/Fig/bget/button_Sb.gif';
+    dt.style.display = 'none';
+  }
+}
+function btn(bobj,img) {
+  bobj.src = "/Fig/bget/button_" + img + ".gif";
+}
+function btn_e(e) {
+  e = e || event;
+  var obj = e.target;
+  var img = e.target.src;
+  var img_base = img.replace(/\\/g,'/').replace(/(b|bd|bh)\.gif$/,'');
+  if(e.type == 'mousedown'||e.type == 'touchstart'){
+    obj.src = img_base +'bd.gif';
+  }
+  else if(e.type == 'mouseover'){
+    obj.src = img_base +'bh.gif';
+  }
+  else if(e.type == 'mouseup'||e.type == 'touchend'){
+    obj.src = img_base +'b.gif';
+  }
+  else if(e.type == 'mouseout'){
+    obj.src = img_base +'b.gif';
+  }
+}
+function init(){
+  for(var i=1;i<=1;i++){
+    if(document.getElementById('kcfb'+i)){
+      document.getElementById('kcfb'+i).onclick = function(e){toggleData(this,e);};
+      document.getElementById('kcfb'+i).onmousedown = function(e){btn_e(e);};
+      document.getElementById('kcfb'+i).onmouseover = function(e){btn_e(e);};
+      document.getElementById('kcfb'+i).onmouseout = function(e){btn_e(e);};
+      document.getElementById('kcfb'+i).onmouseup = function(e){btn_e(e);};
+      document.getElementById('kcfb'+i).ontouchstart = function(e){btn_e(e);};
+      document.getElementById('kcfb'+i).ontouchend = function(e){btn_e(e);};
+    }
+  }
+}
+function Link_XtrctSeq2(form) {
+    var dna_from;
+    var dna_to;
+    var dna_len;
+    var plus_up   = Number(form.XtrctSeq_UP.value) ;
+    var plus_down = Number(form.XtrctSeq_DOWN.value);
+    var vector    = Number(form.VECTOR.value);
+    var org       = form.ORG.value;
+    var chr       = form.CHR.value;
+    var kid       = form.KEGGID.value;
+    var url;
+
+    if (plus_up == 0 && plus_down == 0) {
+	url = "/dbget-bin/www_bget?-f+-n+n+" + kid;
+    }
+    else {
+	if (vector == 1) {
+	    dna_from  = Number(form.FROM.value)  - plus_up;
+	    dna_to    = Number(form.TO.value) + plus_down;
+	} else {
+	    dna_from  = Number(form.FROM.value)  - plus_down;
+	    dna_to    = Number(form.TO.value) + plus_up;
+	}
+
+	url = "/dbget-bin/cut_sequence_genes.pl?FROM=" + dna_from + "&TO=" + dna_to +"&VECTOR=" + vector + "&ORG=" + org;
+	if (chr) url += "&CHR=" + chr;
+    }
+    //window.open( url, "_self" );
+    location.href = url;
+}
+function go_taxonomy(form,params){
+  for(var key in params){
+    if(form[key]){
+      form.setAttribute(key,params[key]);
+    }
+    else{
+      var obj = document.createElement('input');
+      obj.setAttribute('type','hidden');
+      obj.setAttribute('name',key);
+      obj.setAttribute('value',params[key]);
+      form.appendChild(obj);
+    }
+  }
+  form.submit();
+}
+window.onload=function(){window.focus();init();};
+//--->
+</script>
+
+</head>
+<body>
+<div>
+
+<table border=0 cellpadding=0 cellspacing=0><tr><td>
+<table border=0 cellpadding=0 cellspacing=0 width="650"><tr><td width=70><a href="/kegg/kegg2.html"><img align="middle" alt="KEGG" border=0 src="/Fig/bget/kegg2.gif"></a></td><td>&nbsp;&nbsp;&nbsp;</td><td><a name="reaction:R00443"></a><font class="title2">REACTION: R00443</font></td><td align="right" valign="bottom"><a href="javascript:void(window.open('/kegg/document/help_bget_reaction.html','KEGG_Help','toolbar=no,location=no,directories=no,width=720,height=640,resizable=yes,scrollbars=yes'))"><img align="middle" alt="Help" border="0" name="help" onmousedown="btn(this,'Hbd')" onmouseout="btn(this,'Hb')" onmouseover="btn(this,'Hbh')" onmouseup="btn(this,'Hb')" ontouchend="btn(this,'Hb')" ontouchstart="btn(this,'Hbd')" src="/Fig/bget/button_Hb.gif"></a></td></tr></table><form method="post" action="/dbget-bin/www_bget" enctype="application/x-www-form-urlencoded" name="form1"><table border=0 cellpadding=1 cellspacing=0 width="650">
+<tr>
+<td class="fr2">
+<table border=0 cellpadding=2 cellspacing=0 width="650" style="border-bottom:#000 1px solid">
+
+<tr><th class="th20" align="left" valign="middle" style="border-color:#000; border-width: 1px 0px 0px 1px; border-style: solid"><nobr>Entry</nobr></th>
+<td class="td20" style="border-color:#000; border-width: 1px 1px 0px 1px; border-style: solid"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="left"><code><nobr>R00443&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reaction&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+</nobr></code></td><td align="right"><br></td></tr></table></td></tr>
+
+
+<tr><th class="th21" align="left" valign="top" style="border-color:#000; border-width: 1px 0px 0px 1px; border-style: solid"><nobr>Name</nobr></th>
+<td class="td21" style="border-color:#000; border-width: 1px 1px 0px 1px; border-style: solid"><div style="width:555px;overflow-x:auto;overflow-y:hidden"><div style="width:555px;overflow-x:auto;overflow-y:hidden">UTP:RNA uridylyltransferase<br>
+</div></div></td></tr>
+
+
+<tr><th class="th20" align="left" valign="top" style="border-color:#000; border-width: 1px 0px 0px 1px; border-style: solid"><nobr>Definition</nobr></th>
+<td class="td20" style="border-color:#000; border-width: 1px 1px 0px 1px; border-style: solid"><div style="width:555px;overflow-x:auto;overflow-y:hidden"><div style="width:555px;overflow-x:auto;overflow-y:hidden">UTP + RNA &lt;=> Diphosphate + RNA<br>
+</div></div></td></tr>
+
+
+<tr><th class="th21" align="left" valign="top" style="border-color:#000; border-width: 1px 0px 0px 1px; border-style: solid"><nobr>Equation</nobr></th>
+<td class="td21" style="border-color:#000; border-width: 1px 1px 0px 1px; border-style: solid"><div style="width:555px;overflow-x:auto;overflow-y:hidden"><a href="/dbget-bin/www_bget?cpd:C00075">C00075</a> + <a href="/dbget-bin/www_bget?cpd:C00046">C00046</a> &lt;=> <a href="/dbget-bin/www_bget?cpd:C00013">C00013</a> + <a href="/dbget-bin/www_bget?cpd:C00046">C00046</a><br>
+</div></td></tr>
+
+
+<tr><th class="th20" align="left" valign="top" style="border-color:#000; border-width: 1px 0px 0px 1px; border-style: solid"><nobr></nobr></th>
+<td class="td20" style="border-color:#000; border-width: 1px 1px 0px 1px; border-style: solid"><a href="/Fig/reaction/R00443.gif"><img border=0 name="img0" align="bottom" src="/Fig/reaction_small/R00443.gif"></a></td></tr>
+
+
+<tr><th class="th21" align="left" valign="top" style="border-color:#000; border-width: 1px 0px 0px 1px; border-style: solid"><nobr>Comment</nobr></th>
+<td class="td21" style="border-color:#000; border-width: 1px 1px 0px 1px; border-style: solid"><div style="width:555px;overflow-x:auto;overflow-y:hidden">DNA-directed (ec <a href="/dbget-bin/www_bget?ec:2.7.7.6">2.7.7.6</a>)<br>
+RNA-directed (ec <a href="/dbget-bin/www_bget?ec:2.7.7.48">2.7.7.48</a>)<br>
+non-template (ec <a href="/dbget-bin/www_bget?ec:2.7.7.52">2.7.7.52</a>)<br>
+</div></td></tr>
+
+
+<tr><th class="th20" align="left" valign="top" style="border-color:#000; border-width: 1px 0px 0px 1px; border-style: solid"><nobr>Reaction class</nobr></th>
+<td class="td20" style="border-color:#000; border-width: 1px 1px 0px 1px; border-style: solid"><table width=555 border=0 cellspacing=0 cellpadding=0><tr><td align="left" valign="top" style="width:5em"><div><nobr><a href="/dbget-bin/www_bget?rc:RC02795">RC02795</a>&nbsp;&nbsp;</nobr></div></td><td align="left"><div>C00046_C00075</div></td></tr></table></td></tr>
+
+
+<tr><th class="th21" align="left" valign="top" style="border-color:#000; border-width: 1px 0px 0px 1px; border-style: solid"><nobr>Enzyme</nobr></th>
+<td class="td21" style="border-color:#000; border-width: 1px 1px 0px 1px; border-style: solid"><div style="width:555px;overflow-x:auto;overflow-y:hidden"><a href="/dbget-bin/www_bget?ec:2.7.7.6">2.7.7.6</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/dbget-bin/www_bget?ec:2.7.7.48">2.7.7.48</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/dbget-bin/www_bget?ec:2.7.7.52">2.7.7.52</a><br>
+</div></td></tr>
+
+
+<tr><th class="th20" align="left" valign="top" style="border-color:#000; border-width: 1px 0px 0px 1px; border-style: solid"><nobr>Pathway</nobr></th>
+<td class="td20" style="border-color:#000; border-width: 1px 1px 0px 1px; border-style: solid"><table width=555 border=0 cellspacing=0 cellpadding=0><tr><td align="left" valign="top" style="width:5em"><div><nobr><a href="/kegg-bin/show_pathway?rn00240+R00443">rn00240</a>&nbsp;&nbsp;</nobr></div></td><td align="left"><div>Pyrimidine metabolism</div></td></tr><tr><td align="left" valign="top" style="width:5em"><div><nobr><a href="/kegg-bin/show_pathway?rn01100+R00443">rn01100</a>&nbsp;&nbsp;</nobr></div></td><td align="left"><div>Metabolic pathways</div></td></tr></table></td></tr>
+
+
+<tr><th class="th21" align="left" valign="top" style="border-color:#000; border-width: 1px 0px 0px 1px; border-style: solid"><nobr>Orthology</nobr></th>
+<td class="td21" style="border-color:#000; border-width: 1px 1px 0px 1px; border-style: solid"><table width=555 border=0 cellspacing=0 cellpadding=0><tr><td align="left" valign="top" style="width:4.5em"><div><nobr><a href="/dbget-bin/www_bget?ko:K02999">K02999</a>&nbsp;&nbsp;</nobr></div></td><td align="left"><div>DNA-directed RNA polymerase I subunit RPA1 [EC:<a href="/dbget-bin/www_bget?ec:2.7.7.6">2.7.7.6</a>]</div></td></tr><tr><td align="left" valign="top" style="width:4.5em"><div><nobr><a href="/dbget-bin/www_bget?ko:K03000">K03000</a>&nbsp;&nbsp;</nobr></div></td><td align="left"><div>DNA-directed RNA polymerase I subunit RPA12</div></td></tr><tr><td align="left" valign="top" style="width:4.5em"><div><nobr><a href="/dbget-bin/www_bget?ko:K03001">K03001</a>&nbsp;&nbsp;</nobr></div></td><td align="left"><div>DNA-directed RNA polymerase I subunit RPA14</div></td></tr><tr><td align="left" valign="top" style="width:4.5em"><div><nobr><a href="/dbget-bin/www_bget?ko:K03002">K03002</a>&nbsp;&nbsp;</nobr></div></td><td align="left"><div>DNA-directed RNA polymerase I subunit RPA2 [EC:<a href="/dbget-bin/www_bget?ec:2.7.7.6">2.7.7.6</a>]</div></td></tr><tr><td align="left" valign="top" style="width:4.5em"><div><nobr><a href="/dbget-bin/www_bget?ko:K03003">K03003</a>&nbsp;&nbsp;</nobr></div></td><td align="left"><div>DNA-directed RNA polymerase I subunit RPA34</div></td></tr><tr><td align="left" valign="top" style="width:4.5em"><div><nobr><a href="/dbget-bin/www_bget?ko:K03004">K03004</a>&nbsp;&nbsp;</nobr></div></td><td align="left"><div>DNA-directed RNA polymerase I subunit RPA43</div></td></tr><tr><td align="left" valign="top" style="width:4.5em"><div><nobr><a href="/dbget-bin/www_bget?ko:K03005">K03005</a>&nbsp;&nbsp;</nobr></div></td><td align="left"><div>DNA-directed RNA polymerase I subunit RPA49</div></td></tr><tr><td align="left" valign="top" style="width:4.5em"><div><nobr><a href="/dbget-bin/www_bget?ko:K03006">K03006</a>&nbsp;&nbsp;</nobr></div></td><td align="left"><div>DNA-directed RNA polymerase II subunit RPB1 [EC:<a href="/dbget-bin/www_bget?ec:2.7.7.6">2.7.7.6</a>]</div></td></tr><tr><td align="left" valign="top" style="width:4.5em"><div><nobr><a href="/dbget-bin/www_bget?ko:K03007">K03007</a>&nbsp;&nbsp;</nobr></div></td><td align="left"><div>DNA-directed RNA polymerases I, II, and III subunit RPABC5</div></td></tr><tr><td align="left" valign="top" style="width:4.5em"><div><nobr><a href="/dbget-bin/www_bget?ko:K03008">K03008</a>&nbsp;&nbsp;</nobr></div></td><td align="left"><div>DNA-directed RNA polymerase II subunit RPB11</div></td></tr><tr><td align="left" valign="top" style="width:4.5em"><div><nobr><a href="/dbget-bin/www_bget?ko:K03009">K03009</a>&nbsp;&nbsp;</nobr></div></td><td align="left"><div>DNA-directed RNA polymerases I, II, and III subunit RPABC4</div></td></tr><tr><td align="left" valign="top" style="width:4.5em"><div><nobr><a href="/dbget-bin/www_bget?ko:K03010">K03010</a>&nbsp;&nbsp;</nobr></div></td><td align="left"><div>DNA-directed RNA polymerase II subunit RPB2 [EC:<a href="/dbget-bin/www_bget?ec:2.7.7.6">2.7.7.6</a>]</div></td></tr><tr><td align="left" valign="top" style="width:4.5em"><div><nobr><a href="/dbget-bin/www_bget?ko:K03011">K03011</a>&nbsp;&nbsp;</nobr></div></td><td align="left"><div>DNA-directed RNA polymerase II subunit RPB3</div></td></tr><tr><td align="left" valign="top" style="width:4.5em"><div><nobr><a href="/dbget-bin/www_bget?ko:K03012">K03012</a>&nbsp;&nbsp;</nobr></div></td><td align="left"><div>DNA-directed RNA polymerase II subunit RPB4</div></td></tr><tr><td align="left" valign="top" style="width:4.5em"><div><nobr><a href="/dbget-bin/www_bget?ko:K03013">K03013</a>&nbsp;&nbsp;</nobr></div></td><td align="left"><div>DNA-directed RNA polymerases I, II, and III subunit RPABC1</div></td></tr><tr><td align="left" valign="top" style="width:4.5em"><div><nobr><a href="/dbget-bin/www_bget?ko:K03014">K03014</a>&nbsp;&nbsp;</nobr></div></td><td align="left"><div>DNA-directed RNA polymerases I, II, and III subunit RPABC2</div></td></tr><tr><td align="left" valign="top" style="width:4.5em"><div><nobr><a href="/dbget-bin/www_bget?ko:K03015">K03015</a>&nbsp;&nbsp;</nobr></div></td><td align="left"><div>DNA-directed RNA polymerase II subunit RPB7</div></td></tr><tr><td align="left" valign="top" style="width:4.5em"><div><nobr><a href="/dbget-bin/www_bget?ko:K03016">K03016</a>&nbsp;&nbsp;</nobr></div></td><td align="left"><div>DNA-directed RNA polymerases I, II, and III subunit RPABC3</div></td></tr><tr><td align="left" valign="top" style="width:4.5em"><div><nobr><a href="/dbget-bin/www_bget?ko:K03017">K03017</a>&nbsp;&nbsp;</nobr></div></td><td align="left"><div>DNA-directed RNA polymerase II subunit RPB9</div></td></tr><tr><td align="left" valign="top" style="width:4.5em"><div><nobr><a href="/dbget-bin/www_bget?ko:K03018">K03018</a>&nbsp;&nbsp;</nobr></div></td><td align="left"><div>DNA-directed RNA polymerase III subunit RPC1 [EC:<a href="/dbget-bin/www_bget?ec:2.7.7.6">2.7.7.6</a>]</div></td></tr><tr><td align="left" valign="top" style="width:4.5em"><div><nobr><a href="/dbget-bin/www_bget?ko:K03019">K03019</a>&nbsp;&nbsp;</nobr></div></td><td align="left"><div>DNA-directed RNA polymerase III subunit RPC11</div></td></tr><tr><td align="left" valign="top" style="width:4.5em"><div><nobr><a href="/dbget-bin/www_bget?ko:K03020">K03020</a>&nbsp;&nbsp;</nobr></div></td><td align="left"><div>DNA-directed RNA polymerases I and III subunit RPAC2</div></td></tr><tr><td align="left" valign="top" style="width:4.5em"><div><nobr><a href="/dbget-bin/www_bget?ko:K03021">K03021</a>&nbsp;&nbsp;</nobr></div></td><td align="left"><div>DNA-directed RNA polymerase III subunit RPC2 [EC:<a href="/dbget-bin/www_bget?ec:2.7.7.6">2.7.7.6</a>]</div></td></tr><tr><td align="left" valign="top" style="width:4.5em"><div><nobr><a href="/dbget-bin/www_bget?ko:K03022">K03022</a>&nbsp;&nbsp;</nobr></div></td><td align="left"><div>DNA-directed RNA polymerase III subunit RPC8</div></td></tr><tr><td align="left" valign="top" style="width:4.5em"><div><nobr><a href="/dbget-bin/www_bget?ko:K03023">K03023</a>&nbsp;&nbsp;</nobr></div></td><td align="left"><div>DNA-directed RNA polymerase III subunit RPC3</div></td></tr><tr><td align="left" valign="top" style="width:4.5em"><div><nobr><a href="/dbget-bin/www_bget?ko:K03024">K03024</a>&nbsp;&nbsp;</nobr></div></td><td align="left"><div>DNA-directed RNA polymerase III subunit RPC7</div></td></tr><tr><td align="left" valign="top" style="width:4.5em"><div><nobr><a href="/dbget-bin/www_bget?ko:K03025">K03025</a>&nbsp;&nbsp;</nobr></div></td><td align="left"><div>DNA-directed RNA polymerase III subunit RPC6</div></td></tr><tr><td align="left" valign="top" style="width:4.5em"><div><nobr><a href="/dbget-bin/www_bget?ko:K03026">K03026</a>&nbsp;&nbsp;</nobr></div></td><td align="left"><div>DNA-directed RNA polymerase III subunit RPC4</div></td></tr><tr><td align="left" valign="top" style="width:4.5em"><div><nobr><a href="/dbget-bin/www_bget?ko:K03027">K03027</a>&nbsp;&nbsp;</nobr></div></td><td align="left"><div>DNA-directed RNA polymerases I and III subunit RPAC1</div></td></tr><tr><td align="left" valign="top" style="width:4.5em"><div><nobr><a href="/dbget-bin/www_bget?ko:K03040">K03040</a>&nbsp;&nbsp;</nobr></div></td><td align="left"><div>DNA-directed RNA polymerase subunit alpha [EC:<a href="/dbget-bin/www_bget?ec:2.7.7.6">2.7.7.6</a>]</div></td></tr><tr><td align="left" valign="top" style="width:4.5em"><div><nobr><a href="/dbget-bin/www_bget?ko:K03041">K03041</a>&nbsp;&nbsp;</nobr></div></td><td align="left"><div>DNA-directed RNA polymerase subunit A' [EC:<a href="/dbget-bin/www_bget?ec:2.7.7.6">2.7.7.6</a>]</div></td></tr><tr><td align="left" valign="top" style="width:4.5em"><div><nobr><a href="/dbget-bin/www_bget?ko:K03042">K03042</a>&nbsp;&nbsp;</nobr></div></td><td align="left"><div>DNA-directed RNA polymerase subunit A" [EC:<a href="/dbget-bin/www_bget?ec:2.7.7.6">2.7.7.6</a>]</div></td></tr><tr><td align="left" valign="top" style="width:4.5em"><div><nobr><a href="/dbget-bin/www_bget?ko:K03043">K03043</a>&nbsp;&nbsp;</nobr></div></td><td align="left"><div>DNA-directed RNA polymerase subunit beta [EC:<a href="/dbget-bin/www_bget?ec:2.7.7.6">2.7.7.6</a>]</div></td></tr><tr><td align="left" valign="top" style="width:4.5em"><div><nobr><a href="/dbget-bin/www_bget?ko:K03044">K03044</a>&nbsp;&nbsp;</nobr></div></td><td align="left"><div>DNA-directed RNA polymerase subunit B' [EC:<a href="/dbget-bin/www_bget?ec:2.7.7.6">2.7.7.6</a>]</div></td></tr><tr><td align="left" valign="top" style="width:4.5em"><div><nobr><a href="/dbget-bin/www_bget?ko:K03045">K03045</a>&nbsp;&nbsp;</nobr></div></td><td align="left"><div>DNA-directed RNA polymerase subunit B" [EC:<a href="/dbget-bin/www_bget?ec:2.7.7.6">2.7.7.6</a>]</div></td></tr><tr><td align="left" valign="top" style="width:4.5em"><div><nobr><a href="/dbget-bin/www_bget?ko:K03046">K03046</a>&nbsp;&nbsp;</nobr></div></td><td align="left"><div>DNA-directed RNA polymerase subunit beta' [EC:<a href="/dbget-bin/www_bget?ec:2.7.7.6">2.7.7.6</a>]</div></td></tr><tr><td align="left" valign="top" style="width:4.5em"><div><nobr><a href="/dbget-bin/www_bget?ko:K03047">K03047</a>&nbsp;&nbsp;</nobr></div></td><td align="left"><div>DNA-directed RNA polymerase subunit D [EC:<a href="/dbget-bin/www_bget?ec:2.7.7.6">2.7.7.6</a>]</div></td></tr><tr><td align="left" valign="top" style="width:4.5em"><div><nobr><a href="/dbget-bin/www_bget?ko:K03048">K03048</a>&nbsp;&nbsp;</nobr></div></td><td align="left"><div>DNA-directed RNA polymerase subunit delta</div></td></tr><tr><td align="left" valign="top" style="width:4.5em"><div><nobr><a href="/dbget-bin/www_bget?ko:K03049">K03049</a>&nbsp;&nbsp;</nobr></div></td><td align="left"><div>DNA-directed RNA polymerase subunit E' [EC:<a href="/dbget-bin/www_bget?ec:2.7.7.6">2.7.7.6</a>]</div></td></tr><tr><td align="left" valign="top" style="width:4.5em"><div><nobr><a href="/dbget-bin/www_bget?ko:K03050">K03050</a>&nbsp;&nbsp;</nobr></div></td><td align="left"><div>DNA-directed RNA polymerase subunit E" [EC:<a href="/dbget-bin/www_bget?ec:2.7.7.6">2.7.7.6</a>]</div></td></tr><tr><td align="left" valign="top" style="width:4.5em"><div><nobr><a href="/dbget-bin/www_bget?ko:K03051">K03051</a>&nbsp;&nbsp;</nobr></div></td><td align="left"><div>DNA-directed RNA polymerase subunit F [EC:<a href="/dbget-bin/www_bget?ec:2.7.7.6">2.7.7.6</a>]</div></td></tr><tr><td align="left" valign="top" style="width:4.5em"><div><nobr><a href="/dbget-bin/www_bget?ko:K03052">K03052</a>&nbsp;&nbsp;</nobr></div></td><td align="left"><div>DNA-directed RNA polymerase subunit G [EC:<a href="/dbget-bin/www_bget?ec:2.7.7.6">2.7.7.6</a>]</div></td></tr><tr><td align="left" valign="top" style="width:4.5em"><div><nobr><a href="/dbget-bin/www_bget?ko:K03053">K03053</a>&nbsp;&nbsp;</nobr></div></td><td align="left"><div>DNA-directed RNA polymerase subunit H [EC:<a href="/dbget-bin/www_bget?ec:2.7.7.6">2.7.7.6</a>]</div></td></tr><tr><td align="left" valign="top" style="width:4.5em"><div><nobr><a href="/dbget-bin/www_bget?ko:K03054">K03054</a>&nbsp;&nbsp;</nobr></div></td><td align="left"><div>DNA-directed RNA polymerase subunit I [EC:<a href="/dbget-bin/www_bget?ec:2.7.7.6">2.7.7.6</a>]</div></td></tr><tr><td align="left" valign="top" style="width:4.5em"><div><nobr><a href="/dbget-bin/www_bget?ko:K03055">K03055</a>&nbsp;&nbsp;</nobr></div></td><td align="left"><div>DNA-directed RNA polymerase subunit K [EC:<a href="/dbget-bin/www_bget?ec:2.7.7.6">2.7.7.6</a>]</div></td></tr><tr><td align="left" valign="top" style="width:4.5em"><div><nobr><a href="/dbget-bin/www_bget?ko:K03056">K03056</a>&nbsp;&nbsp;</nobr></div></td><td align="left"><div>DNA-directed RNA polymerase subunit L [EC:<a href="/dbget-bin/www_bget?ec:2.7.7.6">2.7.7.6</a>]</div></td></tr><tr><td align="left" valign="top" style="width:4.5em"><div><nobr><a href="/dbget-bin/www_bget?ko:K03058">K03058</a>&nbsp;&nbsp;</nobr></div></td><td align="left"><div>DNA-directed RNA polymerase subunit N [EC:<a href="/dbget-bin/www_bget?ec:2.7.7.6">2.7.7.6</a>]</div></td></tr><tr><td align="left" valign="top" style="width:4.5em"><div><nobr><a href="/dbget-bin/www_bget?ko:K03059">K03059</a>&nbsp;&nbsp;</nobr></div></td><td align="left"><div>DNA-directed RNA polymerase subunit P [EC:<a href="/dbget-bin/www_bget?ec:2.7.7.6">2.7.7.6</a>]</div></td></tr><tr><td align="left" valign="top" style="width:4.5em"><div><nobr><a href="/dbget-bin/www_bget?ko:K03060">K03060</a>&nbsp;&nbsp;</nobr></div></td><td align="left"><div>DNA-directed RNA polymerase subunit omega [EC:<a href="/dbget-bin/www_bget?ec:2.7.7.6">2.7.7.6</a>]</div></td></tr><tr><td align="left" valign="top" style="width:4.5em"><div><nobr><a href="/dbget-bin/www_bget?ko:K13797">K13797</a>&nbsp;&nbsp;</nobr></div></td><td align="left"><div>DNA-directed RNA polymerase subunit beta-beta' [EC:<a href="/dbget-bin/www_bget?ec:2.7.7.6">2.7.7.6</a>]</div></td></tr><tr><td align="left" valign="top" style="width:4.5em"><div><nobr><a href="/dbget-bin/www_bget?ko:K13798">K13798</a>&nbsp;&nbsp;</nobr></div></td><td align="left"><div>DNA-directed RNA polymerase subunit B [EC:<a href="/dbget-bin/www_bget?ec:2.7.7.6">2.7.7.6</a>]</div></td></tr><tr><td align="left" valign="top" style="width:4.5em"><div><nobr><a href="/dbget-bin/www_bget?ko:K14721">K14721</a>&nbsp;&nbsp;</nobr></div></td><td align="left"><div>DNA-directed RNA polymerase III subunit RPC5</div></td></tr></table></td></tr>
+
+
+<tr><th class="th20" align="left" valign="top" style="border-color:#000; border-width: 1px 0px 0px 1px; border-style: solid"><nobr>Other DBs</nobr></th>
+<td class="td20" style="border-color:#000; border-width: 1px 1px 0px 1px; border-style: solid"><div style="width:555px;overflow-x:auto;overflow-y:hidden"><div style="float:left">RHEA:&nbsp;</div><div style="margin-left:3.5em"><a href="http://www.rhea-db.org/reaction?id=14788">14788</a></div></div></td></tr>
+
+</table></td></tr></table>
+<br></form></td><td valign="top"><div style="margin-top:46px;margin-left:1em;border:#ddd 1px solid"><div class="th20" style="font-weight:bold;line-height:1.5em">&nbsp;&nbsp;All links&nbsp;&nbsp;</div>
+<pre style="margin-left:1em">
+<span style="color:#006"><a href="/dbget-bin/get_linkdb?-t+1+rn:R00443">Ontology (2)</a></span>   
+   <a href="/dbget-bin/get_linkdb?-t+brite+rn:R00443">KEGG BRITE (2)</a>   
+<span style="color:#006"><a href="/dbget-bin/get_linkdb?-t+2+rn:R00443">Pathway (4)</a></span>   
+   <a href="/dbget-bin/get_linkdb?-t+pathway+rn:R00443">KEGG PATHWAY (4)</a>   
+<span style="color:#006"><a href="/dbget-bin/get_linkdb?-t+6+rn:R00443">Chemical substance (3)</a></span>   
+   <a href="/dbget-bin/get_linkdb?-t+compound+rn:R00443">KEGG COMPOUND (3)</a>   
+<span style="color:#006"><a href="/dbget-bin/get_linkdb?-t+7+rn:R00443">Chemical reaction (4)</a></span>   
+   <a href="/dbget-bin/get_linkdb?-t+enzyme+rn:R00443">KEGG ENZYME (3)</a>   
+   <a href="/dbget-bin/get_linkdb?-t+rclass+rn:R00443">KEGG RCLASS (1)</a>   
+<span style="color:#006"><a href="/dbget-bin/get_linkdb?-t+9+rn:R00443">Gene (35745)</a></span>   
+   <a href="/dbget-bin/get_linkdb?-t+orthology+rn:R00443">KEGG ORTHOLOGY (52)</a>   
+   <a href="/dbget-bin/get_linkdb?-t+genes+rn:R00443">KEGG GENES (35693)</a>   
+<a href="/dbget-bin/get_linkdb?-t+alldb+rn:R00443">All databases (35758)</a>   
+<br><a href="/dbget-bin/get_linkdb?-N+rn:R00443">Download RDF</a>   
+</pre>
+</div>
+</td></tr></table>
+
+
+<a href="/dbget/">DBGET</a> integrated database retrieval system</div>
+
+</body>
+</html>
