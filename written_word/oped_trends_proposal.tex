@@ -1,0 +1,61 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[a4paper,bindingoffset=0.2in,%
+            left=1in,right=1in,top=1in,bottom=1in,%
+            footskip=.25in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage[nocompress]{cite}
+\usepackage[hidelinks]{hyperref}
+\usepackage{lineno}
+\usepackage{color}
+\usepackage{microtype}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{abstract}
+\usepackage{sectsty}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{helvet}
+\usepackage[helvet]{sfmath}
+\everymath={\sf}
+\usepackage{epsfig}
+\renewcommand{\abstractname}{}    
+\renewcommand{\absnamepos}{empty} 
+\usepackage[font=small,format=plain,labelfont=bf,up,textfont=up]{caption}
+\bibliographystyle{ieeetr}
+\DisableLigatures[f]{encoding = *, family = * }
+\sectionfont{\fontsize{10}{15}\selectfont}
+\begin{document}
+{\begin{center}
+{\large
+\textbf{Evolution of metabolic dependencies: is gene loss enough?}
+}
+\\
+\vskip 5pt 
+\normalsize
+Akshit Goyal
+\\
+\vskip 5pt 
+\emph{Simons Centre for the Study of Living Machines, National Centre for Biological Sciences, \\ Tata Institute of Fundamental Research, Bengaluru 560 065, India.}
+\\
+\vskip 5 pt
+$\ast$ Correspondence: \href{mailto:akshitg@ncbs.res.in}{\texttt{akshitg@ncbs.res.in}}
+\end{center}
+}
+
+\vskip 15pt
+
+\begin{enumerate}[leftmargin=*, label={}]
+
+    \item \textbf{Background:} Microbial ecologists have recently become interested in gaining a mechanistic understanding of how microbes become metabolically dependent — either on each other or on their host organisms \cite{stewart2012growing, giovannoni2014implications, pande2017bacterial}. Towards this end, the bulk of recent efforts have focused on validating the Black Queen hypothesis: which states that dependencies can evolve through ``adaptive gene loss'' \cite{morris2012black, wolf2013genome, fullmer2015pan} (i.e. losing genes which are costly to an individual but provide a common good to the population). A swathe of both experimental \cite{pande2014fitness, koskiniemi2012selection, d2014less, campbell2015self, d2015plasticity, hoek2016resource} and theoretical \cite{pal2006chance, bolotin2016bacterial, mas2016beyond, mcnally2017metabolic, zomorrodi2017genome} studies from the past five years can now demonstrate that this is evolutionarily feasible: administering the loss of even a few ``costly'' genes can initiate a strong metabolic dependence in microbial consortia. 
+
+    \item \textbf{Critique:} However, we believe that these studies miss two major examinations: (a) given the widespread possibility of gene acquisition (say via horizontal gene transfer \cite{press2016evolutionary}), are differences between known free-living genomes and known metabolically-dependent genomes actually consistent with rampant gene loss? and (b) are there other feasible evolutionary paths (as in ref. \cite{mcnally2017metabolic}) towards (hitherto unknown but possible) dependent metabolisms that require a mixture of gene loss and gain? These examinations will crucially supplement our understanding of the evolution of metabolic dependencies since contemporary studies either rely on a few specific examples that represent ``extreme'' atypical cases (e.g. dependent mutants with a few engineered gene deletions \cite{pande2014fitness, d2014less} and obligate endosymbionts with severely reduced genomes \cite{mccutcheon2012extreme, moran2014tiniest}) or simulate gene loss ``by hand'' to show that it suffices to generate metabolic dependencies (without examining as we state, a mixture of loss and gain).
+
+    \item \textbf{Proposal:} We propose here a simple model that accomplishes both these goals: (a) we motivate why we expect both gene loss and gain to be typical in real metabolisms. For this, we survey several real prokaryotic metabolic networks — both independent and dependent; surprisingly, we find that the difference between an independent and a dependent network is often an assortment of both lost and gained genes; and (b) we study evolutionarily feasible trajectories to dependency through dynamical network modification. Here we iteratively modify independent metabolic networks — through pathway addition and deletion  — till we arrive at a hypothetical (not yet sequenced but possible) dependent metabolism; we find that dependents often arise from pathways being added and removed in concert (reflecting a combination of gene addition and removal).
+
+    \item \textbf{Impact:} We hope that these results facilitate a rethink of how metabolic dependencies can and have emerged in naturally occurring microbial populations, especially those observed outside stable, unchanging environments like host guts.
+
+\end{enumerate}
+
+\bibliography{oped_trends_proposal}
+\end{document}
