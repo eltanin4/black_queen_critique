@@ -71,9 +71,7 @@ for orgIndex, orgAbbr in enumerate( orgNames ):
     with open( saveDir + str( orgAbbr ) + '.txt', 'w' ) as outFile:
         outFile.write( str( orgAbbr ) + ' ' + ' '.join( thisOrgECList ) )
 
-# Creating file for NetCmpt.
-for orgIndex, orgAbbr in enumerate( orgNames ):
-    print_progress_bar( orgIndex, len( orgNames ), 'Compiling file for NetCmpt')
+    # Creating file for NetCmpt.
     with open( 'all_prok_ecnums.txt', 'a' ) as outFile:
         outFile.write( str( orgAbbr ) + ' ' + ' '.join( thisOrgECList ) + '\n' )
 
