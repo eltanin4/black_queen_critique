@@ -4,6 +4,7 @@ import pickle
 NUM_ORGS = 435
 
  # Getting all organism seed strings
+orgSeedList = []
  with open('seeds.txt', 'r') as f:
      for thisOrg in range(NUM_ORGS):              
          thisLine = f.readline()    
