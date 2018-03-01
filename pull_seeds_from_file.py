@@ -46,7 +46,7 @@ with open('prok_kegg_abbr_with_names', 'r') as f:
 
 prokNames = list( orgNameDict.keys() ) 
 
-#
+# March 1, 2018
 MEM_CUTOFF = 0.95
 seedMembershipDict = {}
 all_seeds = uniqify( unlistify( orgSeedList ) )
@@ -78,3 +78,19 @@ depScores_CORE = list( depScoreDict_CORE.values() )
 depScores_COREWeights = np.ones_like( np.array( depScores_CORE ) ) / len( depScores_CORE )
 plt.hist( depScores_CORE, histtype='stepfilled', bins=40, weights=depScores_COREWeights )
 plt.show()
+
+# Getting ProTraits grower list.
+proGrowersList = []
+with open('proTraits_growers.txt', 'r') as f:
+    for thisLine in f:
+        proGrowersList.append( thisLine[:-1] )
+
+# Checking against pro-traits growers on many many media.
+isThereDict = {}
+for thisOrg in prokNames:
+    isThereDict[ thisOrg ] = bool( orgNameDict[ thisOrg ] in proGrowersList )
+
+# Checking dependency scores for all ProTraits predicted organisms.
+indDepScoreDict = { thisOrg: depScoreDict[ thisOrg ] 
+                    for thisOrg in prokNames 
+                    if  isThereDict[ thisOrg ] }
