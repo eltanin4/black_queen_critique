@@ -94,3 +94,9 @@ for thisOrg in prokNames:
 indDepScoreDict = { thisOrg: depScoreDict[ thisOrg ] 
                     for thisOrg in prokNames 
                     if  isThereDict[ thisOrg ] }
+
+# March 2, 2018
+# Getting KOMODO growers again.
+import pandas as pd
+org_to_media_df = 
+
