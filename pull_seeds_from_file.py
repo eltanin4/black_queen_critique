@@ -1,6 +1,8 @@
 import numpy as np
 import pickle
-
+import pandas as pd
+import matplotlib.pyplot as plt
+from tqdm import tqdm
 NUM_ORGS = 301
 
  # Getting all organism seed strings
@@ -128,6 +130,7 @@ for thisOrg in prokNames:
     if KOMODOisThereDict[ thisOrg ] or PROTRAITSisThereDict[ thisOrg ]:
         KOMODO_concordance_score += 1
 
+# Getting the normalized and manually checked ProTraits growers.
 invOrgNameDict = { value: key for key, value in orgNameDict.items() }
 FULLPROTRAITSisThereDict = {}
 proCultDF = pd.read_table('filtered_ProTraits_binaryIntegratedPr0.95.csv')
@@ -144,3 +147,46 @@ for idx, thisRow in proCultDF.iterrows():
             FULLPROTRAITSisThereDict[ thisOrgName ]
         except:
             FULLPROTRAITSisThereDict[ thisOrgName ] = 0
+
+# Getting sizes for each organism.
+rxnDict = {}
+for thisOrg in FULLPROTRAITSisThereDict.keys():
+    rxnDict[ thisOrg ] = list( np.genfromtxt( 'organism_reactions/' + thisOrg + '.txt' ) )
+
+# Comparing sizes.
+sizes_ind = [ len( rxnDict[ thisOrgName ] ) 
+              for thisOrgName in rxnDict.keys() 
+              if FULLPROTRAITSisThereDict[ thisOrgName ] ] 
+sizes_dep = [ len( rxnDict[ thisOrgName ] ) 
+              for thisOrgName in rxnDict.keys() 
+              if not FULLPROTRAITSisThereDict[ thisOrgName ] ] 
+NUM_BINS = 15
+ind_weights, dep_weights = [ 1 / len( sizes_ind ) ], [ 1 / len( sizes_dep ) ]
+plt.hist( sizes_ind, bins=NUM_BINS, color='mediumseagreen', 
+          histtype='stepfilled', normed=ind_weights )
+plt.hist( sizes_dep, bins=NUM_BINS, color='dodgerblue', 
+          histtype='stepfilled', normed=dep_weights )
+plt.savefig( 'dists/sizes_ind_dep.svg' )
+plt.show()
+
+# Getting gene loss and gene gain lists.
+ind_org_names = [ thisOrg for thisOrg in FULLPROTRAITSisThereDict.keys() 
+                  if FULLPROTRAITSisThereDict[ thisOrg] ]
+dep_org_names = [ thisOrg for thisOrg in FULLPROTRAITSisThereDict.keys() 
+                  if not FULLPROTRAITSisThereDict[ thisOrg] ]
+numGainsList, numLossesList = [], []
+gainsList, lossesList = [], []
+
+for thisIndOrg in tqdm( ind_org_names ):
+    for thisDepOrg in tqdm( dep_org_names ):
+        commonRxns = set( rxnDict[ thisIndOrg ] ) & set( rxnDict[ thisDepOrg ] )
+        lostRxns = set( rxnDict[ thisIndOrg ] ).difference( commonRxns )
+        gainRxns = set( rxnDict[ thisDepOrg ] ).difference( commonRxns )
+
+        # Updating lists.
+        gainsList.append( gainRxns )
+        lossesList.append( lostRxns )
+        numGainsList.append( len( gainRxns ) )
+        numLossesList.append( len( lostRxns ) )
+
+# Results: from ProTraits: mean number of gains = 304; losses = 591; mean gain/loss ratio = 0.5
