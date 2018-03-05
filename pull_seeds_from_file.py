@@ -1,7 +1,7 @@
 import numpy as np
 import pickle
 
-NUM_ORGS = 435
+NUM_ORGS = 301
 
  # Getting all organism seed strings
 orgSeedList = []
@@ -39,7 +39,7 @@ plt.show()
 
 # Getting the names of the abbrevations from KEGG for KOMODO comparison.
 orgNameDict = {}
-with open('prok_kegg_abbr_with_names', 'r') as f:
+with open('prok_kegg_abbr_with_names_dups_removed.txt', 'r') as f:
     for thisOrg in range(NUM_ORGS):              
         thisLine = f.readline()    
         orgNameDict[ thisLine[:3] ] = thisLine[4:-1]
@@ -80,23 +80,67 @@ plt.hist( depScores_CORE, histtype='stepfilled', bins=40, weights=depScores_CORE
 plt.show()
 
 # Getting ProTraits grower list.
-proGrowersList = []
-with open('proTraits_growers.txt', 'r') as f:
-    for thisLine in f:
-        proGrowersList.append( thisLine[:-1] )
+# proGrowersList = []
+# with open('proTraits_growers.txt', 'r') as f:
+#     for thisLine in f:
+#         proGrowersList.append( thisLine[:-1] )
 
 # Checking against pro-traits growers on many many media.
-isThereDict = {}
-for thisOrg in prokNames:
-    isThereDict[ thisOrg ] = bool( orgNameDict[ thisOrg ] in proGrowersList )
+# PROTRAITSisThereDict = {}
+# for thisOrg in prokNames:
+#     PROTRAITSisThereDict[ thisOrg ] = bool( orgNameDict[ thisOrg ] in proGrowersList )
 
 # Checking dependency scores for all ProTraits predicted organisms.
+depScoreDict = pickle.load( open( 'dict_org_dep_scores.dat', 'rb' ) )
+depScores = list( depScoreDict.values() )
 indDepScoreDict = { thisOrg: depScoreDict[ thisOrg ] 
                     for thisOrg in prokNames 
-                    if  isThereDict[ thisOrg ] }
+                    if  PROTRAITSisThereDict[ thisOrg ] }
 
 # March 2, 2018
 # Getting KOMODO growers again.
 import pandas as pd
-org_to_media_df = 
+org_to_media_df = pd.read_html('komodo_org_to_media.html')[1]
 
+# March 5, 2018
+for thisInd, thisOrg in enumerate( org_to_media_df[2][1:] ):
+    try:
+        org_to_media_df[2][thisInd] = ' '.join( thisOrg.split( )[ : 2 ] )
+    except:
+        pass
+
+# Computing whether a medium is listed for a species or not.
+KOMODOisThereDict = {}
+for thisOrg in prokNames:
+    KOMODOisThereDict[ thisOrg ] = bool( org_to_media_df[2].str.contains( 
+                                   orgNameDict[ thisOrg ] ).any() )
+
+# Double checking if numpy is fucking up here.
+# Yup, numpy fucked up. The concordance score now looks like 61%.
+concordance_score = 0.0
+for thisOrg in prokNames:
+    if KOMODOisThereDict[ thisOrg ] == PROTRAITSisThereDict[ thisOrg ]:
+        concordance_score += 1 / NUM_ORGS
+
+# Are all the ones growing by KOMODO also growing by ProTraits? If yes, they may have a larger database and that may explain it.
+KOMODO_concordance_score = 0
+for thisOrg in prokNames:
+    if KOMODOisThereDict[ thisOrg ] or PROTRAITSisThereDict[ thisOrg ]:
+        KOMODO_concordance_score += 1
+
+invOrgNameDict = { value: key for key, value in orgNameDict.items() }
+FULLPROTRAITSisThereDict = {}
+proCultDF = pd.read_table('filtered_ProTraits_binaryIntegratedPr0.95.csv')
+for idx, thisRow in proCultDF.iterrows():
+    try:
+        thisOrgName = invOrgNameDict[ ' '.join( thisRow[0].split( )[ : 2 ] ) ]
+    except:
+        continue
+
+    if bool( thisRow[-1] == 'TRUE' ):
+        FULLPROTRAITSisThereDict[ thisOrgName ] = 1
+    else:
+        try:
+            FULLPROTRAITSisThereDict[ thisOrgName ]
+        except:
+            FULLPROTRAITSisThereDict[ thisOrgName ] = 0
