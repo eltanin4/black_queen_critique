@@ -1,0 +1,27 @@
+### required (Fasta)
+_seqFile   /home/guest/work/black_queen_critique/njs16_msa_file.txt
+##### recomended (newick)
+_treeFile  /home/guest/work/black_queen_critique/njs16_tree.txt
+##### Evolutionary Model Options
+_rateDistributionType  GAMMA
+_gainLossDist 1
+_isRootFreqEQstationary  0
+_minNumOfOnes 1
+_minNumOfZeros 0
+## Additional_print_outs
+# Parsimony
+_costMatrixGainLossRatio 1
+# Likelihood-based output per position
+_calculateRate4site 1
+_calculeGainLoss4site 1
+# Ancestral reconstuction of states
+_calculateAncestralReconstruct 1
+## Advanced options
+_logValue 4
+_performOptimizations 1
+_optimizationLevel mid
+_performOptimizationsManyStarts 1
+_performOptimizationsBBLManyStarts 1
+_numberOfRateCategories 3
+_numberOfGainCategories 3
+_numberOfLossCategories 3
