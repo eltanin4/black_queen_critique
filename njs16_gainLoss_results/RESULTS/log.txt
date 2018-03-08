@@ -1,0 +1,908 @@
+START OF LOG FILE
+# Process_id= 27694
++=============================================================+
++  The gainLoss project:										
++  Analysis of Phyletic Patterns in a Likelihood Framework		
++  Version: gainLoss.VR01.266 - last updated 14.10.2013						
++  Ofir Cohen - ofircohe@tau.ac.il								
++=============================================================+
+
+ ---------------------- THE PARAMETERS ----------------------------
+Likelihood computation is performed while acounting for un-oberved data
+With min number of presences('1's)= 1
+With min number of absences('0's)= 0
+Fixed-Root ('Non-Rev') model is used
+frequencies (root '1'(Theta)/'0' freq) are model-based
+inTree file: /home/guest/work/black_queen_critique/njs16_tree.txt
+inSeq file: /home/guest/work/black_queen_critique/njs16_msa_file.txt
+log: RESULTS//log.txt with level= 4
+gain , loss ~ Gamma(Alpha,Beta) 
+gain - a Gamma prior distribution with: 3 categories
+loss - a Gamma prior distribution with: 3 categories
+Optimization of the model parmeters is performed
+performOptimizationsManyStarts with numStarts= 10
+branch lengths are not optimized
+rate4site is calculated 
+gain and loss 4site are calculated 
+calculePosteriorExpectationOfChange is done Analytically
+-------------------------------------------------------------------
+
+ startSequenceContainer
+numberOfSeqs=31
+seqLen=2861
+Num of zeros=56406
+Num of ones=32285
+Num of unKnowns=0
+
+ startStochasticProcessVec with: GainCategories=3 and GainCategories=3
+frequencies are 0.635983 0.364017
+
+InitGainLossByEmpiricalFreq: freq 1= 0.364017 Thus, gainLossRatioToCompleteByBeta= 0.286184
+gainDist GENERAL_GAMMA with: initAlphaGain=1 initBetaGain=1.86929 and _numberOfGainCategories= 3
+lossDist GENERAL_GAMMA with: initAlphaLoss=0.5 initBetaLoss=0.534962 and _numberOfLossCategories= 3
+Stochastic process vector normalized with norm_factor=0.680454
+startStochasticProcess SimpleGamma of 4 categories... 
+with gain=0.534962 loss=0.934646 root(1)=0.364017
+Stochastic process 'simple' normalized with norm_factor=0.680454
+
+ startingEvolTreeTopology...
+default rooting used, root name is N1
+sons of root are:
+N2  N16  
+unObservableData object initialized with number of unObservable patterns= 1
+The Tree Likelihood AllPosAlphTheSame is -32690.8
+Starting normalizeQandTree...(so that sumQii=1 (or weighted ave. of sunOii's for many Qs))
+Q were multiplied by 1
+The Tree Likelihood AllPosAlphTheSame is -32690.8
+AlphaGain 1
+BetaGain 1.27197
+  Gain Expectation = 0.786184
+  Gain Expectancy = 0.786184
+  Gain Standard Deviation = 0.786184
+AlphaLoss 0.5
+BetaLoss 0.364017
+  Loss Expectation = 1.37356
+  Loss Expectancy = 1.37356
+  Loss Standard Deviation = 1.94251
+	Expectancy(Gain)/Expectancy(Loss)  ratio by Gamma Params= 0.572368
+	Expectancy(Gain)/Expectancy(Loss)  by computation = 0.572368
+Theta 0.364017
+ Total branch lengths:38.7967
+
+Starting MaxParsimonyChange...
+ MaxParsimony with costMatrix - gainLossRatio 1:1
+Cost of tree is 8768 (with 8768 events)
+ Gain=6236
+ Losses=2532
+TIME = 0 minutes
+
+
+
+ *** Start Optimizations
+ Start multipleAllBranchesByFactorAtStart use epsilonOptimization 0.02 Total branch lengths:38.7967
+Allow proportion: 1e-08 to 1e+08
+The Tree Likelihood AllPosAlphTheSame is -32160.5
+Tree multiplied by 0.357032 Total branch lengths:13.8516
+
+
+ --- start optimizationsVVManyStarts for 10 rand points, with epsilonIteration 2
+
+
+-------startOptimization 1
+Starting initParamsAtRandPointsSPvv with: numOfRandPoints=300
+ logL improved = -31981.1 at rand point 3
+End initParamsAtRandPointsSPvv after 11 randPoints with:
+ bestGainAlpha 0.399249
+ bestGainBeta 3.16794
+ bestLossAlpha 0.507525
+ bestLossBeta 1.04413
+ bestTheta 0.489008
+ bestlogL -33242.4
+initParamsAtRandPointsSPvv RUNNING TIME = 0.433333 minutes
+-------------------------------
+Starting optimizations: maxNumIterations=1
+
+######### optimization starting epsilonCycle=2 maxNumIterations=1
+start optimization with L= -33242.4
+
+------ Model+BBL iter=1
+### optimization starting- epsilonOptParam=0.02 epsilonOptIter= 0.08, MaxNumIterations=3
+start optimization with:
+ L= -33242.4
+ gainLossRatio= 0.259276
+ GainAlpha= 0.399249 GainBeta= 3.16794
+ LossAlpha= 0.507525 LossBeta= 1.04413
+ Theta= 0.489008
+---- iter=1
+currBestL= -31977.5	GainLossRatio=0.232763
+currBestL= -31967.3	GainAlpha=0.550671
+currBestL= -31947.3	LossAlpha=0.60959
+currBestL= -31884.1	Theta=0.328422
+
+---- iter=2
+currBestL= -31883.9	GainLossRatio=0.229536
+currBestL= -31863.8	GainAlpha=0.351413
+currBestL= -31850.8	LossAlpha=0.523079
+currBestL= -31841.2	Theta=0.277624
+
+---- iter=3
+currBestL= -31819.7	GainLossRatio=0.174709
+currBestL= -31816.6	GainAlpha=0.31226
+currBestL= -31809.2	LossAlpha=0.467805
+currBestL= -31801.3	Theta=0.238891
+ Too many iterations in optimizeGainLossModelVV. Iter= 4 Last optimized parameters are used.
+-------------------------------
+Model optimization over with: 
+AlphaGain 0.31226
+BetaGain 0.721772
+ Gain Expectation = 0.46982
+ Gain Expectancy = 0.43263
+ Gain Standard Deviation = 0.774209
+AlphaLoss 0.467805
+BetaLoss 0.188913
+ Loss Expectation = 2.68916
+ Loss Expectancy = 2.47629
+ Loss Standard Deviation = 3.62051
+	Gain/Loss Expectancy ratio= 0.174709
+	Expectancy(Gain)/Expectancy(Loss)  by computation = 0.174709
+Theta 0.238891
+updated likelihood (after optimizeParameters)= -31801.3
+Model optimization RUNNING TIME = 3.58333 minutes
+
+startStochasticProcess SimpleGamma of 4 categories... 
+with gain=0.43263 loss=2.47629 root(1)=0.238891
+ Too many=1 iterations in Model+BBL. Last optimized parameters are used.
+Optimization RUNNING TIME = 3.61667 minutes
+
+-------L= -31801.3
+
+
+-------startOptimization 2
+Starting initParamsAtRandPointsSPvv with: numOfRandPoints=300
+ logL improved = -32131.8 at rand point 36
+End initParamsAtRandPointsSPvv after 36 randPoints with:
+ bestGainAlpha 0.744473
+ bestGainBeta 3.48224
+ bestLossAlpha 0.590292
+ bestLossBeta 1.53531
+ bestTheta 0.509741
+ bestlogL -33232.2
+initParamsAtRandPointsSPvv RUNNING TIME = 1.25 minutes
+-------------------------------
+Starting optimizations: maxNumIterations=1
+
+######### optimization starting epsilonCycle=2 maxNumIterations=1
+start optimization with L= -33232.2
+
+------ Model+BBL iter=1
+### optimization starting- epsilonOptParam=0.02 epsilonOptIter= 0.08, MaxNumIterations=3
+start optimization with:
+ L= -33232.2
+ gainLossRatio= 0.556059
+ GainAlpha= 0.744473 GainBeta= 3.48224
+ LossAlpha= 0.590292 LossBeta= 1.53531
+ Theta= 0.509741
+---- iter=1
+currBestL= -31969.8	GainLossRatio=0.266402
+currBestL= -31962.5	GainAlpha=0.56693
+currBestL= -31960.3	LossAlpha=0.632208
+currBestL= -31900	Theta=0.339453
+
+---- iter=2
+currBestL= -31895.6	GainLossRatio=0.236898
+currBestL= -31875	GainAlpha=0.356657
+currBestL= -31858.9	LossAlpha=0.533241
+currBestL= -31847.7	Theta=0.282077
+
+---- iter=3
+currBestL= -31824	GainLossRatio=0.177601
+currBestL= -31820.5	GainAlpha=0.313944
+currBestL= -31811.5	LossAlpha=0.471992
+currBestL= -31803.1	Theta=0.241166
+ Too many iterations in optimizeGainLossModelVV. Iter= 4 Last optimized parameters are used.
+-------------------------------
+Model optimization over with: 
+AlphaGain 0.313944
+BetaGain 0.724012
+ Gain Expectation = 0.472424
+ Gain Expectancy = 0.433617
+ Gain Standard Deviation = 0.773892
+AlphaLoss 0.471992
+BetaLoss 0.193319
+ Loss Expectation = 2.66003
+ Loss Expectancy = 2.44152
+ Loss Standard Deviation = 3.5538
+	Gain/Loss Expectancy ratio= 0.177601
+	Expectancy(Gain)/Expectancy(Loss)  by computation = 0.177601
+Theta 0.241166
+updated likelihood (after optimizeParameters)= -31803.1
+Model optimization RUNNING TIME = 3.6 minutes
+
+startStochasticProcess SimpleGamma of 4 categories... 
+with gain=0.433617 loss=2.44152 root(1)=0.241166
+ Too many=1 iterations in Model+BBL. Last optimized parameters are used.
+Optimization RUNNING TIME = 3.63333 minutes
+
+-------L= -31803.1
+
+
+-------startOptimization 3
+Starting initParamsAtRandPointsSPvv with: numOfRandPoints=300
+ logL improved = -32132 at rand point 13
+End initParamsAtRandPointsSPvv after 13 randPoints with:
+ bestGainAlpha 0.47945
+ bestGainBeta 3.22409
+ bestLossAlpha 0.439636
+ bestLossBeta 0.448153
+ bestTheta 0.511376
+ bestlogL -32641.3
+initParamsAtRandPointsSPvv RUNNING TIME = 0.483333 minutes
+-------------------------------
+Starting optimizations: maxNumIterations=1
+
+######### optimization starting epsilonCycle=2 maxNumIterations=1
+start optimization with L= -32641.3
+
+------ Model+BBL iter=1
+### optimization starting- epsilonOptParam=0.02 epsilonOptIter= 0.08, MaxNumIterations=3
+start optimization with:
+ L= -32641.3
+ gainLossRatio= 0.151589
+ GainAlpha= 0.47945 GainBeta= 3.22409
+ LossAlpha= 0.439636 LossBeta= 0.448153
+ Theta= 0.511376
+---- iter=1
+currBestL= -32041.1	GainLossRatio=0.248591
+currBestL= -32032.2	GainAlpha=0.638167
+currBestL= -31964.5	LossAlpha=0.619532
+currBestL= -31901.3	Theta=0.340189
+
+---- iter=2
+currBestL= -31901	GainLossRatio=0.238506
+currBestL= -31872	GainAlpha=0.357667
+currBestL= -31860.1	LossAlpha=0.534268
+currBestL= -31849	Theta=0.282732
+
+---- iter=3
+currBestL= -31824.5	GainLossRatio=0.178001
+currBestL= -31821	GainAlpha=0.314279
+currBestL= -31811.9	LossAlpha=0.472653
+currBestL= -31803.4	Theta=0.241491
+ Too many iterations in optimizeGainLossModelVV. Iter= 4 Last optimized parameters are used.
+-------------------------------
+Model optimization over with: 
+AlphaGain 0.314279
+BetaGain 0.724616
+ Gain Expectation = 0.472769
+ Gain Expectancy = 0.433718
+ Gain Standard Deviation = 0.773659
+AlphaLoss 0.472653
+BetaLoss 0.19398
+ Loss Expectation = 2.656
+ Loss Expectancy = 2.43661
+ Loss Standard Deviation = 3.54417
+	Gain/Loss Expectancy ratio= 0.178001
+	Expectancy(Gain)/Expectancy(Loss)  by computation = 0.178001
+Theta 0.241491
+updated likelihood (after optimizeParameters)= -31803.4
+Model optimization RUNNING TIME = 3.71667 minutes
+
+startStochasticProcess SimpleGamma of 4 categories... 
+with gain=0.433718 loss=2.43661 root(1)=0.241491
+ Too many=1 iterations in Model+BBL. Last optimized parameters are used.
+Optimization RUNNING TIME = 3.75 minutes
+
+-------L= -31803.4
+
+
+-------startOptimization 4
+Starting initParamsAtRandPointsSPvv with: numOfRandPoints=300
+ logL improved = -32155.8 at rand point 27
+End initParamsAtRandPointsSPvv after 27 randPoints with:
+ bestGainAlpha 0.530462
+ bestGainBeta 1.24931
+ bestLossAlpha 0.515537
+ bestLossBeta 0.862411
+ bestTheta 0.0956634
+ bestlogL -32491.5
+initParamsAtRandPointsSPvv RUNNING TIME = 1.01667 minutes
+-------------------------------
+Starting optimizations: maxNumIterations=1
+
+######### optimization starting epsilonCycle=2 maxNumIterations=1
+start optimization with L= -32491.5
+
+------ Model+BBL iter=1
+### optimization starting- epsilonOptParam=0.02 epsilonOptIter= 0.08, MaxNumIterations=3
+start optimization with:
+ L= -32491.5
+ gainLossRatio= 0.710293
+ GainAlpha= 0.530462 GainBeta= 1.24931
+ LossAlpha= 0.515537 LossBeta= 0.862411
+ Theta= 0.0956634
+---- iter=1
+currBestL= -31922.7	GainLossRatio=0.218161
+currBestL= -31922.4	GainAlpha=0.507757
+currBestL= -31879.1	LossAlpha=0.395712
+currBestL= -31846.7	Theta=0.208431
+
+---- iter=2
+currBestL= -31829.1	GainLossRatio=0.167553
+currBestL= -31798.2	GainAlpha=0.305459
+currBestL= -31796.2	LossAlpha=0.416155
+currBestL= -31795.6	Theta=0.219491
+
+---- iter=3
+currBestL= -31789.4	GainLossRatio=0.145017
+currBestL= -31788.7	GainAlpha=0.291564
+currBestL= -31787.8	Theta=0.205998
+ Too many iterations in optimizeGainLossModelVV. Iter= 4 Last optimized parameters are used.
+-------------------------------
+Model optimization over with: 
+AlphaGain 0.291564
+BetaGain 0.668866
+ Gain Expectation = 0.451566
+ Gain Expectancy = 0.435908
+ Gain Standard Deviation = 0.807287
+AlphaLoss 0.416155
+BetaLoss 0.444488
+ Loss Expectation = 3.11389
+ Loss Expectancy = 0.936257
+ Loss Standard Deviation = 1.45133
+	Gain/Loss Expectancy ratio= 0.465586
+	Expectancy(Gain)/Expectancy(Loss)  by computation = 0.145017
+Theta 0.205998
+updated likelihood (after optimizeParameters)= -31787.8
+Model optimization RUNNING TIME = 3.83333 minutes
+
+startStochasticProcess SimpleGamma of 4 categories... 
+with gain=0.435908 loss=0.936257 root(1)=0.205998
+ Too many=1 iterations in Model+BBL. Last optimized parameters are used.
+Optimization RUNNING TIME = 3.86667 minutes
+
+-------L= -31787.8
+
+
+-------startOptimization 5
+Starting initParamsAtRandPointsSPvv with: numOfRandPoints=300
+ logL improved = -32033 at rand point 76
+End initParamsAtRandPointsSPvv after 76 randPoints with:
+ bestGainAlpha 1.28829
+ bestGainBeta 2.40401
+ bestLossAlpha 0.666101
+ bestLossBeta 0.284233
+ bestTheta 0.426874
+ bestlogL -32016.1
+initParamsAtRandPointsSPvv RUNNING TIME = 2.63333 minutes
+-------------------------------
+Starting optimizations: maxNumIterations=1
+
+######### optimization starting epsilonCycle=2 maxNumIterations=1
+start optimization with L= -32016.1
+
+------ Model+BBL iter=1
+### optimization starting- epsilonOptParam=0.02 epsilonOptIter= 0.08, MaxNumIterations=3
+start optimization with:
+ L= -32016.1
+ gainLossRatio= 0.22867
+ GainAlpha= 1.28829 GainBeta= 2.40401
+ LossAlpha= 0.666101 LossBeta= 0.284233
+ Theta= 0.426874
+---- iter=1
+currBestL= -31911.6	GainAlpha=0.397428
+currBestL= -31901.7	LossAlpha=0.582492
+currBestL= -31856	Theta=0.303273
+
+---- iter=2
+currBestL= -31849.1	GainLossRatio=0.193421
+currBestL= -31841.7	GainAlpha=0.323566
+currBestL= -31824.7	LossAlpha=0.49232
+currBestL= -31814	Theta=0.251941
+
+---- iter=3
+currBestL= -31805.2	GainLossRatio=0.162218
+currBestL= -31804	GainAlpha=0.302167
+currBestL= -31798	LossAlpha=0.449421
+currBestL= -31794.4	Theta=0.228867
+ Too many iterations in optimizeGainLossModelVV. Iter= 4 Last optimized parameters are used.
+-------------------------------
+Model optimization over with: 
+AlphaGain 0.302167
+BetaGain 0.695336
+ Gain Expectation = 0.458297
+ Gain Expectancy = 0.434563
+ Gain Standard Deviation = 0.79055
+AlphaLoss 0.449421
+BetaLoss 0.167764
+ Loss Expectation = 2.82519
+ Loss Expectancy = 2.67889
+ Loss Standard Deviation = 3.99602
+	Gain/Loss Expectancy ratio= 0.162218
+	Expectancy(Gain)/Expectancy(Loss)  by computation = 0.162218
+Theta 0.228867
+updated likelihood (after optimizeParameters)= -31794.4
+Model optimization RUNNING TIME = 3.18333 minutes
+
+startStochasticProcess SimpleGamma of 4 categories... 
+with gain=0.434563 loss=2.67889 root(1)=0.228867
+ Too many=1 iterations in Model+BBL. Last optimized parameters are used.
+Optimization RUNNING TIME = 3.21667 minutes
+
+-------L= -31794.4
+
+
+-------startOptimization 6
+Starting initParamsAtRandPointsSPvv with: numOfRandPoints=300
+ logL improved = -32145.4 at rand point 1
+ logL improved = -31929.6 at rand point 9
+End initParamsAtRandPointsSPvv after 11 randPoints with:
+ bestGainAlpha 0.934619
+ bestGainBeta 3.27314
+ bestLossAlpha 0.51819
+ bestLossBeta 0.470724
+ bestTheta 0.360253
+ bestlogL -32206.3
+initParamsAtRandPointsSPvv RUNNING TIME = 0.4 minutes
+-------------------------------
+Starting optimizations: maxNumIterations=1
+
+######### optimization starting epsilonCycle=2 maxNumIterations=1
+start optimization with L= -32206.3
+
+------ Model+BBL iter=1
+### optimization starting- epsilonOptParam=0.02 epsilonOptIter= 0.08, MaxNumIterations=3
+start optimization with:
+ L= -32206.3
+ gainLossRatio= 0.259386
+ GainAlpha= 0.934619 GainBeta= 3.27314
+ LossAlpha= 0.51819 LossBeta= 0.470724
+ Theta= 0.360253
+---- iter=1
+currBestL= -31928.5	GainLossRatio=0.242273
+currBestL= -31870.1	GainAlpha=0.427172
+currBestL= -31868.9	LossAlpha=0.54219
+currBestL= -31854.7	Theta=0.288403
+
+---- iter=2
+currBestL= -31838.6	GainLossRatio=0.190013
+currBestL= -31826	GainAlpha=0.320215
+currBestL= -31817.7	LossAlpha=0.480969
+currBestL= -31810.5	Theta=0.248688
+
+---- iter=3
+currBestL= -31801.9	GainLossRatio=0.159774
+currBestL= -31800.9	GainAlpha=0.300922
+currBestL= -31796.7	LossAlpha=0.444122
+currBestL= -31793.1	Theta=0.2261
+ Too many iterations in optimizeGainLossModelVV. Iter= 4 Last optimized parameters are used.
+-------------------------------
+Model optimization over with: 
+AlphaGain 0.300922
+BetaGain 0.694471
+ Gain Expectation = 0.456825
+ Gain Expectancy = 0.433311
+ Gain Standard Deviation = 0.789901
+AlphaLoss 0.444122
+BetaLoss 0.16376
+ Loss Expectation = 2.85919
+ Loss Expectancy = 2.71202
+ Loss Standard Deviation = 4.06951
+	Gain/Loss Expectancy ratio= 0.159774
+	Expectancy(Gain)/Expectancy(Loss)  by computation = 0.159774
+Theta 0.2261
+updated likelihood (after optimizeParameters)= -31793.1
+Model optimization RUNNING TIME = 3.15 minutes
+
+startStochasticProcess SimpleGamma of 4 categories... 
+with gain=0.433311 loss=2.71202 root(1)=0.2261
+ Too many=1 iterations in Model+BBL. Last optimized parameters are used.
+Optimization RUNNING TIME = 3.16667 minutes
+
+-------L= -31793.1
+
+
+-------startOptimization 7
+Starting initParamsAtRandPointsSPvv with: numOfRandPoints=300
+ logL improved = -31923.8 at rand point 1
+End initParamsAtRandPointsSPvv after 11 randPoints with:
+ bestGainAlpha 0.626584
+ bestGainBeta 3.97333
+ bestLossAlpha 0.656938
+ bestLossBeta 1.23404
+ bestTheta 0.373835
+ bestlogL -32861.7
+initParamsAtRandPointsSPvv RUNNING TIME = 0.416667 minutes
+-------------------------------
+Starting optimizations: maxNumIterations=1
+
+######### optimization starting epsilonCycle=2 maxNumIterations=1
+start optimization with L= -32861.7
+
+------ Model+BBL iter=1
+### optimization starting- epsilonOptParam=0.02 epsilonOptIter= 0.08, MaxNumIterations=3
+start optimization with:
+ L= -32861.7
+ gainLossRatio= 0.29623
+ GainAlpha= 0.626584 GainBeta= 3.97333
+ LossAlpha= 0.656938 LossBeta= 1.23404
+ Theta= 0.373835
+---- iter=1
+currBestL= -31915.1	GainLossRatio=0.249028
+currBestL= -31893.2	GainAlpha=0.379859
+currBestL= -31878.6	LossAlpha=0.557475
+currBestL= -31859.9	Theta=0.291461
+
+---- iter=2
+currBestL= -31836.2	GainLossRatio=0.185929
+currBestL= -31830.4	GainAlpha=0.322287
+currBestL= -31817.4	LossAlpha=0.481558
+currBestL= -31808.5	Theta=0.247021
+
+---- iter=3
+currBestL= -31802.1	GainLossRatio=0.159755
+currBestL= -31800.8	GainAlpha=0.300652
+currBestL= -31796.2	LossAlpha=0.443271
+currBestL= -31792.9	Theta=0.225781
+ Too many iterations in optimizeGainLossModelVV. Iter= 4 Last optimized parameters are used.
+-------------------------------
+Model optimization over with: 
+AlphaGain 0.300652
+BetaGain 0.691268
+ Gain Expectation = 0.457139
+ Gain Expectancy = 0.434928
+ Gain Standard Deviation = 0.793205
+AlphaLoss 0.443271
+BetaLoss 0.162819
+ Loss Expectation = 2.86151
+ Loss Expectancy = 2.72247
+ Loss Standard Deviation = 4.08911
+	Gain/Loss Expectancy ratio= 0.159755
+	Expectancy(Gain)/Expectancy(Loss)  by computation = 0.159755
+Theta 0.225781
+updated likelihood (after optimizeParameters)= -31792.9
+Model optimization RUNNING TIME = 3.15 minutes
+
+startStochasticProcess SimpleGamma of 4 categories... 
+with gain=0.434928 loss=2.72247 root(1)=0.225781
+ Too many=1 iterations in Model+BBL. Last optimized parameters are used.
+Optimization RUNNING TIME = 3.18333 minutes
+
+-------L= -31792.9
+
+
+-------startOptimization 8
+Starting initParamsAtRandPointsSPvv with: numOfRandPoints=300
+ logL improved = -31946.6 at rand point 44
+End initParamsAtRandPointsSPvv after 44 randPoints with:
+ bestGainAlpha 0.228271
+ bestGainBeta 3.53928
+ bestLossAlpha 0.404074
+ bestLossBeta 1.50892
+ bestTheta 0.294718
+ bestlogL -34077.5
+initParamsAtRandPointsSPvv RUNNING TIME = 1.36667 minutes
+-------------------------------
+Starting optimizations: maxNumIterations=1
+
+######### optimization starting epsilonCycle=2 maxNumIterations=1
+start optimization with L= -34077.5
+
+------ Model+BBL iter=1
+### optimization starting- epsilonOptParam=0.02 epsilonOptIter= 0.08, MaxNumIterations=3
+start optimization with:
+ L= -34077.5
+ gainLossRatio= 0.240847
+ GainAlpha= 0.228271 GainBeta= 3.53928
+ LossAlpha= 0.404074 LossBeta= 1.50892
+ Theta= 0.294718
+---- iter=1
+currBestL= -31873.5	GainLossRatio=0.158384
+currBestL= -31837.1	GainAlpha=0.314242
+currBestL= -31819.1	LossAlpha=0.47463
+currBestL= -31799.1	Theta=0.232969
+
+---- iter=2
+currBestL= -31799.1	GainLossRatio=0.154976
+currBestL= -31798.1	GainAlpha=0.296626
+currBestL= -31792.1	LossAlpha=0.431626
+currBestL= -31790.6	Theta=0.21978
+
+---- iter=3
+currBestL= -31789.6	GainLossRatio=0.145247
+currBestL= -31789.6	GainAlpha=0.28719
+currBestL= -31788.9	LossAlpha=0.413701
+currBestL= -31787.7	Theta=0.205522
+ Too many iterations in optimizeGainLossModelVV. Iter= 4 Last optimized parameters are used.
+-------------------------------
+Model optimization over with: 
+AlphaGain 0.28719
+BetaGain 0.658632
+ Gain Expectation = 0.452599
+ Gain Expectancy = 0.43604
+ Gain Standard Deviation = 0.813658
+AlphaLoss 0.413701
+BetaLoss 0.137806
+ Loss Expectation = 3.11606
+ Loss Expectancy = 3.00206
+ Loss Standard Deviation = 4.66741
+	Gain/Loss Expectancy ratio= 0.145247
+	Expectancy(Gain)/Expectancy(Loss)  by computation = 0.145247
+Theta 0.205522
+updated likelihood (after optimizeParameters)= -31787.7
+Model optimization RUNNING TIME = 3.25 minutes
+
+startStochasticProcess SimpleGamma of 4 categories... 
+with gain=0.43604 loss=3.00206 root(1)=0.205522
+ Too many=1 iterations in Model+BBL. Last optimized parameters are used.
+Optimization RUNNING TIME = 3.28333 minutes
+
+-------L= -31787.7
+
+
+-------startOptimization 9
+Starting initParamsAtRandPointsSPvv with: numOfRandPoints=300
+ logL improved = -31944.8 at rand point 3
+End initParamsAtRandPointsSPvv after 11 randPoints with:
+ bestGainAlpha 0.642262
+ bestGainBeta 0.764663
+ bestLossAlpha 0.56002
+ bestLossBeta 0.161297
+ bestTheta 0.125873
+ bestlogL -31948.8
+initParamsAtRandPointsSPvv RUNNING TIME = 0.4 minutes
+-------------------------------
+Starting optimizations: maxNumIterations=1
+
+######### optimization starting epsilonCycle=2 maxNumIterations=1
+start optimization with L= -31948.8
+
+------ Model+BBL iter=1
+### optimization starting- epsilonOptParam=0.02 epsilonOptIter= 0.08, MaxNumIterations=3
+start optimization with:
+ L= -31948.8
+ gainLossRatio= 0.241916
+ GainAlpha= 0.642262 GainBeta= 0.764663
+ LossAlpha= 0.56002 LossBeta= 0.161297
+ Theta= 0.125873
+---- iter=1
+currBestL= -31943.9	GainLossRatio=0.261465
+currBestL= -31934.2	GainAlpha=0.507768
+currBestL= -31892.3	LossAlpha=0.422785
+currBestL= -31870.4	Theta=0.228501
+
+---- iter=2
+currBestL= -31829.1	GainLossRatio=0.17457
+currBestL= -31799.5	GainAlpha=0.310227
+currBestL= -31798.9	LossAlpha=0.432801
+
+---- iter=3
+currBestL= -31791.6	GainLossRatio=0.149189
+currBestL= -31790.8	GainAlpha=0.294268
+currBestL= -31790.6	LossAlpha=0.424145
+currBestL= -31788.8	Theta=0.210487
+ Too many iterations in optimizeGainLossModelVV. Iter= 4 Last optimized parameters are used.
+-------------------------------
+Model optimization over with: 
+AlphaGain 0.294268
+BetaGain 0.677735
+ Gain Expectation = 0.454466
+ Gain Expectancy = 0.434194
+ Gain Standard Deviation = 0.800409
+AlphaLoss 0.424145
+BetaLoss 0.145736
+ Loss Expectation = 3.04624
+ Loss Expectancy = 2.91035
+ Loss Standard Deviation = 4.46878
+	Gain/Loss Expectancy ratio= 0.149189
+	Expectancy(Gain)/Expectancy(Loss)  by computation = 0.149189
+Theta 0.210487
+updated likelihood (after optimizeParameters)= -31788.8
+Model optimization RUNNING TIME = 3.18333 minutes
+
+startStochasticProcess SimpleGamma of 4 categories... 
+with gain=0.434194 loss=2.91035 root(1)=0.210487
+ Too many=1 iterations in Model+BBL. Last optimized parameters are used.
+Optimization RUNNING TIME = 3.21667 minutes
+
+-------L= -31788.8
+
+
+-------startOptimization 10
+Starting initParamsAtRandPointsSPvv with: numOfRandPoints=300
+ logL improved = -32030.5 at rand point 33
+End initParamsAtRandPointsSPvv after 33 randPoints with:
+ bestGainAlpha 0.852608
+ bestGainBeta 4.97244
+ bestLossAlpha 0.501881
+ bestLossBeta 0.770827
+ bestTheta 0.546204
+ bestlogL -32813.8
+initParamsAtRandPointsSPvv RUNNING TIME = 1.03333 minutes
+-------------------------------
+Starting optimizations: maxNumIterations=1
+
+######### optimization starting epsilonCycle=2 maxNumIterations=1
+start optimization with L= -32813.8
+
+------ Model+BBL iter=1
+### optimization starting- epsilonOptParam=0.02 epsilonOptIter= 0.08, MaxNumIterations=3
+start optimization with:
+ L= -32813.8
+ gainLossRatio= 0.263352
+ GainAlpha= 0.852608 GainBeta= 4.97244
+ LossAlpha= 0.501881 LossBeta= 0.770827
+ Theta= 0.546204
+---- iter=1
+currBestL= -32029.9	GainLossRatio=0.271638
+currBestL= -32023	GainAlpha=0.665586
+currBestL= -31989.2	LossAlpha=0.643167
+currBestL= -31916.9	Theta=0.354645
+
+---- iter=2
+currBestL= -31914.7	GainLossRatio=0.24662
+currBestL= -31884.4	GainAlpha=0.36438
+currBestL= -31870	LossAlpha=0.546324
+currBestL= -31856.3	Theta=0.287599
+
+---- iter=3
+currBestL= -31829.8	GainLossRatio=0.181479
+currBestL= -31825.8	GainAlpha=0.31626
+currBestL= -31814.7	LossAlpha=0.477396
+currBestL= -31805.7	Theta=0.243984
+ Too many iterations in optimizeGainLossModelVV. Iter= 4 Last optimized parameters are used.
+-------------------------------
+Model optimization over with: 
+AlphaGain 0.31626
+BetaGain 0.726498
+ Gain Expectation = 0.476091
+ Gain Expectancy = 0.435321
+ Gain Standard Deviation = 0.774083
+AlphaLoss 0.477396
+BetaLoss 0.199019
+ Loss Expectation = 2.6234
+ Loss Expectancy = 2.39875
+ Loss Standard Deviation = 3.47172
+	Gain/Loss Expectancy ratio= 0.181479
+	Expectancy(Gain)/Expectancy(Loss)  by computation = 0.181479
+Theta 0.243984
+updated likelihood (after optimizeParameters)= -31805.7
+Model optimization RUNNING TIME = 3.05 minutes
+
+startStochasticProcess SimpleGamma of 4 categories... 
+with gain=0.435321 loss=2.39875 root(1)=0.243984
+ Too many=1 iterations in Model+BBL. Last optimized parameters are used.
+Optimization RUNNING TIME = 3.08333 minutes
+
+-------L= -31805.7
+likelihood of model 1	-31801.3
+likelihood of model 2	-31803.1
+likelihood of model 3	-31803.4
+likelihood of model 4	-31787.8
+likelihood of model 5	-31794.4
+likelihood of model 6	-31793.1
+likelihood of model 7	-31792.9
+likelihood of model 8	-31787.7
+likelihood of model 9	-31788.8
+likelihood of model 10	-31805.7
+likelihood of Best model 8	-31787.7
+-------------------------------
+Starting optimizations: maxNumIterations=3
+
+######### optimization starting epsilonCycle=1 maxNumIterations=3
+start optimization with L= -31787.7
+
+------ Model+BBL iter=1
+### optimization starting- epsilonOptParam=0.01 epsilonOptIter= 0.04, MaxNumIterations=10
+start optimization with:
+ L= -31787.7
+ gainLossRatio= 0.145247
+ GainAlpha= 0.28719 GainBeta= 0.634535
+ LossAlpha= 0.413701 LossBeta= 0.132764
+ Theta= 0.205522
+---- iter=1
+currBestL= -31787.4	GainLossRatio=0.139529
+currBestL= -31787.1	LossAlpha=0.404357
+currBestL= -31786.9	Theta=0.20104
+
+---- iter=2
+currBestL= -31786.9	GainAlpha=0.28719
+currBestL= -31786.9	LossAlpha=0.400314
+currBestL= -31786.9	Theta=0.19903
+ model optimization converged. Iter= 2 Likelihood=-31786.9
+-------------------------------
+Model optimization over with: 
+AlphaGain 0.28719
+BetaGain 0.64325
+ Gain Expectation = 0.448952
+ Gain Expectancy = 0.446467
+ Gain Standard Deviation = 0.833115
+AlphaLoss 0.400314
+BetaLoss 0.125105
+ Loss Expectation = 3.21763
+ Loss Expectancy = 3.19982
+ Loss Standard Deviation = 5.05737
+	Gain/Loss Expectancy ratio= 0.139529
+	Expectancy(Gain)/Expectancy(Loss)  by computation = 0.139529
+Theta 0.19903
+updated likelihood (after optimizeParameters)= -31786.9
+Model optimization RUNNING TIME = 2.25 minutes
+
+startStochasticProcess SimpleGamma of 4 categories... 
+with gain=0.446467 loss=3.19982 root(1)=0.19903
+ OverAll optimization converged. Iter= 1 Likelihood=-31786.9
+Optimization RUNNING TIME = 2.28333 minutes
+
+# Best likelihood after optimization=-31786.9
+TIME = 46.05 minutes
+
+Starting normalizeQandTree...(so that sumQii=1 (or weighted ave. of sunOii's for many Qs))
+Q were multiplied by 1
+Tree branches multi by 1
+The Tree Likelihood AllPosAlphTheSame is -31786.9
+AlphaGain 0.28719
+BetaGain 0.639689
+  Gain Expectation = 0.448952
+  Gain Expectancy = 0.448952
+  Gain Standard Deviation = 0.837752
+AlphaLoss 0.400314
+BetaLoss 0.124413
+  Loss Expectation = 3.21763
+  Loss Expectancy = 3.21763
+  Loss Standard Deviation = 5.08552
+	Expectancy(Gain)/Expectancy(Loss)  ratio by Gamma Params= 0.139529
+	Expectancy(Gain)/Expectancy(Loss)  by computation = 0.139529
+Theta 0.19903
+ Total branch lengths:13.8516
+
+ WARN: distanceFromRootForRecent=1, distanceFromNearestOTUForRecent=0.000001 are not estimated
+Starting printLofPos...
+
+Starting gain4site and loss4site...
+perform computeGain4Site... while computing posteriorProb PerCategory PerPosition
+perform computeLoss4Site... while computing posteriorProb PerCategory PerPosition
+computeEB_EXP_GL4Site RUNNING TIME = 0.1 minutes
+
+Starting calculePosteriorExpectationOfChange...
+
+Computation stochastic mapping
+computePosteriorOfChangeGivenTerminalsPerSpPerCat with sp:
+ Gain= 0.0052956
+ Loss= 0.111805
+computePosteriorOfChangeGivenTerminalsPerSpPerCat with sp:
+ Gain= 0.0052956
+ Loss= 1.2962
+computePosteriorOfChangeGivenTerminalsPerSpPerCat with sp:
+ Gain= 0.0052956
+ Loss= 8.24488
+computePosteriorOfChangeGivenTerminalsPerSpPerCat with sp:
+ Gain= 0.122118
+ Loss= 0.111805
+computePosteriorOfChangeGivenTerminalsPerSpPerCat with sp:
+ Gain= 0.122118
+ Loss= 1.2962
+computePosteriorOfChangeGivenTerminalsPerSpPerCat with sp:
+ Gain= 0.122118
+ Loss= 8.24488
+computePosteriorOfChangeGivenTerminalsPerSpPerCat with sp:
+ Gain= 1.21944
+ Loss= 0.111805
+computePosteriorOfChangeGivenTerminalsPerSpPerCat with sp:
+ Gain= 1.21944
+ Loss= 1.2962
+computePosteriorOfChangeGivenTerminalsPerSpPerCat with sp:
+ Gain= 1.21944
+ Loss= 8.24488
+TIME = 0.25 minutes
+
+Mean   values Gain=5.53295	Loss=5.14179
+Median values Gain=4.41139	Loss=3.54132
+
+TIME = 0.266667 minutes (calculePosteriorExpectationOfChange)
+
+
+Starting ancestralReconstructorBasedOnJoint...
+computeAncestralPosterior (take into acount joint probabilty)...
+TIME = 0.0166667 minutes
+
+
+TOTAL RUNNING TIME = 46.5667 minutes

@@ -1,0 +1,15 @@
+# Log-likelihood= -31786.9
+_userAlphaGain 0.28719
+_userBetaGain 0.639689
+#  Gain Expectation = 0.448952
+#  Gain Expectancy = 0.448952
+#  Gain Standard Deviation = 0.837752
+_userAlphaLoss 0.400314
+_userBetaLoss 0.124413
+#  Loss Expectation = 3.21763
+#  Loss Expectancy = 3.21763
+#  Loss Standard Deviation = 5.08552
+# GainLossRatio Expectation 0.139529
+_userGainLossRatio 0.139529
+_userTheta 0.19903
+# Total branch lengths:13.8516
