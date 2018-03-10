@@ -34,7 +34,7 @@ for tn in njs16_pa_dict:
 # pdMat = pd.read_csv( 'njs16_gainLoss_results/njs16_anctree_pairwise.csv' )
 # gsMat = pd.read_csv( 'njs16_gainLoss_results/njs16_gains_pairwise.csv' )
 # lsMat = pd.read_csv( 'njs16_gainLoss_results/njs16_loss_pairwise.csv' )
-org_names = pdMat.loc[:, pdMat.columns[0]].values   # Here, the names are in the right order.
+# org_names = pdMat.loc[:, pdMat.columns[0]].values   # Here, the names are in the right order.
 
 isIndDict = {}
 for tn in njs16_ind_dict:

@@ -5,6 +5,9 @@ from ete3 import Tree
 # '[N1]' and then the numbers increase.
 ancTree_njs16 = Tree( 'njs16_gainLoss_results/RESULTS/TheTree.INodes.ph', format=1 )
 
+# To print the tree.
+print(ancTree_njs16.get_ascii(show_internal=True))
+
 # Getting the root of the tree.
 root = ancTree_njs16&'[N1]'
 nodes = list( root.traverse() )
