@@ -1,4 +1,7 @@
 from ete3 import Tree
+import numpy as np
+from setup_gloome_njs16 import isIndDict, genotype_dict
+import pandas as pd
 
 # Getting the tree with internal nodes from gainLoss' ancestral reconstruction.
 # Internal nodes are labeled with 'Nx' where x is a number, the root being
@@ -33,4 +36,21 @@ def markNode( tree, node ):
     else:
         node.add_feature( 'isInd', 1 )
 
-markNode( root )
+markNode( ancTree_njs16, root )
+
+# Getting the original genotypes in a genotype dict.
+for orgName in isIndDict:
+        (ancTree_njs16&orgName).add_feature( 'genotype', genotype_dict[ orgName ] )
+
+# Reading the gainLoss ancestral reconstructions.
+anc_recon_table = pd.read_table( 
+                  'njs16_gainLoss_results/RESULTS/AncestralReconstructPosterior.txt' )
+
+# Now also reconstructing the most likely ancestral genotypes.
+def reconAncestor( anc_recon_table, node ):
+    if node.name == '[N1]':
+        tO = anc_recon_table.loc[ anc_recon_table['Node'] == node.name[1:-1] ]
+    else:
+        tO = anc_recon_table.loc[ anc_recon_table['Node'] == node.name ]
+
+    return ( tO[ 'Prob' ].values > 0.5 ) * 1

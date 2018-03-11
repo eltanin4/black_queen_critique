@@ -40,3 +40,8 @@ isIndDict = {}
 for tn in njs16_ind_dict:
     orgName = inv_img_to_name_dict[ '_'.join( tn.split() ) ] + '_' + '_'.join( tn.split() )
     isIndDict[ orgName ] = njs16_ind_dict[ tn ]
+
+genotype_dict = {}
+for tn in njs16_pa_dict:
+    orgName = inv_img_to_name_dict[ '_'.join( tn.split() ) ] + '_' + '_'.join( tn.split() )
+    genotype_dict[ orgName ] = njs16_pa_dict[ tn ]
