@@ -2,6 +2,9 @@ from ete3 import Tree
 import numpy as np
 from setup_gloome_njs16 import isIndDict, genotype_dict
 import pandas as pd
+from uniqify import uniqify
+from unlistify import unlistify
+from copy import copy
 
 # Getting the tree with internal nodes from gainLoss' ancestral reconstruction.
 # Internal nodes are labeled with 'Nx' where x is a number, the root being
@@ -39,21 +42,24 @@ def markNode( tree, node ):
 markNode( ancTree_njs16, root )
 
 # Getting the original genotypes in a genotype dict.
+# NOTE: genotype dicts are now probability vectors.
 for orgName in isIndDict:
-        (ancTree_njs16&orgName).add_feature( 'genotype', genotype_dict[ orgName ] )
+        (ancTree_njs16&orgName).add_feature( 'genotype', 
+                                np.array( list( map( int, genotype_dict[ orgName ] ) ) ) )
 
 # Reading the gainLoss ancestral reconstructions.
 anc_recon_table = pd.read_table( 
                   'njs16_gainLoss_results/RESULTS/AncestralReconstructPosterior.txt' )
 
-# Now also reconstructing the most likely ancestral genotypes.
+# Now to try the alternate 'probability' based way to infer gains and losses 
+# (as in Press et. al., Gen. Res. 2016).
 def reconAncestor( anc_recon_table, node ):
     if node.name == '[N1]':
         tO = anc_recon_table.loc[ anc_recon_table['Node'] == node.name[1:-1] ]
     else:
         tO = anc_recon_table.loc[ anc_recon_table['Node'] == node.name ]
 
-    return ''.join( [ str(e) for e in (tO['Prob'].values > 0.5) * 1 ] )
+    return tO['Prob'].values
 
 # Now traversing the tree and inferring ancestral states for all unmarked nodes.
 for thisNode in nodes:
@@ -62,11 +68,41 @@ for thisNode in nodes:
     except:
         thisNode.add_feature( 'genotype', reconAncestor( anc_recon_table, thisNode ) )
 
+
+njs16_rxnDict = pickle.load( open( 'dict_njs16_rxn.dat', 'rb' ) )
+reaction_ids = sorted( uniqify( unlistify( list( njs16_rxnDict.values() ) ) ) )
+
 # Using first ancestral genotype inference method to calculate gains and losses.
 def giveGainsAndLosses( parent, child ):
-    parentState = np.array( list( map( int, parent.genotype ) ) )
-    childState = np.array( list( map( int, child.genotype ) ) )
+    gainRxns, lostRxns = set( ), set( )
+    for indx, rxnID in enumerate( reaction_ids ):
+        parentProb, childProb = parent.genotype[ indx ], child.genotype[ indx ]
+
+        # Order is present, absent, gain and loss.
+        prsnProb = parentProb * childProb
+        absnProb = ( 1 - parentProb ) * ( 1 - childProb )
+        gainProb = ( 1 - parentProb ) * childProb
+        lossProb = parentProb * ( 1 - childProb )
+
+        # Finding most likely event by indexing.
+        probList = [ prsnProb, absnProb, gainProb, lossProb ]
+        mostLikelyEvent = probList.index( max( probList ) )
+
+        # Checking if gain or loss.
+        if mostLikelyEvent == 2:
+            gainRxns.add( rxnID )
+        elif mostLikelyEvent == 3:
+            lostRxns.add( rxnID )
     
-    commonRxns = set( rxnDict[ thisIndOrg ] ) & set( rxnDict[ thisDepOrg ] )
-    lostRxns = set( rxnDict[ thisIndOrg ] ).difference( commonRxns )
-    gainRxns = set( rxnDict[ thisDepOrg ] ).difference( commonRxns )    
+    return gainRxns, lostRxns
+
+# Now traversing the tree and inferring each branch's transitions.
+ind_to_dep_list, ind_to_ind_list, dep_to_dep_list = [], [], []
+for thisNode in nodes:
+    for thisChild in thisNode.children:
+        if thisNode.isInd and thisChild.isInd:
+            ind_to_ind_list.append( giveGainsAndLosses( thisNode, thisChild ) )
+        elif not thisNode.isInd and not thisChild.isInd:
+            dep_to_dep_list.append( giveGainsAndLosses( thisNode, thisChild ) )
+        elif thisNode.isInd and not thisChild.isInd:
+            ind_to_dep_list.append( giveGainsAndLosses( thisNode, thisChild ) )

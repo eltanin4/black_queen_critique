@@ -2,6 +2,8 @@ from ete3 import Tree
 import numpy as np
 from setup_gloome_njs16 import isIndDict, genotype_dict
 import pandas as pd
+from uniqify import uniqify
+from unlistify import unlistify
 
 # Getting the tree with internal nodes from gainLoss' ancestral reconstruction.
 # Internal nodes are labeled with 'Nx' where x is a number, the root being
@@ -62,11 +64,36 @@ for thisNode in nodes:
     except:
         thisNode.add_feature( 'genotype', reconAncestor( anc_recon_table, thisNode ) )
 
+
+njs16_rxnDict = pickle.load( open( 'dict_njs16_rxn.dat', 'rb' ) )
+reaction_ids = sorted( uniqify( unlistify( list( njs16_rxnDict.values() ) ) ) )
+
 # Using first ancestral genotype inference method to calculate gains and losses.
 def giveGainsAndLosses( parent, child ):
+    # Converting the binary strings to arrays.
     parentState = np.array( list( map( int, parent.genotype ) ) )
     childState = np.array( list( map( int, child.genotype ) ) )
+
+    # Getting the array of reaction IDs present in both parent and child.
+    parentRxns = np.nonzero( np.multiply( parentState, reaction_ids ) )[0]
+    childRxns = np.nonzero( np.multiply( childState, reaction_ids ) )[0]
     
-    commonRxns = set( rxnDict[ thisIndOrg ] ) & set( rxnDict[ thisDepOrg ] )
-    lostRxns = set( rxnDict[ thisIndOrg ] ).difference( commonRxns )
-    gainRxns = set( rxnDict[ thisDepOrg ] ).difference( commonRxns )    
+    commonRxns = set( parentRxns ) & set( childRxns )
+    lostRxns = set( parentRxns ).difference( commonRxns )
+    gainRxns = set( childRxns ).difference( commonRxns )
+
+    return gainRxns, lostRxns
+
+# Now traversing the tree and inferring each branch's transitions.
+ind_to_dep_list, ind_to_ind_list, dep_to_dep_list = [], [], []
+for thisNode in nodes:
+    for thisChild in thisNode.children:
+        if thisNode.isInd and thisChild.isInd:
+            ind_to_ind_list.append( giveGainsAndLosses( thisNode, thisChild ) )
+        elif not thisNode.isInd and not thisChild.isInd:
+            dep_to_dep_list.append( giveGainsAndLosses( thisNode, thisChild ) )
+        elif thisNode.isInd and not thisChild.isInd:
+            ind_to_dep_list.append( giveGainsAndLosses( thisNode, thisChild ) )
+
+# Now to try the alternate 'probability' based way to infer gains and losses 
+# (as in Press et. al., Gen. Res. 2016).
