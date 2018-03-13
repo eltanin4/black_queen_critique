@@ -3,25 +3,32 @@ _seqFile   /home/guest/work/black_queen_critique/njs16_msa_file.txt
 ##### recomended (newick)
 _treeFile  /home/guest/work/black_queen_critique/njs16_tree.txt
 ##### Evolutionary Model Options
-_rateDistributionType  GAMMA
-_gainLossDist 1
-_isRootFreqEQstationary  0
-_minNumOfOnes 1
-_minNumOfZeros 0
-## Additional_print_outs
-# Parsimony
-_costMatrixGainLossRatio 1
-# Likelihood-based output per position
-_calculateRate4site 1
-_calculeGainLoss4site 1
-# Ancestral reconstuction of states
+_printPij_t 1
+_printL_of_Pos 1
 _calculateAncestralReconstruct 1
-## Advanced options
-_logValue 4
+_printAncestralReconstructFullData 1
+_printExpPerPosPerBranchMatrix 1
+_printTree 1
+_optimizationLevel      mid
+_rateDistributionType   GAMMA
+_performOptimizationsBBL        1
 _performOptimizations 1
-_optimizationLevel mid
-_performOptimizationsManyStarts 1
-_performOptimizationsBBLManyStarts 1
+_numberOfGainCategories 3                       
+_numberOfLossCategories 3                   
 _numberOfRateCategories 3
-_numberOfGainCategories 3
-_numberOfLossCategories 3
+_outDir kegg2013_MOtree_results_TEST 
+#_logFile kegg2013_log.txt
+_maxNumOfIterationsManyStarts   3
+_calculateRate4site     1                                                       
+_calculeGainLoss4site   1
+_gainLossDist   1
+_calculeGainLoss4site   1
+_printLikelihoodLandscapeGainLoss       1
+_printPij_t     1
+#_printP11forgain        1
+#_numOfSimulationsForPotExp      1000
+#_numberOfPositions2simulate    100000
+#_simulatePosteriorExpectationOfChange   0
+#_simulateSequences      0
+#_isRootFreqEQstationaryInSimulations    1
+#_printnodesContentSim   1

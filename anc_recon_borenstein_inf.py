@@ -1,6 +1,6 @@
 from ete3 import Tree
 import numpy as np
-from setup_gloome_njs16 import isIndDict, genotype_dict
+from setup_gloome_njs16 import isIndDict, genotype_dict, good_indices
 import pandas as pd
 from uniqify import uniqify
 from unlistify import unlistify
@@ -60,7 +60,7 @@ def reconAncestor( anc_recon_table, node ):
     else:
         tO = anc_recon_table.loc[ anc_recon_table['Node'] == node.name ]
 
-    return tO['Prob'].values
+    return tO['State'].values
 
 # Now traversing the tree and inferring ancestral states for all unmarked nodes.
 for thisNode in nodes:
@@ -70,13 +70,14 @@ for thisNode in nodes:
         thisNode.add_feature( 'genotype', reconAncestor( anc_recon_table, thisNode ) )
 
 
-njs16_rxnDict = pickle.load( open( 'dict_njs16_rxn.dat', 'rb' ) )
-reaction_ids = sorted( uniqify( unlistify( list( njs16_rxnDict.values() ) ) ) )
+njs16_geneDict = pickle.load( open( 'dict_njs16_gene.dat', 'rb' ) )
+gene_ids = sorted( uniqify( unlistify( list( njs16_geneDict.values() ) ) ) )
+gene_ids = list( np.array( gene_ids )[ good_indices ] )
 
 # Using first ancestral genotype inference method to calculate gains and losses.
 def giveGainsAndLosses( parent, child ):
-    gainRxns, lostRxns = set( ), set( )
-    for indx, rxnID in enumerate( reaction_ids ):
+    gainGenes, lostGenes = set( ), set( )
+    for indx, geneID in enumerate( gene_ids ):
         parentProb, childProb = parent.genotype[ indx ], child.genotype[ indx ]
 
         # Order is present, absent, gain and loss.
@@ -91,11 +92,11 @@ def giveGainsAndLosses( parent, child ):
 
         # Checking if gain or loss.
         if mostLikelyEvent == 2:
-            gainRxns.add( rxnID )
+            gainGenes.add( geneID )
         elif mostLikelyEvent == 3:
-            lostRxns.add( rxnID )
+            lostGenes.add( geneID )
     
-    return gainRxns, lostRxns
+    return gainGenes, lostGenes
 
 # Now traversing the tree and inferring each branch's transitions.
 ind_to_dep_list, ind_to_ind_list, dep_to_dep_list = [], [], []
@@ -112,9 +113,9 @@ for thisNode in nodes:
 # Getting gain to loss ratios for each group.
 def giveGLRatio( transitionSet ):
     glRatios = []
-    for gainRxns, lostRxns in transitionSet:
+    for gainGenes, lostGenes in transitionSet:
         try:
-            glRatios.append( len( gainRxns ) / len( lostRxns ) )
+            glRatios.append( len( gainGenes ) / len( lostGenes ) )
         except:
             pass
 

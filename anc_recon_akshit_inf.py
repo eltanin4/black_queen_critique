@@ -1,6 +1,6 @@
 from ete3 import Tree
 import numpy as np
-from setup_gloome_njs16 import isIndDict, genotype_dict
+from setup_gloome_njs16 import isIndDict, genotype_dict, good_indices
 import pandas as pd
 from uniqify import uniqify
 from unlistify import unlistify
@@ -66,17 +66,18 @@ for thisNode in nodes:
 
 
 njs16_rxnDict = pickle.load( open( 'dict_njs16_rxn.dat', 'rb' ) )
-reaction_ids = sorted( uniqify( unlistify( list( njs16_rxnDict.values() ) ) ) )
+gene_ids = sorted( uniqify( unlistify( list( njs16_rxnDict.values() ) ) ) )
+gene_ids = list( np.array( gene_ids )[ good_indices ] )
 
 # Using first ancestral genotype inference method to calculate gains and losses.
 def giveGainsAndLosses( parent, child ):
     # Converting the binary strings to arrays.
-    parentState = np.array( list( map( int, parent.genotype ) ) )
-    childState = np.array( list( map( int, child.genotype ) ) )
+    # parentState = np.array( list( map( int, parent.genotype ) ) )
+    # childState = np.array( list( map( int, child.genotype ) ) )
 
     # Getting the array of reaction IDs present in both parent and child.
-    parentRxns = np.nonzero( np.multiply( parentState, reaction_ids ) )[0]
-    childRxns = np.nonzero( np.multiply( childState, reaction_ids ) )[0]
+    parentRxns = np.nonzero( np.multiply( parent.genotype, gene_ids ) )[0]
+    childRxns = np.nonzero( np.multiply( child.genotype, gene_ids ) )[0]
     
     commonRxns = set( parentRxns ) & set( childRxns )
     lostRxns = set( parentRxns ).difference( commonRxns )

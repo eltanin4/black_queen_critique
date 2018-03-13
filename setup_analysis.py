@@ -60,7 +60,7 @@ for idx, thisRow in proCultDF.iterrows():
 # Getting sizes for each organism.
 geneDict = {}
 for thisOrg in FULLPROTRAITSisThereDict.keys():
-    geneDict[ thisOrg ] = list( np.genfromtxt( 'organism_reactions/' + thisOrg + '.txt' ) )
+    geneDict[ thisOrg ] = list( np.genfromtxt( 'organism_kogenes/' + thisOrg + '.txt' ) )
 
 # Comparing sizes.
 sizes_ind = [ len( geneDict[ thisOrgName ] ) 
