@@ -60,7 +60,7 @@ def reconAncestor( anc_recon_table, node ):
     else:
         tO = anc_recon_table.loc[ anc_recon_table['Node'] == node.name ]
 
-    return tO['State'].values
+    return tO['Prob'].values
 
 # Now traversing the tree and inferring ancestral states for all unmarked nodes.
 for thisNode in nodes:

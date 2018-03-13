@@ -1,14 +1,15 @@
 from ete3 import Tree
 import numpy as np
-from setup_gloome_njs16 import isIndDict, genotype_dict, good_indices
+from setup_gloome_param_files import isIndDict, genotype_dict, good_indices
 import pandas as pd
 from uniqify import uniqify
 from unlistify import unlistify
+import pickle
 
 # Getting the tree with internal nodes from gainLoss' ancestral reconstruction.
 # Internal nodes are labeled with 'Nx' where x is a number, the root being
 # '[N1]' and then the numbers increase.
-ancTree_njs16 = Tree( 'njs16_gainLoss_results/RESULTS/TheTree.INodes.ph', format=1 )
+ancTree_njs16 = Tree( 'full_proks_gainLoss_results/TheTree.INodes.ph', format=1 )
 
 # To print the tree.
 print(ancTree_njs16.get_ascii(show_internal=True))
@@ -46,7 +47,7 @@ markNode( ancTree_njs16, root )
 
 # Reading the gainLoss ancestral reconstructions.
 anc_recon_table = pd.read_table( 
-                  'njs16_gainLoss_results/RESULTS/AncestralReconstructPosterior.txt' )
+                  'full_proks_gainLoss_results/gainLossMP.2.00099.AncestralReconstructSankoff.txt' )
 
 # Now also reconstructing the most likely ancestral genotypes.
 def reconAncestor( anc_recon_table, node ):
@@ -55,7 +56,7 @@ def reconAncestor( anc_recon_table, node ):
     else:
         tO = anc_recon_table.loc[ anc_recon_table['Node'] == node.name ]
 
-    return ''.join( [ str(e) for e in (tO['Prob'].values > 0.5) * 1 ] )
+    return tO['State'].values
 
 # Now traversing the tree and inferring ancestral states for all unmarked nodes.
 for thisNode in nodes:
@@ -63,7 +64,6 @@ for thisNode in nodes:
         thisNode.genotype
     except:
         thisNode.add_feature( 'genotype', reconAncestor( anc_recon_table, thisNode ) )
-
 
 njs16_rxnDict = pickle.load( open( 'dict_njs16_rxn.dat', 'rb' ) )
 gene_ids = sorted( uniqify( unlistify( list( njs16_rxnDict.values() ) ) ) )
@@ -94,6 +94,7 @@ for thisNode in nodes:
         elif not thisNode.isInd and not thisChild.isInd:
             dep_to_dep_list.append( giveGainsAndLosses( thisNode, thisChild ) )
         elif thisNode.isInd and not thisChild.isInd:
+            print( thisNode.name, thisChild.name )
             ind_to_dep_list.append( giveGainsAndLosses( thisNode, thisChild ) )
 
 # Now to try the alternate 'probability' based way to infer gains and losses 
@@ -109,9 +110,9 @@ def giveGLRatio( transitionSet ):
 
     return glRatios
 
-import matplotlib.pyplot as plt
-fig, ax = plt.subplots(1)
-plt.hist( giveGLRatio( ind_to_dep_list ), color='dodgerblue' )
-plt.hist( giveGLRatio( dep_to_dep_list ), color='mediumseagreen' )
-plt.hist( giveGLRatio( dep_to_dep_list ), color='firebrick' )
-plt.show()
+# import matplotlib.pyplot as plt
+# fig, ax = plt.subplots(1)
+# plt.hist( giveGLRatio( ind_to_dep_list ), color='dodgerblue' )
+# plt.hist( giveGLRatio( dep_to_dep_list ), color='mediumseagreen' )
+# plt.hist( giveGLRatio( dep_to_dep_list ), color='firebrick' )
+# plt.show()

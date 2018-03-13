@@ -1,4 +1,12 @@
+from setup_analysis import FULLPROTRAITSisThereDict, invOrgNameDict, geneDict, orgNameDict
+import numpy as np
 import pickle
+import pandas as pd
+import matplotlib.pyplot as plt
+from tqdm import tqdm
+from uniqify import uniqify
+from unlistify import unlistify
+
 
 gene_ids = sorted( uniqify( unlistify( list( geneDict.values() ) ) ) )
 all_pa_dict = {}
@@ -36,9 +44,27 @@ inv_img_to_name_dict = pickle.load( open( 'inv_img_to_name_dict.dat', 'rb' ) )
 #             num_failed += 1
 #             continue
 
-running_string = ''
+# running_string = ''
+# for tn in all_pa_dict:
+#     try:
+#         running_string += ' \"' + inv_img_to_name_dict[ '_'.join( tn.split() ) ] + '_' + '_'.join( tn.split() ) + '\",'
+#     except:
+#         continue
+
+isIndDict = {}
+num_failed = 0
+for tn in FULLPROTRAITSisThereDict:
+    try:
+        orgName = inv_img_to_name_dict[ '_'.join( orgNameDict[tn].split() ) ] + '_' + '_'.join( orgNameDict[tn].split() )
+        isIndDict[ orgName ] = FULLPROTRAITSisThereDict[ tn ]
+    except:
+        num_failed += 1
+
+genotype_dict = {}
+num_failed = 0
 for tn in all_pa_dict:
     try:
-        running_string += ' \"' + inv_img_to_name_dict[ '_'.join( tn.split() ) ] + '_' + '_'.join( tn.split() ) + '\",'
+        orgName = inv_img_to_name_dict[ '_'.join( tn.split() ) ] + '_' + '_'.join( tn.split() )
+        genotype_dict[ orgName ] = all_pa_dict[ tn ]
     except:
-        continue
+        num_failed += 1
