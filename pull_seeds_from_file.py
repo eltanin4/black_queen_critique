@@ -250,25 +250,25 @@ plt.hist( numLossesList, bins=15, normed=True )
 plt.show()
 
 # Checking for the tag 'free-living' in ProTraits and how it matches.
-# invOrgNameDict = { value: key for key, value in orgNameDict.items() }
-# isFreeLivingDict = {}
-# proTraits_freeliving_df = pd.read_csv( 'free_living_protraits.csv' )
-# for idx, thisRow in proTraits_freeliving_df.iterrows():
-#     try:
-#         thisOrgName = invOrgNameDict[ ' '.join( thisRow[0].split( )[ : 2 ] ) ]
-#     except:
-#         continue
+invOrgNameDict = { value: key for key, value in orgNameDict.items() }
+isFreeLivingDict = {}
+proTraits_freeliving_df = pd.read_csv( 'free_living_protraits.csv' )
+for idx, thisRow in proTraits_freeliving_df.iterrows():
+    try:
+        thisOrgName = invOrgNameDict[ ' '.join( thisRow[0].split( )[ : 2 ] ) ]
+    except:
+        continue
 
-#     if bool( thisRow[-1] == 1 ):
-#         isFreeLivingDict[ thisOrgName ] = 1
-#     else:
-#         try:
-#             isFreeLivingDict[ thisOrgName ]
-#         except:
-#             isFreeLivingDict[ thisOrgName ] = 0
+    if bool( thisRow[-1] == 1 ):
+        isFreeLivingDict[ thisOrgName ] = 1
+    else:
+        try:
+            isFreeLivingDict[ thisOrgName ]
+        except:
+            isFreeLivingDict[ thisOrgName ] = 0
 
-# freeliving_concordance_score = 0
-# for thisOrg in FULLPROTRAITSisThereDict.keys():
-#     if isFreeLivingDict[ thisOrg ] and FULLPROTRAITSisThereDict[ thisOrg ]:
-#         print( orgNameDict[ thisOrg ] )
-#         freeliving_concordance_score += 1
+freeliving_concordance_score = 0
+for thisOrg in FULLPROTRAITSisThereDict.keys():
+    if isFreeLivingDict[ thisOrg ] and FULLPROTRAITSisThereDict[ thisOrg ]:
+        print( orgNameDict[ thisOrg ] )
+        freeliving_concordance_score += 1

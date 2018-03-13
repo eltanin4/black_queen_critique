@@ -5,6 +5,7 @@ import pandas as pd
 from uniqify import uniqify
 from unlistify import unlistify
 from copy import copy
+import pickle
 
 # Getting the tree with internal nodes from gainLoss' ancestral reconstruction.
 # Internal nodes are labeled with 'Nx' where x is a number, the root being
@@ -43,9 +44,9 @@ markNode( ancTree_njs16, root )
 
 # Getting the original genotypes in a genotype dict.
 # NOTE: genotype dicts are now probability vectors.
-for orgName in isIndDict:
-        (ancTree_njs16&orgName).add_feature( 'genotype', 
-                                np.array( list( map( int, genotype_dict[ orgName ] ) ) ) )
+# for orgName in isIndDict:
+#         (ancTree_njs16&orgName).add_feature( 'genotype', 
+#                                 np.array( list( map( int, genotype_dict[ orgName ] ) ) ) )
 
 # Reading the gainLoss ancestral reconstructions.
 anc_recon_table = pd.read_table( 
@@ -105,4 +106,23 @@ for thisNode in nodes:
         elif not thisNode.isInd and not thisChild.isInd:
             dep_to_dep_list.append( giveGainsAndLosses( thisNode, thisChild ) )
         elif thisNode.isInd and not thisChild.isInd:
+            print( thisNode.name, thisChild.name )
             ind_to_dep_list.append( giveGainsAndLosses( thisNode, thisChild ) )
+
+# Getting gain to loss ratios for each group.
+def giveGLRatio( transitionSet ):
+    glRatios = []
+    for gainRxns, lostRxns in transitionSet:
+        try:
+            glRatios.append( len( gainRxns ) / len( lostRxns ) )
+        except:
+            pass
+
+    return glRatios
+
+# import matplotlib.pyplot as plt
+# fig, ax = plt.subplots(1)
+# plt.hist( giveGLRatio( ind_to_dep_list ), color='dodgerblue' )
+# plt.hist( giveGLRatio( dep_to_dep_list ), color='mediumseagreen' )
+# plt.hist( giveGLRatio( dep_to_dep_list ), color='firebrick' )
+# plt.show()

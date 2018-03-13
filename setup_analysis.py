@@ -17,9 +17,9 @@ with open('prok_kegg_abbr_with_names_dups_removed.txt', 'r') as f:
 prokNames = list( orgNameDict.keys() ) 
 
 # Getting sizes for each organism.
-rxnDict = {}
+geneDict = {}
 for thisOrg in prokNames:
-    rxnDict[ thisOrg ] = list( np.genfromtxt( 'organism_reactions/' + thisOrg + '.txt' ) )
+    geneDict[ thisOrg ] = list( np.genfromtxt( 'organism_kogenes/' + thisOrg + '.txt' ) )
 
 # # March 2, 2018
 # # Getting KOMODO growers again.
@@ -58,14 +58,14 @@ for idx, thisRow in proCultDF.iterrows():
             FULLPROTRAITSisThereDict[ thisOrgName ] = 0
 
 # Getting sizes for each organism.
-rxnDict = {}
+geneDict = {}
 for thisOrg in FULLPROTRAITSisThereDict.keys():
-    rxnDict[ thisOrg ] = list( np.genfromtxt( 'organism_reactions/' + thisOrg + '.txt' ) )
+    geneDict[ thisOrg ] = list( np.genfromtxt( 'organism_reactions/' + thisOrg + '.txt' ) )
 
 # Comparing sizes.
-sizes_ind = [ len( rxnDict[ thisOrgName ] ) 
-              for thisOrgName in rxnDict.keys() 
+sizes_ind = [ len( geneDict[ thisOrgName ] ) 
+              for thisOrgName in geneDict.keys() 
               if FULLPROTRAITSisThereDict[ thisOrgName ] ] 
-sizes_dep = [ len( rxnDict[ thisOrgName ] ) 
-              for thisOrgName in rxnDict.keys() 
+sizes_dep = [ len( geneDict[ thisOrgName ] ) 
+              for thisOrgName in geneDict.keys() 
               if not FULLPROTRAITSisThereDict[ thisOrgName ] ] 

@@ -41,8 +41,8 @@ def markNode( tree, node ):
 markNode( ancTree_njs16, root )
 
 # Getting the original genotypes in a genotype dict.
-for orgName in isIndDict:
-        (ancTree_njs16&orgName).add_feature( 'genotype', genotype_dict[ orgName ] )
+# for orgName in isIndDict:
+#         (ancTree_njs16&orgName).add_feature( 'genotype', genotype_dict[ orgName ] )
 
 # Reading the gainLoss ancestral reconstructions.
 anc_recon_table = pd.read_table( 
@@ -97,3 +97,20 @@ for thisNode in nodes:
 
 # Now to try the alternate 'probability' based way to infer gains and losses 
 # (as in Press et. al., Gen. Res. 2016).
+# Getting gain to loss ratios for each group.
+def giveGLRatio( transitionSet ):
+    glRatios = []
+    for gainRxns, lostRxns in transitionSet:
+        if len( lostRxns ) and len( gainRxns ):
+            glRatios.append( len( gainRxns ) / len( lostRxns ) )
+        else:
+            continue
+
+    return glRatios
+
+import matplotlib.pyplot as plt
+fig, ax = plt.subplots(1)
+plt.hist( giveGLRatio( ind_to_dep_list ), color='dodgerblue' )
+plt.hist( giveGLRatio( dep_to_dep_list ), color='mediumseagreen' )
+plt.hist( giveGLRatio( dep_to_dep_list ), color='firebrick' )
+plt.show()
