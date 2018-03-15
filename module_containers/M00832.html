@@ -1,0 +1,111 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00832'>M00832</a></td>
+ <td>Kedarcidin 2-aza-3-chloro-beta-tyrosine moiety biosynthesis, azatyrosine =&gt; 2-aza-3-chloro-beta-tyrosyl-PCP</td>
+ <!--td>Kedarcidin 2-aza-3-chloro-beta-tyrosine moiety biosynthesis, azatyrosine =&gt; 2-aza-3-chloro-beta-tyrosyl-PCP</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K21183' target='_blank'>K21183</a></td>
+    <td>sgcC2, mdpC2, kedY2; peptidyl carrier protein</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K21227' target='_blank'>K21227</a></td>
+    <td>kedY4; MIO-dependent 2-aza-L-tyrosine aminomutase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:5.4.3.-">5.4.3.-</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K21228' target='_blank'>K21228</a></td>
+    <td>kedY1; (R)-2-aza-beta-tyrosine adenylation enzyme [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:6.2.1.-">6.2.1.-</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K16431' target='_blank'>K16431</a></td>
+    <td>cepH, sgcC3, mdpC3, kedY3; FAD-dependent halogenase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.14.19.-">1.14.19.-</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K21185' target='_blank'>K21185</a></td>
+    <td>sgcE6, mdpE6, kedE6; flavin reductase</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C21325' target='_blank'>C21325</a></td>
+    <td>Azatyrosine</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C21326' target='_blank'>C21326</a></td>
+    <td>(R)-2-Aza-beta-tyrosine</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C21327' target='_blank'>C21327</a></td>
+    <td>(R)-2-Aza-beta-tyrosyl-[pcp]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C21328' target='_blank'>C21328</a></td>
+    <td>(R)-2-Aza-3-chloro-beta-tyrosyl-[pcp]</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00364'>M00364</a></td>
+ <td>C10-C20 isoprenoid biosynthesis, bacteria</td>
+ <!--td>C10-C20 isoprenoid biosynthesis, bacteria</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K01823' target='_blank'>K01823</a></td>
+    <td>idi, IDI; isopentenyl-diphosphate Delta-isomerase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:5.3.3.2">5.3.3.2</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00795' target='_blank'>K00795</a></td>
+    <td>ispA; farnesyl diphosphate synthase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.5.1.1">2.5.1.1</a> <a target="_blank" href="/dbget-bin/www_bget?ec:2.5.1.10">2.5.1.10</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K13789' target='_blank'>K13789</a></td>
+    <td>GGPS; geranylgeranyl diphosphate synthase, type II [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.5.1.1">2.5.1.1</a> <a target="_blank" href="/dbget-bin/www_bget?ec:2.5.1.10">2.5.1.10</a> <a target="_blank" href="/dbget-bin/www_bget?ec:2.5.1.29">2.5.1.29</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K13787' target='_blank'>K13787</a></td>
+    <td>idsA; geranylgeranyl diphosphate synthase, type I [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.5.1.1">2.5.1.1</a> <a target="_blank" href="/dbget-bin/www_bget?ec:2.5.1.10">2.5.1.10</a> <a target="_blank" href="/dbget-bin/www_bget?ec:2.5.1.29">2.5.1.29</a>]</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00129' target='_blank'>C00129</a></td>
+    <td>Isopentenyl diphosphate (IPP)</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00235' target='_blank'>C00235</a></td>
+    <td>Dimethylallyl diphosphate (DMPP)</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00341' target='_blank'>C00341</a></td>
+    <td>Geranyl diphosphate (GPP)</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00448' target='_blank'>C00448</a></td>
+    <td>trans,trans-Farnesyl diphosphate (FPP)</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00353' target='_blank'>C00353</a></td>
+    <td>Geranylgeranyl diphosphate (GGPP)</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

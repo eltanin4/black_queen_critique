@@ -1,0 +1,101 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00579'>M00579</a></td>
+ <td>Phosphate acetyltransferase-acetate kinase pathway, acetyl-CoA =&gt; acetate</td>
+ <!--td>Phosphate acetyltransferase-acetate kinase pathway, acetyl-CoA =&gt; acetate</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00625' target='_blank'>K00625</a></td>
+    <td>E2.3.1.8, pta; phosphate acetyltransferase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.3.1.8">2.3.1.8</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K13788' target='_blank'>K13788</a></td>
+    <td>pta; phosphate acetyltransferase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.3.1.8">2.3.1.8</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K15024' target='_blank'>K15024</a></td>
+    <td>K15024; putative phosphotransacetylase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.3.1.8">2.3.1.8</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00925' target='_blank'>K00925</a></td>
+    <td>ackA; acetate kinase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.7.2.1">2.7.2.1</a>]</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00024' target='_blank'>C00024</a></td>
+    <td>Acetyl-CoA</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00227' target='_blank'>C00227</a></td>
+    <td>Acetyl phosphate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00033' target='_blank'>C00033</a></td>
+    <td>Acetate</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

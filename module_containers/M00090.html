@@ -1,0 +1,111 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00090'>M00090</a></td>
+ <td>Phosphatidylcholine (PC) biosynthesis, choline =&gt; PC</td>
+ <!--td>Phosphatidylcholine (PC) biosynthesis, choline =&gt; PC</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00866' target='_blank'>K00866</a></td>
+    <td>CKI1; choline kinase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.7.1.32">2.7.1.32</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K14156' target='_blank'>K14156</a></td>
+    <td>CHK; choline/ethanolamine kinase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.7.1.32">2.7.1.32</a> <a target="_blank" href="/dbget-bin/www_bget?ec:2.7.1.82">2.7.1.82</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00968' target='_blank'>K00968</a></td>
+    <td>PCYT1; choline-phosphate cytidylyltransferase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.7.7.15">2.7.7.15</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00994' target='_blank'>K00994</a></td>
+    <td>CHPT1, CPT1; diacylglycerol cholinephosphotransferase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.7.8.2">2.7.8.2</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K13644' target='_blank'>K13644</a></td>
+    <td>CEPT1; choline/ethanolamine phosphotransferase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.7.8.1">2.7.8.1</a> <a target="_blank" href="/dbget-bin/www_bget?ec:2.7.8.2">2.7.8.2</a>]</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00114' target='_blank'>C00114</a></td>
+    <td>Choline</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00588' target='_blank'>C00588</a></td>
+    <td>Choline phosphate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00307' target='_blank'>C00307</a></td>
+    <td>CDP-choline</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00157' target='_blank'>C00157</a></td>
+    <td>Phosphatidylcholine</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

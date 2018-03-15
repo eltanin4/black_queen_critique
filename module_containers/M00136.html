@@ -1,0 +1,111 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00136'>M00136</a></td>
+ <td>GABA biosynthesis, prokaryotes, putrescine =&gt; GABA</td>
+ <!--td>GABA biosynthesis, prokaryotes, putrescine =&gt; GABA</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K09470' target='_blank'>K09470</a></td>
+    <td>puuA; gamma-glutamylputrescine synthase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:6.3.1.11">6.3.1.11</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K09471' target='_blank'>K09471</a></td>
+    <td>puuB, ordL; gamma-glutamylputrescine oxidase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.4.3.-">1.4.3.-</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K09472' target='_blank'>K09472</a></td>
+    <td>puuC, aldH; 4-(gamma-glutamylamino)butanal dehydrogenase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.2.1.99">1.2.1.99</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K09473' target='_blank'>K09473</a></td>
+    <td>puuD; gamma-glutamyl-gamma-aminobutyrate hydrolase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:3.5.1.94">3.5.1.94</a>]</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00134' target='_blank'>C00134</a></td>
+    <td>Putrescine</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C15699' target='_blank'>C15699</a></td>
+    <td>gamma-L-Glutamylputrecine</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C15700' target='_blank'>C15700</a></td>
+    <td>gamma-Glutamyl-gamma-aminobutyraldehyde</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C15767' target='_blank'>C15767</a></td>
+    <td>gamma-Glutamyl-gamma-aminobutyraye</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00334' target='_blank'>C00334</a></td>
+    <td>4-Aminobutanoate</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

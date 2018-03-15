@@ -1,0 +1,101 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00829'>M00829</a></td>
+ <td>3,6-Dimethylsalicylyl-CoA biosynthesis, malonyl-CoA =&gt; 6-methylsalicylate =&gt; 3,6-dimethylsalicylyl-CoA</td>
+ <!--td>3,6-Dimethylsalicylyl-CoA biosynthesis, malonyl-CoA =&gt; 6-methylsalicylate =&gt; 3,6-dimethylsalicylyl-CoA</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K15320' target='_blank'>K15320</a></td>
+    <td>ATX, chlB1, mdpB; 6-methylsalicylic acid synthase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.3.1.165">2.3.1.165</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K21191' target='_blank'>K21191</a></td>
+    <td>mdpB2; CoA ligase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:6.2.1.-">6.2.1.-</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K21192' target='_blank'>K21192</a></td>
+    <td>mdpB1; methyltransferase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.1.1.-">2.1.1.-</a>]</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00083' target='_blank'>C00083</a></td>
+    <td>Malonyl-CoA</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C02657' target='_blank'>C02657</a></td>
+    <td>6-Methylsalicylate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C21312' target='_blank'>C21312</a></td>
+    <td>6-Methylsalicylyl-CoA</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C21313' target='_blank'>C21313</a></td>
+    <td>3,6-Dimethylsalicylyl-CoA</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

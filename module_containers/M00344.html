@@ -1,0 +1,111 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00344'>M00344</a></td>
+ <td>Formaldehyde assimilation, xylulose monophosphate pathway</td>
+ <!--td>Formaldehyde assimilation, xylulose monophosphate pathway</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K17100' target='_blank'>K17100</a></td>
+    <td>DAS; dihydroxyacetone synthase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.2.1.3">2.2.1.3</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00863' target='_blank'>K00863</a></td>
+    <td>DAK, TKFC; triose/dihydroxyacetone kinase / FAD-AMP lyase (cyclizing) [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.7.1.28">2.7.1.28</a> <a target="_blank" href="/dbget-bin/www_bget?ec:2.7.1.29">2.7.1.29</a> <a target="_blank" href="/dbget-bin/www_bget?ec:4.6.1.15">4.6.1.15</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K01624' target='_blank'>K01624</a></td>
+    <td>FBA, fbaA; fructose-bisphosphate aldolase, class II [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:4.1.2.13">4.1.2.13</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K03841' target='_blank'>K03841</a></td>
+    <td>FBP, fbp; fructose-1,6-bisphosphatase I [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:3.1.3.11">3.1.3.11</a>]</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00067' target='_blank'>C00067</a></td>
+    <td>Formaldehyde</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00184' target='_blank'>C00184</a></td>
+    <td>Glycerone</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00111' target='_blank'>C00111</a></td>
+    <td>Glycerone phosphate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00354' target='_blank'>C00354</a></td>
+    <td>D-Fructose 1,6-bisphosphate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00085' target='_blank'>C00085</a></td>
+    <td>D-Fructose 6-phosphate</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

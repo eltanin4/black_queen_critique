@@ -1,0 +1,121 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00042'>M00042</a></td>
+ <td>Catecholamine biosynthesis, tyrosine =&gt; dopamine =&gt; noradrenaline =&gt; adrenaline</td>
+ <!--td>Catecholamine biosynthesis, tyrosine =&gt; dopamine =&gt; noradrenaline =&gt; adrenaline</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00505' target='_blank'>K00505</a></td>
+    <td>TYR; tyrosinase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.14.18.1">1.14.18.1</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00501' target='_blank'>K00501</a></td>
+    <td>TH; tyrosine 3-monooxygenase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.14.16.2">1.14.16.2</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K01592' target='_blank'>K01592</a></td>
+    <td>TYDC; tyrosine decarboxylase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:4.1.1.25">4.1.1.25</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K01593' target='_blank'>K01593</a></td>
+    <td>DDC, TDC; aromatic-L-amino-acid/L-tryptophan decarboxylase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:4.1.1.28">4.1.1.28</a> <a target="_blank" href="/dbget-bin/www_bget?ec:4.1.1.105">4.1.1.105</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00503' target='_blank'>K00503</a></td>
+    <td>DBH; dopamine beta-monooxygenase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.14.17.1">1.14.17.1</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00553' target='_blank'>K00553</a></td>
+    <td>PNMT; phenylethanolamine N-methyltransferase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.1.1.28">2.1.1.28</a>]</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00082' target='_blank'>C00082</a></td>
+    <td>L-Tyrosine</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00355' target='_blank'>C00355</a></td>
+    <td>3,4-Dihydroxy-L-phenylalanine</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C03758' target='_blank'>C03758</a></td>
+    <td>4-(2-Aminoethyl)-1,2-benzenediol</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00547' target='_blank'>C00547</a></td>
+    <td>L-Noradrenaline</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00788' target='_blank'>C00788</a></td>
+    <td>L-Adrenaline</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

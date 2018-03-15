@@ -1,0 +1,111 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00531'>M00531</a></td>
+ <td>Assimilatory nitrate reduction, nitrate =&gt; ammonia</td>
+ <!--td>Assimilatory nitrate reduction, nitrate =&gt; ammonia</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00367' target='_blank'>K00367</a></td>
+    <td>narB; ferredoxin-nitrate reductase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.7.7.2">1.7.7.2</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K10534' target='_blank'>K10534</a></td>
+    <td>NR; nitrate reductase (NAD(P)H) [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.7.1.1">1.7.1.1</a> <a target="_blank" href="/dbget-bin/www_bget?ec:1.7.1.2">1.7.1.2</a> <a target="_blank" href="/dbget-bin/www_bget?ec:1.7.1.3">1.7.1.3</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00372' target='_blank'>K00372</a></td>
+    <td>nasA; assimilatory nitrate reductase catalytic subunit [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.7.99.-">1.7.99.-</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00360' target='_blank'>K00360</a></td>
+    <td>nasB; assimilatory nitrate reductase electron transfer subunit [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.7.99.-">1.7.99.-</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00366' target='_blank'>K00366</a></td>
+    <td>nirA; ferredoxin-nitrite reductase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.7.7.1">1.7.7.1</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K17877' target='_blank'>K17877</a></td>
+    <td>NIT-6; nitrite reductase (NAD(P)H) [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.7.1.4">1.7.1.4</a>]</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00244' target='_blank'>C00244</a></td>
+    <td>Nitrate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00088' target='_blank'>C00088</a></td>
+    <td>Nitrite</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00014' target='_blank'>C00014</a></td>
+    <td>NH3</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

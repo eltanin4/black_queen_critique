@@ -1,0 +1,111 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00045'>M00045</a></td>
+ <td>Histidine degradation, histidine =&gt; N-formiminoglutamate =&gt; glutamate</td>
+ <!--td>Histidine degradation, histidine =&gt; N-formiminoglutamate =&gt; glutamate</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K01745' target='_blank'>K01745</a></td>
+    <td>hutH, HAL; histidine ammonia-lyase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:4.3.1.3">4.3.1.3</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K01712' target='_blank'>K01712</a></td>
+    <td>hutU, UROC1; urocanate hydratase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:4.2.1.49">4.2.1.49</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K01468' target='_blank'>K01468</a></td>
+    <td>hutI, AMDHD1; imidazolonepropionase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:3.5.2.7">3.5.2.7</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K01479' target='_blank'>K01479</a></td>
+    <td>hutG; formiminoglutamase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:3.5.3.8">3.5.3.8</a>]</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00135' target='_blank'>C00135</a></td>
+    <td>L-Histidine</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00785' target='_blank'>C00785</a></td>
+    <td>Urocanate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C03680' target='_blank'>C03680</a></td>
+    <td>4-Imidazolone-5-propanoate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00439' target='_blank'>C00439</a></td>
+    <td>N-Formimino-L-glutamate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00025' target='_blank'>C00025</a></td>
+    <td>L-Glutamate</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

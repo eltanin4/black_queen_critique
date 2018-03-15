@@ -1,0 +1,111 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00548'>M00548</a></td>
+ <td>Benzene degradation, benzene =&gt; catechol</td>
+ <!--td>Benzene degradation, benzene =&gt; catechol</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K16249' target='_blank'>K16249</a></td>
+    <td>dmpK, poxA; phenol hydroxylase P0 protein</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K16243' target='_blank'>K16243</a></td>
+    <td>dmpL, poxC; Phenol hydroxylase P1 protein</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K16244' target='_blank'>K16244</a></td>
+    <td>dmpM, poxB; phenol hydroxylase P2 protein</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K16242' target='_blank'>K16242</a></td>
+    <td>dmpN, poxD; phenol hydroxylase P3 protein [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.14.13.-">1.14.13.-</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K16245' target='_blank'>K16245</a></td>
+    <td>dmpO, poxE; phenol hydroxylase P4 protein</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K16246' target='_blank'>K16246</a></td>
+    <td>dmpP, poxF; phenol hydroxylase P5 protein</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C01407' target='_blank'>C01407</a></td>
+    <td>Benzene</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00146' target='_blank'>C00146</a></td>
+    <td>Phenol</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00090' target='_blank'>C00090</a></td>
+    <td>Catechol</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

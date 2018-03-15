@@ -1,0 +1,126 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00307'>M00307</a></td>
+ <td>Pyruvate oxidation, pyruvate =&gt; acetyl-CoA</td>
+ <!--td>Pyruvate oxidation, pyruvate =&gt; acetyl-CoA</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00163' target='_blank'>K00163</a></td>
+    <td>aceE; pyruvate dehydrogenase E1 component [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.2.4.1">1.2.4.1</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00161' target='_blank'>K00161</a></td>
+    <td>PDHA, pdhA; pyruvate dehydrogenase E1 component alpha subunit [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.2.4.1">1.2.4.1</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00162' target='_blank'>K00162</a></td>
+    <td>PDHB, pdhB; pyruvate dehydrogenase E1 component beta subunit [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.2.4.1">1.2.4.1</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00627' target='_blank'>K00627</a></td>
+    <td>DLAT, aceF, pdhC; pyruvate dehydrogenase E2 component (dihydrolipoamide acetyltransferase) [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.3.1.12">2.3.1.12</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00382' target='_blank'>K00382</a></td>
+    <td>DLD, lpd, pdhD; dihydrolipoamide dehydrogenase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.8.1.4">1.8.1.4</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00169' target='_blank'>K00169</a></td>
+    <td>porA; pyruvate ferredoxin oxidoreductase alpha subunit [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.2.7.1">1.2.7.1</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00170' target='_blank'>K00170</a></td>
+    <td>porB; pyruvate ferredoxin oxidoreductase beta subunit [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.2.7.1">1.2.7.1</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00171' target='_blank'>K00171</a></td>
+    <td>porD; pyruvate ferredoxin oxidoreductase delta subunit [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.2.7.1">1.2.7.1</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00172' target='_blank'>K00172</a></td>
+    <td>porG; pyruvate ferredoxin oxidoreductase gamma subunit [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.2.7.1">1.2.7.1</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K03737' target='_blank'>K03737</a></td>
+    <td>por, nifJ; pyruvate-ferredoxin/flavodoxin oxidoreductase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.2.7.1">1.2.7.1</a> <a target="_blank" href="/dbget-bin/www_bget?ec:1.2.7.-">1.2.7.-</a>]</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00022' target='_blank'>C00022</a></td>
+    <td>Pyruvate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00024' target='_blank'>C00024</a></td>
+    <td>Acetyl-CoA</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

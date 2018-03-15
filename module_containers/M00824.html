@@ -1,0 +1,121 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00824'>M00824</a></td>
+ <td>9-membered enediyne core biosynthesis, malonyl-CoA =&gt; 3-hydroxyhexadeca-4,6,8,10,12,14-hexaenoyl-ACP =&gt; 9-membered enediyne core</td>
+ <!--td>9-membered enediyne core biosynthesis, malonyl-CoA =&gt; 3-hydroxyhexadeca-4,6,8,10,12,14-hexaenoyl-ACP =&gt; 9-membered enediyne core</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K15314' target='_blank'>K15314</a></td>
+    <td>sgcE, mdpE, ncsE, kedE, calE8, pksE; enediyne polyketide synthase</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K21160' target='_blank'>K21160</a></td>
+    <td>sgcE2, ncsE2, kedE2; enediyne biosynthesis protein E2</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K21161' target='_blank'>K21161</a></td>
+    <td>sgcE3, ncsE3, kedE3; enediyne biosynthesis protein E3</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K21162' target='_blank'>K21162</a></td>
+    <td>sgcE4, ncsE4, kedE4; enediyne biosynthesis protein E4</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K21163' target='_blank'>K21163</a></td>
+    <td>sgcE5, ncsE5, kedE5; enediyne biosynthesis protein E5</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K21164' target='_blank'>K21164</a></td>
+    <td>sgcE7, ncsE7, kedE7; enediyne biosynthesis protein E7</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K21165' target='_blank'>K21165</a></td>
+    <td>sgcE8, ncsE8, kedE8; enediyne biosynthesis protein E8</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K21166' target='_blank'>K21166</a></td>
+    <td>sgcE9, ncsE9, kedE9; enediyne biosynthesis protein E9</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K21167' target='_blank'>K21167</a></td>
+    <td>sgcE11, ncsE11, kedE11; enediyne biosynthesis protein E11</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00083' target='_blank'>C00083</a></td>
+    <td>Malonyl-CoA</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C21357' target='_blank'>C21357</a></td>
+    <td>3-Hydroxyhexadeca-4,6,8,10,12,14-hexaenoyl-[acp]</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

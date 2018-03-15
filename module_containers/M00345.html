@@ -1,0 +1,131 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00345'>M00345</a></td>
+ <td>Formaldehyde assimilation, ribulose monophosphate pathway</td>
+ <!--td>Formaldehyde assimilation, ribulose monophosphate pathway</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K08093' target='_blank'>K08093</a></td>
+    <td>hxlA; 3-hexulose-6-phosphate synthase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:4.1.2.43">4.1.2.43</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K13812' target='_blank'>K13812</a></td>
+    <td>fae-hps; bifunctional enzyme Fae/Hps [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:4.2.1.147">4.2.1.147</a> <a target="_blank" href="/dbget-bin/www_bget?ec:4.1.2.43">4.1.2.43</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K13831' target='_blank'>K13831</a></td>
+    <td>hps-phi; 3-hexulose-6-phosphate synthase / 6-phospho-3-hexuloisomerase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:4.1.2.43">4.1.2.43</a> <a target="_blank" href="/dbget-bin/www_bget?ec:5.3.1.27">5.3.1.27</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K08094' target='_blank'>K08094</a></td>
+    <td>hxlB; 6-phospho-3-hexuloisomerase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:5.3.1.27">5.3.1.27</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K13831' target='_blank'>K13831</a></td>
+    <td>hps-phi; 3-hexulose-6-phosphate synthase / 6-phospho-3-hexuloisomerase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:4.1.2.43">4.1.2.43</a> <a target="_blank" href="/dbget-bin/www_bget?ec:5.3.1.27">5.3.1.27</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00850' target='_blank'>K00850</a></td>
+    <td>pfkA, PFK; 6-phosphofructokinase 1 [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.7.1.11">2.7.1.11</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K16370' target='_blank'>K16370</a></td>
+    <td>pfkB; 6-phosphofructokinase 2 [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.7.1.11">2.7.1.11</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K01624' target='_blank'>K01624</a></td>
+    <td>FBA, fbaA; fructose-bisphosphate aldolase, class II [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:4.1.2.13">4.1.2.13</a>]</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00067' target='_blank'>C00067</a></td>
+    <td>Formaldehyde</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C06019' target='_blank'>C06019</a></td>
+    <td>D-arabino-Hex-3-ulose 6-phosphate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00085' target='_blank'>C00085</a></td>
+    <td>D-Fructose 6-phosphate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00354' target='_blank'>C00354</a></td>
+    <td>D-Fructose 1,6-bisphosphate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00111' target='_blank'>C00111</a></td>
+    <td>Glycerone phosphate</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

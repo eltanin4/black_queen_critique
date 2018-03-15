@@ -1,0 +1,111 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00595'>M00595</a></td>
+ <td>Thiosulfate oxidation by SOX complex, thiosulfate =&gt; sulfate</td>
+ <!--td>Thiosulfate oxidation by SOX complex, thiosulfate =&gt; sulfate</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K17222' target='_blank'>K17222</a></td>
+    <td>soxA; sulfur-oxidizing protein SoxA</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K17223' target='_blank'>K17223</a></td>
+    <td>soxX; sulfur-oxidizing protein SoxX</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K17224' target='_blank'>K17224</a></td>
+    <td>soxB; sulfur-oxidizing protein SoxB</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K17225' target='_blank'>K17225</a></td>
+    <td>soxC; sulfane dehydrogenase subunit SoxC</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K08738' target='_blank'>K08738</a></td>
+    <td>CYC; cytochrome c</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K17226' target='_blank'>K17226</a></td>
+    <td>soxY; sulfur-oxidizing protein SoxY</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K17227' target='_blank'>K17227</a></td>
+    <td>soxZ; sulfur-oxidizing protein SoxZ</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00320' target='_blank'>C00320</a></td>
+    <td>Thiosulfate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00059' target='_blank'>C00059</a></td>
+    <td>Sulfate</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

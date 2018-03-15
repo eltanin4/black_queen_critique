@@ -1,0 +1,1003 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>KEGG MODULE: M00169</title>
+<link rel="stylesheet" href="/css/kegg.css" type="text/css">
+<style type="text/css">
+td
+{
+  font-size:12px;
+  font-family:verdana,arial,helvetica,sans-serif;
+  vertical-align: top;
+}
+
+div#definition
+{
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+div#definition table tr td {
+  padding-right: 10px;
+}
+
+div.poplay {
+  position: absolute;
+  padding: 2px;
+  background-color: #ffff99;
+  border-top: solid 1px #c0c0c0;
+  border-left: solid 1px #c0c0c0;
+  border-bottom: solid 1px #808080;
+  border-right: solid 1px #808080;
+  visibility: hidden;
+}
+
+span.popup
+{
+  font-weight: bold;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+</style>
+<script language="JavaScript" type="text/javascript" src="/js/dhtml.js"></script>
+<script language="javascript" type="text/javascript">
+<!--
+
+function SubmitForm(theForm)
+{
+  var org = theForm.select_org.value;
+
+  if(org == "set_cookie")
+  {
+    window.open('/kegg/misc/kegg2_select.html','sel_org','toolbar=no,location=no,directories=no,width=500,height=320,resizable=yes');
+    return false;
+  }
+  else if(org.indexOf(".sort_alp") > 0)
+  {
+    var dt = new Date();
+    dt.setTime(dt.getTime() + (30 * 24 * 60 * 60));
+    var c = "KEGG_MapMenu_Sorted=alp;path=/;expires=" + dt.toGMTString();
+    document.cookie = c;
+  }
+  else if(org.indexOf(".sort_org") > 0)
+  {
+    // delete cookie
+    var dt = new Date();
+    dt.setTime(dt.getTime() - 100);
+    var c = "KEGG_MapMenu_Sorted=alp;path=/;expires=" + dt.toGMTString();
+    document.cookie = c;
+  }
+  else
+  {
+    theForm.org.value = org;
+  }
+
+  return true;
+}
+
+function btn(bobj, img)
+{
+  bobj.src = "/Fig/bget/button_" + img + ".gif";
+}
+
+
+function open_ko_list()
+{
+	var win = window.open('module_ko_list?map=M00169&org=ko','_md','toolbar=no,location=no,directories=no,width=700,height=400,resizable=yes,scrollbars=yes,status=no');
+  win.focus();
+}
+
+var timer = 0;
+var p_entry, p_title, p_bgcolor;
+function popupTimer(entry, title, bgcolor)
+{
+  p_entry = entry;
+  p_title = title;
+  p_bgcolor = bgcolor;
+
+  if(timer == 0){
+    var func = "showThumbnail()";
+    timer = setTimeout(func, 1200);
+  }
+}
+
+
+function showThumbnail()
+{
+
+  var url = "";
+  if(p_entry.match(/^[A-Z]+\d+$/))
+  {
+    url = "/kegg/misc/thumbnail/" + p_entry + ".gif";
+  }
+  else if(p_entry.match(/(\d+)$/))
+  {
+    url = "/kegg/misc/thumbnail/map" + RegExp.$1 + ".gif";
+  }
+
+  var html = "";
+
+  if(p_bgcolor != "#ffffff")
+  {
+    html += "<span class=\"popup\">" + p_entry + "</span><br />";
+  }
+
+  html += "<img src=\"" + url + "\" alt=\"Loading...\">";
+
+  var x = getCurrentMouseX();
+  var y = getCurrentMouseY();
+
+  var layer = new Component("poplay");
+  layer.backgroundColor(p_bgcolor);
+  layer.HTML(html);
+  layer.move(x, y+40);
+  layer.visible(true);
+
+  timer = 0;
+}
+
+
+function hideMapTn(){
+  var layer = new Component("poplay");
+  layer.visible(false);
+
+  if(timer != 0){
+    clearTimeout(timer);
+    timer = 0;
+  }
+}
+
+
+// -->
+</script>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+ <tr>
+  <td>
+    <a href="/kegg/kegg2.html"><img align="middle" border="0" src="/Fig/bget/kegg3.gif" alt="KEGG"></a>
+    &nbsp;&nbsp;&nbsp;<a name="module:M00169"></a><font class="title3"><b>CAM (Crassulacean acid metabolism), light</b></font>
+  </td>
+  <td align="right" valign="bottom"><a href="javascript:void(window.open('/kegg/document/help_module.html','KEGG_Help','toolbar=no,location=no,directories=no,width=720,height=640,resizable=yes,scrollbars=yes'))"><img onmouseup="btn(this,'Hb')" align="middle" onmouseout="btn(this,'Hb')" onmousedown="btn(this,'Hbd')" onmouseover="btn(this,'Hbh')" alt="Help" name="help" border="0" src="/Fig/bget/button_Hb.gif"></a></td>
+ </tr>
+</table>
+
+[
+<a href="/kegg-bin/get_htext?htext=ko00002.keg&amp;query=M00169&amp;option=-a">Module menu</a> |
+
+<a href="/kegg-bin/get_htext?htext=br08601_M00169.keg&amp;hier=5">Organism menu</a> |
+
+
+<a href="/dbget-bin/www_bget?M00169">Module entry</a> |
+<a href="javascript:void(open_ko_list())">KO/Compound list</a>
+
+]
+
+<div id="definition">
+ <table>
+  <tr>
+   <td>Entry</td>
+   <td>
+   M00169
+   
+   </td>
+  </tr>
+  <tr>
+   <td>Name</td>
+   <td>CAM (Crassulacean acid metabolism), light</td>
+  </tr>
+  <tr>
+   <td>Definition</td>
+   <td>
+    <a href="/dbget-bin/www_bget?K00029">K00029</a> <a href="/dbget-bin/www_bget?K01006">K01006</a><br />
+    <a href="http://www.kegg.jp/kegg-bin/view_ortholog_table?md=M00169"><img onmouseup="btn(this,'OTb')" align="middle" onmouseout="btn(this,'OTb')" onmousedown="btn(this,'OTbd')" onmouseover="btn(this,'OTbh')" alt="Ortholog table" name="OT" border="0" src="/Fig/bget/button_OTb.gif"></a>
+    
+    <a href="javascript:void(document.forms['taxonomy'].submit())"><img onmouseup="btn(this,'Taxb')" align="middle" onmouseout="btn(this,'Taxb')" onmousedown="btn(this,'Taxbd')" onmouseover="btn(this,'Taxbh')" alt="Taxonomy" name="Taxonomy" border="0" src="/Fig/bget/button_Taxb.gif"></a>
+    
+   </td>
+  </tr>
+  <tr>
+   <td>Type</td>
+   <td>Pathway module</td>
+  </tr>
+  
+  
+  <tr>
+   <td>Pathway</td>
+   <td>
+    
+    <span style="margin-right:5px;">
+    <a href="/kegg-bin/show_pathway?map01200+M00169">map01200</a>
+    </span>
+    
+    <span style="margin-right:5px;">
+    <a href="/kegg-bin/show_pathway?map00710+M00169">map00710</a>
+    </span>
+    
+   </td>
+  </tr>
+  
+  
+  
+  <tr>
+   <td>Reaction</td>
+   <td><a href="/dbget-bin/www_bget?R00216">R00216</a>  <a href="/dbget-bin/www_bget?C00149">C00149</a> -&gt; <a href="/dbget-bin/www_bget?C00022">C00022</a> + <a href="/dbget-bin/www_bget?C00011">C00011</a><br><a href="/dbget-bin/www_bget?R00206">R00206</a>  <a href="/dbget-bin/www_bget?C00022">C00022</a> -&gt; <a href="/dbget-bin/www_bget?C00074">C00074</a></td>
+  </tr>
+  
+  
+  
+ </table>
+</div>
+
+<form action="/kegg-bin/show_module" onsubmit="return SubmitForm(this)">
+<input type="hidden" name="map" value="M00169">
+<input type="hidden" name="org" value="ko">
+
+<div style="margin-top:10px;">
+
+<div>
+<select name="select_org">
+<option value="ko">Reference module (KO)</option>
+<option value="set_cookie">-----&lt; Set personalized menu &gt;-----</option>
+<option value="ko.sort_alp">-----&lt; Sort below by alphabet &gt;-----</option>
+<option value="ath" >Arabidopsis thaliana (thale cress)</option>
+<option value="aly" >Arabidopsis lyrata (lyrate rockcress)</option>
+<option value="crb" >Capsella rubella</option>
+<option value="csat" >Camelina sativa (false flax)</option>
+<option value="eus" >Eutrema salsugineum</option>
+<option value="brp" >Brassica rapa (field mustard)</option>
+<option value="bna" >Brassica napus (rape)</option>
+<option value="boe" >Brassica oleracea (wild cabbage)</option>
+<option value="thj" >Tarenaya hassleriana (spider flower)</option>
+<option value="cpap" >Carica papaya (papaya)</option>
+<option value="cit" >Citrus sinensis (Valencia orange)</option>
+<option value="cic" >Citrus clementina (mandarin orange)</option>
+<option value="tcc" >Theobroma cacao (cacao)</option>
+<option value="gra" >Gossypium raimondii</option>
+<option value="ghi" >Gossypium hirsutum (upland cotton)</option>
+<option value="dzi" >Durio zibethinus (durian)</option>
+<option value="egr" >Eucalyptus grandis (rose gum)</option>
+<option value="gmx" >Glycine max (soybean)</option>
+<option value="pvu" >Phaseolus vulgaris (common bean)</option>
+<option value="vra" >Vigna radiata (mung bean)</option>
+<option value="var" >Vigna angularis (adzuki bean)</option>
+<option value="ccaj" >Cajanus cajan (pigeon pea)</option>
+<option value="mtr" >Medicago truncatula (barrel medic)</option>
+<option value="cam" >Cicer arietinum (chickpea)</option>
+<option value="adu" >Arachis duranensis</option>
+<option value="aip" >Arachis ipaensis</option>
+<option value="lja" >Lotus japonicus</option>
+<option value="lang" >Lupinus angustifolius (narrow-leaved blue lupine)</option>
+<option value="fve" >Fragaria vesca (woodland strawberry)</option>
+<option value="pper" >Prunus persica (peach)</option>
+<option value="pmum" >Prunus mume (Japanese apricot)</option>
+<option value="pavi" >Prunus avium (sweet cherry)</option>
+<option value="mdm" >Malus domestica (apple)</option>
+<option value="pxb" >Pyrus x bretschneideri (Chinese white pear)</option>
+<option value="zju" >Ziziphus jujuba (Chinese jujube)</option>
+<option value="csv" >Cucumis sativus (cucumber)</option>
+<option value="cmo" >Cucumis melo (muskmelon)</option>
+<option value="mcha" >Momordica charantia (bitter melon)</option>
+<option value="cmax" >Cucurbita maxima (winter squash)</option>
+<option value="cmos" >Cucurbita moschata (crookneck pumpkin)</option>
+<option value="rcu" >Ricinus communis (castor bean)</option>
+<option value="jcu" >Jatropha curcas</option>
+<option value="hbr" >Hevea brasiliensis (rubber tree)</option>
+<option value="pop" >Populus trichocarpa (black cottonwood)</option>
+<option value="jre" >Juglans regia (English walnut)</option>
+<option value="vvi" >Vitis vinifera (wine grape)</option>
+<option value="sly" >Solanum lycopersicum (tomato)</option>
+<option value="spen" >Solanum pennellii</option>
+<option value="sot" >Solanum tuberosum (potato)</option>
+<option value="cann" >Capsicum annuum</option>
+<option value="nta" >Nicotiana tabacum (common tobacco)</option>
+<option value="nsy" >Nicotiana sylvestris</option>
+<option value="nto" >Nicotiana tomentosiformis</option>
+<option value="ini" >Ipomoea nil (Japanese morning glory)</option>
+<option value="sind" >Sesamum indicum (sesame)</option>
+<option value="oeu" >Olea europaea var. sylvestris (wild olive)</option>
+<option value="han" >Helianthus annuus (common sunflower)</option>
+<option value="bvg" >Beta vulgaris (sugar beet)</option>
+<option value="soe" >Spinacia oleracea (spinach)</option>
+<option value="nnu" >Nelumbo nucifera (sacred lotus)</option>
+<option value="osa" >Oryza sativa japonica (Japanese rice) (RefSeq)</option>
+<option value="dosa" >Oryza sativa japonica (Japanese rice) (RAPDB)</option>
+<option value="obr" >Oryza brachyantha (malo sina)</option>
+<option value="bdi" >Brachypodium distachyon</option>
+<option value="ats" >Aegilops tauschii (wheat D)</option>
+<option value="sbi" >Sorghum bicolor (sorghum)</option>
+<option value="zma" >Zea mays (maize)</option>
+<option value="sita" >Setaria italica (foxtail millet)</option>
+<option value="pda" >Phoenix dactylifera (date palm)</option>
+<option value="egu" >Elaeis guineensis (African oil palm)</option>
+<option value="mus" >Musa acuminata (wild Malaysian banana)</option>
+<option value="dct" >Dendrobium officinale</option>
+<option value="aof" >Asparagus officinalis (garden asparagus)</option>
+<option value="atr" >Amborella trichopoda</option>
+<option value="smo" >Selaginella moellendorffii</option>
+<option value="ppp" >Physcomitrella patens subsp. patens</option>
+<option value="cre" >Chlamydomonas reinhardtii</option>
+<option value="vcn" >Volvox carteri f. nagariensis</option>
+<option value="mng" >Monoraphidium neglectum</option>
+<option value="olu" >Ostreococcus lucimarinus</option>
+<option value="ota" >Ostreococcus tauri</option>
+<option value="bpg" >Bathycoccus prasinos</option>
+<option value="mis" >Micromonas commoda</option>
+<option value="mpp" >Micromonas pusilla</option>
+<option value="cvr" >Chlorella variabilis</option>
+<option value="pti" >Phaeodactylum tricornutum</option>
+<option value="tps" >Thalassiosira pseudonana</option>
+<option value="pif" >Phytophthora infestans</option>
+<option value="psoj" >Phytophthora sojae</option>
+<option value="gtt" >Guillardia theta</option>
+<option value="snj" >Pseudomonas geniculata</option>
+<option value="avn" >Azotobacter vinelandii DJ</option>
+<option value="avl" >Azotobacter vinelandii CA</option>
+<option value="avd" >Azotobacter vinelandii CA6</option>
+<option value="acx" >Azotobacter chroococcum</option>
+<option value="pin" >Psychromonas ingrahamii</option>
+<option value="osg" >Oceanicoccus sagamiensis</option>
+<option value="hja" >Halioglobus japonicus</option>
+<option value="tig" >Thioploca ingrica</option>
+<option value="blep" >Beggiatoa leptomitiformis</option>
+<option value="alv" >Allochromatium vinosum</option>
+<option value="tvi" >Thiocystis violascens</option>
+<option value="tmb" >Thioflavicoccus mobilis</option>
+<option value="mpur" >Marichromatium purpuratum</option>
+<option value="tsy" >Candidatus Thiodictyon syntrophicum</option>
+<option value="tbn" >Thiolapillus brandeum</option>
+<option value="pspi" >Pseudohongiella spirulinae</option>
+<option value="bam" >Burkholderia ambifaria AMMD</option>
+<option value="bxe" >Paraburkholderia xenovorans LB400</option>
+<option value="bxb" >Paraburkholderia xenovorans LB400</option>
+<option value="rfr" >Rhodoferax ferrireducens</option>
+<option value="acid" >Acidovorax sp. NA2</option>
+<option value="acip" >Acidovorax sp. P4</option>
+<option value="acin" >Acidovorax sp. NA3</option>
+<option value="acis" >Acidovorax sp. P3</option>
+<option value="cbaa" >Comamonadaceae bacterium A1</option>
+<option value="cbab" >Comamonadaceae bacterium B1</option>
+<option value="mpt" >Methylibium petroleiphilum</option>
+<option value="rge" >Rubrivivax gelatinosus</option>
+<option value="rbn" >Rubrivivax benzoatilyticus</option>
+<option value="pkt" >Paucibacter sp. KCTC 42545</option>
+<option value="shd" >Sulfuritalea hydrogenivorans</option>
+<option value="metr" >Methyloversatilis sp. RAC08</option>
+<option value="tbd" >Thiobacillus denitrificans</option>
+<option value="slt" >Sideroxydans lithotrophicus</option>
+<option value="sdr" >Sulfuricella denitrificans</option>
+<option value="tmz" >Thauera sp. MZ1T</option>
+<option value="thk" >Thauera sp. K11</option>
+<option value="app" >Accumulibacter phosphatis</option>
+<option value="gsu" >Geobacter sulfurreducens PCA</option>
+<option value="gsk" >Geobacter sulfurreducens KN400</option>
+<option value="gme" >Geobacter metallireducens</option>
+<option value="gur" >Geobacter uraniireducens</option>
+<option value="glo" >Geobacter lovleyi</option>
+<option value="gbm" >Geobacter bemidjiensis</option>
+<option value="geo" >Geobacter daltonii FRC-32</option>
+<option value="gem" >Geobacter sp. M21</option>
+<option value="geb" >Geobacter sp. M18</option>
+<option value="gpi" >Geobacter pickeringii</option>
+<option value="gsb" >Geoalkalibacter subterraneus</option>
+<option value="pef" >Pelobacter sp. SFB93</option>
+<option value="des" >Desulfuromonas soudanensis</option>
+<option value="deu" >Desulfuromonas sp. DDH964</option>
+<option value="dpr" >Desulfobulbus propionicus</option>
+<option value="dml" >Desulfococcus multivorans</option>
+<option value="dal" >Desulfatibacillum alkenivorans</option>
+<option value="dto" >Desulfobacula toluolica</option>
+<option value="ade" >Anaeromyxobacter dehalogenans 2CP-C</option>
+<option value="acp" >Anaeromyxobacter dehalogenans 2CP-1</option>
+<option value="afw" >Anaeromyxobacter sp. Fw109-5</option>
+<option value="ank" >Anaeromyxobacter sp. K</option>
+<option value="scl" >Sorangium cellulosum So ce 56</option>
+<option value="ccro" >Chondromyces crocatus</option>
+<option value="llu" >Labilithrix luteola</option>
+<option value="mrm" >Minicystis rosea</option>
+<option value="hoh" >Haliangium ochraceum</option>
+<option value="sfu" >Syntrophobacter fumaroxidans</option>
+<option value="dbr" >Desulfarculus baarsii</option>
+<option value="dav" >Desulfurella acetivorans</option>
+<option value="bba" >Bdellovibrio bacteriovorus HD100</option>
+<option value="bbat" >Bdellovibrio bacteriovorus Tiberius</option>
+<option value="bbw" >Bdellovibrio bacteriovorus W</option>
+<option value="bbac" >Bdellovibrio bacteriovorus 109J</option>
+<option value="bex" >Bdellovibrio exovorus</option>
+<option value="bmx" >Halobacteriovorax marinus</option>
+<option value="bsto" >Bacteriovorax stolpii</option>
+<option value="rpr" >Rickettsia prowazekii Madrid E</option>
+<option value="rpo" >Rickettsia prowazekii BuV67-CWPP</option>
+<option value="rpw" >Rickettsia prowazekii Chernikova</option>
+<option value="rpz" >Rickettsia prowazekii Dachau</option>
+<option value="rpg" >Rickettsia prowazekii GvV257</option>
+<option value="rps" >Rickettsia prowazekii Katsinyian</option>
+<option value="rpv" >Rickettsia prowazekii RpGvF24</option>
+<option value="rpq" >Rickettsia prowazekii Rp22</option>
+<option value="rpl" >Rickettsia prowazekii Breinl</option>
+<option value="rpn" >Rickettsia prowazekii NMRC Madrid E</option>
+<option value="rty" >Rickettsia typhi Wilmington</option>
+<option value="rtt" >Rickettsia typhi TH1527</option>
+<option value="rtb" >Rickettsia typhi B9991CWPP</option>
+<option value="rcm" >Rickettsia canadensis McKiel</option>
+<option value="rcc" >Rickettsia canadensis CA410</option>
+<option value="rbe" >Rickettsia bellii RML369-C</option>
+<option value="rbo" >Rickettsia bellii OSU 85-389</option>
+<option value="rco" >Rickettsia conorii</option>
+<option value="rfe" >Rickettsia felis</option>
+<option value="rak" >Rickettsia akari</option>
+<option value="rri" >Rickettsia rickettsii Sheila Smith</option>
+<option value="rrj" >Rickettsia rickettsii Iowa</option>
+<option value="rra" >Rickettsia rickettsii Arizona</option>
+<option value="rrc" >Rickettsia rickettsii Colombia</option>
+<option value="rrh" >Rickettsia rickettsii Hauke</option>
+<option value="rrb" >Rickettsia rickettsii Brazil</option>
+<option value="rrn" >Rickettsia rickettsii Hino</option>
+<option value="rrp" >Rickettsia rickettsii Hlp#2</option>
+<option value="rrm" >Rickettsia rickettsii Morgan</option>
+<option value="rrr" >Rickettsia rickettsii R</option>
+<option value="rms" >Rickettsia massiliae MTU5</option>
+<option value="rmi" >Rickettsia massiliae AZT80</option>
+<option value="rpk" >Rickettsia peacockii</option>
+<option value="raf" >Rickettsia africae</option>
+<option value="rhe" >Rickettsia heilongjiangensis</option>
+<option value="rja" >Rickettsia japonica</option>
+<option value="rsv" >Rickettsia slovaca 13-B</option>
+<option value="rsw" >Rickettsia slovaca D-CWPP</option>
+<option value="rph" >Rickettsia philipii</option>
+<option value="rau" >Rickettsia australis</option>
+<option value="rmo" >Rickettsia montanensis</option>
+<option value="rpp" >Rickettsia parkeri</option>
+<option value="rre" >Rickettsia rhipicephali</option>
+<option value="ram" >Rickettsia amblyommatis GAT-30V</option>
+<option value="rab" >Rickettsia amblyommatis Ac37</option>
+<option value="rmc" >Rickettsia monacensis</option>
+<option value="ott" >Orientia tsutsugamushi Ikeda</option>
+<option value="wol" >Wolbachia wMel (Drosophila melanogaster)</option>
+<option value="wri" >Wolbachia wRi (Drosophila simulans)</option>
+<option value="wen" >Wolbachia wHa (Drosophila simulans)</option>
+<option value="wed" >Wolbachia wNo (Drosophila simulans)</option>
+<option value="wpi" >Wolbachia wPip (Culex quinquefasciatus)</option>
+<option value="wbm" >Wolbachia wBm (Brugia malayi)</option>
+<option value="woo" >Wolbachia wOo (Onchocerca ochengi)</option>
+<option value="wcl" >Wolbachia wCle (Cimex lectularius)</option>
+<option value="ama" >Anaplasma marginale St. Maries</option>
+<option value="amf" >Anaplasma marginale Florida</option>
+<option value="amp" >Anaplasma marginale Gypsy Plains</option>
+<option value="acn" >Anaplasma centrale</option>
+<option value="aph" >Anaplasma phagocytophilum HZ</option>
+<option value="apy" >Anaplasma phagocytophilum HZ2</option>
+<option value="apd" >Anaplasma phagocytophilum Dog2</option>
+<option value="apha" >Anaplasma phagocytophilum JM</option>
+<option value="eru" >Ehrlichia ruminantium Welgevonden (South Africa)</option>
+<option value="erw" >Ehrlichia ruminantium Welgevonden (France)</option>
+<option value="erg" >Ehrlichia ruminantium Gardel</option>
+<option value="ecn" >Ehrlichia canis</option>
+<option value="ech" >Ehrlichia chaffeensis Arkansas</option>
+<option value="echa" >Ehrlichia chaffeensis Heartland</option>
+<option value="echj" >Ehrlichia chaffeensis Jax</option>
+<option value="echl" >Ehrlichia chaffeensis Liberty</option>
+<option value="echs" >Ehrlichia chaffeensis Osceola</option>
+<option value="echv" >Ehrlichia chaffeensis Saint Vincent</option>
+<option value="echw" >Ehrlichia chaffeensis Wakulla</option>
+<option value="echp" >Ehrlichia chaffeensis West Paces</option>
+<option value="ehh" >Ehrlichia sp. HF</option>
+<option value="nse" >Neorickettsia sennetsu</option>
+<option value="nri" >Neorickettsia risticii</option>
+<option value="nhm" >Neorickettsia helminthoeca</option>
+<option value="mmn" >Candidatus Midichloria mitochondrii</option>
+<option value="rbt" >Rickettsiales bacterium Ac37b</option>
+<option value="mlo" >Mesorhizobium japonicum MAFF 303099</option>
+<option value="mln" >Mesorhizobium loti NZP2037</option>
+<option value="mci" >Mesorhizobium ciceri</option>
+<option value="mop" >Mesorhizobium opportunistum</option>
+<option value="mam" >Mesorhizobium australicum</option>
+<option value="mamo" >Mesorhizobium amorphae</option>
+<option value="meso" >Mesorhizobium sp. B7</option>
+<option value="mesw" >Mesorhizobium sp. WSM1497</option>
+<option value="mes" >Chelativorans sp. BNC1</option>
+<option value="hoe" >Hoeflea sp. IMCC20628</option>
+<option value="aak" >Aminobacter aminovorans</option>
+<option value="pht" >Phyllobacterium sp. Tri-48</option>
+<option value="pla" >Parvibaculum lavamentivorans</option>
+<option value="sme" >Sinorhizobium meliloti 1021</option>
+<option value="smk" >Sinorhizobium meliloti AK83</option>
+<option value="smq" >Sinorhizobium meliloti BL225C</option>
+<option value="smx" >Sinorhizobium meliloti SM11</option>
+<option value="smi" >Sinorhizobium meliloti Rm41</option>
+<option value="smeg" >Sinorhizobium meliloti GR4</option>
+<option value="smel" >Sinorhizobium meliloti 2011</option>
+<option value="smer" >Sinorhizobium meliloti RMO17</option>
+<option value="smd" >Sinorhizobium medicae</option>
+<option value="rhi" >Sinorhizobium fredii NGR234</option>
+<option value="sfh" >Sinorhizobium fredii HH103</option>
+<option value="sfd" >Sinorhizobium fredii USDA 257</option>
+<option value="six" >Sinorhizobium sp. RAC02</option>
+<option value="same" >Sinorhizobium americanum</option>
+<option value="sino" >Sinorhizobium sp. CCBAU 05631</option>
+<option value="ead" >Ensifer adhaerens OV14</option>
+<option value="eah" >Ensifer adhaerens Casida A</option>
+<option value="esj" >Ensifer sojae</option>
+<option value="atu" >Agrobacterium fabrum</option>
+<option value="ara" >Agrobacterium radiobacter</option>
+<option value="atf" >Agrobacterium tumefaciens Ach5</option>
+<option value="ata" >Agrobacterium tumefaciens S33</option>
+<option value="avi" >Agrobacterium vitis</option>
+<option value="agr" >Agrobacterium sp. H13-3</option>
+<option value="agc" >Agrobacterium sp. RAC06</option>
+<option value="aro" >Agrobacterium rhizogenes</option>
+<option value="ret" >Rhizobium etli CFN 42</option>
+<option value="rec" >Rhizobium etli CIAT 652</option>
+<option value="rel" >Rhizobium etli bv. mimosae Mim1</option>
+<option value="rei" >Rhizobium etli bv. mimosae IE4771</option>
+<option value="rep" >Rhizobium etli bv. phaseoli IE4803</option>
+<option value="rle" >Rhizobium leguminosarum bv. viciae 3841</option>
+<option value="rlt" >Rhizobium leguminosarum bv. trifolii WSM2304</option>
+<option value="rlg" >Rhizobium leguminosarum bv. trifolii WSM1325</option>
+<option value="rlb" >Rhizobium leguminosarum bv. trifolii WSM1689</option>
+<option value="rlu" >Rhizobium leguminosarum bv. trifolii CB782</option>
+<option value="rtr" >Rhizobium tropici</option>
+<option value="rir" >Rhizobium sp. IRBG74</option>
+<option value="rhl" >Rhizobium favelukesii</option>
+<option value="rga" >Rhizobium gallicum</option>
+<option value="rhn" >Rhizobium sp. N1341</option>
+<option value="rpha" >Rhizobium phaseoli</option>
+<option value="rht" >Rhizobium sp. NT-26</option>
+<option value="rhx" >Rhizobium sp. N731</option>
+<option value="ngl" >Neorhizobium galegae bv. officinalis bv. officinalis HAMBI 1141</option>
+<option value="ngg" >Neorhizobium galegae bv. orientalis HAMBI 540</option>
+<option value="shz" >Shinella sp. HZN7</option>
+<option value="bme" >Brucella melitensis bv. 1 16M</option>
+<option value="bmel" >Brucella melitensis bv. 1 16M</option>
+<option value="bmi" >Brucella melitensis ATCC 23457</option>
+<option value="bmz" >Brucella melitensis M28</option>
+<option value="bmg" >Brucella melitensis M5-90</option>
+<option value="bmw" >Brucella melitensis NI</option>
+<option value="bmee" >Brucella melitensis bv. 3 Ether</option>
+<option value="bmf" >Brucella abortus 2308</option>
+<option value="bmb" >Brucella abortus bv. 1 9-941</option>
+<option value="bmc" >Brucella abortus S19</option>
+<option value="baa" >Brucella abortus A13334</option>
+<option value="babo" >Brucella abortus bv. 2 86/8/59</option>
+<option value="babr" >Brucella abortus bv. 6 870</option>
+<option value="babt" >Brucella abortus 63 75</option>
+<option value="babb" >Brucella abortus BDW</option>
+<option value="babu" >Brucella abortus bv. 9 C68</option>
+<option value="babs" >Brucella abortus BER</option>
+<option value="babc" >Brucella abortus NCTC 10505</option>
+<option value="bms" >Brucella suis 1330</option>
+<option value="bsi" >Brucella suis 1330</option>
+<option value="bsf" >Brucella suis bv. 1</option>
+<option value="bsui" >Brucella suis bv. 2 Bs143CITA</option>
+<option value="bsup" >Brucella suis bv. 2 PT09143</option>
+<option value="bsuv" >Brucella suis bv. 2 PT09172</option>
+<option value="bsuc" >Brucella suis bv. 2 Bs364CITA</option>
+<option value="bmt" >Brucella suis ATCC 23445</option>
+<option value="bsz" >Brucella suis bv. 3</option>
+<option value="bsv" >Brucella suis VBI22</option>
+<option value="bsw" >Brucella suis ZW043</option>
+<option value="bsg" >Brucella suis ZW046</option>
+<option value="bov" >Brucella ovis</option>
+<option value="bcs" >Brucella canis ATCC 23365</option>
+<option value="bsk" >Brucella canis HSK A52141</option>
+<option value="bol" >Brucella canis Oliveri</option>
+<option value="bcar" >Brucella canis RM6/66</option>
+<option value="bcas" >Brucella canis SVA13</option>
+<option value="bmr" >Brucella microti</option>
+<option value="bpp" >Brucella pinnipedialis B2/94</option>
+<option value="bpv" >Brucella pinnipedialis 6/566</option>
+<option value="bcet" >Brucella ceti TE10759-12</option>
+<option value="bvl" >Brucella vulpis</option>
+<option value="oan" >Ochrobactrum anthropi ATCC 49188</option>
+<option value="oah" >Ochrobactrum anthropi OAB</option>
+<option value="ops" >Ochrobactrum pseudogrignonense</option>
+<option value="och" >Ochrobactrum sp. A44</option>
+<option value="bja" >Bradyrhizobium diazoefficiens USDA 110</option>
+<option value="bju" >Bradyrhizobium japonicum USDA 6</option>
+<option value="bjp" >Bradyrhizobium japonicum E109</option>
+<option value="bra" >Bradyrhizobium sp. ORS 278</option>
+<option value="bbt" >Bradyrhizobium sp. BTAi1</option>
+<option value="brs" >Bradyrhizobium sp. S23321</option>
+<option value="aol" >Bradyrhizobium oligotrophicum</option>
+<option value="brc" >Bradyrhizobium sp. CCGE-LA001</option>
+<option value="brad" >Bradyrhizobium sp. BF49</option>
+<option value="bic" >Bradyrhizobium icense</option>
+<option value="bro" >Bradyrhizobium sp. ORS 285</option>
+<option value="rpa" >Rhodopseudomonas palustris CGA009</option>
+<option value="rpb" >Rhodopseudomonas palustris HaA2</option>
+<option value="rpc" >Rhodopseudomonas palustris BisB18</option>
+<option value="rpd" >Rhodopseudomonas palustris BisB5</option>
+<option value="rpe" >Rhodopseudomonas palustris BisA53</option>
+<option value="rpt" >Rhodopseudomonas palustris TIE-1</option>
+<option value="rpx" >Rhodopseudomonas palustris DX-1</option>
+<option value="nwi" >Nitrobacter winogradskyi</option>
+<option value="nha" >Nitrobacter hamburgensis</option>
+<option value="oca" >Oligotropha carboxidovorans OM5 (Mississippi)</option>
+<option value="ocg" >Oligotropha carboxidovorans OM5 (Goettingen)</option>
+<option value="oco" >Oligotropha carboxidovorans OM4</option>
+<option value="bop" >Bosea sp. PAMC 26642</option>
+<option value="bos" >Bosea sp. RAC05</option>
+<option value="bvv" >Bosea vaviloviae</option>
+<option value="bhe" >Bartonella henselae Houston-1</option>
+<option value="bhn" >Bartonella henselae BM1374163</option>
+<option value="bhs" >Bartonella henselae BM1374165</option>
+<option value="bqu" >Bartonella quintana Toulouse</option>
+<option value="bqr" >Bartonella quintana RM-11</option>
+<option value="bbk" >Bartonella bacilliformis</option>
+<option value="btr" >Bartonella tribocorum CIP 105476</option>
+<option value="btx" >Bartonella tribocorum BM1374166</option>
+<option value="bgr" >Bartonella grahamii</option>
+<option value="bcd" >Bartonella clarridgeiae</option>
+<option value="baus" >Bartonella australis</option>
+<option value="bvn" >Bartonella vinsonii</option>
+<option value="banc" >Bartonella ancashensis</option>
+<option value="bapi" >Bartonella apis</option>
+<option value="bart" >Bartonella sp. JB15</option>
+<option value="bara" >Bartonella sp. A1379B</option>
+<option value="barw" >Bartonella sp. WD16.2</option>
+<option value="xau" >Xanthobacter autotrophicus</option>
+<option value="azc" >Azorhizobium caulinodans</option>
+<option value="sno" >Starkeya novella</option>
+<option value="mex" >Methylobacterium extorquens PA1</option>
+<option value="mea" >Methylobacterium extorquens AM1</option>
+<option value="mdi" >Methylobacterium extorquens DM4</option>
+<option value="mch" >Methylobacterium extorquens CM4</option>
+<option value="mrd" >Methylobacterium radiotolerans</option>
+<option value="met" >Methylobacterium sp. 4-46</option>
+<option value="mpo" >Methylobacterium populi</option>
+<option value="mno" >Methylobacterium nodulans</option>
+<option value="mor" >Methylobacterium oryzae</option>
+<option value="meta" >Methylobacterium sp. AMS5</option>
+<option value="maqu" >Methylobacterium aquaticum</option>
+<option value="mphy" >Methylobacterium phyllosphaerae</option>
+<option value="mza" >Methylobacterium zatmanii</option>
+<option value="mee" >Methylobacterium sp. PR1016A</option>
+<option value="moc" >Microvirga ossetica</option>
+<option value="bid" >Beijerinckia indica</option>
+<option value="msl" >Methylocella silvestris</option>
+<option value="chel" >Chelatococcus sp. CO-6</option>
+<option value="cdq" >Chelatococcus daeguensis</option>
+<option value="hmc" >Hyphomicrobium sp. MC1</option>
+<option value="rva" >Rhodomicrobium vannielii</option>
+<option value="phl" >Pelagibacterium halotolerans</option>
+<option value="fil" >Filomicrobium sp. W</option>
+<option value="fiy" >Filomicrobium sp. Y</option>
+<option value="bvr" >Blastochloris viridis</option>
+<option value="rhz" >Rhodoplanes sp. Z2-YC6860</option>
+<option value="msc" >Methylocystis sp. SC2</option>
+<option value="mbry" >Methylocystis bryophila</option>
+<option value="mtw" >Methylosinus trichosporium</option>
+<option value="mey" >Martelella endophytica</option>
+<option value="maad" >Martelella sp. AD-3</option>
+<option value="mmed" >Martelella mediterranea</option>
+<option value="aua" >Aureimonas sp. AU20</option>
+<option value="thd" >Candidatus Tokpelaia hoelldoblerii</option>
+<option value="psin" >Pseudorhodoplanes sinuspersici</option>
+<option value="hdi" >Hartmannibacter diazotrophicus</option>
+<option value="rbm" >Rhizobiales bacterium NRL2</option>
+<option value="ccr" >Caulobacter crescentus CB15</option>
+<option value="ccs" >Caulobacter crescentus NA1000</option>
+<option value="cak" >Caulobacter sp. K31</option>
+<option value="cse" >Caulobacter segnis</option>
+<option value="chq" >Caulobacter henricii</option>
+<option value="cmb" >Caulobacter mirabilis</option>
+<option value="pzu" >Phenylobacterium zucineum</option>
+<option value="bsb" >Brevundimonas subvibrioides</option>
+<option value="brd" >Brevundimonas sp. DS20</option>
+<option value="bne" >Brevundimonas naejangsanensis</option>
+<option value="brg" >Brevundimonas sp. GW460-12-10-14-LB2</option>
+<option value="brl" >Brevundimonas sp. LM2</option>
+<option value="bvc" >Brevundimonas vesicularis</option>
+<option value="aex" >Asticcacaulis excentricus</option>
+<option value="cbot" >Caulobacteraceae bacterium OTSz_A_272</option>
+<option value="sil" >Ruegeria pomeroyi</option>
+<option value="sit" >Ruegeria sp. TM1040</option>
+<option value="rmb" >Ruegeria mobilis</option>
+<option value="rsp" >Rhodobacter sphaeroides 2.4.1</option>
+<option value="rsh" >Rhodobacter sphaeroides ATCC 17029</option>
+<option value="rsq" >Rhodobacter sphaeroides ATCC 17025</option>
+<option value="rsk" >Rhodobacter sphaeroides KD131</option>
+<option value="rcp" >Rhodobacter capsulatus</option>
+<option value="rhp" >Rhodobacter sp. LPB0142</option>
+<option value="jan" >Jannaschia sp. CCS1</option>
+<option value="rde" >Roseobacter denitrificans</option>
+<option value="rli" >Roseobacter litoralis</option>
+<option value="pde" >Paracoccus denitrificans</option>
+<option value="pami" >Paracoccus aminophilus</option>
+<option value="pye" >Paracoccus yeei</option>
+<option value="pcon" >Paracoccus contaminans</option>
+<option value="pzh" >Paracoccus zhejiangensis</option>
+<option value="paro" >Paracoccus sp. BM15</option>
+<option value="paru" >Paracoccus sp. CBA4604</option>
+<option value="dsh" >Dinoroseobacter shibae</option>
+<option value="kvu" >Ketogulonicigenium vulgare Y25</option>
+<option value="kvl" >Ketogulonicigenium vulgare WSH-001</option>
+<option value="kro" >Ketogulonicigenium robustum</option>
+<option value="psf" >Pseudovibrio sp. FO-BEG1</option>
+<option value="pga" >Phaeobacter inhibens DSM 17395</option>
+<option value="pgl" >Phaeobacter inhibens 2.10</option>
+<option value="pgd" >Phaeobacter gallaeciensis DSM 26640</option>
+<option value="php" >Phaeobacter porticola</option>
+<option value="ppic" >Phaeobacter piscinae</option>
+<option value="oat" >Octadecabacter antarcticus</option>
+<option value="oar" >Octadecabacter arcticus</option>
+<option value="otm" >Octadecabacter temperatus</option>
+<option value="lmd" >Leisingera methylohalidivorans</option>
+<option value="red" >Roseibacterium elongatum</option>
+<option value="ptp" >Planktomarina temperata</option>
+<option value="cid" >Celeribacter indicus</option>
+<option value="cmar" >Celeribacter marinus</option>
+<option value="ceh" >Celeribacter ethanolicus</option>
+<option value="cmag" >Celeribacter manganoxidans</option>
+<option value="malg" >Marinovum algicola</option>
+<option value="con" >Confluentimicrobium sp. EMB200-NS6</option>
+<option value="rsu" >Rhodovulum sulfidophilum</option>
+<option value="rhm" >Rhodovulum sp. MB263</option>
+<option value="rhc" >Rhodovulum sp. P5</option>
+<option value="pphr" >Pannonibacter phragmitetus</option>
+<option value="hat" >Halocynthiibacter arcticus</option>
+<option value="lap" >Labrenzia sp. CP4</option>
+<option value="lagg" >Labrenzia aggregata</option>
+<option value="labr" >Labrenzia sp. VG12</option>
+<option value="daa" >Defluviimonas alba</option>
+<option value="yan" >Yangia sp. CCB-MM3</option>
+<option value="spse" >Sulfitobacter pseudonitzschiae</option>
+<option value="don" >Donghicola sp. JLT3646</option>
+<option value="tpro" >Thiobacimonas profunda</option>
+<option value="tom" >Tateyamaria omphalii</option>
+<option value="paby" >Pelagibaca abyssi</option>
+<option value="thw" >Thioclava nitratireducens</option>
+<option value="rmm" >Roseovarius mucosus</option>
+<option value="lvs" >Loktanella vestfoldensis</option>
+<option value="aht" >Antarctobacter heliothermus</option>
+<option value="rbg" >Rhodobaca barguzinensis</option>
+<option value="sagu" >Sagittula sp. P11</option>
+<option value="mmr" >Maricaulis maris</option>
+<option value="hne" >Hyphomonas neptunium</option>
+<option value="hba" >Hirschia baltica</option>
+<option value="hbc" >Hyphomonadaceae bacterium UKL13-1</option>
+<option value="nar" >Novosphingobium aromaticivorans</option>
+<option value="npp" >Novosphingobium sp. PP1Y</option>
+<option value="npn" >Novosphingobium pentaromativorans</option>
+<option value="nre" >Novosphingobium resinovorum</option>
+<option value="sal" >Sphingopyxis alaskensis</option>
+<option value="sphk" >Sphingopyxis fribergensis</option>
+<option value="sphp" >Sphingopyxis sp. 113P3</option>
+<option value="smag" >Sphingopyxis macrogoltabida EY-1</option>
+<option value="smaz" >Sphingopyxis macrogoltabida 203</option>
+<option value="ster" >Sphingopyxis terrae</option>
+<option value="sgi" >Sphingopyxis granuli</option>
+<option value="sphl" >Sphingopyxis sp. LPB0140</option>
+<option value="sphq" >Sphingopyxis sp. QXT-31</option>
+<option value="swi" >Sphingomonas wittichii</option>
+<option value="sphm" >Sphingomonas sp. MM-1</option>
+<option value="stax" >Sphingomonas taxi</option>
+<option value="sphi" >Sphingomonas sp. WHSC-8</option>
+<option value="ssan" >Sphingomonas sanxanigenens</option>
+<option value="smy" >Sphingomonas melonis</option>
+<option value="span" >Sphingomonas panacis</option>
+<option value="skr" >Sphingomonas koreensis</option>
+<option value="splm" >Sphingomonas sp. LM7</option>
+<option value="splk" >Sphingomonas sp. LK11</option>
+<option value="sphj" >Sphingomonas sp. JJ-A5</option>
+<option value="spkc" >Sphingomonas sp. KC8</option>
+<option value="sphd" >Sphingomonas sp. DC-6</option>
+<option value="sjp" >Sphingobium japonicum</option>
+<option value="sch" >Sphingobium chlorophenolicum</option>
+<option value="ssy" >Sphingobium sp. SYK-6</option>
+<option value="syb" >Sphingobium sp. YBL2</option>
+<option value="sbd" >Sphingobium baderi</option>
+<option value="spmi" >Sphingobium sp. MI1205</option>
+<option value="sphb" >Sphingobium sp. EP60837</option>
+<option value="sphr" >Sphingobium sp. RAC03</option>
+<option value="sinb" >Sphingobium indicum</option>
+<option value="spht" >Sphingobium sp. TKS</option>
+<option value="shyd" >Sphingobium hydrophobicum</option>
+<option value="sya" >Sphingobium yanoikuyae</option>
+<option value="sclo" >Sphingobium cloacae</option>
+<option value="cij" >Citromicrobium sp. JL477</option>
+<option value="sphg" >Sphingorhabdus sp. M41</option>
+<option value="sfla" >Sphingorhabdus flavimaris</option>
+<option value="sphy" >Sphingorhabdus sp. YGSMI21</option>
+<option value="blas" >Blastomonas sp. RAC04</option>
+<option value="rdi" >Rhizorhabdus dicambivorans</option>
+<option value="eli" >Erythrobacter litoralis HTCC2594</option>
+<option value="elq" >Erythrobacter litoralis DSM 8509</option>
+<option value="ery" >Erythrobacter sp. s21-N3</option>
+<option value="egn" >Erythrobacter gangjinensis</option>
+<option value="efv" >Erythrobacter flavus</option>
+<option value="aay" >Altererythrobacter atlanticus</option>
+<option value="amx" >Altererythrobacter marensis</option>
+<option value="aep" >Altererythrobacter epoxidivorans</option>
+<option value="anh" >Altererythrobacter namhicola</option>
+<option value="ado" >Altererythrobacter dongtanensis</option>
+<option value="cna" >Croceicoccus naphthovorans</option>
+<option value="cman" >Croceicoccus marinus</option>
+<option value="pns" >Porphyrobacter neustonensis</option>
+<option value="porl" >Porphyrobacter sp. LM 6</option>
+<option value="acr" >Acidiphilium cryptum</option>
+<option value="amv" >Acidiphilium multivorum</option>
+<option value="gdi" >Gluconacetobacter diazotrophicus PAl 5 (Brazil)</option>
+<option value="gdj" >Gluconacetobacter diazotrophicus PA1 5 (JGI)</option>
+<option value="gxl" >Komagataeibacter xylinus</option>
+<option value="apt" >Acetobacter pasteurianus IFO 3283-01</option>
+<option value="apw" >Acetobacter pasteurianus IFO 3283-01-42C</option>
+<option value="apf" >Acetobacter pasteurianus IFO 3283-03</option>
+<option value="apu" >Acetobacter pasteurianus IFO 3283-07</option>
+<option value="apg" >Acetobacter pasteurianus IFO 3283-12</option>
+<option value="apq" >Acetobacter pasteurianus IFO 3283-22</option>
+<option value="apx" >Acetobacter pasteurianus IFO 3283-26</option>
+<option value="apz" >Acetobacter pasteurianus IFO 3283-32</option>
+<option value="apk" >Acetobacter pasteurianus 386B</option>
+<option value="asz" >Acetobacter senegalensis</option>
+<option value="asv" >Acetobacter sp. SLV-7</option>
+<option value="aace" >Acetobacter aceti</option>
+<option value="aper" >Acetobacter persici</option>
+<option value="apom" >Acetobacter pomorum</option>
+<option value="ato" >Acetobacter tropicalis</option>
+<option value="rgi" >Roseomonas gilardii</option>
+<option value="ros" >Roseomonas sp. FDAARGOS_362</option>
+<option value="rru" >Rhodospirillum rubrum ATCC 11170</option>
+<option value="rrf" >Rhodospirillum rubrum F11</option>
+<option value="rce" >Rhodospirillum centenum</option>
+<option value="rpm" >Pararhodospirillum photometricum</option>
+<option value="mag" >Magnetospirillum magneticum</option>
+<option value="mgy" >Magnetospirillum gryphiswaldense</option>
+<option value="magx" >Magnetospirillum sp. XM-1</option>
+<option value="magn" >Magnetospirillum sp. ME-1</option>
+<option value="azl" >Azospirillum sp. B510</option>
+<option value="ali" >Azospirillum lipoferum</option>
+<option value="abs" >Azospirillum brasilense Sp245</option>
+<option value="abq" >Azospirillum brasilense Az39</option>
+<option value="abf" >Azospirillum brasilense Sp7</option>
+<option value="ati" >Azospirillum thiophilum</option>
+<option value="ahu" >Azospirillum humicireducens</option>
+<option value="tmo" >Tistrella mobilis</option>
+<option value="thal" >Candidatus Endolissoclinum faulkneri L2</option>
+<option value="efk" >Candidatus Endolissoclinum faulkneri L5</option>
+<option value="txi" >Thalassospira xiamenensis</option>
+<option value="thac" >Thalassospira sp. CSC3H3</option>
+<option value="magq" >Magnetospira sp. QH-2</option>
+<option value="hjo" >Haematospirillum jordaniae</option>
+<option value="nao" >Nitrospirillum amazonense</option>
+<option value="ncb" >Niveispirillum cyanobacteriorum</option>
+<option value="pbr" >Parvularcula bermudensis</option>
+<option value="mgm" >Magnetococcus marinus</option>
+<option value="mai" >Micavibrio aeruginosavorus ARL-13</option>
+<option value="man" >Micavibrio aeruginosavorus EPB</option>
+<option value="pgv" >Polymorphum gilvum</option>
+<option value="pub" >Candidatus Pelagibacter ubique</option>
+<option value="pel" >Candidatus Pelagibacter sp. IMCC9063</option>
+<option value="apm" >Alpha proteobacterium HIMB5</option>
+<option value="apb" >Candidatus Puniceispirillum marinum</option>
+<option value="maes" >Mariprofundus aestuarium</option>
+<option value="mfn" >Mariprofundus ferrinatatus</option>
+<option value="lpil" >Limnochorda pilosa</option>
+<option value="abao" >Anaerolineaceae bacterium oral taxon 439</option>
+<option value="cap" >Caldilinea aerophila</option>
+<option value="ote" >Opitutus terrae</option>
+<option value="obg" >Lacunisphaera limnophila</option>
+<option value="obt" >Opitutaceae bacterium TAV5</option>
+<option value="amu" >Akkermansia muciniphila</option>
+<option value="agl" >Akkermansia glycaniphila</option>
+<option value="vba" >Verrucomicrobia bacterium IMCC26134</option>
+<option value="vbl" >Kiritimatiella glycovorans</option>
+<option value="ssm" >Sediminispirochaeta smaragdinae</option>
+<option value="sta" >Spirochaeta thermophila DSM 6192</option>
+<option value="stq" >Spirochaeta thermophila DSM 6578</option>
+<option value="sfc" >Spirochaeta africana</option>
+<option value="sbu" >Sphaerochaeta globosa</option>
+<option value="sgp" >Sphaerochaeta pleomorpha</option>
+<option value="slr" >Salinispira pacifica</option>
+<option value="bhy" >Brachyspira hyodysenteriae WA1</option>
+<option value="bhd" >Brachyspira hyodysenteriae ATCC 27164</option>
+<option value="bpo" >Brachyspira pilosicoli 95/1000</option>
+<option value="bpj" >Brachyspira pilosicoli B2904</option>
+<option value="bpw" >Brachyspira pilosicoli WesB</option>
+<option value="bip" >Brachyspira intermedia</option>
+<option value="sus" >Candidatus Solibacter usitatus</option>
+<option value="ctm" >Chloracidobacterium thermophilum</option>
+<option value="abac" >Luteitalea pratensis</option>
+<option value="gph" >Gemmatimonas phototrophica</option>
+<option value="gba" >Gemmatirosa kalamazoonesis</option>
+<option value="bth" >Bacteroides thetaiotaomicron VPI-5482</option>
+<option value="btho" >Bacteroides thetaiotaomicron 7330</option>
+<option value="bfr" >Bacteroides fragilis YCH46</option>
+<option value="bfs" >Bacteroides fragilis NCTC9343</option>
+<option value="bfg" >Bacteroides fragilis 638R</option>
+<option value="bfb" >Bacteroides fragilis BOB25</option>
+<option value="bvu" >Bacteroides vulgatus</option>
+<option value="bhl" >Bacteroides helcogenes</option>
+<option value="bsa" >Bacteroides salanitronis</option>
+<option value="bxy" >Bacteroides xylanisolvens</option>
+<option value="bdo" >Bacteroides dorei HS1_L_1_B_010</option>
+<option value="bdh" >Bacteroides dorei HS1_L_3_B_079</option>
+<option value="boa" >Bacteroides ovatus</option>
+<option value="bcel" >Bacteroides cellulosilyticus</option>
+<option value="bcac" >Bacteroides caccae</option>
+<option value="bcae" >Bacteroides caecimuris</option>
+<option value="pgi" >Porphyromonas gingivalis W83</option>
+<option value="pgn" >Porphyromonas gingivalis ATCC 33277</option>
+<option value="pgt" >Porphyromonas gingivalis TDC60</option>
+<option value="pah" >Porphyromonas asaccharolytica</option>
+<option value="pbt" >Fermentimonas caenicola</option>
+<option value="pmuc" >Petrimonas mucosa</option>
+<option value="pet" >Petrimonas sp. IBARAKI</option>
+<option value="ppn" >Paludibacter propionicigenes</option>
+<option value="pdi" >Parabacteroides distasonis</option>
+<option value="pary" >Parabacteroides sp. YL27</option>
+<option value="parc" >Parabacteroides sp. CT06</option>
+<option value="bvs" >Barnesiella viscericola</option>
+<option value="psac" >Proteiniphilum saccharofermentans</option>
+<option value="aps" >Candidatus Azobacteroides pseudotrichonymphae (Coptotermes formosanus)</option>
+<option value="pmz" >Prevotella melaninogenica</option>
+<option value="pdn" >Prevotella denticola</option>
+<option value="pit" >Prevotella intermedia</option>
+<option value="pdt" >Prevotella dentalis</option>
+<option value="pro" >Prevotella sp. oral taxon 299</option>
+<option value="pfus" >Prevotella fusca</option>
+<option value="peo" >Prevotella enoeca</option>
+<option value="pje" >Prevotella jejuni</option>
+<option value="afd" >Alistipes finegoldii</option>
+<option value="ash" >Alistipes shahii</option>
+<option value="rbc" >Mucinivorans hirudinis</option>
+<option value="dori" >Draconibacterium orientale</option>
+<option value="blq" >Salinivirga cyanobacteriivorans</option>
+<option value="hhy" >Haliscomenobacter hydrossis</option>
+<option value="che" >Cardinium endosymbiont cEper1 (Encarsia pergandiella)</option>
+<option value="rbi" >Robiginitalea biformata</option>
+<option value="fbc" >Maribacter sp. HTCC2170</option>
+<option value="mrs" >Muricauda ruestringensis</option>
+<option value="orh" >Ornithobacterium rhinotracheale DSM 15997</option>
+<option value="ori" >Ornithobacterium rhinotracheale ORT-UMN 88</option>
+<option value="lut" >Lutibacter profundi</option>
+<option value="seon" >Seonamhaeicola sp. S2-3</option>
+<option value="fek" >Flavivirga eckloniae</option>
+<option value="ial" >Ignavibacterium album</option>
+<option value="mro" >Melioribacter roseus</option>
+<option value="ttk" >Thermosulfidibacter takaii</option>
+<option value="din" >Desulfurispirillum indicum</option>
+<option value="ddf" >Deferribacter desulfuricans</option>
+<option value="dap" >Denitrovibrio acetiphilus</option>
+<option value="cni" >Calditerrivibrio nitroreducens</option>
+<option value="fsi" >Flexistipes sinusarabici</option>
+<option value="caby" >Caldithrix abyssi</option>
+
+</select>
+<input type="submit" value="Go">
+</div>
+
+<table cellpadding="10">
+ <tr>
+  <td><img src="/tmp/pathway_thumbnail/ko_M00169.png?1521114552" usemap="#module" border="0" alt="MODULE IMAGE"></td>
+  
+  <td><img src="/tmp/pathway_thumbnail/M00169_reaction.png?1521114552" usemap="#reaction" border="0" alt="MODULE-REACTION IMAGE"></td>
+  
+ </tr>
+</table>
+<map id="module" name="module">
+<area shape="rect" id="node1_0" href="http://www.kegg.jp/dbget-bin/www_bget?K00029" title="K00029 (E1.1.1.40)" alt="" coords="17,19,90,41"/>
+<area shape="rect" id="node2_1" href="http://www.kegg.jp/dbget-bin/www_bget?K01006" title="K01006 (ppdK)" alt="" coords="17,77,90,100"/>
+</map>
+
+<map id="reaction" name="reaction">
+<area shape="poly" id="node1" href="/dbget-bin/www_bget?C00149" title="C00149 ((S)&#45;Malate)" alt="" coords="130,29,129,22,123,15,115,10,105,7,93,5,82,7,72,10,63,15,58,22,56,29,58,37,63,43,72,49,82,52,93,53,105,52,115,49,123,43,129,37" onmouseover="popupTimer(&quot;C00149&quot;, &quot;C00149 ((S)&#45;Malate)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node2" href="/dbget-bin/www_bget?R00216" title="R00216" alt="" coords="55,83,132,105"/>
+<area shape="poly" id="node3" href="/dbget-bin/www_bget?C00022" title="C00022 (Pyruvate)" alt="" coords="81,159,79,151,74,145,66,139,55,136,44,135,33,136,22,139,14,145,9,151,7,159,9,166,14,173,22,178,33,181,44,183,55,181,66,178,74,173,79,166" onmouseover="popupTimer(&quot;C00022&quot;, &quot;C00022 (Pyruvate)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="poly" id="node4" href="/dbget-bin/www_bget?C00011" title="C00011 (CO2)" alt="" coords="180,159,178,151,173,145,164,139,154,136,143,135,131,136,121,139,113,145,107,151,106,159,107,166,113,173,121,178,131,181,143,183,154,181,164,178,173,173,178,166" onmouseover="popupTimer(&quot;C00011&quot;, &quot;C00011 (CO2)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node5" href="/dbget-bin/www_bget?R00206" title="R00206" alt="" coords="5,212,83,235"/>
+<area shape="poly" id="node6" href="/dbget-bin/www_bget?C00074" title="C00074 (Phosphoenolpyruvate)" alt="" coords="81,288,79,281,74,274,66,269,55,265,44,264,33,265,22,269,14,274,9,281,7,288,9,295,14,302,22,307,33,311,44,312,55,311,66,307,74,302,79,295" onmouseover="popupTimer(&quot;C00074&quot;, &quot;C00074 (Phosphoenolpyruvate)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+</map>
+</div>
+
+</form>
+<form name="taxonomy" method="post" action="/kegg-bin/get_htext">
+ <input type="hidden" name="htext" value="br08601.keg">
+ <input type="hidden" name="option" value="-a">
+ <input type="hidden" name="query" value="ath aly crb csat eus brp bna boe thj cpap cit cic tcc gra ghi dzi egr gmx pvu vra var ccaj mtr cam adu aip lja lang fve pper pmum pavi mdm pxb zju csv cmo mcha cmax cmos rcu jcu hbr pop jre vvi sly spen sot cann nta nsy nto ini sind oeu han bvg soe nnu osa dosa obr bdi ats sbi zma sita pda egu mus dct aof atr smo ppp cre vcn mng olu ota bpg mis mpp cvr pti tps pif psoj gtt snj avn avl avd acx pin osg hja tig blep alv tvi tmb mpur tsy tbn pspi bam bxe bxb rfr acid acip acin acis cbaa cbab mpt rge rbn pkt shd metr tbd slt sdr tmz thk app gsu gsk gme gur glo gbm geo gem geb gpi gsb pef des deu dpr dml dal dto ade acp afw ank scl ccro llu mrm hoh sfu dbr dav bba bbat bbw bbac bex bmx bsto rpr rpo rpw rpz rpg rps rpv rpq rpl rpn rty rtt rtb rcm rcc rbe rbo rco rfe rak rri rrj rra rrc rrh rrb rrn rrp rrm rrr rms rmi rpk raf rhe rja rsv rsw rph rau rmo rpp rre ram rab rmc ott wol wri wen wed wpi wbm woo wcl ama amf amp acn aph apy apd apha eru erw erg ecn ech echa echj echl echs echv echw echp ehh nse nri nhm mmn rbt mlo mln mci mop mam mamo meso mesw mes hoe aak pht pla sme smk smq smx smi smeg smel smer smd rhi sfh sfd six same sino ead eah esj atu ara atf ata avi agr agc aro ret rec rel rei rep rle rlt rlg rlb rlu rtr rir rhl rga rhn rpha rht rhx ngl ngg shz bme bmel bmi bmz bmg bmw bmee bmf bmb bmc baa babo babr babt babb babu babs babc bms bsi bsf bsui bsup bsuv bsuc bmt bsz bsv bsw bsg bov bcs bsk bol bcar bcas bmr bpp bpv bcet bvl oan oah ops och bja bju bjp bra bbt brs aol brc brad bic bro rpa rpb rpc rpd rpe rpt rpx nwi nha oca ocg oco bop bos bvv bhe bhn bhs bqu bqr bbk btr btx bgr bcd baus bvn banc bapi bart bara barw xau azc sno mex mea mdi mch mrd met mpo mno mor meta maqu mphy mza mee moc bid msl chel cdq hmc rva phl fil fiy bvr rhz msc mbry mtw mey maad mmed aua thd psin hdi rbm ccr ccs cak cse chq cmb pzu bsb brd bne brg brl bvc aex cbot sil sit rmb rsp rsh rsq rsk rcp rhp jan rde rli pde pami pye pcon pzh paro paru dsh kvu kvl kro psf pga pgl pgd php ppic oat oar otm lmd red ptp cid cmar ceh cmag malg con rsu rhm rhc pphr hat lap lagg labr daa yan spse don tpro tom paby thw rmm lvs aht rbg sagu mmr hne hba hbc nar npp npn nre sal sphk sphp smag smaz ster sgi sphl sphq swi sphm stax sphi ssan smy span skr splm splk sphj spkc sphd sjp sch ssy syb sbd spmi sphb sphr sinb spht shyd sya sclo cij sphg sfla sphy blas rdi eli elq ery egn efv aay amx aep anh ado cna cman pns porl acr amv gdi gdj gxl apt apw apf apu apg apq apx apz apk asz asv aace aper apom ato rgi ros rru rrf rce rpm mag mgy magx magn azl ali abs abq abf ati ahu tmo thal efk txi thac magq hjo nao ncb pbr mgm mai man pgv pub pel apm apb maes mfn lpil abao cap ote obg obt amu agl vba vbl ssm sta stq sfc sbu sgp slr bhy bhd bpo bpj bpw bip sus ctm abac gph gba bth btho bfr bfs bfg bfb bvu bhl bsa bxy bdo bdh boa bcel bcac bcae pgi pgn pgt pah pbt pmuc pet ppn pdi pary parc bvs psac aps pmz pdn pit pdt pro pfus peo pje afd ash rbc dori blq hhy che rbi fbc mrs orh ori lut seon fek ial mro ttk din ddf dap cni fsi caby">
+</form>
+<div id="poplay" class="poplay"></div>
+</body>
+</html>

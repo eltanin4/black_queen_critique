@@ -1,0 +1,156 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00782'>M00782</a></td>
+ <td>Mithramycin biosynthesis, 4-demethylpremithramycinone =&gt; mithramycin</td>
+ <!--td>Mithramycin biosynthesis, 4-demethylpremithramycinone =&gt; mithramycin</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K15959' target='_blank'>K15959</a></td>
+    <td>mtmMI; O-methyltransferase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.1.1.-">2.1.1.-</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K15960' target='_blank'>K15960</a></td>
+    <td>mtmGIV; glycosyltransferase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.4.1.-">2.4.1.-</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K15961' target='_blank'>K15961</a></td>
+    <td>mtmGIII; glycosyltransferase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.4.1.-">2.4.1.-</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K15963' target='_blank'>K15963</a></td>
+    <td>mtmMII; C-methyltransferase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.1.1.-">2.1.1.-</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K15964' target='_blank'>K15964</a></td>
+    <td>mtmGI; glycosyltransferase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.4.1.-">2.4.1.-</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K15965' target='_blank'>K15965</a></td>
+    <td>mtmGII; glycosyltransferase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.4.1.-">2.4.1.-</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K15966' target='_blank'>K15966</a></td>
+    <td>mtmOIV; monooxygenase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.14.13.-">1.14.13.-</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K15967' target='_blank'>K15967</a></td>
+    <td>mtmW; ketoreductase</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C12382' target='_blank'>C12382</a></td>
+    <td>4-Demethylpremithramycinone</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C12383' target='_blank'>C12383</a></td>
+    <td>Premithramycinone</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C12384' target='_blank'>C12384</a></td>
+    <td>Premithramycin A1</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C12385' target='_blank'>C12385</a></td>
+    <td>Premithramycin A2'</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C12386' target='_blank'>C12386</a></td>
+    <td>Premithramycin A3'</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C12387' target='_blank'>C12387</a></td>
+    <td>Premithramycin A3</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C18710' target='_blank'>C18710</a></td>
+    <td>3A-Deolivosylpremithramycin B</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C12388' target='_blank'>C12388</a></td>
+    <td>Premithramycin B</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C18711' target='_blank'>C18711</a></td>
+    <td>Mithramycin DK</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C12389' target='_blank'>C12389</a></td>
+    <td>Mithramycin</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

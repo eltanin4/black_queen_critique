@@ -1,0 +1,181 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00777'>M00777</a></td>
+ <td>Avermectin biosynthesis, 2-methylbutanoyl-CoA/isobutyryl-CoA =&gt; 6,8a-Seco-6,8a-deoxy-5-oxoavermectin 1a/1b aglycone =&gt; avermectin A1a/B1a/A1b/B1b</td>
+ <!--td>Avermectin biosynthesis, 2-methylbutanoyl-CoA/isobutyryl-CoA =&gt; 6,8a-Seco-6,8a-deoxy-5-oxoavermectin 1a/1b aglycone =&gt; avermectin A1a/B1a/A1b/B1b</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K14371' target='_blank'>K14371</a></td>
+    <td>aveA; type I polyketide synthase AVES</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K14372' target='_blank'>K14372</a></td>
+    <td>aveE, CYP171A; cytochrome P450 hydroxylase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.14.-.-">1.14.-.-</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K14373' target='_blank'>K14373</a></td>
+    <td>aveF; C-5 ketoreductase</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K14374' target='_blank'>K14374</a></td>
+    <td>aveD; avermectin B 5-O-methyltransferase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.1.1.-">2.1.1.-</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K14375' target='_blank'>K14375</a></td>
+    <td>aveBI; dTDP-L-oleandrosyltransferase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.4.1.-">2.4.1.-</a>]</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C01033' target='_blank'>C01033</a></td>
+    <td>2-Methylbutanoyl-CoA</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C11977' target='_blank'>C11977</a></td>
+    <td>6,8a-Seco-6,8a-deoxy-5-oxoavermectin ''1a'' aglycone</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C11978' target='_blank'>C11978</a></td>
+    <td>5-Oxoavermectin ''1a'' aglycone</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C11979' target='_blank'>C11979</a></td>
+    <td>Avermectin B1a aglycone</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C11980' target='_blank'>C11980</a></td>
+    <td>Avermectin A1a aglycone</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C11982' target='_blank'>C11982</a></td>
+    <td>Avermectin A1a monosaccharide</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C11984' target='_blank'>C11984</a></td>
+    <td>Avermectin A1a</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C11981' target='_blank'>C11981</a></td>
+    <td>Avermectin B1a monosaccharide</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C11983' target='_blank'>C11983</a></td>
+    <td>Avermectin B1a</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00630' target='_blank'>C00630</a></td>
+    <td>2-Methylpropanoyl-CoA</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C11961' target='_blank'>C11961</a></td>
+    <td>6,8a-Seco-6,8a-deoxy-5-oxoavermectin ''1b'' aglycone</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C11962' target='_blank'>C11962</a></td>
+    <td>5-Oxoavermectin ''1b'' aglycone</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C11963' target='_blank'>C11963</a></td>
+    <td>Avermectin B1b aglycone</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C11964' target='_blank'>C11964</a></td>
+    <td>Avermectin A1b aglycone</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C11966' target='_blank'>C11966</a></td>
+    <td>Avermectin A1b monosaccharide</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C11968' target='_blank'>C11968</a></td>
+    <td>Avermectin A1b</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C11965' target='_blank'>C11965</a></td>
+    <td>Avermectin B1b monosaccharide</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C11967' target='_blank'>C11967</a></td>
+    <td>Avermectin B1b</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

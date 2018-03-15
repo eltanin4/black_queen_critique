@@ -1,0 +1,101 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00069'>M00069</a></td>
+ <td>Glycosphingolipid biosynthesis, ganglio series, LacCer =&gt; GT3</td>
+ <!--td>Glycosphingolipid biosynthesis, ganglio series, LacCer =&gt; GT3</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K03370' target='_blank'>K03370</a></td>
+    <td>SIAT9; lactosylceramide alpha-2,3-sialyltransferase (sialyltransferase 9) [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.4.99.9">2.4.99.9</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K03371' target='_blank'>K03371</a></td>
+    <td>SIAT8A; alpha-N-acetyl-neuraminate alpha-2,8-sialyltransferase (sialyltransferase 8A) [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.4.99.8">2.4.99.8</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K03369' target='_blank'>K03369</a></td>
+    <td>SIAT8E; alpha-N-acetyl-neuraminate alpha-2,8-sialyltransferase (sialyltransferase 8E) [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.4.99.-">2.4.99.-</a>]</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?G00092' target='_blank'>G00092</a></td>
+    <td>Lactosylceramide; LacCer; (Gal)1 (Glc)1 (Cer)1</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?G00108' target='_blank'>G00108</a></td>
+    <td>GM3; (Gal)1 (Glc)1 (Neu5Ac)1 (Cer)1</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?G00113' target='_blank'>G00113</a></td>
+    <td>GD3; (Gal)1 (Glc)1 (Neu5Ac)2 (Cer)1</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?G00118' target='_blank'>G00118</a></td>
+    <td>GT3; (Gal)1 (Glc)1 (Neu5Ac)3 (Cer)1</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

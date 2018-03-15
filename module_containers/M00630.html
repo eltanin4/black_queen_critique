@@ -1,0 +1,116 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00630'>M00630</a></td>
+ <td>D-Galacturonate degradation (fungi), D-galacturonate =&gt; glycerol</td>
+ <!--td>D-Galacturonate degradation (fungi), D-galacturonate =&gt; glycerol</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K18106' target='_blank'>K18106</a></td>
+    <td>GAAA; D-galacturonate reductase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.1.1.-">1.1.1.-</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K19634' target='_blank'>K19634</a></td>
+    <td>gar1; D-galacturonate reductase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.1.1.365">1.1.1.365</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K18102' target='_blank'>K18102</a></td>
+    <td>GAAB, LGD1; L-galactonate dehydratase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:4.2.1.146">4.2.1.146</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K18103' target='_blank'>K18103</a></td>
+    <td>GAAC, LGA1; L-threo-3-deoxy-hexylosonate aldolase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:4.1.2.54">4.1.2.54</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K18107' target='_blank'>K18107</a></td>
+    <td>GAAD; L-glyceraldehyde reductase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.1.1.372">1.1.1.372</a>]</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00333' target='_blank'>C00333</a></td>
+    <td>D-Galacturonate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C15930' target='_blank'>C15930</a></td>
+    <td>L-Galactonate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C20680' target='_blank'>C20680</a></td>
+    <td>2-Dehydro-3-deoxy-L-galactonate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C02426' target='_blank'>C02426</a></td>
+    <td>L-Glyceraldehyde</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00116' target='_blank'>C00116</a></td>
+    <td>Glycerol</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

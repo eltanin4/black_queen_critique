@@ -1,0 +1,126 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00775'>M00775</a></td>
+ <td>Oleandomycin biosynthesis, malonyl-CoA + methylmalonyl-CoA =&gt; 8,8a-deoxyoleandolide =&gt; oleandomycin</td>
+ <!--td>Oleandomycin biosynthesis, malonyl-CoA + methylmalonyl-CoA =&gt; 8,8a-deoxyoleandolide =&gt; oleandomycin</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K16007' target='_blank'>K16007</a></td>
+    <td>oleA; 8,8a-deoxyoleandolide synthase</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K16008' target='_blank'>K16008</a></td>
+    <td>oleP, CYP107D; cytochrome P450 monooxygenase OleP</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K16009' target='_blank'>K16009</a></td>
+    <td>oleGII; glycosyltransferase OleGII</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K13320' target='_blank'>K13320</a></td>
+    <td>oleY; L-olivosyl-oleandolide 3-O-methyltransferase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.1.1.239">2.1.1.239</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K16010' target='_blank'>K16010</a></td>
+    <td>oleGI; desosaminyltransferase OleGI</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00083' target='_blank'>C00083</a></td>
+    <td>Malonyl-CoA</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C02557' target='_blank'>C02557</a></td>
+    <td>Methylmalonyl-CoA</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C11989' target='_blank'>C11989</a></td>
+    <td>8,8a-Deoxyoleandolide</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C11990' target='_blank'>C11990</a></td>
+    <td>Oleandolide</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C11991' target='_blank'>C11991</a></td>
+    <td>L-Olivosyl-oleandolide</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C11992' target='_blank'>C11992</a></td>
+    <td>L-Oleandrosyl-oleandolide</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C01946' target='_blank'>C01946</a></td>
+    <td>Oleandomycin</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

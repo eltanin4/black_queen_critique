@@ -1,0 +1,136 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00789'>M00789</a></td>
+ <td>Rebeccamycin biosynthesis, tryptophan =&gt; rebeccamycin</td>
+ <!--td>Rebeccamycin biosynthesis, tryptophan =&gt; rebeccamycin</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K14266' target='_blank'>K14266</a></td>
+    <td>prnA, rebH; tryptophan halogenase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.14.19.9">1.14.19.9</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K19884' target='_blank'>K19884</a></td>
+    <td>rebO; 7-chloro-L-tryptophan oxidase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.4.3.23">1.4.3.23</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K19885' target='_blank'>K19885</a></td>
+    <td>rebD; dichlorochromopyrrolate synthase / catalase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.21.98.2">1.21.98.2</a> <a target="_blank" href="/dbget-bin/www_bget?ec:1.11.1.6">1.11.1.6</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K19886' target='_blank'>K19886</a></td>
+    <td>rebC; flavin-dependent monooxygenase RebC [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.13.12.17">1.13.12.17</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K19887' target='_blank'>K19887</a></td>
+    <td>rebP; cytochrome P450 RebP [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.13.12.17">1.13.12.17</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K19888' target='_blank'>K19888</a></td>
+    <td>rebG; 4'-demethylrebeccamycin synthase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:4.3.3.5">4.3.3.5</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K19889' target='_blank'>K19889</a></td>
+    <td>rebM; demethylrebeccamycin-D-glucose O-methyltransferase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.1.1.164">2.1.1.164</a>]</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00078' target='_blank'>C00078</a></td>
+    <td>L-Tryptophan</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C19687' target='_blank'>C19687</a></td>
+    <td>7-Chloro-L-tryptophan</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C19688' target='_blank'>C19688</a></td>
+    <td>2-Imino-3-(7-chloroindol-3-yl)propanoate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C19698' target='_blank'>C19698</a></td>
+    <td>3,4-Bis(7-chloroindol-3-yl)pyrrole-2,5-dicarboxylate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C19699' target='_blank'>C19699</a></td>
+    <td>Dichloroarcyriaflavin A</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C19700' target='_blank'>C19700</a></td>
+    <td>4'-O-Demethylrebeccamycin</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C19701' target='_blank'>C19701</a></td>
+    <td>Rebeccamycin</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00043'>M00043</a></td>
+ <td>Thyroid hormone biosynthesis, tyrosine =&gt; triiodothyronine/thyroxine</td>
+ <!--td>Thyroid hormone biosynthesis, tyrosine =&gt; triiodothyronine/thyroxine</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00431' target='_blank'>K00431</a></td>
+    <td>TPO; thyroid peroxidase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.11.1.8">1.11.1.8</a>]</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00082' target='_blank'>C00082</a></td>
+    <td>L-Tyrosine</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C02515' target='_blank'>C02515</a></td>
+    <td>3-Iodo-L-tyrosine</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C01060' target='_blank'>C01060</a></td>
+    <td>3,5-Diiodo-L-tyrosine</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C02465' target='_blank'>C02465</a></td>
+    <td>Triiodothyronine</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

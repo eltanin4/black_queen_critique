@@ -1,0 +1,101 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00555'>M00555</a></td>
+ <td>Betaine biosynthesis, choline =&gt; betaine</td>
+ <!--td>Betaine biosynthesis, choline =&gt; betaine</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00108' target='_blank'>K00108</a></td>
+    <td>betA, CHDH; choline dehydrogenase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.1.99.1">1.1.99.1</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K11440' target='_blank'>K11440</a></td>
+    <td>gbsB; choline dehydrogenase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.1.1.1">1.1.1.1</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K17755' target='_blank'>K17755</a></td>
+    <td>codA; choline oxidase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.1.3.17">1.1.3.17</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00130' target='_blank'>K00130</a></td>
+    <td>betB, gbsA; betaine-aldehyde dehydrogenase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.2.1.8">1.2.1.8</a>]</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00114' target='_blank'>C00114</a></td>
+    <td>Choline</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00576' target='_blank'>C00576</a></td>
+    <td>Betaine aldehyde</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00719' target='_blank'>C00719</a></td>
+    <td>Betaine</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

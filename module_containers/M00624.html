@@ -1,0 +1,101 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00624'>M00624</a></td>
+ <td>Terephthalate degradation, terephthalate =&gt; 3,4-dihydroxybenzoate</td>
+ <!--td>Terephthalate degradation, terephthalate =&gt; 3,4-dihydroxybenzoate</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K18074' target='_blank'>K18074</a></td>
+    <td>tphA2; terephthalate 1,2-dioxygenase oxygenase component alpha subunit [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.14.12.15">1.14.12.15</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K18075' target='_blank'>K18075</a></td>
+    <td>tphA3; terephthalate 1,2-dioxygenase oxygenase component beta subunit [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.14.12.15">1.14.12.15</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K18077' target='_blank'>K18077</a></td>
+    <td>tphA1; terephthalate 1,2-dioxygenase reductase component [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.18.1.-">1.18.1.-</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K18076' target='_blank'>K18076</a></td>
+    <td>tphB; 1,2-dihydroxy-3,5-cyclohexadiene-1,4-dicarboxylate dehydrogenase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.3.1.53">1.3.1.53</a>]</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C06337' target='_blank'>C06337</a></td>
+    <td>Terephthalate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C06318' target='_blank'>C06318</a></td>
+    <td>(3S,4R)-3,4-Dihydroxycyclohexa-1,5-diene-1,4-dicarboxylate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00230' target='_blank'>C00230</a></td>
+    <td>3,4-Dihydroxybenzoate</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

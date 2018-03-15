@@ -1,0 +1,161 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00673'>M00673</a></td>
+ <td>Cephamycin C biosynthesis, aminoadipate + cycteine + valine =&gt; cephamycin C</td>
+ <!--td>Cephamycin C biosynthesis, aminoadipate + cycteine + valine =&gt; cephamycin C</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K12743' target='_blank'>K12743</a></td>
+    <td>PCBAB; N-(5-amino-5-carboxypentanoyl)-L-cysteinyl-D-valine synthase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:6.3.2.26">6.3.2.26</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K04126' target='_blank'>K04126</a></td>
+    <td>PCBC; isopenicillin-N synthase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.21.3.1">1.21.3.1</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K04127' target='_blank'>K04127</a></td>
+    <td>cefD; isopenicillin-N epimerase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:5.1.1.17">5.1.1.17</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K12744' target='_blank'>K12744</a></td>
+    <td>cefE; deacetoxycephalosporin-C synthase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.14.20.1">1.14.20.1</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K12745' target='_blank'>K12745</a></td>
+    <td>cefF; deacetoxycephalosporin-C hydroxylase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.14.11.26">1.14.11.26</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K04128' target='_blank'>K04128</a></td>
+    <td>cmcH; hydroxymethyl cephem carbamoyltransferase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.1.3.7">2.1.3.7</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K18062' target='_blank'>K18062</a></td>
+    <td>cmcI; cephamycin C biosynthesis protein</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K18063' target='_blank'>K18063</a></td>
+    <td>cmcJ; cephamycin C biosynthesis protein</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00956' target='_blank'>C00956</a></td>
+    <td>L-2-Aminoadipate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00183' target='_blank'>C00183</a></td>
+    <td>L-Valine</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00097' target='_blank'>C00097</a></td>
+    <td>L-Cysteine</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C05556' target='_blank'>C05556</a></td>
+    <td>delta-(L-2-Aminoadipyl)-L-cysteinyl-D-valine</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C05557' target='_blank'>C05557</a></td>
+    <td>Isopenicillin N</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C06564' target='_blank'>C06564</a></td>
+    <td>Penicillin N</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C06565' target='_blank'>C06565</a></td>
+    <td>Deacetoxycephalosporin C</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C03112' target='_blank'>C03112</a></td>
+    <td>Deacetylcephalosporin C</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C06568' target='_blank'>C06568</a></td>
+    <td>O-Carbamoyl-deacetylcephalosporin C</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C06569' target='_blank'>C06569</a></td>
+    <td>7a-Hydroxy-O-carbamoyl-deacetylcephalosporin C</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C06566' target='_blank'>C06566</a></td>
+    <td>Cephamycin C</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

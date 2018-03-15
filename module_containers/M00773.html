@@ -1,0 +1,161 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00773'>M00773</a></td>
+ <td>Tylosin biosynthesis, methylmalonyl-CoA + malonyl-CoA =&gt; tylactone =&gt; tylosin</td>
+ <!--td>Tylosin biosynthesis, methylmalonyl-CoA + malonyl-CoA =&gt; tylactone =&gt; tylosin</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K15988' target='_blank'>K15988</a></td>
+    <td>tylG; tylactone synthase</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K15989' target='_blank'>K15989</a></td>
+    <td>tylMII; tylactone mycaminosyltransferase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.4.1.316">2.4.1.316</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K15990' target='_blank'>K15990</a></td>
+    <td>tylMIII; tylactone mycaminosyltransferase auxiliary protein</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K15992' target='_blank'>K15992</a></td>
+    <td>tylI, CYP113B; cytochrome P450 TylI</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K15991' target='_blank'>K15991</a></td>
+    <td>tylHI, CYP105L; 20-oxo-5-O-mycaminosyltylactone 23-monooxygenase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.14.13.186">1.14.13.186</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K15993' target='_blank'>K15993</a></td>
+    <td>tylN; O-mycaminosyltylonolide 6-deoxyallosyltransferase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.4.1.317">2.4.1.317</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K15994' target='_blank'>K15994</a></td>
+    <td>tylCV; demethyllactenocin mycarosyltransferase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.4.1.318">2.4.1.318</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K15995' target='_blank'>K15995</a></td>
+    <td>tylE; demethylmacrocin O-methyltransferase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.1.1.102">2.1.1.102</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K15996' target='_blank'>K15996</a></td>
+    <td>tylF; macrocin O-methyltransferase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.1.1.101">2.1.1.101</a>]</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C02557' target='_blank'>C02557</a></td>
+    <td>Methylmalonyl-CoA</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00083' target='_blank'>C00083</a></td>
+    <td>Malonyl-CoA</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C12000' target='_blank'>C12000</a></td>
+    <td>Tylactone</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C12001' target='_blank'>C12001</a></td>
+    <td>5-O-beta-D-Mycaminosyltylactone</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C20760' target='_blank'>C20760</a></td>
+    <td>20-Oxo-5-O-beta-mycaminosyltylactone</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C12002' target='_blank'>C12002</a></td>
+    <td>5-O-beta-D-Mycaminosyltylonolide</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C12003' target='_blank'>C12003</a></td>
+    <td>Demethyllactenocin</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C02400' target='_blank'>C02400</a></td>
+    <td>Demethylmacrocin</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00744' target='_blank'>C00744</a></td>
+    <td>Macrocin</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C01457' target='_blank'>C01457</a></td>
+    <td>Tylosin</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

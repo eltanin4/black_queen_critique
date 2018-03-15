@@ -1,0 +1,101 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00528'>M00528</a></td>
+ <td>Nitrification, ammonia =&gt; nitrite</td>
+ <!--td>Nitrification, ammonia =&gt; nitrite</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K10944' target='_blank'>K10944</a></td>
+    <td>pmoA-amoA; methane/ammonia monooxygenase subunit A [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.14.18.3">1.14.18.3</a> <a target="_blank" href="/dbget-bin/www_bget?ec:1.14.99.39">1.14.99.39</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K10945' target='_blank'>K10945</a></td>
+    <td>pmoB-amoB; methane/ammonia monooxygenase subunit B</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K10946' target='_blank'>K10946</a></td>
+    <td>pmoC-amoC; methane/ammonia monooxygenase subunit C</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K10535' target='_blank'>K10535</a></td>
+    <td>hao; hydroxylamine dehydrogenase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.7.2.6">1.7.2.6</a>]</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00014' target='_blank'>C00014</a></td>
+    <td>Ammonia</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00192' target='_blank'>C00192</a></td>
+    <td>Hydroxylamine</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00088' target='_blank'>C00088</a></td>
+    <td>Nitrite</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

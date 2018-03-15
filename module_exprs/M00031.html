@@ -1,0 +1,445 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>KEGG MODULE: M00031</title>
+<link rel="stylesheet" href="/css/kegg.css" type="text/css">
+<style type="text/css">
+td
+{
+  font-size:12px;
+  font-family:verdana,arial,helvetica,sans-serif;
+  vertical-align: top;
+}
+
+div#definition
+{
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+div#definition table tr td {
+  padding-right: 10px;
+}
+
+div.poplay {
+  position: absolute;
+  padding: 2px;
+  background-color: #ffff99;
+  border-top: solid 1px #c0c0c0;
+  border-left: solid 1px #c0c0c0;
+  border-bottom: solid 1px #808080;
+  border-right: solid 1px #808080;
+  visibility: hidden;
+}
+
+span.popup
+{
+  font-weight: bold;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+</style>
+<script language="JavaScript" type="text/javascript" src="/js/dhtml.js"></script>
+<script language="javascript" type="text/javascript">
+<!--
+
+function SubmitForm(theForm)
+{
+  var org = theForm.select_org.value;
+
+  if(org == "set_cookie")
+  {
+    window.open('/kegg/misc/kegg2_select.html','sel_org','toolbar=no,location=no,directories=no,width=500,height=320,resizable=yes');
+    return false;
+  }
+  else if(org.indexOf(".sort_alp") > 0)
+  {
+    var dt = new Date();
+    dt.setTime(dt.getTime() + (30 * 24 * 60 * 60));
+    var c = "KEGG_MapMenu_Sorted=alp;path=/;expires=" + dt.toGMTString();
+    document.cookie = c;
+  }
+  else if(org.indexOf(".sort_org") > 0)
+  {
+    // delete cookie
+    var dt = new Date();
+    dt.setTime(dt.getTime() - 100);
+    var c = "KEGG_MapMenu_Sorted=alp;path=/;expires=" + dt.toGMTString();
+    document.cookie = c;
+  }
+  else
+  {
+    theForm.org.value = org;
+  }
+
+  return true;
+}
+
+function btn(bobj, img)
+{
+  bobj.src = "/Fig/bget/button_" + img + ".gif";
+}
+
+
+function open_ko_list()
+{
+	var win = window.open('module_ko_list?map=M00031&org=ko','_md','toolbar=no,location=no,directories=no,width=700,height=400,resizable=yes,scrollbars=yes,status=no');
+  win.focus();
+}
+
+var timer = 0;
+var p_entry, p_title, p_bgcolor;
+function popupTimer(entry, title, bgcolor)
+{
+  p_entry = entry;
+  p_title = title;
+  p_bgcolor = bgcolor;
+
+  if(timer == 0){
+    var func = "showThumbnail()";
+    timer = setTimeout(func, 1200);
+  }
+}
+
+
+function showThumbnail()
+{
+
+  var url = "";
+  if(p_entry.match(/^[A-Z]+\d+$/))
+  {
+    url = "/kegg/misc/thumbnail/" + p_entry + ".gif";
+  }
+  else if(p_entry.match(/(\d+)$/))
+  {
+    url = "/kegg/misc/thumbnail/map" + RegExp.$1 + ".gif";
+  }
+
+  var html = "";
+
+  if(p_bgcolor != "#ffffff")
+  {
+    html += "<span class=\"popup\">" + p_entry + "</span><br />";
+  }
+
+  html += "<img src=\"" + url + "\" alt=\"Loading...\">";
+
+  var x = getCurrentMouseX();
+  var y = getCurrentMouseY();
+
+  var layer = new Component("poplay");
+  layer.backgroundColor(p_bgcolor);
+  layer.HTML(html);
+  layer.move(x, y+40);
+  layer.visible(true);
+
+  timer = 0;
+}
+
+
+function hideMapTn(){
+  var layer = new Component("poplay");
+  layer.visible(false);
+
+  if(timer != 0){
+    clearTimeout(timer);
+    timer = 0;
+  }
+}
+
+
+// -->
+</script>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+ <tr>
+  <td>
+    <a href="/kegg/kegg2.html"><img align="middle" border="0" src="/Fig/bget/kegg3.gif" alt="KEGG"></a>
+    &nbsp;&nbsp;&nbsp;<a name="module:M00031"></a><font class="title3"><b>Lysine biosynthesis, mediated by LysW, 2-aminoadipate =&gt; lysine</b></font>
+  </td>
+  <td align="right" valign="bottom"><a href="javascript:void(window.open('/kegg/document/help_module.html','KEGG_Help','toolbar=no,location=no,directories=no,width=720,height=640,resizable=yes,scrollbars=yes'))"><img onmouseup="btn(this,'Hb')" align="middle" onmouseout="btn(this,'Hb')" onmousedown="btn(this,'Hbd')" onmouseover="btn(this,'Hbh')" alt="Help" name="help" border="0" src="/Fig/bget/button_Hb.gif"></a></td>
+ </tr>
+</table>
+
+[
+<a href="/kegg-bin/get_htext?htext=ko00002.keg&amp;query=M00031&amp;option=-a">Module menu</a> |
+
+<a href="/kegg-bin/get_htext?htext=br08601_M00031.keg&amp;hier=5">Organism menu</a> |
+
+
+<a href="/dbget-bin/www_bget?M00031">Module entry</a> |
+<a href="javascript:void(open_ko_list())">KO/Compound list</a>
+
+]
+
+<div id="definition">
+ <table>
+  <tr>
+   <td>Entry</td>
+   <td>
+   M00031
+   
+   </td>
+  </tr>
+  <tr>
+   <td>Name</td>
+   <td>Lysine biosynthesis, mediated by LysW, 2-aminoadipate =&gt; lysine</td>
+  </tr>
+  <tr>
+   <td>Definition</td>
+   <td>
+    <a href="/dbget-bin/www_bget?K05826">K05826</a><br><a href="/dbget-bin/www_bget?K05827">K05827</a> <a href="/dbget-bin/www_bget?K05828">K05828</a> <a href="/dbget-bin/www_bget?K05829">K05829</a> <a href="/dbget-bin/www_bget?K05830">K05830</a> <a href="/dbget-bin/www_bget?K05831">K05831</a><br />
+    <a href="http://www.kegg.jp/kegg-bin/view_ortholog_table?md=M00031"><img onmouseup="btn(this,'OTb')" align="middle" onmouseout="btn(this,'OTb')" onmousedown="btn(this,'OTbd')" onmouseover="btn(this,'OTbh')" alt="Ortholog table" name="OT" border="0" src="/Fig/bget/button_OTb.gif"></a>
+    
+    <a href="javascript:void(document.forms['taxonomy'].submit())"><img onmouseup="btn(this,'Taxb')" align="middle" onmouseout="btn(this,'Taxb')" onmousedown="btn(this,'Taxbd')" onmouseover="btn(this,'Taxbh')" alt="Taxonomy" name="Taxonomy" border="0" src="/Fig/bget/button_Taxb.gif"></a>
+    
+   </td>
+  </tr>
+  <tr>
+   <td>Type</td>
+   <td>Pathway module</td>
+  </tr>
+  
+  
+  <tr>
+   <td>Pathway</td>
+   <td>
+    
+    <span style="margin-right:5px;">
+    <a href="/kegg-bin/show_pathway?map01210+M00031">map01210</a>
+    </span>
+    
+    <span style="margin-right:5px;">
+    <a href="/kegg-bin/show_pathway?map01230+M00031">map01230</a>
+    </span>
+    
+    <span style="margin-right:5px;">
+    <a href="/kegg-bin/show_pathway?map00300+M00031">map00300</a>
+    </span>
+    
+   </td>
+  </tr>
+  
+  
+  
+  <tr>
+   <td>Reaction</td>
+   <td><a href="/dbget-bin/www_bget?R09775">R09775</a>  <a href="/dbget-bin/www_bget?C00956">C00956</a> -&gt; <a href="/dbget-bin/www_bget?C19886">C19886</a><br><a href="/dbget-bin/www_bget?R09776">R09776</a>  <a href="/dbget-bin/www_bget?C19886">C19886</a> -&gt; <a href="/dbget-bin/www_bget?C19887">C19887</a><br><a href="/dbget-bin/www_bget?R09777">R09777</a>  <a href="/dbget-bin/www_bget?C19887">C19887</a> -&gt; <a href="/dbget-bin/www_bget?C19888">C19888</a><br><a href="/dbget-bin/www_bget?R09778">R09778</a>  <a href="/dbget-bin/www_bget?C19888">C19888</a> -&gt; <a href="/dbget-bin/www_bget?C19889">C19889</a><br><a href="/dbget-bin/www_bget?R09779">R09779</a>  <a href="/dbget-bin/www_bget?C19889">C19889</a> -&gt; <a href="/dbget-bin/www_bget?C00047">C00047</a></td>
+  </tr>
+  
+  
+  <tr>
+   <td>RModule</td>
+   <td><a href="/kegg/reaction/rm002.html">RM002</A>  Carboxyl to amino conversion using protective N-acetyl group (basic amino acid synthesis)</td>
+  </tr>
+  
+  
+ </table>
+</div>
+
+<form action="/kegg-bin/show_module" onsubmit="return SubmitForm(this)">
+<input type="hidden" name="map" value="M00031">
+<input type="hidden" name="org" value="ko">
+
+<div style="margin-top:10px;">
+
+<div>
+<select name="select_org">
+<option value="ko">Reference module (KO)</option>
+<option value="set_cookie">-----&lt; Set personalized menu &gt;-----</option>
+<option value="ko.sort_alp">-----&lt; Sort below by alphabet &gt;-----</option>
+<option value="rrs" >Roseiflexus sp. RS-1</option>
+<option value="rca" >Roseiflexus castenholzii</option>
+<option value="cau" >Chloroflexus aurantiacus</option>
+<option value="cag" >Chloroflexus aggregans</option>
+<option value="chl" >Chloroflexus sp. Y-400-fl</option>
+<option value="hau" >Herpetosiphon aurantiacus</option>
+<option value="tro" >Thermomicrobium roseum</option>
+<option value="sti" >Sphaerobacter thermophilus</option>
+<option value="atm" >Anaerolinea thermophila</option>
+<option value="cap" >Caldilinea aerophila</option>
+<option value="dge" >Deinococcus geothermalis</option>
+<option value="ddr" >Deinococcus deserti</option>
+<option value="dmr" >Deinococcus maricopensis</option>
+<option value="dgo" >Deinococcus gobiensis</option>
+<option value="dpd" >Deinococcus peraridilitoris</option>
+<option value="dsw" >Deinococcus swuensis</option>
+<option value="dch" >Deinococcus soli</option>
+<option value="dab" >Deinococcus actinosclerus</option>
+<option value="dpu" >Deinococcus puniceus</option>
+<option value="tth" >Thermus thermophilus HB27</option>
+<option value="ttj" >Thermus thermophilus HB8</option>
+<option value="tts" >Thermus thermophilus SG0.5JP17-16</option>
+<option value="ttl" >Thermus thermophilus JL-18</option>
+<option value="tsc" >Thermus scotoductus</option>
+<option value="thc" >Thermus sp. CCB_US3_UF1</option>
+<option value="tos" >Thermus oshimai</option>
+<option value="taq" >Thermus aquaticus</option>
+<option value="msv" >Meiothermus silvanus</option>
+<option value="opr" >Oceanithermus profundus</option>
+<option value="mhd" >Marinithermus hydrothermalis</option>
+<option value="ttr" >Thermobaculum terrenum</option>
+<option value="tai" >Thermanaerovibrio acidaminovorans</option>
+<option value="tli" >Thermovirga lienii</option>
+<option value="amo" >Acetomicrobium mobile</option>
+<option value="cpor" >Cloacibacillus porcorum</option>
+<option value="hdl" >Halobacterium sp. DL1</option>
+<option value="hhb" >Halobacterium hubeiense</option>
+<option value="hje" >Halalkalicoccus jeotgali</option>
+<option value="halh" >Haloarchaeon HTSR1</option>
+<option value="hhsr" >Haloarchaeon HSR6</option>
+<option value="hsu" >Halanaeroarchaeum sulfurireducens HSR2</option>
+<option value="hsf" >Halanaeroarchaeum sulfurireducens M27-SA2</option>
+<option value="hma" >Haloarcula marismortui</option>
+<option value="hhi" >Haloarcula hispanica ATCC 33960</option>
+<option value="hhn" >Haloarcula hispanica N601</option>
+<option value="hab" >Haloarcula sp. CBA1115</option>
+<option value="hta" >Haloarcula taiwanensis</option>
+<option value="nph" >Natronomonas pharaonis</option>
+<option value="nmo" >Natronomonas moolapensis</option>
+<option value="hut" >Halorhabdus utahensis</option>
+<option value="hti" >Halorhabdus tiamatea</option>
+<option value="hmu" >Halomicrobium mukohataei</option>
+<option value="hali" >Halorientalis sp. IM1011</option>
+<option value="hae" >Halophilic archaeon True-ADL</option>
+<option value="hwa" >Haloquadratum walsbyi DSM 16790</option>
+<option value="hwc" >Haloquadratum walsbyi C23</option>
+<option value="hvo" >Haloferax volcanii</option>
+<option value="hme" >Haloferax mediterranei</option>
+<option value="hgi" >Haloferax gibbonsii</option>
+<option value="hbo" >Halogeometricum borinquense</option>
+<option value="hla" >Halorubrum lacusprofundi</option>
+<option value="htu" >Haloterrigena turkmenica</option>
+<option value="hda" >Haloterrigena daqingensis</option>
+<option value="nmg" >Natrialba magadii</option>
+<option value="hxa" >Halopiger xanaduensis</option>
+<option value="nat" >Natrinema sp. J7-2</option>
+<option value="npe" >Natrinema pellirubrum</option>
+<option value="nge" >Natronobacterium gregoryi</option>
+<option value="hru" >Halovivax ruber</option>
+<option value="nou" >Natronococcus occultus</option>
+<option value="sali" >Salinarchaeum sp. Harcht-Bsk1</option>
+<option value="hlr" >Halostagnicola larsenii</option>
+<option value="hlc" >Halobiforma lacisalsi</option>
+<option value="naj" >Natrialbaceae archaeon JW/NM-HA 15</option>
+<option value="pto" >Picrophilus torridus</option>
+<option value="fac" >Ferroplasma acidarmanus</option>
+<option value="fai" >Ferroplasma acidiphilum</option>
+<option value="cdiv" >Cuniculiplasma divulgatum</option>
+<option value="pfu" >Pyrococcus furiosus DSM 3638</option>
+<option value="pyn" >Pyrococcus sp. NA2</option>
+<option value="pys" >Pyrococcus sp. ST04</option>
+<option value="tko" >Thermococcus kodakarensis</option>
+<option value="ths" >Thermococcus paralvinellae</option>
+<option value="thv" >Thermococcus sp. 2319x1</option>
+<option value="tch" >Thermococcus chitonophagus</option>
+<option value="ape" >Aeropyrum pernix</option>
+<option value="acj" >Aeropyrum camini</option>
+<option value="iho" >Ignicoccus hospitalis</option>
+<option value="iis" >Ignicoccus islandicus</option>
+<option value="iag" >Ignisphaera aggregans</option>
+<option value="pfm" >Pyrolobus fumarii</option>
+<option value="pdl" >Pyrodictium delaneyi</option>
+<option value="sso" >Sulfolobus solfataricus P2</option>
+<option value="sol" >Sulfolobus solfataricus 98/2</option>
+<option value="ssoa" >Sulfolobus solfataricus SULA</option>
+<option value="ssol" >Sulfolobus solfataricus SULB</option>
+<option value="ssof" >Sulfolobus solfataricus SULC</option>
+<option value="sto" >Sulfolobus tokodaii</option>
+<option value="sai" >Sulfolobus acidocaldarius DSM 639</option>
+<option value="sacn" >Sulfolobus acidocaldarius N8</option>
+<option value="sacr" >Sulfolobus acidocaldarius Ron12/I</option>
+<option value="sacs" >Sulfolobus acidocaldarius SUSAZ</option>
+<option value="sis" >Sulfolobus islandicus L.S.2.15</option>
+<option value="sia" >Sulfolobus islandicus M.14.25</option>
+<option value="sim" >Sulfolobus islandicus M.16.27</option>
+<option value="sid" >Sulfolobus islandicus M.16.4</option>
+<option value="siy" >Sulfolobus islandicus Y.G.57.14</option>
+<option value="sin" >Sulfolobus islandicus Y.N.15.51</option>
+<option value="sii" >Sulfolobus islandicus L.D.8.5</option>
+<option value="sih" >Sulfolobus islandicus HVE10/4</option>
+<option value="sir" >Sulfolobus islandicus REY15A</option>
+<option value="sic" >Sulfolobus islandicus LAL14/1</option>
+<option value="sula" >Sulfolobus sp. A20</option>
+<option value="mse" >Metallosphaera sedula</option>
+<option value="mcn" >Metallosphaera cuprina</option>
+<option value="aho" >Acidianus hospitalis</option>
+<option value="aman" >Acidianus manzaensis</option>
+<option value="pai" >Pyrobaculum aerophilum</option>
+<option value="pis" >Pyrobaculum islandicum</option>
+<option value="pcl" >Pyrobaculum calidifontis</option>
+<option value="pas" >Pyrobaculum arsenaticum</option>
+<option value="pyr" >Pyrobaculum ferrireducens</option>
+<option value="pog" >Pyrobaculum oguniense</option>
+<option value="tne" >Pyrobaculum neutrophilum</option>
+<option value="pyw" >Pyrobaculum sp. WP30</option>
+<option value="tuz" >Thermoproteus uzoniensis</option>
+<option value="ttn" >Thermoproteus tenax</option>
+<option value="vdi" >Vulcanisaeta distributa</option>
+<option value="nmr" >Nitrosopumilus maritimus</option>
+<option value="nir" >Candidatus Nitrosopumilus sp. AR2</option>
+<option value="nid" >Candidatus Nitrosopumilus piranensis</option>
+<option value="nin" >Candidatus Nitrosopumilus adriaticus</option>
+<option value="nkr" >Candidatus Nitrosopumilus koreensis</option>
+<option value="nct" >Candidatus Nitrosomarinus catalina</option>
+<option value="csy" >Cenarchaeum symbiosum</option>
+<option value="nga" >Candidatus Nitrososphaera gargensis</option>
+<option value="nvn" >Nitrososphaera viennensis</option>
+<option value="nev" >Candidatus Nitrososphaera evergladensis</option>
+<option value="taa" >Candidatus Nitrocosmicus oleophilus</option>
+<option value="csu" >Candidatus Caldiarchaeum subterraneum</option>
+<option value="nbv" >Candidatus Nitrosopelagicus brevis</option>
+<option value="tah" >Candidatus Nitrosotenuis cloacae</option>
+<option value="ndv" >Candidatus Nitrosotalea devanaterra</option>
+<option value="kcr" >Candidatus Korarchaeum cryptofilum</option>
+<option value="barb" >Bathyarchaeota archaeon BA2</option>
+<option value="hah" >Halophilic archaeon DL31</option>
+
+</select>
+<input type="submit" value="Go">
+</div>
+
+<table cellpadding="10">
+ <tr>
+  <td><img src="/tmp/pathway_thumbnail/ko_M00031.png?1521114741" usemap="#module" border="0" alt="MODULE IMAGE"></td>
+  
+  <td><img src="/tmp/pathway_thumbnail/M00031_reaction.png?1521114741" usemap="#reaction" border="0" alt="MODULE-REACTION IMAGE"></td>
+  
+ </tr>
+</table>
+<map id="module" name="module">
+<area shape="rect" id="node1_0" href="http://www.kegg.jp/dbget-bin/www_bget?K05826" title="K05826 (lysW)" alt="" coords="17,19,90,41"/>
+<area shape="rect" id="node2_1" href="http://www.kegg.jp/dbget-bin/www_bget?K05827" title="K05827 (lysX)" alt="" coords="135,19,209,41"/>
+<area shape="rect" id="node3_2" href="http://www.kegg.jp/dbget-bin/www_bget?K05828" title="K05828 (lysZ)" alt="" coords="135,77,209,100"/>
+<area shape="rect" id="node4_3" href="http://www.kegg.jp/dbget-bin/www_bget?K05829" title="K05829 (lysY)" alt="" coords="135,136,209,159"/>
+<area shape="rect" id="node5_4" href="http://www.kegg.jp/dbget-bin/www_bget?K05830" title="K05830 (lysJ)" alt="" coords="135,195,209,217"/>
+<area shape="rect" id="node6_5" href="http://www.kegg.jp/dbget-bin/www_bget?K05831" title="K05831 (lysK)" alt="" coords="135,253,209,276"/>
+</map>
+
+<map id="reaction" name="reaction">
+<area shape="poly" id="node1" href="/dbget-bin/www_bget?C00956" title="C00956 (L&#45;2&#45;Aminoadipate)" alt="" coords="81,29,79,22,74,15,66,10,55,7,44,5,33,7,22,10,14,15,9,22,7,29,9,37,14,43,22,49,33,52,44,53,55,52,66,49,74,43,79,37" onmouseover="popupTimer(&quot;C00956&quot;, &quot;C00956 (L&#45;2&#45;Aminoadipate)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node2" href="/dbget-bin/www_bget?R09775" title="R09775" alt="" coords="5,83,83,105"/>
+<area shape="poly" id="node3" href="/dbget-bin/www_bget?C19886" title="C19886 (LysW&#45;gamma&#45;L&#45;alpha&#45;aminoadipate)" alt="" coords="80,159,79,151,73,145,65,139,55,136,44,135,33,136,23,139,15,145,9,151,8,159,9,166,15,173,23,178,33,181,44,183,55,181,65,178,73,173,79,166" onmouseover="popupTimer(&quot;C19886&quot;, &quot;C19886 (LysW&#45;gamma&#45;L&#45;alpha&#45;aminoadipate)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node4" href="/dbget-bin/www_bget?R09776" title="R09776" alt="" coords="5,212,83,235"/>
+<area shape="poly" id="node5" href="/dbget-bin/www_bget?C19887" title="C19887 (LysW&#45;gamma&#45;L&#45;alpha&#45;aminoadipyl 6&#45;phosphate)" alt="" coords="81,288,79,281,74,274,66,269,55,265,44,264,33,265,22,269,14,274,9,281,7,288,9,295,14,302,22,307,33,311,44,312,55,311,66,307,74,302,79,295" onmouseover="popupTimer(&quot;C19887&quot;, &quot;C19887 (LysW&#45;gamma&#45;L&#45;alpha&#45;aminoadipyl 6&#45;phosphate)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node6" href="/dbget-bin/www_bget?R09777" title="R09777" alt="" coords="5,341,83,364"/>
+<area shape="poly" id="node7" href="/dbget-bin/www_bget?C19888" title="C19888 (LysW&#45;gamma&#45;L&#45;alpha&#45;aminoadipate 6&#45;semialdehyde)" alt="" coords="81,417,79,410,74,403,66,398,55,395,44,393,33,395,22,398,14,403,9,410,7,417,9,425,14,431,22,437,33,440,44,441,55,440,66,437,74,431,79,425" onmouseover="popupTimer(&quot;C19888&quot;, &quot;C19888 (LysW&#45;gamma&#45;L&#45;alpha&#45;aminoadipate 6&#45;semialdehyde)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node8" href="/dbget-bin/www_bget?R09778" title="R09778" alt="" coords="5,471,83,493"/>
+<area shape="poly" id="node9" href="/dbget-bin/www_bget?C19889" title="C19889 (LysW&#45;gamma&#45;L&#45;lysine)" alt="" coords="81,547,79,539,74,533,66,527,55,524,44,523,33,524,22,527,14,533,9,539,7,547,9,554,14,561,22,566,33,569,44,571,55,569,66,566,74,561,79,554" onmouseover="popupTimer(&quot;C19889&quot;, &quot;C19889 (LysW&#45;gamma&#45;L&#45;lysine)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node10" href="/dbget-bin/www_bget?R09779" title="R09779" alt="" coords="5,600,83,623"/>
+<area shape="poly" id="node11" href="/dbget-bin/www_bget?C00047" title="C00047 (L&#45;Lysine)" alt="" coords="81,676,79,669,74,662,66,657,55,653,44,652,33,653,22,657,14,662,9,669,7,676,9,683,14,690,22,695,33,699,44,700,55,699,66,695,74,690,79,683" onmouseover="popupTimer(&quot;C00047&quot;, &quot;C00047 (L&#45;Lysine)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+</map>
+</div>
+
+</form>
+<form name="taxonomy" method="post" action="/kegg-bin/get_htext">
+ <input type="hidden" name="htext" value="br08601.keg">
+ <input type="hidden" name="option" value="-a">
+ <input type="hidden" name="query" value="rrs rca cau cag chl hau tro sti atm cap dge ddr dmr dgo dpd dsw dch dab dpu tth ttj tts ttl tsc thc tos taq msv opr mhd ttr tai tli amo cpor hdl hhb hje halh hhsr hsu hsf hma hhi hhn hab hta nph nmo hut hti hmu hali hae hwa hwc hvo hme hgi hbo hla htu hda nmg hxa nat npe nge hru nou sali hlr hlc naj pto fac fai cdiv pfu pyn pys tko ths thv tch ape acj iho iis iag pfm pdl sso sol ssoa ssol ssof sto sai sacn sacr sacs sis sia sim sid siy sin sii sih sir sic sula mse mcn aho aman pai pis pcl pas pyr pog tne pyw tuz ttn vdi nmr nir nid nin nkr nct csy nga nvn nev taa csu nbv tah ndv kcr barb hah">
+</form>
+<div id="poplay" class="poplay"></div>
+</body>
+</html>

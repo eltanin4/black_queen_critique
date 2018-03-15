@@ -1,0 +1,111 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00015'>M00015</a></td>
+ <td>Proline biosynthesis, glutamate =&gt; proline</td>
+ <!--td>Proline biosynthesis, glutamate =&gt; proline</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00931' target='_blank'>K00931</a></td>
+    <td>proB; glutamate 5-kinase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.7.2.11">2.7.2.11</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00147' target='_blank'>K00147</a></td>
+    <td>proA; glutamate-5-semialdehyde dehydrogenase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.2.1.41">1.2.1.41</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K12657' target='_blank'>K12657</a></td>
+    <td>ALDH18A1, P5CS; delta-1-pyrroline-5-carboxylate synthetase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.7.2.11">2.7.2.11</a> <a target="_blank" href="/dbget-bin/www_bget?ec:1.2.1.41">1.2.1.41</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00286' target='_blank'>K00286</a></td>
+    <td>proC; pyrroline-5-carboxylate reductase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.5.1.2">1.5.1.2</a>]</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00025' target='_blank'>C00025</a></td>
+    <td>L-Glutamate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C03287' target='_blank'>C03287</a></td>
+    <td>L-Glutamyl 5-phosphate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C01165' target='_blank'>C01165</a></td>
+    <td>L-Glutamate 5-semialdehyde</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C03912' target='_blank'>C03912</a></td>
+    <td>(S)-1-Pyrroline-5-carboxylate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00148' target='_blank'>C00148</a></td>
+    <td>L-Proline</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

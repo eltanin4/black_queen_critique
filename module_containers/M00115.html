@@ -1,0 +1,131 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00115'>M00115</a></td>
+ <td>NAD biosynthesis, aspartate =&gt; NAD</td>
+ <!--td>NAD biosynthesis, aspartate =&gt; NAD</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00278' target='_blank'>K00278</a></td>
+    <td>nadB; L-aspartate oxidase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.4.3.16">1.4.3.16</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K03517' target='_blank'>K03517</a></td>
+    <td>nadA; quinolinate synthase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.5.1.72">2.5.1.72</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00767' target='_blank'>K00767</a></td>
+    <td>nadC, QPRT; nicotinate-nucleotide pyrophosphorylase (carboxylating) [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.4.2.19">2.4.2.19</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00969' target='_blank'>K00969</a></td>
+    <td>nadD; nicotinate-nucleotide adenylyltransferase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.7.7.18">2.7.7.18</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K06210' target='_blank'>K06210</a></td>
+    <td>NMNAT; nicotinamide mononucleotide adenylyltransferase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.7.7.1">2.7.7.1</a> <a target="_blank" href="/dbget-bin/www_bget?ec:2.7.7.18">2.7.7.18</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K01916' target='_blank'>K01916</a></td>
+    <td>nadE; NAD+ synthase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:6.3.1.5">6.3.1.5</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K01950' target='_blank'>K01950</a></td>
+    <td>E6.3.5.1, NADSYN1, QNS1, nadE; NAD+ synthase (glutamine-hydrolysing) [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:6.3.5.1">6.3.5.1</a>]</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00049' target='_blank'>C00049</a></td>
+    <td>L-Aspartate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C05840' target='_blank'>C05840</a></td>
+    <td>Iminoaspartate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C03722' target='_blank'>C03722</a></td>
+    <td>Pyridine-2,3-dicarboxylate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C01185' target='_blank'>C01185</a></td>
+    <td>Nicotinate D-ribonucleotide</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00857' target='_blank'>C00857</a></td>
+    <td>Deamino-NAD+</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00003' target='_blank'>C00003</a></td>
+    <td>NAD+</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

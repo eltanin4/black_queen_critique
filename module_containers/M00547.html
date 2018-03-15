@@ -1,0 +1,121 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00547'>M00547</a></td>
+ <td>Benzene/toluene degradation, benzene =&gt; catechol / toluene =&gt; 3-methylcatechol</td>
+ <!--td>Benzene/toluene degradation, benzene =&gt; catechol / toluene =&gt; 3-methylcatechol</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K03268' target='_blank'>K03268</a></td>
+    <td>todC1, bedC1, tcbAa; benzene/toluene/chlorobenzene dioxygenase subunit alpha [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.14.12.3">1.14.12.3</a> <a target="_blank" href="/dbget-bin/www_bget?ec:1.14.12.11">1.14.12.11</a> <a target="_blank" href="/dbget-bin/www_bget?ec:1.14.12.-">1.14.12.-</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K16268' target='_blank'>K16268</a></td>
+    <td>todC2, bedC2, tcbAb; benzene/toluene/chlorobenzene dioxygenase subunit beta [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.14.12.3">1.14.12.3</a> <a target="_blank" href="/dbget-bin/www_bget?ec:1.14.12.11">1.14.12.11</a> <a target="_blank" href="/dbget-bin/www_bget?ec:1.14.12.-">1.14.12.-</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K18089' target='_blank'>K18089</a></td>
+    <td>todB, tcbAc; benzene/toluene/chlorobenzene dioxygenase ferredoxin component</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K18090' target='_blank'>K18090</a></td>
+    <td>todA, tcbAd; benzene/toluene/chlorobenzene dioxygenase ferredoxin reductase component [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.18.1.3">1.18.1.3</a> <a target="_blank" href="/dbget-bin/www_bget?ec:1.18.1.-">1.18.1.-</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K16269' target='_blank'>K16269</a></td>
+    <td>todD, tcbB; cis-1,2-dihydrobenzene-1,2-diol dehydrogenase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.3.1.19">1.3.1.19</a> <a target="_blank" href="/dbget-bin/www_bget?ec:1.3.1.-">1.3.1.-</a>]</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C01407' target='_blank'>C01407</a></td>
+    <td>Benzene</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C04091' target='_blank'>C04091</a></td>
+    <td>cis-1,2-Dihydrobenzene-1,2-diol</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00090' target='_blank'>C00090</a></td>
+    <td>Catechol</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C01455' target='_blank'>C01455</a></td>
+    <td>Toluene</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C04592' target='_blank'>C04592</a></td>
+    <td>Toluene-cis-dihydrodiol</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C02923' target='_blank'>C02923</a></td>
+    <td>2,3-Dihydroxytoluene</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

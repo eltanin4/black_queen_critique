@@ -1,0 +1,121 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00540'>M00540</a></td>
+ <td>Benzoate degradation, cyclohexanecarboxylic acid =&gt;pimeloyl-CoA</td>
+ <!--td>Benzoate degradation, cyclohexanecarboxylic acid =&gt;pimeloyl-CoA</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K04116' target='_blank'>K04116</a></td>
+    <td>aliA; cyclohexanecarboxylate-CoA ligase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:6.2.1.-">6.2.1.-</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K04117' target='_blank'>K04117</a></td>
+    <td>aliB; cyclohexanecarboxyl-CoA dehydrogenase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.3.99.-">1.3.99.-</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K07534' target='_blank'>K07534</a></td>
+    <td>badK; cyclohex-1-ene-1-carboxyl-CoA hydratase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:4.2.1.-">4.2.1.-</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K07535' target='_blank'>K07535</a></td>
+    <td>badH; 2-hydroxycyclohexanecarboxyl-CoA dehydrogenase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.1.1.-">1.1.1.-</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K07536' target='_blank'>K07536</a></td>
+    <td>badI; 2-ketocyclohexanecarboxyl-CoA hydrolase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:3.1.2.-">3.1.2.-</a>]</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C09822' target='_blank'>C09822</a></td>
+    <td>Cyclohexane-1-carboxylate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C09823' target='_blank'>C09823</a></td>
+    <td>Cyclohexane-1-carboxyl-CoA</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C09811' target='_blank'>C09811</a></td>
+    <td>Cyclohex-1-ene-1-carboxyl-CoA</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C09812' target='_blank'>C09812</a></td>
+    <td>2-Hydroxycyclohexane-1-carboxyl-CoA</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C09813' target='_blank'>C09813</a></td>
+    <td>2-Ketocyclohexane-1-carboxyl-CoA</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C01063' target='_blank'>C01063</a></td>
+    <td>6-Carboxyhexanoyl-CoA</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

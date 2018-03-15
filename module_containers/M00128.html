@@ -1,0 +1,141 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00128'>M00128</a></td>
+ <td>Ubiquinone biosynthesis, eukaryotes, 4-hydroxybenzoate =&gt; ubiquinone</td>
+ <!--td>Ubiquinone biosynthesis, eukaryotes, 4-hydroxybenzoate =&gt; ubiquinone</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K06125' target='_blank'>K06125</a></td>
+    <td>COQ2; 4-hydroxybenzoate polyprenyltransferase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.5.1.39">2.5.1.39</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00591' target='_blank'>K00591</a></td>
+    <td>COQ3; polyprenyldihydroxybenzoate methyltransferase / 3-demethylubiquinol 3-O-methyltransferase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.1.1.114">2.1.1.114</a> <a target="_blank" href="/dbget-bin/www_bget?ec:2.1.1.64">2.1.1.64</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K06126' target='_blank'>K06126</a></td>
+    <td>COQ6; ubiquinone biosynthesis monooxygenase Coq6 [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.14.13.-">1.14.13.-</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K06127' target='_blank'>K06127</a></td>
+    <td>COQ5; 2-methoxy-6-polyprenyl-1,4-benzoquinol methylase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.1.1.201">2.1.1.201</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K06134' target='_blank'>K06134</a></td>
+    <td>COQ7; ubiquinone biosynthesis monooxygenase Coq7 [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.14.13.-">1.14.13.-</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00591' target='_blank'>K00591</a></td>
+    <td>COQ3; polyprenyldihydroxybenzoate methyltransferase / 3-demethylubiquinol 3-O-methyltransferase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.1.1.114">2.1.1.114</a> <a target="_blank" href="/dbget-bin/www_bget?ec:2.1.1.64">2.1.1.64</a>]</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00156' target='_blank'>C00156</a></td>
+    <td>4-Hydroxybenzoate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C05848' target='_blank'>C05848</a></td>
+    <td>4-Hydroxy-3-polyprenylbenzoate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C17554' target='_blank'>C17554</a></td>
+    <td>3-Polyprenyl-4,5-dihydroxybenzoate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C17559' target='_blank'>C17559</a></td>
+    <td>3-Polyprenyl-4-hydroxy-5-methoxybenzoate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C17552' target='_blank'>C17552</a></td>
+    <td>2-Polyprenyl-6-methoxyphenol</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C17560' target='_blank'>C17560</a></td>
+    <td>2-Polyprenyl-6-methoxy-1,4-benzoquinone</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C17561' target='_blank'>C17561</a></td>
+    <td>2-Polyprenyl-3-methyl-6-methoxy-1,4-benzoquinone</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C17562' target='_blank'>C17562</a></td>
+    <td>2-Polyprenyl-3-methyl-5-hydroxy-6-methoxy-1,4-benzoquinone</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00399' target='_blank'>C00399</a></td>
+    <td>Ubiquinone</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00808'>M00808</a></td>
+ <td>Violacein biosynthesis, tryptophan =&gt; violacein</td>
+ <!--td>Violacein biosynthesis, tryptophan =&gt; violacein</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K20086' target='_blank'>K20086</a></td>
+    <td>vioA; tryptophan oxidase VioA [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.4.3.-">1.4.3.-</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K20087' target='_blank'>K20087</a></td>
+    <td>vioB; violacein biosynthesis protein VioB</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K20088' target='_blank'>K20088</a></td>
+    <td>vioE; violacein biosynthesis protein VioE</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K20089' target='_blank'>K20089</a></td>
+    <td>vioD; protodeoxyviolaceinate monooxygenase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.14.13.217">1.14.13.217</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K20090' target='_blank'>K20090</a></td>
+    <td>vioC; violacein synthase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.14.13.224">1.14.13.224</a>]</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00078' target='_blank'>C00078</a></td>
+    <td>L-Tryptophan</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C21124' target='_blank'>C21124</a></td>
+    <td>IPA imine</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C21131' target='_blank'>C21131</a></td>
+    <td>Protodeoxyviolaceinic acid</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C21134' target='_blank'>C21134</a></td>
+    <td>Protoviolaceinic acid</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C21135' target='_blank'>C21135</a></td>
+    <td>Violaceinic acid</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C21136' target='_blank'>C21136</a></td>
+    <td>Violacein</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

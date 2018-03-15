@@ -1,0 +1,136 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00046'>M00046</a></td>
+ <td>Pyrimidine degradation, uracil =&gt; beta-alanine, thymine =&gt; 3-aminoisobutanoate</td>
+ <!--td>Pyrimidine degradation, uracil =&gt; beta-alanine, thymine =&gt; 3-aminoisobutanoate</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00207' target='_blank'>K00207</a></td>
+    <td>DPYD; dihydropyrimidine dehydrogenase (NADP+) [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.3.1.2">1.3.1.2</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K17722' target='_blank'>K17722</a></td>
+    <td>preT; dihydropyrimidine dehydrogenase (NAD+) subunit PreT [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.3.1.1">1.3.1.1</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K17723' target='_blank'>K17723</a></td>
+    <td>preA; dihydropyrimidine dehydrogenase (NAD+) subunit PreA [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.3.1.1">1.3.1.1</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K01464' target='_blank'>K01464</a></td>
+    <td>DPYS, dht, hydA; dihydropyrimidinase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:3.5.2.2">3.5.2.2</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K01431' target='_blank'>K01431</a></td>
+    <td>UPB1, pydC; beta-ureidopropionase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:3.5.1.6">3.5.1.6</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K06016' target='_blank'>K06016</a></td>
+    <td>pydC; beta-ureidopropionase / N-carbamoyl-L-amino-acid hydrolase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:3.5.1.6">3.5.1.6</a> <a target="_blank" href="/dbget-bin/www_bget?ec:3.5.1.87">3.5.1.87</a>]</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00106' target='_blank'>C00106</a></td>
+    <td>Uracil</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00429' target='_blank'>C00429</a></td>
+    <td>5,6-Dihydrouracil</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C02642' target='_blank'>C02642</a></td>
+    <td>3-Ureidopropionate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00099' target='_blank'>C00099</a></td>
+    <td>beta-Alanine</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00178' target='_blank'>C00178</a></td>
+    <td>Thymine</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C21028' target='_blank'>C21028</a></td>
+    <td>(R)-5,6-Dihydrothymine</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C21029' target='_blank'>C21029</a></td>
+    <td>(R)-3-Ureidoisobutyrate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C01205' target='_blank'>C01205</a></td>
+    <td>(R)-3-Amino-2-methylpropanoate</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

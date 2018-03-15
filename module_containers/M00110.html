@@ -1,0 +1,121 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00110'>M00110</a></td>
+ <td>C19/C18-Steroid hormone biosynthesis, pregnenolone =&gt; androstenedione =&gt; estrone</td>
+ <!--td>C19/C18-Steroid hormone biosynthesis, pregnenolone =&gt; androstenedione =&gt; estrone</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00512' target='_blank'>K00512</a></td>
+    <td>CYP17A; steroid 17alpha-monooxygenase / 17alpha-hydroxyprogesterone deacetylase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.14.14.19">1.14.14.19</a> <a target="_blank" href="/dbget-bin/www_bget?ec:1.14.14.32">1.14.14.32</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00070' target='_blank'>K00070</a></td>
+    <td>HSD3B; 3beta-hydroxy-Delta5-steroid dehydrogenase / steroid Delta-isomerase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.1.1.145">1.1.1.145</a> <a target="_blank" href="/dbget-bin/www_bget?ec:5.3.3.1">5.3.3.1</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K01822' target='_blank'>K01822</a></td>
+    <td>E5.3.3.1; steroid Delta-isomerase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:5.3.3.1">5.3.3.1</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K07434' target='_blank'>K07434</a></td>
+    <td>CYP19A; aromatase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.14.14.14">1.14.14.14</a>]</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C01953' target='_blank'>C01953</a></td>
+    <td>Pregnenolone</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C05138' target='_blank'>C05138</a></td>
+    <td>17alpha-Hydroxypregnenolone</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C01227' target='_blank'>C01227</a></td>
+    <td>Dehydroepiandrosterone</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00280' target='_blank'>C00280</a></td>
+    <td>Androstenedione</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C05290' target='_blank'>C05290</a></td>
+    <td>19-Hydroxyandrost-4-ene-3,17-dione</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C05297' target='_blank'>C05297</a></td>
+    <td>19-Oxoandrost-4-ene-3,17-dione</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00468' target='_blank'>C00468</a></td>
+    <td>Estrone</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

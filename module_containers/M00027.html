@@ -1,0 +1,121 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00027'>M00027</a></td>
+ <td>GABA (gamma-Aminobutyrate) shunt</td>
+ <!--td>GABA (gamma-Aminobutyrate) shunt</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K01580' target='_blank'>K01580</a></td>
+    <td>E4.1.1.15, gadB, gadA, GAD; glutamate decarboxylase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:4.1.1.15">4.1.1.15</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K13524' target='_blank'>K13524</a></td>
+    <td>ABAT; 4-aminobutyrate aminotransferase / (S)-3-amino-2-methylpropionate transaminase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.6.1.19">2.6.1.19</a> <a target="_blank" href="/dbget-bin/www_bget?ec:2.6.1.22">2.6.1.22</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K07250' target='_blank'>K07250</a></td>
+    <td>gabT; 4-aminobutyrate aminotransferase / (S)-3-amino-2-methylpropionate transaminase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.6.1.19">2.6.1.19</a> <a target="_blank" href="/dbget-bin/www_bget?ec:2.6.1.22">2.6.1.22</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00823' target='_blank'>K00823</a></td>
+    <td>puuE; 4-aminobutyrate aminotransferase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.6.1.19">2.6.1.19</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K16871' target='_blank'>K16871</a></td>
+    <td>POP2; 4-aminobutyrate---pyruvate transaminase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.6.1.96">2.6.1.96</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00135' target='_blank'>K00135</a></td>
+    <td>gabD; succinate-semialdehyde dehydrogenase / glutarate-semialdehyde dehydrogenase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.2.1.16">1.2.1.16</a> <a target="_blank" href="/dbget-bin/www_bget?ec:1.2.1.79">1.2.1.79</a> <a target="_blank" href="/dbget-bin/www_bget?ec:1.2.1.20">1.2.1.20</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00139' target='_blank'>K00139</a></td>
+    <td>ALDH5A1; succinate-semialdehyde dehydrogenase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.2.1.24">1.2.1.24</a>]</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00025' target='_blank'>C00025</a></td>
+    <td>L-Glutamate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00334' target='_blank'>C00334</a></td>
+    <td>4-Aminobutanoate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00232' target='_blank'>C00232</a></td>
+    <td>Succinate semialdehyde</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00042' target='_blank'>C00042</a></td>
+    <td>Succinate</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

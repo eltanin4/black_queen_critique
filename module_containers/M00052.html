@@ -1,0 +1,126 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00052'>M00052</a></td>
+ <td>Pyrimidine ribonucleotide biosynthesis, UMP =&gt; UDP/UTP,CDP/CTP</td>
+ <!--td>Pyrimidine ribonucleotide biosynthesis, UMP =&gt; UDP/UTP,CDP/CTP</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K13800' target='_blank'>K13800</a></td>
+    <td>CMPK1, UMPK; UMP-CMP kinase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.7.4.14">2.7.4.14</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K13809' target='_blank'>K13809</a></td>
+    <td>CMPK2; UMP-CMP kinase 2, mitochondrial [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.7.4.14">2.7.4.14</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00945' target='_blank'>K00945</a></td>
+    <td>cmk; CMP/dCMP kinase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.7.4.25">2.7.4.25</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K13799' target='_blank'>K13799</a></td>
+    <td>panC-cmk; pantoate ligase / CMP/dCMP kinase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:6.3.2.1">6.3.2.1</a> <a target="_blank" href="/dbget-bin/www_bget?ec:2.7.4.25">2.7.4.25</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00940' target='_blank'>K00940</a></td>
+    <td>ndk, NME; nucleoside-diphosphate kinase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.7.4.6">2.7.4.6</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K18533' target='_blank'>K18533</a></td>
+    <td>AK9; adenylate/nucleoside-diphosphate kinase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.7.4.3">2.7.4.3</a> <a target="_blank" href="/dbget-bin/www_bget?ec:2.7.4.6">2.7.4.6</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K01937' target='_blank'>K01937</a></td>
+    <td>pyrG, CTPS; CTP synthase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:6.3.4.2">6.3.4.2</a>]</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00105' target='_blank'>C00105</a></td>
+    <td>UMP</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00015' target='_blank'>C00015</a></td>
+    <td>UDP</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00075' target='_blank'>C00075</a></td>
+    <td>UTP</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00063' target='_blank'>C00063</a></td>
+    <td>CTP</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00112' target='_blank'>C00112</a></td>
+    <td>CDP</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

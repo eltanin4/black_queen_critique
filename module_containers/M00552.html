@@ -1,0 +1,121 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00552'>M00552</a></td>
+ <td>D-galactonate degradation, De Ley-Doudoroff pathway, D-galactonate =&gt; glycerate-3P</td>
+ <!--td>D-galactonate degradation, De Ley-Doudoroff pathway, D-galactonate =&gt; glycerate-3P</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K01684' target='_blank'>K01684</a></td>
+    <td>dgoD; galactonate dehydratase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:4.2.1.6">4.2.1.6</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00883' target='_blank'>K00883</a></td>
+    <td>dgoK; 2-dehydro-3-deoxygalactonokinase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.7.1.58">2.7.1.58</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K01631' target='_blank'>K01631</a></td>
+    <td>dgoA; 2-dehydro-3-deoxyphosphogalactonate aldolase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:4.1.2.21">4.1.2.21</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00134' target='_blank'>K00134</a></td>
+    <td>GAPDH, gapA; glyceraldehyde 3-phosphate dehydrogenase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.2.1.12">1.2.1.12</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00927' target='_blank'>K00927</a></td>
+    <td>PGK, pgk; phosphoglycerate kinase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.7.2.3">2.7.2.3</a>]</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00880' target='_blank'>C00880</a></td>
+    <td>D-Galactonate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C01216' target='_blank'>C01216</a></td>
+    <td>2-Dehydro-3-deoxy-D-galactonate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C01286' target='_blank'>C01286</a></td>
+    <td>2-Dehydro-3-deoxy-6-phospho-D-galactonate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00118' target='_blank'>C00118</a></td>
+    <td>D-Glyceraldehyde 3-phosphate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00236' target='_blank'>C00236</a></td>
+    <td>3-Phospho-D-glyceroyl phosphate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00197' target='_blank'>C00197</a></td>
+    <td>3-Phospho-D-glycerate</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

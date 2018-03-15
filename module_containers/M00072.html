@@ -1,0 +1,126 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00072'>M00072</a></td>
+ <td>N-glycosylation by oligosaccharyltransferase</td>
+ <!--td>N-glycosylation by oligosaccharyltransferase</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K07151' target='_blank'>K07151</a></td>
+    <td>STT3; dolichyl-diphosphooligosaccharide---protein glycosyltransferase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.4.99.18">2.4.99.18</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K12666' target='_blank'>K12666</a></td>
+    <td>OST1, RPN1; oligosaccharyltransferase complex subunit alpha (ribophorin I)</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K12667' target='_blank'>K12667</a></td>
+    <td>SWP1, RPN2; oligosaccharyltransferase complex subunit delta (ribophorin II)</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K12668' target='_blank'>K12668</a></td>
+    <td>OST2, DAD1; oligosaccharyltransferase complex subunit epsilon</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K12669' target='_blank'>K12669</a></td>
+    <td>OST3, OST6; oligosaccharyltransferase complex subunit gamma</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K12670' target='_blank'>K12670</a></td>
+    <td>WBP1; oligosaccharyltransferase complex subunit beta</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00730' target='_blank'>K00730</a></td>
+    <td>OST4; oligosaccharyl transferase complex subunit OST4</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K12691' target='_blank'>K12691</a></td>
+    <td>OST5; oligosaccharyl transferase complex subunit OST5</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?G00008' target='_blank'>G00008</a></td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C03021' target='_blank'>C03021</a></td>
+    <td>Protein asparagine</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00621' target='_blank'>C00621</a></td>
+    <td>Dolichyl diphosphate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?G00009' target='_blank'>G00009</a></td>
+    <td></td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

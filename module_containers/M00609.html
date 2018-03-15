@@ -1,0 +1,136 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00609'>M00609</a></td>
+ <td>Cysteine biosynthesis, methionine =&gt; cysteine</td>
+ <!--td>Cysteine biosynthesis, methionine =&gt; cysteine</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00789' target='_blank'>K00789</a></td>
+    <td>metK; S-adenosylmethionine synthetase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.5.1.6">2.5.1.6</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K17462' target='_blank'>K17462</a></td>
+    <td>yrrT; putative AdoMet-dependent methyltransferase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.1.1.-">2.1.1.-</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K01243' target='_blank'>K01243</a></td>
+    <td>mtnN, mtn, pfs; adenosylhomocysteine nucleosidase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:3.2.2.9">3.2.2.9</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K18284' target='_blank'>K18284</a></td>
+    <td>K18284; adenosylhomocysteine/aminodeoxyfutalosine nucleosidase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:3.2.2.9">3.2.2.9</a> <a target="_blank" href="/dbget-bin/www_bget?ec:3.2.2.30">3.2.2.30</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K07173' target='_blank'>K07173</a></td>
+    <td>luxS; S-ribosylhomocysteine lyase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:4.4.1.21">4.4.1.21</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K17216' target='_blank'>K17216</a></td>
+    <td>mccA; cystathionine beta-synthase (O-acetyl-L-serine) [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.5.1.134">2.5.1.134</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K17217' target='_blank'>K17217</a></td>
+    <td>mccB; cystathionine gamma-lyase / homocysteine desulfhydrase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:4.4.1.1">4.4.1.1</a> <a target="_blank" href="/dbget-bin/www_bget?ec:4.4.1.2">4.4.1.2</a>]</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00073' target='_blank'>C00073</a></td>
+    <td>L-Methionine</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00019' target='_blank'>C00019</a></td>
+    <td>S-Adenosyl-L-methionine</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00021' target='_blank'>C00021</a></td>
+    <td>S-Adenosyl-L-homocysteine</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C03539' target='_blank'>C03539</a></td>
+    <td>S-Ribosyl-L-homocysteine</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00155' target='_blank'>C00155</a></td>
+    <td>L-Homocysteine</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C02291' target='_blank'>C02291</a></td>
+    <td>L-Cystathionine</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00097' target='_blank'>C00097</a></td>
+    <td>L-Cysteine</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

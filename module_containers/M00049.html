@@ -1,0 +1,136 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00049'>M00049</a></td>
+ <td>Adenine ribonucleotide biosynthesis, IMP =&gt; ADP,ATP</td>
+ <!--td>Adenine ribonucleotide biosynthesis, IMP =&gt; ADP,ATP</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K01939' target='_blank'>K01939</a></td>
+    <td>purA, ADSS; adenylosuccinate synthase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:6.3.4.4">6.3.4.4</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K01756' target='_blank'>K01756</a></td>
+    <td>purB, ADSL; adenylosuccinate lyase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:4.3.2.2">4.3.2.2</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00939' target='_blank'>K00939</a></td>
+    <td>adk, AK; adenylate kinase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.7.4.3">2.7.4.3</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K18532' target='_blank'>K18532</a></td>
+    <td>AK6, FAP7; adenylate kinase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.7.4.3">2.7.4.3</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K18533' target='_blank'>K18533</a></td>
+    <td>AK9; adenylate/nucleoside-diphosphate kinase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.7.4.3">2.7.4.3</a> <a target="_blank" href="/dbget-bin/www_bget?ec:2.7.4.6">2.7.4.6</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00944' target='_blank'>K00944</a></td>
+    <td>AK3; nucleoside-triphosphate--adenylate kinase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.7.4.10">2.7.4.10</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00940' target='_blank'>K00940</a></td>
+    <td>ndk, NME; nucleoside-diphosphate kinase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.7.4.6">2.7.4.6</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00873' target='_blank'>K00873</a></td>
+    <td>PK, pyk; pyruvate kinase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.7.1.40">2.7.1.40</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K12406' target='_blank'>K12406</a></td>
+    <td>PKLR; pyruvate kinase isozymes R/L [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.7.1.40">2.7.1.40</a>]</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00130' target='_blank'>C00130</a></td>
+    <td>IMP</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C03794' target='_blank'>C03794</a></td>
+    <td>N6-(1,2-Dicarboxyethyl)-AMP</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00020' target='_blank'>C00020</a></td>
+    <td>AMP</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00008' target='_blank'>C00008</a></td>
+    <td>ADP</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00002' target='_blank'>C00002</a></td>
+    <td>ATP</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

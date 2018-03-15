@@ -1,0 +1,116 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00661'>M00661</a></td>
+ <td>Paspaline biosynthesis, geranylgeranyl-PP + indoleglycerol phosphate =&gt; paspaline</td>
+ <!--td>Paspaline biosynthesis, geranylgeranyl-PP + indoleglycerol phosphate =&gt; paspaline</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K18385' target='_blank'>K18385</a></td>
+    <td>PAXC, ATMC, LTMC; geranylgeranyldiphosphate transferase</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K18386' target='_blank'>K18386</a></td>
+    <td>PAXM, ATMM, LTMM; FAD dependent monooxygenase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.14.13.-">1.14.13.-</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K18387' target='_blank'>K18387</a></td>
+    <td>PAXB, ATMB, LTMB; paspaline synthase</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00353' target='_blank'>C00353</a></td>
+    <td>Geranylgeranyl diphosphate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C03506' target='_blank'>C03506</a></td>
+    <td>Indoleglycerol phosphate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C20525' target='_blank'>C20525</a></td>
+    <td>3-Geranylgeranylindole</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C20526' target='_blank'>C20526</a></td>
+    <td>10,11-Epoxy-3-geranylgeranylindole</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C20527' target='_blank'>C20527</a></td>
+    <td>Emindole SB</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C20529' target='_blank'>C20529</a></td>
+    <td>14,15-Epoxyemindole SB</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C20530' target='_blank'>C20530</a></td>
+    <td>Paspaline</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

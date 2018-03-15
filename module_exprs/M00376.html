@@ -1,0 +1,347 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>KEGG MODULE: M00376</title>
+<link rel="stylesheet" href="/css/kegg.css" type="text/css">
+<style type="text/css">
+td
+{
+  font-size:12px;
+  font-family:verdana,arial,helvetica,sans-serif;
+  vertical-align: top;
+}
+
+div#definition
+{
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+div#definition table tr td {
+  padding-right: 10px;
+}
+
+div.poplay {
+  position: absolute;
+  padding: 2px;
+  background-color: #ffff99;
+  border-top: solid 1px #c0c0c0;
+  border-left: solid 1px #c0c0c0;
+  border-bottom: solid 1px #808080;
+  border-right: solid 1px #808080;
+  visibility: hidden;
+}
+
+span.popup
+{
+  font-weight: bold;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+</style>
+<script language="JavaScript" type="text/javascript" src="/js/dhtml.js"></script>
+<script language="javascript" type="text/javascript">
+<!--
+
+function SubmitForm(theForm)
+{
+  var org = theForm.select_org.value;
+
+  if(org == "set_cookie")
+  {
+    window.open('/kegg/misc/kegg2_select.html','sel_org','toolbar=no,location=no,directories=no,width=500,height=320,resizable=yes');
+    return false;
+  }
+  else if(org.indexOf(".sort_alp") > 0)
+  {
+    var dt = new Date();
+    dt.setTime(dt.getTime() + (30 * 24 * 60 * 60));
+    var c = "KEGG_MapMenu_Sorted=alp;path=/;expires=" + dt.toGMTString();
+    document.cookie = c;
+  }
+  else if(org.indexOf(".sort_org") > 0)
+  {
+    // delete cookie
+    var dt = new Date();
+    dt.setTime(dt.getTime() - 100);
+    var c = "KEGG_MapMenu_Sorted=alp;path=/;expires=" + dt.toGMTString();
+    document.cookie = c;
+  }
+  else
+  {
+    theForm.org.value = org;
+  }
+
+  return true;
+}
+
+function btn(bobj, img)
+{
+  bobj.src = "/Fig/bget/button_" + img + ".gif";
+}
+
+
+function open_ko_list()
+{
+	var win = window.open('module_ko_list?map=M00376&org=ko','_md','toolbar=no,location=no,directories=no,width=700,height=400,resizable=yes,scrollbars=yes,status=no');
+  win.focus();
+}
+
+var timer = 0;
+var p_entry, p_title, p_bgcolor;
+function popupTimer(entry, title, bgcolor)
+{
+  p_entry = entry;
+  p_title = title;
+  p_bgcolor = bgcolor;
+
+  if(timer == 0){
+    var func = "showThumbnail()";
+    timer = setTimeout(func, 1200);
+  }
+}
+
+
+function showThumbnail()
+{
+
+  var url = "";
+  if(p_entry.match(/^[A-Z]+\d+$/))
+  {
+    url = "/kegg/misc/thumbnail/" + p_entry + ".gif";
+  }
+  else if(p_entry.match(/(\d+)$/))
+  {
+    url = "/kegg/misc/thumbnail/map" + RegExp.$1 + ".gif";
+  }
+
+  var html = "";
+
+  if(p_bgcolor != "#ffffff")
+  {
+    html += "<span class=\"popup\">" + p_entry + "</span><br />";
+  }
+
+  html += "<img src=\"" + url + "\" alt=\"Loading...\">";
+
+  var x = getCurrentMouseX();
+  var y = getCurrentMouseY();
+
+  var layer = new Component("poplay");
+  layer.backgroundColor(p_bgcolor);
+  layer.HTML(html);
+  layer.move(x, y+40);
+  layer.visible(true);
+
+  timer = 0;
+}
+
+
+function hideMapTn(){
+  var layer = new Component("poplay");
+  layer.visible(false);
+
+  if(timer != 0){
+    clearTimeout(timer);
+    timer = 0;
+  }
+}
+
+
+// -->
+</script>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+ <tr>
+  <td>
+    <a href="/kegg/kegg2.html"><img align="middle" border="0" src="/Fig/bget/kegg3.gif" alt="KEGG"></a>
+    &nbsp;&nbsp;&nbsp;<a name="module:M00376"></a><font class="title3"><b>3-Hydroxypropionate bi-cycle</b></font>
+  </td>
+  <td align="right" valign="bottom"><a href="javascript:void(window.open('/kegg/document/help_module.html','KEGG_Help','toolbar=no,location=no,directories=no,width=720,height=640,resizable=yes,scrollbars=yes'))"><img onmouseup="btn(this,'Hb')" align="middle" onmouseout="btn(this,'Hb')" onmousedown="btn(this,'Hbd')" onmouseover="btn(this,'Hbh')" alt="Help" name="help" border="0" src="/Fig/bget/button_Hb.gif"></a></td>
+ </tr>
+</table>
+
+[
+<a href="/kegg-bin/get_htext?htext=ko00002.keg&amp;query=M00376&amp;option=-a">Module menu</a> |
+
+<a href="/kegg-bin/get_htext?htext=br08601_M00376.keg&amp;hier=5">Organism menu</a> |
+
+
+<a href="/dbget-bin/www_bget?M00376">Module entry</a> |
+<a href="javascript:void(open_ko_list())">KO/Compound list</a>
+
+]
+
+<div id="definition">
+ <table>
+  <tr>
+   <td>Entry</td>
+   <td>
+   M00376
+   
+   </td>
+  </tr>
+  <tr>
+   <td>Name</td>
+   <td>3-Hydroxypropionate bi-cycle</td>
+  </tr>
+  <tr>
+   <td>Definition</td>
+   <td>
+    <a href="/dbget-bin/www_bget?K02160">K02160</a>+<a href="/dbget-bin/www_bget?K01961">K01961</a>+<a href="/dbget-bin/www_bget?K01962">K01962</a>+<a href="/dbget-bin/www_bget?K01963">K01963</a> <a href="/dbget-bin/www_bget?K14468">K14468</a> <a href="/dbget-bin/www_bget?K14469">K14469</a> <a href="/dbget-bin/www_bget?K15052">K15052</a> <a href="/dbget-bin/www_bget?K05606">K05606</a> (<a href="/dbget-bin/www_bget?K01847">K01847</a>,<a href="/dbget-bin/www_bget?K01848">K01848</a>+<br><a href="/dbget-bin/www_bget?K01849">K01849</a>) <a href="/dbget-bin/www_bget?K14471">K14471</a>+<a href="/dbget-bin/www_bget?K14472">K14472</a> <a href="/dbget-bin/www_bget?K00239">K00239</a>+<a href="/dbget-bin/www_bget?K00240">K00240</a>+<a href="/dbget-bin/www_bget?K00241">K00241</a> <a href="/dbget-bin/www_bget?K01679">K01679</a><br><a href="/dbget-bin/www_bget?K08691">K08691</a> <a href="/dbget-bin/www_bget?K14449">K14449</a> <a href="/dbget-bin/www_bget?K14470">K14470</a> <a href="/dbget-bin/www_bget?K09709">K09709</a><br />
+    <a href="http://www.kegg.jp/kegg-bin/view_ortholog_table?md=M00376"><img onmouseup="btn(this,'OTb')" align="middle" onmouseout="btn(this,'OTb')" onmousedown="btn(this,'OTbd')" onmouseover="btn(this,'OTbh')" alt="Ortholog table" name="OT" border="0" src="/Fig/bget/button_OTb.gif"></a>
+    
+    <a href="javascript:void(document.forms['taxonomy'].submit())"><img onmouseup="btn(this,'Taxb')" align="middle" onmouseout="btn(this,'Taxb')" onmousedown="btn(this,'Taxbd')" onmouseover="btn(this,'Taxbh')" alt="Taxonomy" name="Taxonomy" border="0" src="/Fig/bget/button_Taxb.gif"></a>
+    
+   </td>
+  </tr>
+  <tr>
+   <td>Type</td>
+   <td>Pathway module</td>
+  </tr>
+  
+  
+  <tr>
+   <td>Pathway</td>
+   <td>
+    
+    <span style="margin-right:5px;">
+    <a href="/kegg-bin/show_pathway?map01200+M00376">map01200</a>
+    </span>
+    
+    <span style="margin-right:5px;">
+    <a href="/kegg-bin/show_pathway?map00720+M00376">map00720</a>
+    </span>
+    
+   </td>
+  </tr>
+  
+  
+  
+  <tr>
+   <td>Reaction</td>
+   <td><a href="/dbget-bin/www_bget?R00742">R00742</a>  <a href="/dbget-bin/www_bget?C00024">C00024</a> -&gt; <a href="/dbget-bin/www_bget?C00083">C00083</a><br><a href="/dbget-bin/www_bget?R00740">R00740</a>  <a href="/dbget-bin/www_bget?C00083">C00083</a> -&gt; <a href="/dbget-bin/www_bget?C00222">C00222</a><br><a href="/dbget-bin/www_bget?R09289">R09289</a>  <a href="/dbget-bin/www_bget?C00222">C00222</a> -&gt; <a href="/dbget-bin/www_bget?C01013">C01013</a><br><a href="/dbget-bin/www_bget?R09286">R09286</a>  <a href="/dbget-bin/www_bget?C01013">C01013</a> -&gt; <a href="/dbget-bin/www_bget?C05668">C05668</a><br><a href="/dbget-bin/www_bget?R03045">R03045</a>  <a href="/dbget-bin/www_bget?C05668">C05668</a> -&gt; <a href="/dbget-bin/www_bget?C00894">C00894</a><br><a href="/dbget-bin/www_bget?R00919">R00919</a>  <a href="/dbget-bin/www_bget?C00894">C00894</a> -&gt; <a href="/dbget-bin/www_bget?C00100">C00100</a><br><a href="/dbget-bin/www_bget?R01859">R01859</a>  <a href="/dbget-bin/www_bget?C00100">C00100</a> -&gt; <a href="/dbget-bin/www_bget?C00683">C00683</a><br><a href="/dbget-bin/www_bget?R02765">R02765</a>  <a href="/dbget-bin/www_bget?C00683">C00683</a> -&gt; <a href="/dbget-bin/www_bget?C01213">C01213</a><br><a href="/dbget-bin/www_bget?R00833">R00833</a>  <a href="/dbget-bin/www_bget?C01213">C01213</a> -&gt; <a href="/dbget-bin/www_bget?C00091">C00091</a><br><a href="/dbget-bin/www_bget?R00406">R00406</a>  <a href="/dbget-bin/www_bget?C00091">C00091</a> -&gt; <a href="/dbget-bin/www_bget?C00042">C00042</a><br><a href="/dbget-bin/www_bget?R02164">R02164</a>  <a href="/dbget-bin/www_bget?C00042">C00042</a> -&gt; <a href="/dbget-bin/www_bget?C00122">C00122</a><br><a href="/dbget-bin/www_bget?R01082">R01082</a>  <a href="/dbget-bin/www_bget?C00122">C00122</a> -&gt; <a href="/dbget-bin/www_bget?C00149">C00149</a><br><a href="/dbget-bin/www_bget?R00406">R00406</a>  <a href="/dbget-bin/www_bget?C00149">C00149</a> -&gt; <a href="/dbget-bin/www_bget?C04348">C04348</a><br><a href="/dbget-bin/www_bget?R00473">R00473</a>  <a href="/dbget-bin/www_bget?C04348">C04348</a> -&gt; <a href="/dbget-bin/www_bget?C00024">C00024</a> + <a href="/dbget-bin/www_bget?C00048">C00048</a><br><a href="/dbget-bin/www_bget?R00934">R00934</a>  <a href="/dbget-bin/www_bget?C00100">C00100</a> -&gt; <a href="/dbget-bin/www_bget?C06027">C06027</a><br><a href="/dbget-bin/www_bget?R05076">R05076</a>  <a href="/dbget-bin/www_bget?C06027">C06027</a> -&gt; <a href="/dbget-bin/www_bget?C06028">C06028</a><br><a href="/dbget-bin/www_bget?R09283">R09283</a>  <a href="/dbget-bin/www_bget?C06028">C06028</a> -&gt; <a href="/dbget-bin/www_bget?C18323">C18323</a><br><a href="/dbget-bin/www_bget?R09282">R09282</a>  <a href="/dbget-bin/www_bget?C18323">C18323</a> -&gt; <a href="/dbget-bin/www_bget?C01011">C01011</a><br><a href="/dbget-bin/www_bget?R00237">R00237</a>  <a href="/dbget-bin/www_bget?C01011">C01011</a> -&gt; <a href="/dbget-bin/www_bget?C00024">C00024</a> + <a href="/dbget-bin/www_bget?C00022">C00022</a></td>
+  </tr>
+  
+  
+  <tr>
+   <td>RModule</td>
+   <td><a href="/kegg/reaction/rm019.html">RM019</A>  Acyl-CoA conversion via dicarboxylate semialdehyde</td>
+  </tr>
+  
+  
+  <tr>
+   <td>Comment</td>
+   <td>Organism group: photosynthetic green nonsulfur bacteria</td>
+  </tr>
+  
+ </table>
+</div>
+
+<form action="/kegg-bin/show_module" onsubmit="return SubmitForm(this)">
+<input type="hidden" name="map" value="M00376">
+<input type="hidden" name="org" value="ko">
+
+<div style="margin-top:10px;">
+
+<div>
+<select name="select_org">
+<option value="ko">Reference module (KO)</option>
+<option value="set_cookie">-----&lt; Set personalized menu &gt;-----</option>
+<option value="ko.sort_alp">-----&lt; Sort below by alphabet &gt;-----</option>
+<option value="rrs" >Roseiflexus sp. RS-1</option>
+<option value="rca" >Roseiflexus castenholzii</option>
+<option value="cau" >Chloroflexus aurantiacus</option>
+<option value="cag" >Chloroflexus aggregans</option>
+<option value="chl" >Chloroflexus sp. Y-400-fl</option>
+
+</select>
+<input type="submit" value="Go">
+</div>
+
+<table cellpadding="10">
+ <tr>
+  <td><img src="/tmp/pathway_thumbnail/ko_M00376.png?1521114556" usemap="#module" border="0" alt="MODULE IMAGE"></td>
+  
+  <td><img src="/tmp/pathway_thumbnail/M00376_reaction.png?1521114556" usemap="#reaction" border="0" alt="MODULE-REACTION IMAGE"></td>
+  
+ </tr>
+</table>
+<map id="module" name="module">
+<area shape="rect" id="node1_0" href="http://www.kegg.jp/dbget-bin/www_bget?K02160" title="K02160 (accB)" alt="" coords="55,11,129,33"/>
+<area shape="rect" id="node1_1" href="http://www.kegg.jp/dbget-bin/www_bget?K01961" title="K01961 (accC)" alt="" coords="55,33,129,56"/>
+<area shape="rect" id="node1_2" href="http://www.kegg.jp/dbget-bin/www_bget?K01962" title="K01962 (accA)" alt="" coords="55,56,129,79"/>
+<area shape="rect" id="node1_3" href="http://www.kegg.jp/dbget-bin/www_bget?K01963" title="K01963 (accD)" alt="" coords="55,79,129,101"/>
+<area shape="rect" id="node2_4" href="http://www.kegg.jp/dbget-bin/www_bget?K14468" title="K14468 (mcr)" alt="" coords="55,131,129,153"/>
+<area shape="rect" id="node3_5" href="http://www.kegg.jp/dbget-bin/www_bget?K14469" title="K14469" alt="" coords="55,189,129,212"/>
+<area shape="rect" id="node4_6" href="http://www.kegg.jp/dbget-bin/www_bget?K15052" title="K15052" alt="" coords="55,248,129,271"/>
+<area shape="rect" id="node5_7" href="http://www.kegg.jp/dbget-bin/www_bget?K05606" title="K05606 (MCEE)" alt="" coords="55,307,129,329"/>
+<area shape="rect" id="node6_8" href="http://www.kegg.jp/dbget-bin/www_bget?K01847" title="K01847 (MUT)" alt="" coords="17,357,90,403"/>
+<area shape="rect" id="node6_9" href="http://www.kegg.jp/dbget-bin/www_bget?K01848" title="K01848 (E5.4.99.2A)" alt="" coords="94,357,167,380"/>
+<area shape="rect" id="node6_10" href="http://www.kegg.jp/dbget-bin/www_bget?K01849" title="K01849 (E5.4.99.2B)" alt="" coords="94,380,167,403"/>
+<area shape="rect" id="node7_11" href="http://www.kegg.jp/dbget-bin/www_bget?K14471" title="K14471 (smtA1)" alt="" coords="55,424,129,447"/>
+<area shape="rect" id="node7_12" href="http://www.kegg.jp/dbget-bin/www_bget?K14472" title="K14472 (smtB)" alt="" coords="55,447,129,469"/>
+<area shape="rect" id="node8_13" href="http://www.kegg.jp/dbget-bin/www_bget?K00239" title="K00239 (sdhA)" alt="" coords="55,491,129,514"/>
+<area shape="rect" id="node8_14" href="http://www.kegg.jp/dbget-bin/www_bget?K00240" title="K00240 (sdhB)" alt="" coords="55,514,129,537"/>
+<area shape="rect" id="node8_15" href="http://www.kegg.jp/dbget-bin/www_bget?K00241" title="K00241 (sdhC)" alt="" coords="55,537,129,559"/>
+<area shape="rect" id="node9_16" href="http://www.kegg.jp/dbget-bin/www_bget?K01679" title="K01679 (E4.2.1.2B)" alt="" coords="55,588,129,611"/>
+<area shape="rect" id="node10_17" href="http://www.kegg.jp/dbget-bin/www_bget?K08691" title="K08691 (mcl)" alt="" coords="174,45,247,68"/>
+<area shape="rect" id="node11_18" href="http://www.kegg.jp/dbget-bin/www_bget?K14449" title="K14449 (mch)" alt="" coords="174,131,247,153"/>
+<area shape="rect" id="node12_19" href="http://www.kegg.jp/dbget-bin/www_bget?K14470" title="K14470 (mct)" alt="" coords="174,189,247,212"/>
+<area shape="rect" id="node13_20" href="http://www.kegg.jp/dbget-bin/www_bget?K09709" title="K09709 (meh)" alt="" coords="174,248,247,271"/>
+</map>
+
+<map id="reaction" name="reaction">
+<area shape="poly" id="node1" href="/dbget-bin/www_bget?C00024" title="C00024 (Acetyl&#45;CoA)" alt="" coords="389,29,387,22,382,15,374,10,363,7,352,5,341,7,330,10,322,15,317,22,315,29,317,37,322,43,330,49,341,52,352,53,363,52,374,49,382,43,387,37" onmouseover="popupTimer(&quot;C00024&quot;, &quot;C00024 (Acetyl&#45;CoA)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node2" href="/dbget-bin/www_bget?R00742" title="R00742" alt="" coords="237,83,315,105"/>
+<area shape="poly" id="node3" href="/dbget-bin/www_bget?C00083" title="C00083 (Malonyl&#45;CoA)" alt="" coords="313,159,311,151,306,145,298,139,287,136,276,135,265,136,254,139,246,145,241,151,239,159,241,166,246,173,254,178,265,181,276,183,287,181,298,178,306,173,311,166" onmouseover="popupTimer(&quot;C00083&quot;, &quot;C00083 (Malonyl&#45;CoA)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node4" href="/dbget-bin/www_bget?R00740" title="R00740" alt="" coords="237,212,315,235"/>
+<area shape="poly" id="node5" href="/dbget-bin/www_bget?C00222" title="C00222 (3&#45;Oxopropanoate)" alt="" coords="313,288,311,281,306,274,298,269,287,265,276,264,265,265,254,269,246,274,241,281,239,288,241,295,246,302,254,307,265,311,276,312,287,311,298,307,306,302,311,295" onmouseover="popupTimer(&quot;C00222&quot;, &quot;C00222 (3&#45;Oxopropanoate)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node6" href="/dbget-bin/www_bget?R09289" title="R09289" alt="" coords="237,341,315,364"/>
+<area shape="poly" id="node7" href="/dbget-bin/www_bget?C01013" title="C01013 (3&#45;Hydroxypropanoate)" alt="" coords="313,417,311,410,306,403,298,398,287,395,276,393,265,395,254,398,246,403,241,410,239,417,241,425,246,431,254,437,265,440,276,441,287,440,298,437,306,431,311,425" onmouseover="popupTimer(&quot;C01013&quot;, &quot;C01013 (3&#45;Hydroxypropanoate)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node8" href="/dbget-bin/www_bget?R09286" title="R09286" alt="" coords="237,471,315,493"/>
+<area shape="poly" id="node9" href="/dbget-bin/www_bget?C05668" title="C05668 (3&#45;Hydroxypropionyl&#45;CoA)" alt="" coords="312,547,311,539,305,533,297,527,287,524,276,523,265,524,255,527,247,533,241,539,240,547,241,554,247,561,255,566,265,569,276,571,287,569,297,566,305,561,311,554" onmouseover="popupTimer(&quot;C05668&quot;, &quot;C05668 (3&#45;Hydroxypropionyl&#45;CoA)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node10" href="/dbget-bin/www_bget?R03045" title="R03045" alt="" coords="237,600,315,623"/>
+<area shape="poly" id="node11" href="/dbget-bin/www_bget?C00894" title="C00894 (Propenoyl&#45;CoA)" alt="" coords="313,676,311,669,306,662,298,657,287,653,276,652,265,653,254,657,246,662,241,669,239,676,241,683,246,690,254,695,265,699,276,700,287,699,298,695,306,690,311,683" onmouseover="popupTimer(&quot;C00894&quot;, &quot;C00894 (Propenoyl&#45;CoA)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node12" href="/dbget-bin/www_bget?R00919" title="R00919" alt="" coords="237,729,315,752"/>
+<area shape="poly" id="node13" href="/dbget-bin/www_bget?C00100" title="C00100 (Propanoyl&#45;CoA)" alt="" coords="313,805,311,798,306,791,298,786,287,783,276,781,265,783,254,786,246,791,241,798,239,805,241,813,246,819,254,825,265,828,276,829,287,828,298,825,306,819,311,813" onmouseover="popupTimer(&quot;C00100&quot;, &quot;C00100 (Propanoyl&#45;CoA)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node14" href="/dbget-bin/www_bget?R01859" title="R01859" alt="" coords="89,859,167,881"/>
+<area shape="rect" id="node29" href="/dbget-bin/www_bget?R00934" title="R00934" alt="" coords="237,859,315,881"/>
+<area shape="poly" id="node15" href="/dbget-bin/www_bget?C00683" title="C00683 ((S)&#45;Methylmalonyl&#45;CoA)" alt="" coords="164,935,163,927,157,921,149,915,139,912,128,911,117,912,107,915,99,921,93,927,92,935,93,942,99,949,107,954,117,957,128,959,139,957,149,954,157,949,163,942" onmouseover="popupTimer(&quot;C00683&quot;, &quot;C00683 ((S)&#45;Methylmalonyl&#45;CoA)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node16" href="/dbget-bin/www_bget?R02765" title="R02765" alt="" coords="89,988,167,1011"/>
+<area shape="poly" id="node17" href="/dbget-bin/www_bget?C01213" title="C01213 ((R)&#45;Methylmalonyl&#45;CoA)" alt="" coords="165,1064,163,1057,158,1050,150,1045,139,1041,128,1040,117,1041,106,1045,98,1050,93,1057,91,1064,93,1071,98,1078,106,1083,117,1087,128,1088,139,1087,150,1083,158,1078,163,1071" onmouseover="popupTimer(&quot;C01213&quot;, &quot;C01213 ((R)&#45;Methylmalonyl&#45;CoA)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node18" href="/dbget-bin/www_bget?R00833" title="R00833" alt="" coords="89,1117,167,1140"/>
+<area shape="poly" id="node19" href="/dbget-bin/www_bget?C00091" title="C00091 (Succinyl&#45;CoA)" alt="" coords="153,1193,151,1186,146,1179,138,1174,127,1171,116,1169,105,1171,94,1174,86,1179,81,1186,79,1193,81,1201,86,1207,94,1213,105,1216,116,1217,127,1216,138,1213,146,1207,151,1201" onmouseover="popupTimer(&quot;C00091&quot;, &quot;C00091 (Succinyl&#45;CoA)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node20" href="/dbget-bin/www_bget?R00406" title="R00406" alt="" coords="53,1247,131,1269"/>
+<area shape="poly" id="node21" href="/dbget-bin/www_bget?C00042" title="C00042 (Succinate)" alt="" coords="117,1323,115,1315,110,1309,102,1303,91,1300,80,1299,69,1300,58,1303,50,1309,45,1315,43,1323,45,1330,50,1337,58,1342,69,1345,80,1347,91,1345,102,1342,110,1337,115,1330" onmouseover="popupTimer(&quot;C00042&quot;, &quot;C00042 (Succinate)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="poly" id="node26" href="/dbget-bin/www_bget?C04348" title="C04348 (L&#45;Malyl&#45;CoA)" alt="" coords="216,1323,214,1315,209,1309,200,1303,190,1300,179,1299,167,1300,157,1303,149,1309,143,1315,142,1323,143,1330,149,1337,157,1342,167,1345,179,1347,190,1345,200,1342,209,1337,214,1330" onmouseover="popupTimer(&quot;C04348&quot;, &quot;C04348 (L&#45;Malyl&#45;CoA)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node22" href="/dbget-bin/www_bget?R02164" title="R02164" alt="" coords="43,1376,120,1399"/>
+<area shape="poly" id="node23" href="/dbget-bin/www_bget?C00122" title="C00122 (Fumarate)" alt="" coords="118,1452,117,1445,111,1438,103,1433,93,1429,81,1428,70,1429,60,1433,51,1438,46,1445,44,1452,46,1459,51,1466,60,1471,70,1475,81,1476,93,1475,103,1471,111,1466,117,1459" onmouseover="popupTimer(&quot;C00122&quot;, &quot;C00122 (Fumarate)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node24" href="/dbget-bin/www_bget?R01082" title="R01082" alt="" coords="43,1505,120,1528"/>
+<area shape="poly" id="node25" href="/dbget-bin/www_bget?C00149" title="C00149 ((S)&#45;Malate)" alt="" coords="80,1581,78,1574,73,1567,64,1562,54,1559,43,1557,31,1559,21,1562,13,1567,7,1574,6,1581,7,1589,13,1595,21,1601,31,1604,43,1605,54,1604,64,1601,73,1595,78,1589" onmouseover="popupTimer(&quot;C00149&quot;, &quot;C00149 ((S)&#45;Malate)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node27" href="/dbget-bin/www_bget?R00473" title="R00473" alt="" coords="203,1376,280,1399"/>
+<area shape="poly" id="node28" href="/dbget-bin/www_bget?C00048" title="C00048 (Glyoxylate)" alt="" coords="278,1452,277,1445,271,1438,263,1433,253,1429,241,1428,230,1429,220,1433,211,1438,206,1445,204,1452,206,1459,211,1466,220,1471,230,1475,241,1476,253,1475,263,1471,271,1466,277,1459" onmouseover="popupTimer(&quot;C00048&quot;, &quot;C00048 (Glyoxylate)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="poly" id="node30" href="/dbget-bin/www_bget?C06027" title="C06027 (L&#45;erythro&#45;3&#45;Methylmalyl&#45;CoA)" alt="" coords="312,935,311,927,305,921,297,915,287,912,276,911,265,912,255,915,247,921,241,927,240,935,241,942,247,949,255,954,265,957,276,959,287,957,297,954,305,949,311,942" onmouseover="popupTimer(&quot;C06027&quot;, &quot;C06027 (L&#45;erythro&#45;3&#45;Methylmalyl&#45;CoA)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node31" href="/dbget-bin/www_bget?R05076" title="R05076" alt="" coords="237,988,315,1011"/>
+<area shape="poly" id="node32" href="/dbget-bin/www_bget?C06028" title="C06028 (2&#45;Methylfumaryl&#45;CoA)" alt="" coords="312,1064,311,1057,305,1050,297,1045,287,1041,276,1040,265,1041,255,1045,247,1050,241,1057,240,1064,241,1071,247,1078,255,1083,265,1087,276,1088,287,1087,297,1083,305,1078,311,1071" onmouseover="popupTimer(&quot;C06028&quot;, &quot;C06028 (2&#45;Methylfumaryl&#45;CoA)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node33" href="/dbget-bin/www_bget?R09283" title="R09283" alt="" coords="237,1117,315,1140"/>
+<area shape="poly" id="node34" href="/dbget-bin/www_bget?C18323" title="C18323 (3&#45;Methylfumaryl&#45;CoA)" alt="" coords="313,1193,311,1186,306,1179,298,1174,287,1171,276,1169,265,1171,254,1174,246,1179,241,1186,239,1193,241,1201,246,1207,254,1213,265,1216,276,1217,287,1216,298,1213,306,1207,311,1201" onmouseover="popupTimer(&quot;C18323&quot;, &quot;C18323 (3&#45;Methylfumaryl&#45;CoA)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node35" href="/dbget-bin/www_bget?R09282" title="R09282" alt="" coords="237,1247,315,1269"/>
+<area shape="poly" id="node36" href="/dbget-bin/www_bget?C01011" title="C01011 ((3S)&#45;Citramalyl&#45;CoA)" alt="" coords="314,1323,313,1315,307,1309,299,1303,289,1300,277,1299,266,1300,256,1303,247,1309,242,1315,240,1323,242,1330,247,1337,256,1342,266,1345,277,1347,289,1345,299,1342,307,1337,313,1330" onmouseover="popupTimer(&quot;C01011&quot;, &quot;C01011 ((3S)&#45;Citramalyl&#45;CoA)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node37" href="/dbget-bin/www_bget?R00237" title="R00237" alt="" coords="333,1376,411,1399"/>
+<area shape="poly" id="node38" href="/dbget-bin/www_bget?C00022" title="C00022 (Pyruvate)" alt="" coords="409,1452,407,1445,402,1438,394,1433,383,1429,372,1428,361,1429,350,1433,342,1438,337,1445,335,1452,337,1459,342,1466,350,1471,361,1475,372,1476,383,1475,394,1471,402,1466,407,1459" onmouseover="popupTimer(&quot;C00022&quot;, &quot;C00022 (Pyruvate)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+</map>
+</div>
+
+</form>
+<form name="taxonomy" method="post" action="/kegg-bin/get_htext">
+ <input type="hidden" name="htext" value="br08601.keg">
+ <input type="hidden" name="option" value="-a">
+ <input type="hidden" name="query" value="rrs rca cau cag chl">
+</form>
+<div id="poplay" class="poplay"></div>
+</body>
+</html>

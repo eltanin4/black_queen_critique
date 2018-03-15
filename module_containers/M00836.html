@@ -1,0 +1,116 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00836'>M00836</a></td>
+ <td>Coenzyme F430 biosynthesis, sirohydrochlorin =&gt; coenzyme F430</td>
+ <!--td>Coenzyme F430 biosynthesis, sirohydrochlorin =&gt; coenzyme F430</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K22011' target='_blank'>K22011</a></td>
+    <td>cfbA; sirohydrochlorin cobalto/nickelchelatase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:4.99.1.3">4.99.1.3</a> <a target="_blank" href="/dbget-bin/www_bget?ec:4.99.1.11">4.99.1.11</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K22012' target='_blank'>K22012</a></td>
+    <td>cfbB; Ni-sirohydrochlorin a,c-diamide synthase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:6.3.5.12">6.3.5.12</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K21610' target='_blank'>K21610</a></td>
+    <td>cfbC; Ni-sirohydrochlorin a,c-diamide reductive cyclase subunit CfbC [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:6.3.3.7">6.3.3.7</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K21611' target='_blank'>K21611</a></td>
+    <td>cfbD; Ni-sirohydrochlorin a,c-diamide reductive cyclase subunit CfbD [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:6.3.3.7">6.3.3.7</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K21612' target='_blank'>K21612</a></td>
+    <td>cfbE; coenzyme F430 synthetase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:6.4.1.9">6.4.1.9</a>]</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C05778' target='_blank'>C05778</a></td>
+    <td>Sirohydrochlorin</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C21510' target='_blank'>C21510</a></td>
+    <td>Nickel-sirohydrochlorin</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C21511' target='_blank'>C21511</a></td>
+    <td>Nickel-sirohydrochlorin a,c-diamide</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C21512' target='_blank'>C21512</a></td>
+    <td>15,17(3)-Seco-F430-17(3)-acid</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C05777' target='_blank'>C05777</a></td>
+    <td>Coenzyme F430</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

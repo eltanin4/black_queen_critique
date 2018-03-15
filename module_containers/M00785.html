@@ -1,0 +1,141 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00785'>M00785</a></td>
+ <td>Cycloserine biosynthesis, arginine/serine =&gt; cycloserine</td>
+ <!--td>Cycloserine biosynthesis, arginine/serine =&gt; cycloserine</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K19741' target='_blank'>K19741</a></td>
+    <td>dcsA; Nomega-hydroxy-L-arginine synthase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.14.-.-">1.14.-.-</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K19723' target='_blank'>K19723</a></td>
+    <td>dcsB; Nomega-hydroxy-L-arginine amidinohydrolase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:3.5.3.25">3.5.3.25</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K19726' target='_blank'>K19726</a></td>
+    <td>dcsE; serine/homoserine O-acetyltransferase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.3.1.30">2.3.1.30</a> <a target="_blank" href="/dbget-bin/www_bget?ec:2.3.1.31">2.3.1.31</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K19725' target='_blank'>K19725</a></td>
+    <td>dcsD; O-ureido-L-serine/cysteine synthase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.6.99.3">2.6.99.3</a> <a target="_blank" href="/dbget-bin/www_bget?ec:2.5.1.47">2.5.1.47</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K19724' target='_blank'>K19724</a></td>
+    <td>dcsC; O-ureido-serine racemase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:5.1.1.19">5.1.1.19</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K19727' target='_blank'>K19727</a></td>
+    <td>dcsG; O-ureido-D-serine cyclo-ligase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:6.3.3.5">6.3.3.5</a>]</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00065' target='_blank'>C00065</a></td>
+    <td>L-Serine</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00979' target='_blank'>C00979</a></td>
+    <td>O-Acetyl-L-serine</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00062' target='_blank'>C00062</a></td>
+    <td>L-Arginine</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C05933' target='_blank'>C05933</a></td>
+    <td>N(omega)-Hydroxyarginine</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C07044' target='_blank'>C07044</a></td>
+    <td>Hydroxyurea</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00077' target='_blank'>C00077</a></td>
+    <td>L-Ornithine</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C20639' target='_blank'>C20639</a></td>
+    <td>O-Ureido-L-serine</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C20651' target='_blank'>C20651</a></td>
+    <td>O-Ureido-D-serine</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C08057' target='_blank'>C08057</a></td>
+    <td>Cycloserine</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

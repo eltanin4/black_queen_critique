@@ -1,0 +1,141 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00174'>M00174</a></td>
+ <td>Methane oxidation, methanotroph, methane =&gt; formaldehyde</td>
+ <!--td>Methane oxidation, methanotroph, methane =&gt; formaldehyde</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K10944' target='_blank'>K10944</a></td>
+    <td>pmoA-amoA; methane/ammonia monooxygenase subunit A [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.14.18.3">1.14.18.3</a> <a target="_blank" href="/dbget-bin/www_bget?ec:1.14.99.39">1.14.99.39</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K10945' target='_blank'>K10945</a></td>
+    <td>pmoB-amoB; methane/ammonia monooxygenase subunit B</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K10946' target='_blank'>K10946</a></td>
+    <td>pmoC-amoC; methane/ammonia monooxygenase subunit C</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K16157' target='_blank'>K16157</a></td>
+    <td>mmoX; methane monooxygenase component A alpha chain [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.14.13.25">1.14.13.25</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K16158' target='_blank'>K16158</a></td>
+    <td>mmoY; methane monooxygenase component A beta chain [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.14.13.25">1.14.13.25</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K16159' target='_blank'>K16159</a></td>
+    <td>mmoZ; methane monooxygenase component A gamma chain [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.14.13.25">1.14.13.25</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K16160' target='_blank'>K16160</a></td>
+    <td>mmoB; methane monooxygenase regulatory protein B</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K16161' target='_blank'>K16161</a></td>
+    <td>mmoC; methane monooxygenase component C [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.14.13.25">1.14.13.25</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K16162' target='_blank'>K16162</a></td>
+    <td>mmoD; methane monooxygenase component D</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K14028' target='_blank'>K14028</a></td>
+    <td>mdh1, mxaF; methanol dehydrogenase (cytochrome c) subunit 1 [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.1.2.7">1.1.2.7</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K14029' target='_blank'>K14029</a></td>
+    <td>mdh2, mxaI; methanol dehydrogenase (cytochrome c) subunit 2 [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.1.2.7">1.1.2.7</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K17066' target='_blank'>K17066</a></td>
+    <td>MOX; alcohol oxidase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.1.3.13">1.1.3.13</a>]</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C01438' target='_blank'>C01438</a></td>
+    <td>Methane</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00132' target='_blank'>C00132</a></td>
+    <td>Methanol</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00067' target='_blank'>C00067</a></td>
+    <td>Formaldehyde</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

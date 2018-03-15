@@ -1,0 +1,151 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00097'>M00097</a></td>
+ <td>beta-Carotene biosynthesis, GGAP =&gt; beta-carotene</td>
+ <!--td>beta-Carotene biosynthesis, GGAP =&gt; beta-carotene</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K02291' target='_blank'>K02291</a></td>
+    <td>crtB; 15-cis-phytoene/all-trans-phytoene synthase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.5.1.32">2.5.1.32</a> <a target="_blank" href="/dbget-bin/www_bget?ec:2.5.1.99">2.5.1.99</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K02293' target='_blank'>K02293</a></td>
+    <td>PDS, crtP; 15-cis-phytoene desaturase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.3.5.5">1.3.5.5</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K15744' target='_blank'>K15744</a></td>
+    <td>Z-ISO; zeta-carotene isomerase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:5.2.1.12">5.2.1.12</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00514' target='_blank'>K00514</a></td>
+    <td>ZDS, crtQ; zeta-carotene desaturase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.3.5.6">1.3.5.6</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K09835' target='_blank'>K09835</a></td>
+    <td>crtISO, crtH; prolycopene isomerase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:5.2.1.13">5.2.1.13</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K06443' target='_blank'>K06443</a></td>
+    <td>lcyB, crtL1, crtY; lycopene beta-cyclase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:5.5.1.19">5.5.1.19</a>]</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00353' target='_blank'>C00353</a></td>
+    <td>Geranylgeranyl diphosphate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C03427' target='_blank'>C03427</a></td>
+    <td>Prephytoene diphosphate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C05421' target='_blank'>C05421</a></td>
+    <td>15-cis-Phytoene</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C19765' target='_blank'>C19765</a></td>
+    <td>15,9'-dicis-Phytofluene</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C19764' target='_blank'>C19764</a></td>
+    <td>9,15,9'-tricis-zeta-Carotene</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C15857' target='_blank'>C15857</a></td>
+    <td>9,9'-dicis-zeta-Carotene</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C19759' target='_blank'>C19759</a></td>
+    <td>7,9,9'-tricis-Neurosporene</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C15858' target='_blank'>C15858</a></td>
+    <td>7,9,7',9'-tetracis-Lycopene</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C05432' target='_blank'>C05432</a></td>
+    <td>Lycopene</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C05435' target='_blank'>C05435</a></td>
+    <td>gamma-Carotene</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C02094' target='_blank'>C02094</a></td>
+    <td>beta-Carotene</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

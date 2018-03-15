@@ -1,0 +1,166 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00815'>M00815</a></td>
+ <td>Validamycin A biosynthesis, sedoheptulopyranose-7P =&gt; validamycin A</td>
+ <!--td>Validamycin A biosynthesis, sedoheptulopyranose-7P =&gt; validamycin A</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K19969' target='_blank'>K19969</a></td>
+    <td>acbC, salQ, valA, cetA; 2-epi-5-epi-valiolone synthase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:4.2.3.152">4.2.3.152</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K20431' target='_blank'>K20431</a></td>
+    <td>cetB, valD; 2-epi-5-epi-valiolone epimerase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:5.1.3.33">5.1.3.33</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K20432' target='_blank'>K20432</a></td>
+    <td>valK; 5-epi-valiolone dehydratase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:4.2.1.-">4.2.1.-</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K20433' target='_blank'>K20433</a></td>
+    <td>valC; C7-cyclitol 7-kinase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.7.1.214">2.7.1.214</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K20434' target='_blank'>K20434</a></td>
+    <td>valN; cyclitol reductase</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K20435' target='_blank'>K20435</a></td>
+    <td>valM; validone 7-phosphate aminotransferase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.6.1.-">2.6.1.-</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K20436' target='_blank'>K20436</a></td>
+    <td>valL, salC; validamine 7-phosphate valienyltransferase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.5.1.135">2.5.1.135</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K20437' target='_blank'>K20437</a></td>
+    <td>vldH; validoxylamine A 7'-phosphate phosphatase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:3.1.3.101">3.1.3.101</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K20438' target='_blank'>K20438</a></td>
+    <td>valG; validoxylamine A glucosyltransferase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.4.1.338">2.4.1.338</a>]</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C20956' target='_blank'>C20956</a></td>
+    <td>alpha-D-Sedoheptulopyranose 7-phosphate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C17691' target='_blank'>C17691</a></td>
+    <td>2-epi-5-epi-Valiolone</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C17694' target='_blank'>C17694</a></td>
+    <td>5-epi-Valiolone</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C17696' target='_blank'>C17696</a></td>
+    <td>Valienone</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C17697' target='_blank'>C17697</a></td>
+    <td>Valienone 7-phosphate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C21218' target='_blank'>C21218</a></td>
+    <td>Validone 7-phosphate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C21216' target='_blank'>C21216</a></td>
+    <td>Validamine 7-phosphate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C21210' target='_blank'>C21210</a></td>
+    <td>NDP-1-epi-valienol</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C21219' target='_blank'>C21219</a></td>
+    <td>Validoxylamine A 7'-phosphate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C17700' target='_blank'>C17700</a></td>
+    <td>Validoxylamine A</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C12112' target='_blank'>C12112</a></td>
+    <td>Validamycin A</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

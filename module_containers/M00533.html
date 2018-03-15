@@ -1,0 +1,121 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00533'>M00533</a></td>
+ <td>Homoprotocatechuate degradation, homoprotocatechuate =&gt; 2-oxohept-3-enedioate</td>
+ <!--td>Homoprotocatechuate degradation, homoprotocatechuate =&gt; 2-oxohept-3-enedioate</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00455' target='_blank'>K00455</a></td>
+    <td>hpaD, hpcB; 3,4-dihydroxyphenylacetate 2,3-dioxygenase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.13.11.15">1.13.11.15</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00151' target='_blank'>K00151</a></td>
+    <td>hpaE, hpcC; 5-carboxymethyl-2-hydroxymuconic-semialdehyde dehydrogenase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.2.1.60">1.2.1.60</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K10219' target='_blank'>K10219</a></td>
+    <td>ligC; 2-hydroxy-4-carboxymuconate semialdehyde hemiacetal dehydrogenase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.1.1.312">1.1.1.312</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K01826' target='_blank'>K01826</a></td>
+    <td>hpaF, hpcD; 5-carboxymethyl-2-hydroxymuconate isomerase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:5.3.3.10">5.3.3.10</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K05921' target='_blank'>K05921</a></td>
+    <td>hpaG; 5-oxopent-3-ene-1,2,5-tricarboxylate decarboxylase / 2-hydroxyhepta-2,4-diene-1,7-dioate isomerase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:4.1.1.68">4.1.1.68</a> <a target="_blank" href="/dbget-bin/www_bget?ec:5.3.3.-">5.3.3.-</a>]</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C01161' target='_blank'>C01161</a></td>
+    <td>3,4-Dihydroxyphenylacetate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C04642' target='_blank'>C04642</a></td>
+    <td>2-Hydroxy-5-carboxymethylmuconate semialdehyde</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C04186' target='_blank'>C04186</a></td>
+    <td>5-Carboxymethyl-2-hydroxymuconate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C04052' target='_blank'>C04052</a></td>
+    <td>5-Carboxy-2-oxohept-3-enedioate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C05600' target='_blank'>C05600</a></td>
+    <td>2-Hydroxyhepta-2,4-dienedioate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C03063' target='_blank'>C03063</a></td>
+    <td>2-Oxohept-3-enedioate</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

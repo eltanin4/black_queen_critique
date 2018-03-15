@@ -1,0 +1,121 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00800'>M00800</a></td>
+ <td>dTDP-L-megosamine biosynthesis</td>
+ <!--td>dTDP-L-megosamine biosynthesis</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K16435' target='_blank'>K16435</a></td>
+    <td>evaA, eryBVI, tylCVI, tylX3, staJ; dTDP-4-dehydro-6-deoxy-alpha-D-glucopyranose 2,3-dehydratase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:4.2.1.159">4.2.1.159</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K16436' target='_blank'>K16436</a></td>
+    <td>evaB, megDII, angB, staI; dTDP-3-amino-2,3,6-trideoxy-4-keto-D-glucose/dTDP-3-amino-3,4,6-trideoxy-alpha-D-glucose/dTDP-2,6-dideoxy-D-kanosamine transaminase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.6.1.-">2.6.1.-</a> <a target="_blank" href="/dbget-bin/www_bget?ec:2.6.1.106">2.6.1.106</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K13326' target='_blank'>K13326</a></td>
+    <td>megDIII; dTDP-3-amino-2,3,6-trideoxy-4-keto-D-glucose/dTDP-3-amino-3,4,6-trideoxy-alpha-D-glucopyranose N,N-dimethyltransferase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.1.1.-">2.1.1.-</a> <a target="_blank" href="/dbget-bin/www_bget?ec:2.1.1.234">2.1.1.234</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K16438' target='_blank'>K16438</a></td>
+    <td>evaD, eryBVII, aveBV, megDIV, staE; 5-epimerase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:5.1.3.-">5.1.3.-</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K13322' target='_blank'>K13322</a></td>
+    <td>megDV; dTDP-4-keto-6-deoxyhexose 4-ketoreductase</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C11907' target='_blank'>C11907</a></td>
+    <td>dTDP-4-oxo-6-deoxy-D-glucose</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C06620' target='_blank'>C06620</a></td>
+    <td>dTDP-3,4-dioxo-2,6-dideoxy-D-glucose</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C12318' target='_blank'>C12318</a></td>
+    <td>dTDP-3-amino-2,3,6-trideoxy-4-keto-D-glucose</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C21073' target='_blank'>C21073</a></td>
+    <td>dTDP-3-N,N-dimethylamino-2,3,6-trideoxy-4-keto-D-glucose</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C21074' target='_blank'>C21074</a></td>
+    <td>dTDP-3-N,N-dimethylamino-4-oxo-2,3,6-trideoxy-L-allose</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C11919' target='_blank'>C11919</a></td>
+    <td>dTDP-L-megosamine</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

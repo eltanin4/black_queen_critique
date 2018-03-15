@@ -1,0 +1,156 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00038'>M00038</a></td>
+ <td>Tryptophan metabolism, tryptophan =&gt; kynurenine =&gt; 2-aminomuconate</td>
+ <!--td>Tryptophan metabolism, tryptophan =&gt; kynurenine =&gt; 2-aminomuconate</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00453' target='_blank'>K00453</a></td>
+    <td>TDO2, kynA; tryptophan 2,3-dioxygenase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.13.11.11">1.13.11.11</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00463' target='_blank'>K00463</a></td>
+    <td>IDO, INDO; indoleamine 2,3-dioxygenase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.13.11.52">1.13.11.52</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K01432' target='_blank'>K01432</a></td>
+    <td>AFMID; arylformamidase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:3.5.1.9">3.5.1.9</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K14263' target='_blank'>K14263</a></td>
+    <td>BNA7; kynurenine formamidase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:3.5.1.9">3.5.1.9</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K07130' target='_blank'>K07130</a></td>
+    <td>kynB; arylformamidase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:3.5.1.9">3.5.1.9</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00486' target='_blank'>K00486</a></td>
+    <td>KMO; kynurenine 3-monooxygenase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.14.13.9">1.14.13.9</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K01556' target='_blank'>K01556</a></td>
+    <td>KYNU, kynU; kynureninase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:3.7.1.3">3.7.1.3</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00452' target='_blank'>K00452</a></td>
+    <td>HAAO; 3-hydroxyanthranilate 3,4-dioxygenase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.13.11.6">1.13.11.6</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K03392' target='_blank'>K03392</a></td>
+    <td>ACMSD; aminocarboxymuconate-semialdehyde decarboxylase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:4.1.1.45">4.1.1.45</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K10217' target='_blank'>K10217</a></td>
+    <td>dmpC, xylG, praB; aminomuconate-semialdehyde/2-hydroxymuconate-6-semialdehyde dehydrogenase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.2.1.32">1.2.1.32</a> <a target="_blank" href="/dbget-bin/www_bget?ec:1.2.1.85">1.2.1.85</a>]</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00078' target='_blank'>C00078</a></td>
+    <td>L-Tryptophan</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C02700' target='_blank'>C02700</a></td>
+    <td>L-Formylkynurenine</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00328' target='_blank'>C00328</a></td>
+    <td>L-Kynurenine</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C03227' target='_blank'>C03227</a></td>
+    <td>3-Hydroxy-L-kynurenine</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00632' target='_blank'>C00632</a></td>
+    <td>3-Hydroxyanthranilate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C04409' target='_blank'>C04409</a></td>
+    <td>2-Amino-3-carboxymuconate semialdehyde</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C03824' target='_blank'>C03824</a></td>
+    <td>2-Aminomuconate semialdehyde</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C02220' target='_blank'>C02220</a></td>
+    <td>2-Aminomuconate</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00831'>M00831</a></td>
+ <td>Kedarcidin 2-hydroxynaphthoate moiety biosynthesis, malonyl-CoA =&gt; 3,6,8-trihydroxy-2-naphthoate =&gt; 3-hydroxy-7,8-dimethoxy-6-isopropoxy-2-naphthoyl-CoA</td>
+ <!--td>Kedarcidin 2-hydroxynaphthoate moiety biosynthesis, malonyl-CoA =&gt; 3,6,8-trihydroxy-2-naphthoate =&gt; 3-hydroxy-7,8-dimethoxy-6-isopropoxy-2-naphthoyl-CoA</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K21222' target='_blank'>K21222</a></td>
+    <td>kedN3; cytochrome P450 monooxygenase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.14.-.-">1.14.-.-</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K21223' target='_blank'>K21223</a></td>
+    <td>kedN1; O-methyltransferase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.1.1.-">2.1.1.-</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K21224' target='_blank'>K21224</a></td>
+    <td>kedN5; radical SAM C-methyltransferase</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K21225' target='_blank'>K21225</a></td>
+    <td>kedN2; acyl-CoA synthetase</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C21320' target='_blank'>C21320</a></td>
+    <td>3,6,8-Trihydroxy-2-naphthoate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C21321' target='_blank'>C21321</a></td>
+    <td>3,6,7,8-Tetrahydroxy-2-naphthoate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C21322' target='_blank'>C21322</a></td>
+    <td>3-Hydroxy-6,7,8-trimethoxy-2-naphthoate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C21323' target='_blank'>C21323</a></td>
+    <td>3-Hydroxy-7,8-dimethoxy-6-isopropoxy-2-naphthoate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C21324' target='_blank'>C21324</a></td>
+    <td>3-Hydroxy-7,8-dimethoxy-6-isopropoxy-2-naphthoyl-CoA</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

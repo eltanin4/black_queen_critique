@@ -1,0 +1,136 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00826'>M00826</a></td>
+ <td>C-1027 benzoxazolinate moiety biosynthesis, chorismate =&gt; benzoxazolinyl-CoA</td>
+ <!--td>C-1027 benzoxazolinate moiety biosynthesis, chorismate =&gt; benzoxazolinyl-CoA</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K20159' target='_blank'>K20159</a></td>
+    <td>sgcD; 2-amino-4-deoxychorismate synthase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.6.1.86">2.6.1.86</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K21175' target='_blank'>K21175</a></td>
+    <td>sgcD1; 2-amino-4-deoxychorismate synthase, glutamine amidotransferase component [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.6.1.86">2.6.1.86</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K20156' target='_blank'>K20156</a></td>
+    <td>sgcG; 2-amino-4-deoxychorismate dehydrogenase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.3.99.24">1.3.99.24</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K21176' target='_blank'>K21176</a></td>
+    <td>sgcD5; benzoxazolinate moiety biosynthesis protein SgcD5</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K21177' target='_blank'>K21177</a></td>
+    <td>sgcD3; cytochrome P450 hydroxylase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.14.-.-">1.14.-.-</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K21178' target='_blank'>K21178</a></td>
+    <td>sgcD4; O-methyltransferase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.1.1.-">2.1.1.-</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K21179' target='_blank'>K21179</a></td>
+    <td>sgcH; CoA-ligase</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00251' target='_blank'>C00251</a></td>
+    <td>Chorismate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C18054' target='_blank'>C18054</a></td>
+    <td>2-Amino-2-deoxyisochorismate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C19686' target='_blank'>C19686</a></td>
+    <td>3-(1-Carboxyvinyloxy)anthranilate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C21306' target='_blank'>C21306</a></td>
+    <td>3,4-Dihydro-2-methylene-3-oxo-2H-1,4-benzoxazine-5-carboxylate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C21307' target='_blank'>C21307</a></td>
+    <td>3,4-Dihydro-7-hydroxy-2-methylene-3-oxo-2H-1,4-benzoxazine-5-carboxylate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C11468' target='_blank'>C11468</a></td>
+    <td>3,4-Dihydro-7-methoxy-2-methylene-3-oxo-2H-1,4-benzoxazine-5-carboxylic acid</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C11448' target='_blank'>C11448</a></td>
+    <td>3,4-Dihydro-7-methoxy-2-methylene-3-oxo-2H-1,4-benzoxazine-5-carbonyl-CoA</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

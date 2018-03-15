@@ -1,0 +1,111 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00057'>M00057</a></td>
+ <td>Glycosaminoglycan biosynthesis, linkage tetrasaccharide</td>
+ <!--td>Glycosaminoglycan biosynthesis, linkage tetrasaccharide</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00771' target='_blank'>K00771</a></td>
+    <td>XYLT; protein xylosyltransferase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.4.2.26">2.4.2.26</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00733' target='_blank'>K00733</a></td>
+    <td>B4GALT7; xylosylprotein 4-beta-galactosyltransferase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.4.1.133">2.4.1.133</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00734' target='_blank'>K00734</a></td>
+    <td>B3GALT6; galactosylxylosylprotein 3-beta-galactosyltransferase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.4.1.134">2.4.1.134</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K10158' target='_blank'>K10158</a></td>
+    <td>B3GAT3; galactosylgalactosylxylosylprotein 3-beta-glucuronosyltransferase 3 [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.4.1.135">2.4.1.135</a>]</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C02189' target='_blank'>C02189</a></td>
+    <td>Protein serine</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?G00154' target='_blank'>G00154</a></td>
+    <td>(Xyl)1 (Ser)1</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?G00155' target='_blank'>G00155</a></td>
+    <td>(Gal)1 (Xyl)1 (Ser)1</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?G00156' target='_blank'>G00156</a></td>
+    <td>(Gal)2 (Xyl)1 (Ser)1</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?G00157' target='_blank'>G00157</a></td>
+    <td>(Gal)2 (GlcA)1 (Xyl)1 (Ser)1</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

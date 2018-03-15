@@ -1,0 +1,191 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00032'>M00032</a></td>
+ <td>Lysine degradation, lysine =&gt; saccharopine =&gt; acetoacetyl-CoA</td>
+ <!--td>Lysine degradation, lysine =&gt; saccharopine =&gt; acetoacetyl-CoA</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00290' target='_blank'>K00290</a></td>
+    <td>LYS1; saccharopine dehydrogenase (NAD+, L-lysine forming) [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.5.1.7">1.5.1.7</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00293' target='_blank'>K00293</a></td>
+    <td>LYS9; saccharopine dehydrogenase (NADP+, L-glutamate forming) [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.5.1.10">1.5.1.10</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K14157' target='_blank'>K14157</a></td>
+    <td>AASS; alpha-aminoadipic semialdehyde synthase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.5.1.8">1.5.1.8</a> <a target="_blank" href="/dbget-bin/www_bget?ec:1.5.1.9">1.5.1.9</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K14085' target='_blank'>K14085</a></td>
+    <td>ALDH7A1; aldehyde dehydrogenase family 7 member A1 [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.2.1.31">1.2.1.31</a> <a target="_blank" href="/dbget-bin/www_bget?ec:1.2.1.8">1.2.1.8</a> <a target="_blank" href="/dbget-bin/www_bget?ec:1.2.1.3">1.2.1.3</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00825' target='_blank'>K00825</a></td>
+    <td>AADAT, KAT2; kynurenine/2-aminoadipate aminotransferase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.6.1.7">2.6.1.7</a> <a target="_blank" href="/dbget-bin/www_bget?ec:2.6.1.39">2.6.1.39</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00164' target='_blank'>K00164</a></td>
+    <td>OGDH, sucA; 2-oxoglutarate dehydrogenase E1 component [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.2.4.2">1.2.4.2</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00658' target='_blank'>K00658</a></td>
+    <td>DLST, sucB; 2-oxoglutarate dehydrogenase E2 component (dihydrolipoamide succinyltransferase) [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.3.1.61">2.3.1.61</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00252' target='_blank'>K00252</a></td>
+    <td>GCDH, gcdH; glutaryl-CoA dehydrogenase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.3.8.6">1.3.8.6</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K01825' target='_blank'>K01825</a></td>
+    <td>fadB; 3-hydroxyacyl-CoA dehydrogenase / enoyl-CoA hydratase / 3-hydroxybutyryl-CoA epimerase / enoyl-CoA isomerase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.1.1.35">1.1.1.35</a> <a target="_blank" href="/dbget-bin/www_bget?ec:4.2.1.17">4.2.1.17</a> <a target="_blank" href="/dbget-bin/www_bget?ec:5.1.2.3">5.1.2.3</a> <a target="_blank" href="/dbget-bin/www_bget?ec:5.3.3.8">5.3.3.8</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K01782' target='_blank'>K01782</a></td>
+    <td>fadJ; 3-hydroxyacyl-CoA dehydrogenase / enoyl-CoA hydratase / 3-hydroxybutyryl-CoA epimerase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.1.1.35">1.1.1.35</a> <a target="_blank" href="/dbget-bin/www_bget?ec:4.2.1.17">4.2.1.17</a> <a target="_blank" href="/dbget-bin/www_bget?ec:5.1.2.3">5.1.2.3</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K07514' target='_blank'>K07514</a></td>
+    <td>EHHADH; enoyl-CoA hydratase / 3-hydroxyacyl-CoA dehydrogenase / 3,2-trans-enoyl-CoA isomerase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:4.2.1.17">4.2.1.17</a> <a target="_blank" href="/dbget-bin/www_bget?ec:1.1.1.35">1.1.1.35</a> <a target="_blank" href="/dbget-bin/www_bget?ec:5.3.3.8">5.3.3.8</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K01692' target='_blank'>K01692</a></td>
+    <td>paaF, echA; enoyl-CoA hydratase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:4.2.1.17">4.2.1.17</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K07515' target='_blank'>K07515</a></td>
+    <td>HADHA; enoyl-CoA hydratase / long-chain 3-hydroxyacyl-CoA dehydrogenase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:4.2.1.17">4.2.1.17</a> <a target="_blank" href="/dbget-bin/www_bget?ec:1.1.1.211">1.1.1.211</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K07511' target='_blank'>K07511</a></td>
+    <td>ECHS1; enoyl-CoA hydratase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:4.2.1.17">4.2.1.17</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00022' target='_blank'>K00022</a></td>
+    <td>HADH; 3-hydroxyacyl-CoA dehydrogenase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.1.1.35">1.1.1.35</a>]</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00047' target='_blank'>C00047</a></td>
+    <td>L-Lysine</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00449' target='_blank'>C00449</a></td>
+    <td>N6-(L-1,3-Dicarboxypropyl)-L-lysine</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C04076' target='_blank'>C04076</a></td>
+    <td>L-2-Aminoadipate 6-semialdehyde</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00956' target='_blank'>C00956</a></td>
+    <td>L-2-Aminoadipate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00322' target='_blank'>C00322</a></td>
+    <td>2-Oxoadipate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C06157' target='_blank'>C06157</a></td>
+    <td>S-Glutaryldihydrolipoamide</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00527' target='_blank'>C00527</a></td>
+    <td>Glutaryl-CoA</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00877' target='_blank'>C00877</a></td>
+    <td>Crotonoyl-CoA</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C01144' target='_blank'>C01144</a></td>
+    <td>(S)-3-Hydroxybutanoyl-CoA</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00332' target='_blank'>C00332</a></td>
+    <td>Acetoacetyl-CoA</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00432'>M00432</a></td>
+ <td>Leucine biosynthesis, 2-oxoisovalerate =&gt; 2-oxoisocaproate</td>
+ <!--td>Leucine biosynthesis, 2-oxoisovalerate =&gt; 2-oxoisocaproate</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K01649' target='_blank'>K01649</a></td>
+    <td>leuA, IMS; 2-isopropylmalate synthase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.3.3.13">2.3.3.13</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K01702' target='_blank'>K01702</a></td>
+    <td>LEU1; 3-isopropylmalate dehydratase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:4.2.1.33">4.2.1.33</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K01703' target='_blank'>K01703</a></td>
+    <td>leuC, IPMI-L; 3-isopropylmalate/(R)-2-methylmalate dehydratase large subunit [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:4.2.1.33">4.2.1.33</a> <a target="_blank" href="/dbget-bin/www_bget?ec:4.2.1.35">4.2.1.35</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K01704' target='_blank'>K01704</a></td>
+    <td>leuD, IPMI-S; 3-isopropylmalate/(R)-2-methylmalate dehydratase small subunit [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:4.2.1.33">4.2.1.33</a> <a target="_blank" href="/dbget-bin/www_bget?ec:4.2.1.35">4.2.1.35</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00052' target='_blank'>K00052</a></td>
+    <td>leuB, IMDH; 3-isopropylmalate dehydrogenase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.1.1.85">1.1.1.85</a>]</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00141' target='_blank'>C00141</a></td>
+    <td>3-Methyl-2-oxobutanoic acid</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00024' target='_blank'>C00024</a></td>
+    <td>Acetyl-CoA</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C02504' target='_blank'>C02504</a></td>
+    <td>alpha-Isopropylmalate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C04411' target='_blank'>C04411</a></td>
+    <td>(2R,3S)-3-Isopropylmalate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00233' target='_blank'>C00233</a></td>
+    <td>4-Methyl-2-oxopentanoate</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

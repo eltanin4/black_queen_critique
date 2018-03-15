@@ -1,0 +1,201 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00546'>M00546</a></td>
+ <td>Purine degradation, xanthine =&gt; urea</td>
+ <!--td>Purine degradation, xanthine =&gt; urea</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00106' target='_blank'>K00106</a></td>
+    <td>XDH; xanthine dehydrogenase/oxidase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.17.1.4">1.17.1.4</a> <a target="_blank" href="/dbget-bin/www_bget?ec:1.17.3.2">1.17.3.2</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00087' target='_blank'>K00087</a></td>
+    <td>ygeS, xdhA; xanthine dehydrogenase molybdenum-binding subunit [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.17.1.4">1.17.1.4</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K13479' target='_blank'>K13479</a></td>
+    <td>ygeT, xdhB; xanthine dehydrogenase FAD-binding subunit [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.17.1.4">1.17.1.4</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K13480' target='_blank'>K13480</a></td>
+    <td>ygeU, xdhC; xanthine dehydrogenase iron-sulfur-binding subunit</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K13481' target='_blank'>K13481</a></td>
+    <td>xdhA; xanthine dehydrogenase small subunit [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.17.1.4">1.17.1.4</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K13482' target='_blank'>K13482</a></td>
+    <td>xdhB; xanthine dehydrogenase large subunit [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.17.1.4">1.17.1.4</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K11177' target='_blank'>K11177</a></td>
+    <td>yagR; xanthine dehydrogenase YagR molybdenum-binding subunit [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.17.1.4">1.17.1.4</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K11178' target='_blank'>K11178</a></td>
+    <td>yagS; xanthine dehydrogenase YagS FAD-binding subunit [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.17.1.4">1.17.1.4</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K13483' target='_blank'>K13483</a></td>
+    <td>yagT; xanthine dehydrogenase YagT iron-sulfur-binding subunit</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00365' target='_blank'>K00365</a></td>
+    <td>uaZ; urate oxidase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.7.3.3">1.7.3.3</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K16838' target='_blank'>K16838</a></td>
+    <td>pucL; urate oxidase / 2-oxo-4-hydroxy-4-carboxy-5-ureidoimidazoline decarboxylase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.7.3.3">1.7.3.3</a> <a target="_blank" href="/dbget-bin/www_bget?ec:4.1.1.97">4.1.1.97</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K16839' target='_blank'>K16839</a></td>
+    <td>hpxO; FAD-dependent urate hydroxylase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.14.13.113">1.14.13.113</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K07127' target='_blank'>K07127</a></td>
+    <td>uraH, pucM, hiuH; 5-hydroxyisourate hydrolase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:3.5.2.17">3.5.2.17</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K13485' target='_blank'>K13485</a></td>
+    <td>PRHOXNB, URAD; 2-oxo-4-hydroxy-4-carboxy-5-ureidoimidazoline decarboxylase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:4.1.1.97">4.1.1.97</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K16838' target='_blank'>K16838</a></td>
+    <td>pucL; urate oxidase / 2-oxo-4-hydroxy-4-carboxy-5-ureidoimidazoline decarboxylase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.7.3.3">1.7.3.3</a> <a target="_blank" href="/dbget-bin/www_bget?ec:4.1.1.97">4.1.1.97</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K16840' target='_blank'>K16840</a></td>
+    <td>hpxQ; 2-oxo-4-hydroxy-4-carboxy-5-ureidoimidazoline decarboxylase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:4.1.1.97">4.1.1.97</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K13484' target='_blank'>K13484</a></td>
+    <td>TTHL; 5-hydroxyisourate hydrolase / 2-oxo-4-hydroxy-4-carboxy-5-ureidoimidazoline decarboxylase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:3.5.2.17">3.5.2.17</a> <a target="_blank" href="/dbget-bin/www_bget?ec:4.1.1.97">4.1.1.97</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K01466' target='_blank'>K01466</a></td>
+    <td>allB; allantoinase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:3.5.2.5">3.5.2.5</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K16842' target='_blank'>K16842</a></td>
+    <td>hpxB; allantoinase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:3.5.2.5">3.5.2.5</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K01477' target='_blank'>K01477</a></td>
+    <td>alc, ALLC; allantoicase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:3.5.3.4">3.5.3.4</a>]</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00385' target='_blank'>C00385</a></td>
+    <td>Xanthine</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00366' target='_blank'>C00366</a></td>
+    <td>Urate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C11821' target='_blank'>C11821</a></td>
+    <td>5-Hydroxyisourate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C12248' target='_blank'>C12248</a></td>
+    <td>5-Hydroxy-2-oxo-4-ureido-2,5-dihydro-1H-imidazole-5-carboxylate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C02350' target='_blank'>C02350</a></td>
+    <td>(S)(+)-Allantoin</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00499' target='_blank'>C00499</a></td>
+    <td>Allantoate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00086' target='_blank'>C00086</a></td>
+    <td>Urea</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

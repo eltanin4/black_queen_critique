@@ -1,0 +1,116 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00842'>M00842</a></td>
+ <td>Tetrahydrobiopterin biosynthesis, GTP =&gt; BH4</td>
+ <!--td>Tetrahydrobiopterin biosynthesis, GTP =&gt; BH4</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K01495' target='_blank'>K01495</a></td>
+    <td>GCH1, folE; GTP cyclohydrolase IA [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:3.5.4.16">3.5.4.16</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K01737' target='_blank'>K01737</a></td>
+    <td>queD, ptpS, PTS; 6-pyruvoyltetrahydropterin/6-carboxytetrahydropterin synthase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:4.2.3.12">4.2.3.12</a> <a target="_blank" href="/dbget-bin/www_bget?ec:4.1.2.50">4.1.2.50</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00072' target='_blank'>K00072</a></td>
+    <td>SPR; sepiapterin reductase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.1.1.153">1.1.1.153</a>]</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00044' target='_blank'>C00044</a></td>
+    <td>GTP</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C05922' target='_blank'>C05922</a></td>
+    <td>Formamidopyrimidine nucleoside triphosphate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C05923' target='_blank'>C05923</a></td>
+    <td>2,5-Diaminopyrimidine nucleoside triphosphate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C06148' target='_blank'>C06148</a></td>
+    <td>2,5-Diamino-6-(5'-triphosphoryl-3',4'-trihydroxy-2'-oxopentyl)-amino-4-oxopyrimidine</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C04895' target='_blank'>C04895</a></td>
+    <td>7,8-Dihydroneopterin 3'-triphosphate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C03684' target='_blank'>C03684</a></td>
+    <td>6-Pyruvoyltetrahydropterin</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00272' target='_blank'>C00272</a></td>
+    <td>Tetrahydrobiopterin</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

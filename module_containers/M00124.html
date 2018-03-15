@@ -1,0 +1,136 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00124'>M00124</a></td>
+ <td>Pyridoxal biosynthesis, erythrose-4P =&gt; pyridoxal-5P</td>
+ <!--td>Pyridoxal biosynthesis, erythrose-4P =&gt; pyridoxal-5P</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K03472' target='_blank'>K03472</a></td>
+    <td>epd; D-erythrose 4-phosphate dehydrogenase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.2.1.72">1.2.1.72</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K03473' target='_blank'>K03473</a></td>
+    <td>pdxB; erythronate-4-phosphate dehydrogenase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.1.1.290">1.1.1.290</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00831' target='_blank'>K00831</a></td>
+    <td>serC, PSAT1; phosphoserine aminotransferase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.6.1.52">2.6.1.52</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00097' target='_blank'>K00097</a></td>
+    <td>pdxA; 4-hydroxythreonine-4-phosphate dehydrogenase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.1.1.262">1.1.1.262</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K03474' target='_blank'>K03474</a></td>
+    <td>pdxJ; pyridoxine 5-phosphate synthase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.6.99.2">2.6.99.2</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00275' target='_blank'>K00275</a></td>
+    <td>pdxH, PNPO; pyridoxamine 5'-phosphate oxidase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.4.3.5">1.4.3.5</a>]</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00279' target='_blank'>C00279</a></td>
+    <td>D-Erythrose 4-phosphate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C03393' target='_blank'>C03393</a></td>
+    <td>4-Phospho-D-erythronate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C06054' target='_blank'>C06054</a></td>
+    <td>2-Oxo-3-hydroxy-4-phosphobutanoate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C06055' target='_blank'>C06055</a></td>
+    <td>O-Phospho-4-hydroxy-L-threonine</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C07335' target='_blank'>C07335</a></td>
+    <td>2-Amino-3-oxo-4-phosphonooxybutyrate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C11638' target='_blank'>C11638</a></td>
+    <td>3-Amino-2-oxopropyl phosphate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00627' target='_blank'>C00627</a></td>
+    <td>Pyridoxine phosphate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00018' target='_blank'>C00018</a></td>
+    <td>Pyridoxal phosphate</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

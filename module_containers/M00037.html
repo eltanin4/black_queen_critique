@@ -1,0 +1,116 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00037'>M00037</a></td>
+ <td>Melatonin biosynthesis, tryptophan =&gt; serotonin =&gt; melatonin</td>
+ <!--td>Melatonin biosynthesis, tryptophan =&gt; serotonin =&gt; melatonin</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00502' target='_blank'>K00502</a></td>
+    <td>TPH1_2; tryptophan 5-monooxygenase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.14.16.4">1.14.16.4</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K01593' target='_blank'>K01593</a></td>
+    <td>DDC, TDC; aromatic-L-amino-acid/L-tryptophan decarboxylase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:4.1.1.28">4.1.1.28</a> <a target="_blank" href="/dbget-bin/www_bget?ec:4.1.1.105">4.1.1.105</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00669' target='_blank'>K00669</a></td>
+    <td>AANAT; arylalkylamine N-acetyltransferase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.3.1.87">2.3.1.87</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K22450' target='_blank'>K22450</a></td>
+    <td>SNAT; aralkylamine N-acetyltransferase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.3.1.87">2.3.1.87</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00543' target='_blank'>K00543</a></td>
+    <td>ASMT; acetylserotonin N-methyltransferase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.1.1.4">2.1.1.4</a>]</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00078' target='_blank'>C00078</a></td>
+    <td>L-Tryptophan</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00643' target='_blank'>C00643</a></td>
+    <td>5-Hydroxy-L-tryptophan</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00780' target='_blank'>C00780</a></td>
+    <td>Serotonin</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00978' target='_blank'>C00978</a></td>
+    <td>N-Acetylserotonin</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C01598' target='_blank'>C01598</a></td>
+    <td>Melatonin</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

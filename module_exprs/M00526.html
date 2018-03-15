@@ -1,0 +1,551 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>KEGG MODULE: M00526</title>
+<link rel="stylesheet" href="/css/kegg.css" type="text/css">
+<style type="text/css">
+td
+{
+  font-size:12px;
+  font-family:verdana,arial,helvetica,sans-serif;
+  vertical-align: top;
+}
+
+div#definition
+{
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+div#definition table tr td {
+  padding-right: 10px;
+}
+
+div.poplay {
+  position: absolute;
+  padding: 2px;
+  background-color: #ffff99;
+  border-top: solid 1px #c0c0c0;
+  border-left: solid 1px #c0c0c0;
+  border-bottom: solid 1px #808080;
+  border-right: solid 1px #808080;
+  visibility: hidden;
+}
+
+span.popup
+{
+  font-weight: bold;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+</style>
+<script language="JavaScript" type="text/javascript" src="/js/dhtml.js"></script>
+<script language="javascript" type="text/javascript">
+<!--
+
+function SubmitForm(theForm)
+{
+  var org = theForm.select_org.value;
+
+  if(org == "set_cookie")
+  {
+    window.open('/kegg/misc/kegg2_select.html','sel_org','toolbar=no,location=no,directories=no,width=500,height=320,resizable=yes');
+    return false;
+  }
+  else if(org.indexOf(".sort_alp") > 0)
+  {
+    var dt = new Date();
+    dt.setTime(dt.getTime() + (30 * 24 * 60 * 60));
+    var c = "KEGG_MapMenu_Sorted=alp;path=/;expires=" + dt.toGMTString();
+    document.cookie = c;
+  }
+  else if(org.indexOf(".sort_org") > 0)
+  {
+    // delete cookie
+    var dt = new Date();
+    dt.setTime(dt.getTime() - 100);
+    var c = "KEGG_MapMenu_Sorted=alp;path=/;expires=" + dt.toGMTString();
+    document.cookie = c;
+  }
+  else
+  {
+    theForm.org.value = org;
+  }
+
+  return true;
+}
+
+function btn(bobj, img)
+{
+  bobj.src = "/Fig/bget/button_" + img + ".gif";
+}
+
+
+function open_ko_list()
+{
+	var win = window.open('module_ko_list?map=M00526&org=ko','_md','toolbar=no,location=no,directories=no,width=700,height=400,resizable=yes,scrollbars=yes,status=no');
+  win.focus();
+}
+
+var timer = 0;
+var p_entry, p_title, p_bgcolor;
+function popupTimer(entry, title, bgcolor)
+{
+  p_entry = entry;
+  p_title = title;
+  p_bgcolor = bgcolor;
+
+  if(timer == 0){
+    var func = "showThumbnail()";
+    timer = setTimeout(func, 1200);
+  }
+}
+
+
+function showThumbnail()
+{
+
+  var url = "";
+  if(p_entry.match(/^[A-Z]+\d+$/))
+  {
+    url = "/kegg/misc/thumbnail/" + p_entry + ".gif";
+  }
+  else if(p_entry.match(/(\d+)$/))
+  {
+    url = "/kegg/misc/thumbnail/map" + RegExp.$1 + ".gif";
+  }
+
+  var html = "";
+
+  if(p_bgcolor != "#ffffff")
+  {
+    html += "<span class=\"popup\">" + p_entry + "</span><br />";
+  }
+
+  html += "<img src=\"" + url + "\" alt=\"Loading...\">";
+
+  var x = getCurrentMouseX();
+  var y = getCurrentMouseY();
+
+  var layer = new Component("poplay");
+  layer.backgroundColor(p_bgcolor);
+  layer.HTML(html);
+  layer.move(x, y+40);
+  layer.visible(true);
+
+  timer = 0;
+}
+
+
+function hideMapTn(){
+  var layer = new Component("poplay");
+  layer.visible(false);
+
+  if(timer != 0){
+    clearTimeout(timer);
+    timer = 0;
+  }
+}
+
+
+// -->
+</script>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+ <tr>
+  <td>
+    <a href="/kegg/kegg2.html"><img align="middle" border="0" src="/Fig/bget/kegg3.gif" alt="KEGG"></a>
+    &nbsp;&nbsp;&nbsp;<a name="module:M00526"></a><font class="title3"><b>Lysine biosynthesis, DAP dehydrogenase pathway, aspartate =&gt; lysine</b></font>
+  </td>
+  <td align="right" valign="bottom"><a href="javascript:void(window.open('/kegg/document/help_module.html','KEGG_Help','toolbar=no,location=no,directories=no,width=720,height=640,resizable=yes,scrollbars=yes'))"><img onmouseup="btn(this,'Hb')" align="middle" onmouseout="btn(this,'Hb')" onmousedown="btn(this,'Hbd')" onmouseover="btn(this,'Hbh')" alt="Help" name="help" border="0" src="/Fig/bget/button_Hb.gif"></a></td>
+ </tr>
+</table>
+
+[
+<a href="/kegg-bin/get_htext?htext=ko00002.keg&amp;query=M00526&amp;option=-a">Module menu</a> |
+
+<a href="/kegg-bin/get_htext?htext=br08601_M00526.keg&amp;hier=5">Organism menu</a> |
+
+
+<a href="/dbget-bin/www_bget?M00526">Module entry</a> |
+<a href="javascript:void(open_ko_list())">KO/Compound list</a>
+
+]
+
+<div id="definition">
+ <table>
+  <tr>
+   <td>Entry</td>
+   <td>
+   M00526
+   
+   </td>
+  </tr>
+  <tr>
+   <td>Name</td>
+   <td>Lysine biosynthesis, DAP dehydrogenase pathway, aspartate =&gt; lysine</td>
+  </tr>
+  <tr>
+   <td>Definition</td>
+   <td>
+    (<a href="/dbget-bin/www_bget?K00928">K00928</a>,<a href="/dbget-bin/www_bget?K12524">K12524</a>,<a href="/dbget-bin/www_bget?K12525">K12525</a>,<a href="/dbget-bin/www_bget?K12526">K12526</a>) <a href="/dbget-bin/www_bget?K00133">K00133</a> <a href="/dbget-bin/www_bget?K01714">K01714</a> <a href="/dbget-bin/www_bget?K00215">K00215</a> <a href="/dbget-bin/www_bget?K03340">K03340</a> (<a href="/dbget-bin/www_bget?K01586">K01586</a>,<a href="/dbget-bin/www_bget?K12526">K12526</a>)<br />
+    <a href="http://www.kegg.jp/kegg-bin/view_ortholog_table?md=M00526"><img onmouseup="btn(this,'OTb')" align="middle" onmouseout="btn(this,'OTb')" onmousedown="btn(this,'OTbd')" onmouseover="btn(this,'OTbh')" alt="Ortholog table" name="OT" border="0" src="/Fig/bget/button_OTb.gif"></a>
+    
+    <a href="javascript:void(document.forms['taxonomy'].submit())"><img onmouseup="btn(this,'Taxb')" align="middle" onmouseout="btn(this,'Taxb')" onmousedown="btn(this,'Taxbd')" onmouseover="btn(this,'Taxbh')" alt="Taxonomy" name="Taxonomy" border="0" src="/Fig/bget/button_Taxb.gif"></a>
+    
+   </td>
+  </tr>
+  <tr>
+   <td>Type</td>
+   <td>Pathway module</td>
+  </tr>
+  
+  
+  <tr>
+   <td>Pathway</td>
+   <td>
+    
+    <span style="margin-right:5px;">
+    <a href="/kegg-bin/show_pathway?map01230+M00526">map01230</a>
+    </span>
+    
+    <span style="margin-right:5px;">
+    <a href="/kegg-bin/show_pathway?map00300+M00526">map00300</a>
+    </span>
+    
+   </td>
+  </tr>
+  
+  
+  
+  <tr>
+   <td>Reaction</td>
+   <td><a href="/dbget-bin/www_bget?R00480">R00480</a>  <a href="/dbget-bin/www_bget?C00049">C00049</a> -&gt; <a href="/dbget-bin/www_bget?C03082">C03082</a><br><a href="/dbget-bin/www_bget?R02291">R02291</a>  <a href="/dbget-bin/www_bget?C03082">C03082</a> -&gt; <a href="/dbget-bin/www_bget?C00441">C00441</a><br><a href="/dbget-bin/www_bget?R10147">R10147</a>  <a href="/dbget-bin/www_bget?C00441">C00441</a> -&gt; <a href="/dbget-bin/www_bget?C20258">C20258</a><br><a href="/dbget-bin/www_bget?R04198">R04198</a>,<a href="/dbget-bin/www_bget?R04199">R04199</a>  <a href="/dbget-bin/www_bget?C20258">C20258</a> -&gt; <a href="/dbget-bin/www_bget?C03972">C03972</a><br><a href="/dbget-bin/www_bget?R04336">R04336</a>  <a href="/dbget-bin/www_bget?C03972">C03972</a> -&gt; <a href="/dbget-bin/www_bget?C03871">C03871</a><br><a href="/dbget-bin/www_bget?R02755">R02755</a>  <a href="/dbget-bin/www_bget?C03871">C03871</a> -&gt; <a href="/dbget-bin/www_bget?C00680">C00680</a><br><a href="/dbget-bin/www_bget?R00451">R00451</a>  <a href="/dbget-bin/www_bget?C00680">C00680</a> -&gt; <a href="/dbget-bin/www_bget?C00047">C00047</a></td>
+  </tr>
+  
+  
+  
+ </table>
+</div>
+
+<form action="/kegg-bin/show_module" onsubmit="return SubmitForm(this)">
+<input type="hidden" name="map" value="M00526">
+<input type="hidden" name="org" value="ko">
+
+<div style="margin-top:10px;">
+
+<div>
+<select name="select_org">
+<option value="ko">Reference module (KO)</option>
+<option value="set_cookie">-----&lt; Set personalized menu &gt;-----</option>
+<option value="ko.sort_alp">-----&lt; Sort below by alphabet &gt;-----</option>
+<option value="pmr" >Proteus mirabilis HI4320</option>
+<option value="pmib" >Proteus mirabilis BB2000</option>
+<option value="pvl" >Proteus vulgaris</option>
+<option value="psi" >Providencia stuartii MRSN 2154</option>
+<option value="psx" >Providencia stuartii ATCC 33672</option>
+<option value="psta" >Providencia stuartii BE2467</option>
+<option value="prg" >Providencia rettgeri</option>
+<option value="pala" >Providencia alcalifaciens</option>
+<option value="mmk" >Morganella morganii</option>
+<option value="pfq" >Pragia fontium</option>
+<option value="psj" >Pseudomonas stutzeri DSM 10701</option>
+<option value="acx" >Azotobacter chroococcum</option>
+<option value="pbb" >Oblitimonas alkaliphila</option>
+<option value="prw" >Psychrobacter sp. PRwf-1</option>
+<option value="pur" >Psychrobacter urativorans</option>
+<option value="psyc" >Psychrobacter sp. DAB_AL43B</option>
+<option value="mbs" >Marinobacter sp. BSs20148</option>
+<option value="tgr" >Thioalkalivibrio sulfidiphilus</option>
+<option value="ocm" >Oceanisphaera sp. AMac2203</option>
+<option value="opf" >Oceanisphaera profunda</option>
+<option value="gpb" >Gamma proteobacterium HdN1</option>
+<option value="ccup" >Cupriavidus sp. USMAHM13</option>
+<option value="btrm" >Bordetella trematum</option>
+<option value="put" >Pusillimonas sp. T7-7</option>
+<option value="afa" >Alcaligenes faecalis</option>
+<option value="rfr" >Rhodoferax ferrireducens</option>
+<option value="ajs" >Acidovorax sp. JS42</option>
+<option value="dia" >Acidovorax ebreus</option>
+<option value="dac" >Delftia acidovorans</option>
+<option value="del" >Delftia sp. Cs1-4</option>
+<option value="dts" >Delftia tsuruhatensis</option>
+<option value="dhk" >Delftia sp. HK171</option>
+<option value="ctt" >Comamonas testosteroni CNB-2</option>
+<option value="ctes" >Comamonas testosteroni TK102</option>
+<option value="cke" >Comamonas kerstersii</option>
+<option value="adn" >Alicycliphilus denitrificans BC</option>
+<option value="adk" >Alicycliphilus denitrificans K601</option>
+<option value="dpy" >Diaphorobacter polyhydroxybutyrativorans</option>
+<option value="har" >Herminiimonas arsenicoxydans</option>
+<option value="ofo" >Oxalobacter formigenes</option>
+<option value="nii" >Nitrosomonas sp. Is79A3</option>
+<option value="nco" >Nitrosomonas communis</option>
+<option value="thu" >Thauera humireducens</option>
+<option value="cgra" >Campylobacter gracilis</option>
+<option value="cspf" >Campylobacter sputorum</option>
+<option value="pca" >Pelobacter carbinolicus</option>
+<option value="pef" >Pelobacter sp. SFB93</option>
+<option value="dds" >Desulfovibrio desulfuricans ATCC 27774</option>
+<option value="dpg" >Desulfovibrio piger</option>
+<option value="def" >Desulfovibrio sp. G11</option>
+<option value="baco" >Bacillus sp. OxB-1</option>
+<option value="axl" >Amphibacillus xylanus</option>
+<option value="lsp" >Lysinibacillus sphaericus</option>
+<option value="lgy" >Lysinibacillus varians</option>
+<option value="lfu" >Lysinibacillus fusiformis</option>
+<option value="lys" >Lysinibacillus sp. YS11</option>
+<option value="lao" >Lentibacillus amyloliquefaciens</option>
+<option value="gym" >Paenibacillus sp. Y412MC10</option>
+<option value="plv" >Paenibacillus larvae</option>
+<option value="pbd" >Paenibacillus borealis</option>
+<option value="pgm" >Paenibacillus graminis</option>
+<option value="pod" >Paenibacillus odorifer</option>
+<option value="paen" >Paenibacillus sp. FSL P4-0081</option>
+<option value="paef" >Paenibacillus sp. FSL R5-0345</option>
+<option value="paeq" >Paenibacillus sp. FSL R5-0912</option>
+<option value="paea" >Paenibacillus sp. FSL R7-0273</option>
+<option value="paee" >Paenibacillus sp. FSL R7-0331</option>
+<option value="paeh" >Paenibacillus sp. FSL H7-0357</option>
+<option value="paej" >Paenibacillus sp. FSL H7-0737</option>
+<option value="pih" >Paenibacillus sp. IHBB 10380</option>
+<option value="pri" >Paenibacillus riograndensis</option>
+<option value="pow" >Paenibacillus sp. 32O-W</option>
+<option value="pxl" >Paenibacillus xylanexedens</option>
+<option value="pdh" >Paenibacillus donghaensis</option>
+<option value="pib" >Paenibacillus ihbetae</option>
+<option value="pcx" >Paenibacillus crassostreae</option>
+<option value="tco" >Thermobacillus composti</option>
+<option value="siv" >Solibacillus silvestris StLB046</option>
+<option value="ssil" >Solibacillus silvestris DSM 12223</option>
+<option value="sob" >Solibacillus sp. R5-41</option>
+<option value="kur" >Kurthia sp. 11kri321</option>
+<option value="spsy" >Sporosarcina psychrophila</option>
+<option value="spor" >Sporosarcina sp. P33</option>
+<option value="spop" >Sporosarcina sp. P37</option>
+<option value="sure" >Sporosarcina ureae</option>
+<option value="ess" >Enterococcus silesiacus</option>
+<option value="thl" >Tetragenococcus halophilus</option>
+<option value="vpi" >Vagococcus penaei</option>
+<option value="aur" >Aerococcus urinae ACS-120-V-Col10a</option>
+<option value="aun" >Aerococcus urinae CCUG36881</option>
+<option value="asan" >Aerococcus sanguinicola</option>
+<option value="auh" >Aerococcus urinaehominis</option>
+<option value="crn" >Carnobacterium sp. 17-4</option>
+<option value="caw" >Carnobacterium inhibens</option>
+<option value="carc" >Carnobacterium sp. CP1</option>
+<option value="jep" >Jeotgalibaca sp. PTS2502</option>
+<option value="ctc" >Clostridium tetani E88</option>
+<option value="ctet" >Clostridium tetani 12124569</option>
+<option value="cno" >Clostridium novyi</option>
+<option value="cbk" >Clostridium botulinum B Eklund 17B (NRP)</option>
+<option value="cbn" >Clostridium botulinum BKT015925</option>
+<option value="cbt" >Clostridium botulinum E3</option>
+<option value="clb" >Clostridium sp. BNL1100</option>
+<option value="cbv" >Clostridium baratii</option>
+<option value="cth" >Ruminiclostridium thermocellum ATCC 27405</option>
+<option value="ctx" >Ruminiclostridium thermocellum DSM 1313</option>
+<option value="cce" >Clostridium cellulolyticum</option>
+<option value="ccl" >Clostridium clariflavum</option>
+<option value="css" >Clostridium stercorarium subsp. stercorarium DSM 8532</option>
+<option value="csd" >Clostridium stercorarium subsp. stercorarium DSM 8532</option>
+<option value="cthd" >Clostridium thermosuccinogenes</option>
+<option value="ral" >Ruminococcus albus</option>
+<option value="hsc" >Herbivorax saccincola</option>
+<option value="bpb" >Butyrivibrio proteoclasticus</option>
+<option value="bfi" >Butyrivibrio fibrisolvens</option>
+<option value="bhu" >Butyrivibrio hungatei</option>
+<option value="cle" >Clostridium lentocellum</option>
+<option value="rob" >Blautia obeum</option>
+<option value="byl" >Blautia sp. YL58</option>
+<option value="rto" >Ruminococcus torques</option>
+<option value="bhan" >Blautia hansenii</option>
+<option value="cpy" >Lachnoclostridium phytofermentans</option>
+<option value="csh" >Clostridium saccharolyticum WM1</option>
+<option value="cso" >Clostridium cf. saccharolyticum K10</option>
+<option value="bprl" >Anaerostipes hadrus</option>
+<option value="hsd" >Herbinix luporum</option>
+<option value="sth" >Symbiobacterium thermophilum</option>
+<option value="swo" >Syntrophomonas wolfei</option>
+<option value="dsy" >Desulfitobacterium hafniense Y51</option>
+<option value="dhd" >Desulfitobacterium hafniense DCB-2</option>
+<option value="ddh" >Desulfitobacterium dehalogenans</option>
+<option value="ddl" >Desulfitobacterium dichloroeliminans</option>
+<option value="dfg" >Desulfotomaculum ferrireducens</option>
+<option value="ehl" >Eubacterium hallii</option>
+<option value="fpla" >Flavonifractor plautii</option>
+<option value="bprs" >Butyrate-producing bacterium SS3/4</option>
+<option value="tep" >Tepidanaerobacter acetatoxydans Re1</option>
+<option value="tae" >Tepidanaerobacter acetatoxydans Re1</option>
+<option value="ped" >Peptoniphilus sp. 1-1</option>
+<option value="cad" >Gottschalkia acidurici</option>
+<option value="vpr" >Veillonella parvula</option>
+<option value="vat" >Veillonella atypica</option>
+<option value="vrm" >Veillonella rodentium</option>
+<option value="ssg" >Selenomonas sputigena</option>
+<option value="sri" >Selenomonas ruminantium</option>
+<option value="sele" >Selenomonas sp. oral taxon 478</option>
+<option value="selo" >Selenomonas sp. oral taxon 136</option>
+<option value="selt" >Selenomonas sp. oral taxon 920</option>
+<option value="afn" >Acidaminococcus fermentans</option>
+<option value="ain" >Acidaminococcus intestini</option>
+<option value="acl" >Acholeplasma laidlawii</option>
+<option value="cgl" >Corynebacterium glutamicum ATCC 13032 (Kyowa Hakko)</option>
+<option value="cgb" >Corynebacterium glutamicum ATCC 13032 (Bielefeld)</option>
+<option value="cgu" >Corynebacterium glutamicum K051</option>
+<option value="cgt" >Corynebacterium glutamicum R</option>
+<option value="cgs" >Corynebacterium glutamicum SCgG1</option>
+<option value="cgg" >Corynebacterium glutamicum SCgG2</option>
+<option value="cgm" >Corynebacterium glutamicum MB001</option>
+<option value="cgj" >Corynebacterium glutamicum ATCC 21831</option>
+<option value="cgq" >Corynebacterium glutamicum AR1</option>
+<option value="cgx" >Corynebacterium glutamicum B253</option>
+<option value="cef" >Corynebacterium efficiens</option>
+<option value="cur" >Corynebacterium urealyticum DSM 7109</option>
+<option value="cua" >Corynebacterium urealyticum DSM 7111</option>
+<option value="chn" >Corynebacterium halotolerans</option>
+<option value="cmd" >Corynebacterium maris</option>
+<option value="coa" >Corynebacterium sp. ATCC 6931</option>
+<option value="chm" >Corynebacterium humireducens</option>
+<option value="cmq" >Corynebacterium marinum</option>
+<option value="cei" >Corynebacterium epidermidicanis</option>
+<option value="cted" >Corynebacterium testudinoris</option>
+<option value="cdx" >Corynebacterium deserti</option>
+<option value="ccjz" >Corynebacterium crudilactis</option>
+<option value="csph" >Corynebacterium sphenisci</option>
+<option value="bfv" >Brevibacterium flavum ZL-1</option>
+<option value="goq" >Gordonia sp. QH-11</option>
+<option value="cbq" >Lawsonella clevelandensis</option>
+<option value="mvd" >Microterricola viridarii</option>
+<option value="arm" >Arthrobacter sp. PAMC 25486</option>
+<option value="arl" >Arthrobacter sp. LS16</option>
+<option value="aaq" >Arthrobacter alpinus</option>
+<option value="ary" >Arthrobacter sp. YC-RL1</option>
+<option value="aai" >Glutamicibacter arilaitensis Re117</option>
+<option value="mlu" >Micrococcus luteus</option>
+<option value="bfa" >Brachybacterium faecium</option>
+<option value="brv" >Brachybacterium sp. VR2415</option>
+<option value="brz" >Brachybacterium sp. VM2412</option>
+<option value="tpy" >Trueperella pyogenes TP6375</option>
+<option value="tpyo" >Trueperella pyogenes TP8</option>
+<option value="asg" >Actinotignum schaalii</option>
+<option value="aos" >Actinomyces oris</option>
+<option value="actp" >Actinomyces gaoshouyii</option>
+<option value="actc" >Actinomyces sp. Chiba101</option>
+<option value="ccu" >Cryptobacterium curtum</option>
+<option value="ele" >Eggerthella lenta</option>
+<option value="eyy" >Eggerthella sp. YY7918</option>
+<option value="aeq" >Adlercreutzia equolifaciens</option>
+<option value="abao" >Anaerolineaceae bacterium oral taxon 439</option>
+<option value="ote" >Opitutus terrae</option>
+<option value="amu" >Akkermansia muciniphila</option>
+<option value="agl" >Akkermansia glycaniphila</option>
+<option value="emi" >Elusimicrobium minutum</option>
+<option value="fsu" >Fibrobacter succinogenes</option>
+<option value="fsc" >Fibrobacter succinogenes</option>
+<option value="bth" >Bacteroides thetaiotaomicron VPI-5482</option>
+<option value="btho" >Bacteroides thetaiotaomicron 7330</option>
+<option value="bfr" >Bacteroides fragilis YCH46</option>
+<option value="bfs" >Bacteroides fragilis NCTC9343</option>
+<option value="bfg" >Bacteroides fragilis 638R</option>
+<option value="bfb" >Bacteroides fragilis BOB25</option>
+<option value="bvu" >Bacteroides vulgatus</option>
+<option value="bhl" >Bacteroides helcogenes</option>
+<option value="bsa" >Bacteroides salanitronis</option>
+<option value="bdo" >Bacteroides dorei HS1_L_1_B_010</option>
+<option value="bdh" >Bacteroides dorei HS1_L_3_B_079</option>
+<option value="boa" >Bacteroides ovatus</option>
+<option value="bcel" >Bacteroides cellulosilyticus</option>
+<option value="bcac" >Bacteroides caccae</option>
+<option value="bcae" >Bacteroides caecimuris</option>
+<option value="pgi" >Porphyromonas gingivalis W83</option>
+<option value="pgn" >Porphyromonas gingivalis ATCC 33277</option>
+<option value="pgt" >Porphyromonas gingivalis TDC60</option>
+<option value="pbt" >Fermentimonas caenicola</option>
+<option value="pmuc" >Petrimonas mucosa</option>
+<option value="pet" >Petrimonas sp. IBARAKI</option>
+<option value="pdi" >Parabacteroides distasonis</option>
+<option value="pary" >Parabacteroides sp. YL27</option>
+<option value="parc" >Parabacteroides sp. CT06</option>
+<option value="tfo" >Tannerella forsythia</option>
+<option value="bvs" >Barnesiella viscericola</option>
+<option value="psac" >Proteiniphilum saccharofermentans</option>
+<option value="osp" >Odoribacter splanchnicus</option>
+<option value="pru" >Prevotella ruminicola</option>
+<option value="pmz" >Prevotella melaninogenica</option>
+<option value="pdn" >Prevotella denticola</option>
+<option value="pdt" >Prevotella dentalis</option>
+<option value="pfus" >Prevotella fusca</option>
+<option value="peo" >Prevotella enoeca</option>
+<option value="pje" >Prevotella jejuni</option>
+<option value="asx" >Alkalitalea saponilacus</option>
+<option value="psn" >Pseudopedobacter saltans</option>
+<option value="sht" >Sphingobacterium sp. ML3W</option>
+<option value="myr" >Myroides sp. A21</option>
+<option value="mpw" >Myroides profundi</option>
+<option value="mod" >Myroides odoratimimus</option>
+<option value="myz" >Myroides sp. ZB35</option>
+<option value="tta" >Pseudothermotoga thermarum</option>
+<option value="phy" >Pseudothermotoga hypogea</option>
+<option value="din" >Desulfurispirillum indicum</option>
+<option value="nde" >Nitrospira defluvii</option>
+<option value="mvn" >Methanococcus vannielii</option>
+<option value="mhi" >Methanosaeta harundinacea</option>
+
+</select>
+<input type="submit" value="Go">
+</div>
+
+<table cellpadding="10">
+ <tr>
+  <td><img src="/tmp/pathway_thumbnail/ko_M00526.png?1521114737" usemap="#module" border="0" alt="MODULE IMAGE"></td>
+  
+  <td><img src="/tmp/pathway_thumbnail/M00526_reaction.png?1521114737" usemap="#reaction" border="0" alt="MODULE-REACTION IMAGE"></td>
+  
+ </tr>
+</table>
+<map id="module" name="module">
+<area shape="rect" id="node1_0" href="http://www.kegg.jp/dbget-bin/www_bget?K00928" title="K00928 (lysC)" alt="" coords="17,19,90,41"/>
+<area shape="rect" id="node1_1" href="http://www.kegg.jp/dbget-bin/www_bget?K12524" title="K12524 (thrA)" alt="" coords="94,19,167,41"/>
+<area shape="rect" id="node1_2" href="http://www.kegg.jp/dbget-bin/www_bget?K12525" title="K12525 (metL)" alt="" coords="171,19,245,41"/>
+<area shape="rect" id="node1_3" href="http://www.kegg.jp/dbget-bin/www_bget?K12526" title="K12526 (lysAC)" alt="" coords="249,19,322,41"/>
+<area shape="rect" id="node2_4" href="http://www.kegg.jp/dbget-bin/www_bget?K00133" title="K00133 (asd)" alt="" coords="133,77,206,100"/>
+<area shape="rect" id="node3_5" href="http://www.kegg.jp/dbget-bin/www_bget?K01714" title="K01714 (dapA)" alt="" coords="133,136,206,159"/>
+<area shape="rect" id="node4_6" href="http://www.kegg.jp/dbget-bin/www_bget?K00215" title="K00215 (dapB)" alt="" coords="133,195,206,217"/>
+<area shape="rect" id="node5_7" href="http://www.kegg.jp/dbget-bin/www_bget?K03340" title="K03340 (dapdh)" alt="" coords="133,253,206,276"/>
+<area shape="rect" id="node6_8" href="http://www.kegg.jp/dbget-bin/www_bget?K01586" title="K01586 (lysA)" alt="" coords="94,312,167,335"/>
+<area shape="rect" id="node6_9" href="http://www.kegg.jp/dbget-bin/www_bget?K12526" title="K12526 (lysAC)" alt="" coords="171,312,245,335"/>
+</map>
+
+<map id="reaction" name="reaction">
+<area shape="poly" id="node1" href="/dbget-bin/www_bget?C00049" title="C00049 (L&#45;Aspartate)" alt="" coords="113,29,111,22,106,15,98,10,87,7,76,5,65,7,54,10,46,15,41,22,39,29,41,37,46,43,54,49,65,52,76,53,87,52,98,49,106,43,111,37" onmouseover="popupTimer(&quot;C00049&quot;, &quot;C00049 (L&#45;Aspartate)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node2" href="/dbget-bin/www_bget?R00480" title="R00480" alt="" coords="37,83,115,105"/>
+<area shape="poly" id="node3" href="/dbget-bin/www_bget?C03082" title="C03082 (4&#45;Phospho&#45;L&#45;aspartate)" alt="" coords="113,159,111,151,106,145,98,139,87,136,76,135,65,136,54,139,46,145,41,151,39,159,41,166,46,173,54,178,65,181,76,183,87,181,98,178,106,173,111,166" onmouseover="popupTimer(&quot;C03082&quot;, &quot;C03082 (4&#45;Phospho&#45;L&#45;aspartate)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node4" href="/dbget-bin/www_bget?R02291" title="R02291" alt="" coords="37,212,115,235"/>
+<area shape="poly" id="node5" href="/dbget-bin/www_bget?C00441" title="C00441 (L&#45;Aspartate 4&#45;semialdehyde)" alt="" coords="113,288,111,281,106,274,98,269,87,265,76,264,65,265,54,269,46,274,41,281,39,288,41,295,46,302,54,307,65,311,76,312,87,311,98,307,106,302,111,295" onmouseover="popupTimer(&quot;C00441&quot;, &quot;C00441 (L&#45;Aspartate 4&#45;semialdehyde)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node6" href="/dbget-bin/www_bget?R10147" title="R10147" alt="" coords="37,341,115,364"/>
+<area shape="poly" id="node7" href="/dbget-bin/www_bget?C20258" title="C20258 ((2S,4S)&#45;4&#45;Hydroxy&#45;2,3,4,5&#45;tetrahydrodipicolinate)" alt="" coords="114,417,112,410,107,403,98,398,88,395,76,393,64,395,54,398,45,403,40,410,38,417,40,425,45,431,54,437,64,440,76,441,88,440,98,437,107,431,112,425" onmouseover="popupTimer(&quot;C20258&quot;, &quot;C20258 ((2S,4S)&#45;4&#45;Hydroxy&#45;2,3,4,5&#45;tetrahydrodipicolinate)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node8_0" href="/dbget-bin/www_bget?R04198" title="R04198" alt="" coords="16,481,76,508"/>
+<area shape="rect" id="node8_1" href="/dbget-bin/www_bget?R04199" title="R04199" alt="" coords="76,481,136,508"/>
+<area shape="poly" id="node9" href="/dbget-bin/www_bget?C03972" title="C03972 (2,3,4,5&#45;Tetrahydrodipicolinate)" alt="" coords="113,572,111,565,106,558,98,553,87,549,76,548,65,549,54,553,46,558,41,565,39,572,41,579,46,586,54,591,65,595,76,596,87,595,98,591,106,586,111,579" onmouseover="popupTimer(&quot;C03972&quot;, &quot;C03972 (2,3,4,5&#45;Tetrahydrodipicolinate)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node10" href="/dbget-bin/www_bget?R04336" title="R04336" alt="" coords="37,625,115,648"/>
+<area shape="poly" id="node11" href="/dbget-bin/www_bget?C03871" title="C03871 (L&#45;2&#45;Amino&#45;6&#45;oxoheptanedioate)" alt="" coords="113,701,111,694,106,687,98,682,87,679,76,677,65,679,54,682,46,687,41,694,39,701,41,709,46,715,54,721,65,724,76,725,87,724,98,721,106,715,111,709" onmouseover="popupTimer(&quot;C03871&quot;, &quot;C03871 (L&#45;2&#45;Amino&#45;6&#45;oxoheptanedioate)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node12" href="/dbget-bin/www_bget?R02755" title="R02755" alt="" coords="37,755,115,777"/>
+<area shape="poly" id="node13" href="/dbget-bin/www_bget?C00680" title="C00680 (meso&#45;2,6&#45;Diaminoheptanedioate)" alt="" coords="112,831,111,823,105,817,97,811,87,808,76,807,65,808,55,811,47,817,41,823,40,831,41,838,47,845,55,850,65,853,76,855,87,853,97,850,105,845,111,838" onmouseover="popupTimer(&quot;C00680&quot;, &quot;C00680 (meso&#45;2,6&#45;Diaminoheptanedioate)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node14" href="/dbget-bin/www_bget?R00451" title="R00451" alt="" coords="37,884,115,907"/>
+<area shape="poly" id="node15" href="/dbget-bin/www_bget?C00047" title="C00047 (L&#45;Lysine)" alt="" coords="113,960,111,953,106,946,98,941,87,937,76,936,65,937,54,941,46,946,41,953,39,960,41,967,46,974,54,979,65,983,76,984,87,983,98,979,106,974,111,967" onmouseover="popupTimer(&quot;C00047&quot;, &quot;C00047 (L&#45;Lysine)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+</map>
+</div>
+
+</form>
+<form name="taxonomy" method="post" action="/kegg-bin/get_htext">
+ <input type="hidden" name="htext" value="br08601.keg">
+ <input type="hidden" name="option" value="-a">
+ <input type="hidden" name="query" value="pmr pmib pvl psi psx psta prg pala mmk pfq psj acx pbb prw pur psyc mbs tgr ocm opf gpb ccup btrm put afa rfr ajs dia dac del dts dhk ctt ctes cke adn adk dpy har ofo nii nco thu cgra cspf pca pef dds dpg def baco axl lsp lgy lfu lys lao gym plv pbd pgm pod paen paef paeq paea paee paeh paej pih pri pow pxl pdh pib pcx tco siv ssil sob kur spsy spor spop sure ess thl vpi aur aun asan auh crn caw carc jep ctc ctet cno cbk cbn cbt clb cbv cth ctx cce ccl css csd cthd ral hsc bpb bfi bhu cle rob byl rto bhan cpy csh cso bprl hsd sth swo dsy dhd ddh ddl dfg ehl fpla bprs tep tae ped cad vpr vat vrm ssg sri sele selo selt afn ain acl cgl cgb cgu cgt cgs cgg cgm cgj cgq cgx cef cur cua chn cmd coa chm cmq cei cted cdx ccjz csph bfv goq cbq mvd arm arl aaq ary aai mlu bfa brv brz tpy tpyo asg aos actp actc ccu ele eyy aeq abao ote amu agl emi fsu fsc bth btho bfr bfs bfg bfb bvu bhl bsa bdo bdh boa bcel bcac bcae pgi pgn pgt pbt pmuc pet pdi pary parc tfo bvs psac osp pru pmz pdn pdt pfus peo pje asx psn sht myr mpw mod myz tta phy din nde mvn mhi">
+</form>
+<div id="poplay" class="poplay"></div>
+</body>
+</html>

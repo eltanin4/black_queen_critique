@@ -1,0 +1,101 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00338'>M00338</a></td>
+ <td>Cysteine biosynthesis, homocysteine + serine =&gt; cysteine</td>
+ <!--td>Cysteine biosynthesis, homocysteine + serine =&gt; cysteine</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K01697' target='_blank'>K01697</a></td>
+    <td>CBS; cystathionine beta-synthase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:4.2.1.22">4.2.1.22</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K10150' target='_blank'>K10150</a></td>
+    <td>cysO; cysteine synthase / O-phosphoserine sulfhydrylase / cystathionine beta-synthase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.5.1.47">2.5.1.47</a> <a target="_blank" href="/dbget-bin/www_bget?ec:2.5.1.65">2.5.1.65</a> <a target="_blank" href="/dbget-bin/www_bget?ec:4.2.1.22">4.2.1.22</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K01758' target='_blank'>K01758</a></td>
+    <td>CTH; cystathionine gamma-lyase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:4.4.1.1">4.4.1.1</a>]</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00065' target='_blank'>C00065</a></td>
+    <td>L-Serine</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00155' target='_blank'>C00155</a></td>
+    <td>L-Homocysteine</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C02291' target='_blank'>C02291</a></td>
+    <td>L-Cystathionine</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00097' target='_blank'>C00097</a></td>
+    <td>L-Cysteine</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

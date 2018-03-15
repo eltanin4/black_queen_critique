@@ -1,0 +1,334 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>KEGG MODULE: M00309</title>
+<link rel="stylesheet" href="/css/kegg.css" type="text/css">
+<style type="text/css">
+td
+{
+  font-size:12px;
+  font-family:verdana,arial,helvetica,sans-serif;
+  vertical-align: top;
+}
+
+div#definition
+{
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+div#definition table tr td {
+  padding-right: 10px;
+}
+
+div.poplay {
+  position: absolute;
+  padding: 2px;
+  background-color: #ffff99;
+  border-top: solid 1px #c0c0c0;
+  border-left: solid 1px #c0c0c0;
+  border-bottom: solid 1px #808080;
+  border-right: solid 1px #808080;
+  visibility: hidden;
+}
+
+span.popup
+{
+  font-weight: bold;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+</style>
+<script language="JavaScript" type="text/javascript" src="/js/dhtml.js"></script>
+<script language="javascript" type="text/javascript">
+<!--
+
+function SubmitForm(theForm)
+{
+  var org = theForm.select_org.value;
+
+  if(org == "set_cookie")
+  {
+    window.open('/kegg/misc/kegg2_select.html','sel_org','toolbar=no,location=no,directories=no,width=500,height=320,resizable=yes');
+    return false;
+  }
+  else if(org.indexOf(".sort_alp") > 0)
+  {
+    var dt = new Date();
+    dt.setTime(dt.getTime() + (30 * 24 * 60 * 60));
+    var c = "KEGG_MapMenu_Sorted=alp;path=/;expires=" + dt.toGMTString();
+    document.cookie = c;
+  }
+  else if(org.indexOf(".sort_org") > 0)
+  {
+    // delete cookie
+    var dt = new Date();
+    dt.setTime(dt.getTime() - 100);
+    var c = "KEGG_MapMenu_Sorted=alp;path=/;expires=" + dt.toGMTString();
+    document.cookie = c;
+  }
+  else
+  {
+    theForm.org.value = org;
+  }
+
+  return true;
+}
+
+function btn(bobj, img)
+{
+  bobj.src = "/Fig/bget/button_" + img + ".gif";
+}
+
+
+function open_ko_list()
+{
+	var win = window.open('module_ko_list?map=M00309&org=ko','_md','toolbar=no,location=no,directories=no,width=700,height=400,resizable=yes,scrollbars=yes,status=no');
+  win.focus();
+}
+
+var timer = 0;
+var p_entry, p_title, p_bgcolor;
+function popupTimer(entry, title, bgcolor)
+{
+  p_entry = entry;
+  p_title = title;
+  p_bgcolor = bgcolor;
+
+  if(timer == 0){
+    var func = "showThumbnail()";
+    timer = setTimeout(func, 1200);
+  }
+}
+
+
+function showThumbnail()
+{
+
+  var url = "";
+  if(p_entry.match(/^[A-Z]+\d+$/))
+  {
+    url = "/kegg/misc/thumbnail/" + p_entry + ".gif";
+  }
+  else if(p_entry.match(/(\d+)$/))
+  {
+    url = "/kegg/misc/thumbnail/map" + RegExp.$1 + ".gif";
+  }
+
+  var html = "";
+
+  if(p_bgcolor != "#ffffff")
+  {
+    html += "<span class=\"popup\">" + p_entry + "</span><br />";
+  }
+
+  html += "<img src=\"" + url + "\" alt=\"Loading...\">";
+
+  var x = getCurrentMouseX();
+  var y = getCurrentMouseY();
+
+  var layer = new Component("poplay");
+  layer.backgroundColor(p_bgcolor);
+  layer.HTML(html);
+  layer.move(x, y+40);
+  layer.visible(true);
+
+  timer = 0;
+}
+
+
+function hideMapTn(){
+  var layer = new Component("poplay");
+  layer.visible(false);
+
+  if(timer != 0){
+    clearTimeout(timer);
+    timer = 0;
+  }
+}
+
+
+// -->
+</script>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+ <tr>
+  <td>
+    <a href="/kegg/kegg2.html"><img align="middle" border="0" src="/Fig/bget/kegg3.gif" alt="KEGG"></a>
+    &nbsp;&nbsp;&nbsp;<a name="module:M00309"></a><font class="title3"><b>Non-phosphorylative Entner-Doudoroff pathway, gluconate/galactonate =&gt; glycerate</b></font>
+  </td>
+  <td align="right" valign="bottom"><a href="javascript:void(window.open('/kegg/document/help_module.html','KEGG_Help','toolbar=no,location=no,directories=no,width=720,height=640,resizable=yes,scrollbars=yes'))"><img onmouseup="btn(this,'Hb')" align="middle" onmouseout="btn(this,'Hb')" onmousedown="btn(this,'Hbd')" onmouseover="btn(this,'Hbh')" alt="Help" name="help" border="0" src="/Fig/bget/button_Hb.gif"></a></td>
+ </tr>
+</table>
+
+[
+<a href="/kegg-bin/get_htext?htext=ko00002.keg&amp;query=M00309&amp;option=-a">Module menu</a> |
+
+<a href="/kegg-bin/get_htext?htext=br08601_M00309.keg&amp;hier=5">Organism menu</a> |
+
+
+<a href="/dbget-bin/www_bget?M00309">Module entry</a> |
+<a href="javascript:void(open_ko_list())">KO/Compound list</a>
+
+]
+
+<div id="definition">
+ <table>
+  <tr>
+   <td>Entry</td>
+   <td>
+   M00309
+   
+   </td>
+  </tr>
+  <tr>
+   <td>Name</td>
+   <td>Non-phosphorylative Entner-Doudoroff pathway, gluconate/galactonate =&gt; glycerate</td>
+  </tr>
+  <tr>
+   <td>Definition</td>
+   <td>
+    <a href="/dbget-bin/www_bget?K05308">K05308</a> (<a href="/dbget-bin/www_bget?K11395">K11395</a>,<a href="/dbget-bin/www_bget?K18127">K18127</a>) (<a href="/dbget-bin/www_bget?K18020">K18020</a>+<a href="/dbget-bin/www_bget?K18021">K18021</a>+<a href="/dbget-bin/www_bget?K18022">K18022</a>,<a href="/dbget-bin/www_bget?K18128">K18128</a>,<a href="/dbget-bin/www_bget?K03738">K03738</a>)<br />
+    <a href="http://www.kegg.jp/kegg-bin/view_ortholog_table?md=M00309"><img onmouseup="btn(this,'OTb')" align="middle" onmouseout="btn(this,'OTb')" onmousedown="btn(this,'OTbd')" onmouseover="btn(this,'OTbh')" alt="Ortholog table" name="OT" border="0" src="/Fig/bget/button_OTb.gif"></a>
+    
+    <a href="javascript:void(document.forms['taxonomy'].submit())"><img onmouseup="btn(this,'Taxb')" align="middle" onmouseout="btn(this,'Taxb')" onmousedown="btn(this,'Taxbd')" onmouseover="btn(this,'Taxbh')" alt="Taxonomy" name="Taxonomy" border="0" src="/Fig/bget/button_Taxb.gif"></a>
+    
+   </td>
+  </tr>
+  <tr>
+   <td>Type</td>
+   <td>Pathway module</td>
+  </tr>
+  
+  
+  <tr>
+   <td>Pathway</td>
+   <td>
+    
+    <span style="margin-right:5px;">
+    <a href="/kegg-bin/show_pathway?map01200+M00309">map01200</a>
+    </span>
+    
+    <span style="margin-right:5px;">
+    <a href="/kegg-bin/show_pathway?map00030+M00309">map00030</a>
+    </span>
+    
+    <span style="margin-right:5px;">
+    <a href="/kegg-bin/show_pathway?map00052+M00309">map00052</a>
+    </span>
+    
+   </td>
+  </tr>
+  
+  
+  
+  <tr>
+   <td>Reaction</td>
+   <td><a href="/dbget-bin/www_bget?R01538">R01538</a>  <a href="/dbget-bin/www_bget?C00257">C00257</a> -&gt; <a href="/dbget-bin/www_bget?C00204">C00204</a><br><a href="/dbget-bin/www_bget?R08570">R08570</a>  <a href="/dbget-bin/www_bget?C00204">C00204</a> -&gt; <a href="/dbget-bin/www_bget?C00577">C00577</a> + <a href="/dbget-bin/www_bget?C00022">C00022</a><br><a href="/dbget-bin/www_bget?R03033">R03033</a>  <a href="/dbget-bin/www_bget?C00880">C00880</a> -&gt; <a href="/dbget-bin/www_bget?C01216">C01216</a><br><a href="/dbget-bin/www_bget?R10616">R10616</a>  <a href="/dbget-bin/www_bget?C01216">C01216</a> -&gt; <a href="/dbget-bin/www_bget?C00577">C00577</a> + <a href="/dbget-bin/www_bget?C00022">C00022</a><br><a href="/dbget-bin/www_bget?R10324">R10324</a>,<a href="/dbget-bin/www_bget?R10615">R10615</a>,<a href="/dbget-bin/www_bget?R08571">R08571</a>  <a href="/dbget-bin/www_bget?C00577">C00577</a> -&gt; <a href="/dbget-bin/www_bget?C00258">C00258</a></td>
+  </tr>
+  
+  
+  
+  <tr>
+   <td>Comment</td>
+   <td>Organism group: archaea</td>
+  </tr>
+  
+ </table>
+</div>
+
+<form action="/kegg-bin/show_module" onsubmit="return SubmitForm(this)">
+<input type="hidden" name="map" value="M00309">
+<input type="hidden" name="org" value="ko">
+
+<div style="margin-top:10px;">
+
+<div>
+<select name="select_org">
+<option value="ko">Reference module (KO)</option>
+<option value="set_cookie">-----&lt; Set personalized menu &gt;-----</option>
+<option value="ko.sort_alp">-----&lt; Sort below by alphabet &gt;-----</option>
+<option value="tvo" >Thermoplasma volcanium</option>
+<option value="pto" >Picrophilus torridus</option>
+<option value="fac" >Ferroplasma acidarmanus</option>
+<option value="sso" >Sulfolobus solfataricus P2</option>
+<option value="sol" >Sulfolobus solfataricus 98/2</option>
+<option value="ssoa" >Sulfolobus solfataricus SULA</option>
+<option value="ssol" >Sulfolobus solfataricus SULB</option>
+<option value="ssof" >Sulfolobus solfataricus SULC</option>
+<option value="sto" >Sulfolobus tokodaii</option>
+<option value="sai" >Sulfolobus acidocaldarius DSM 639</option>
+<option value="sacn" >Sulfolobus acidocaldarius N8</option>
+<option value="sacr" >Sulfolobus acidocaldarius Ron12/I</option>
+<option value="sacs" >Sulfolobus acidocaldarius SUSAZ</option>
+<option value="sis" >Sulfolobus islandicus L.S.2.15</option>
+<option value="sia" >Sulfolobus islandicus M.14.25</option>
+<option value="sim" >Sulfolobus islandicus M.16.27</option>
+<option value="sid" >Sulfolobus islandicus M.16.4</option>
+<option value="siy" >Sulfolobus islandicus Y.G.57.14</option>
+<option value="sin" >Sulfolobus islandicus Y.N.15.51</option>
+<option value="sii" >Sulfolobus islandicus L.D.8.5</option>
+<option value="sih" >Sulfolobus islandicus HVE10/4</option>
+<option value="sir" >Sulfolobus islandicus REY15A</option>
+<option value="sic" >Sulfolobus islandicus LAL14/1</option>
+<option value="sula" >Sulfolobus sp. A20</option>
+<option value="mse" >Metallosphaera sedula</option>
+<option value="mcn" >Metallosphaera cuprina</option>
+<option value="aho" >Acidianus hospitalis</option>
+<option value="pyr" >Pyrobaculum ferrireducens</option>
+<option value="tuz" >Thermoproteus uzoniensis</option>
+<option value="ttn" >Thermoproteus tenax</option>
+
+</select>
+<input type="submit" value="Go">
+</div>
+
+<table cellpadding="10">
+ <tr>
+  <td><img src="/tmp/pathway_thumbnail/ko_M00309.png?1521114610" usemap="#module" border="0" alt="MODULE IMAGE"></td>
+  
+  <td><img src="/tmp/pathway_thumbnail/M00309_reaction.png?1521114610" usemap="#reaction" border="0" alt="MODULE-REACTION IMAGE"></td>
+  
+ </tr>
+</table>
+<map id="module" name="module">
+<area shape="rect" id="node1_0" href="http://www.kegg.jp/dbget-bin/www_bget?K05308" title="K05308 (gnaD)" alt="" coords="94,19,167,41"/>
+<area shape="rect" id="node2_1" href="http://www.kegg.jp/dbget-bin/www_bget?K11395" title="K11395 (kdpgA)" alt="" coords="55,77,129,100"/>
+<area shape="rect" id="node2_2" href="http://www.kegg.jp/dbget-bin/www_bget?K18127" title="K18127 (kdgA)" alt="" coords="133,77,206,100"/>
+<area shape="rect" id="node3_3" href="http://www.kegg.jp/dbget-bin/www_bget?K18020" title="K18020 (cutA)" alt="" coords="17,129,90,151"/>
+<area shape="rect" id="node3_4" href="http://www.kegg.jp/dbget-bin/www_bget?K18021" title="K18021 (cutB)" alt="" coords="17,151,90,174"/>
+<area shape="rect" id="node3_5" href="http://www.kegg.jp/dbget-bin/www_bget?K18022" title="K18022 (cutC)" alt="" coords="17,174,90,197"/>
+<area shape="rect" id="node3_6" href="http://www.kegg.jp/dbget-bin/www_bget?K18128" title="K18128 (gadh)" alt="" coords="94,129,167,197"/>
+<area shape="rect" id="node3_7" href="http://www.kegg.jp/dbget-bin/www_bget?K03738" title="K03738 (aor)" alt="" coords="171,129,245,197"/>
+</map>
+
+<map id="reaction" name="reaction">
+<area shape="poly" id="node1" href="/dbget-bin/www_bget?C00257" title="C00257 (D&#45;Gluconic acid)" alt="" coords="142,29,141,22,135,15,127,10,116,7,105,5,93,7,82,10,74,15,69,22,67,29,69,37,74,43,82,49,93,52,105,53,116,52,127,49,135,43,141,37" onmouseover="popupTimer(&quot;C00257&quot;, &quot;C00257 (D&#45;Gluconic acid)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node2" href="/dbget-bin/www_bget?R01538" title="R01538" alt="" coords="66,83,143,105"/>
+<area shape="poly" id="node3" href="/dbget-bin/www_bget?C00204" title="C00204 (2&#45;Dehydro&#45;3&#45;deoxy&#45;D&#45;gluconate)" alt="" coords="142,159,140,151,135,145,126,139,116,136,105,135,93,136,83,139,75,145,69,151,68,159,69,166,75,173,83,178,93,181,105,183,116,181,126,178,135,173,140,166" onmouseover="popupTimer(&quot;C00204&quot;, &quot;C00204 (2&#45;Dehydro&#45;3&#45;deoxy&#45;D&#45;gluconate)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node4" href="/dbget-bin/www_bget?R08570" title="R08570" alt="" coords="66,212,143,235"/>
+<area shape="poly" id="node5" href="/dbget-bin/www_bget?C00577" title="C00577 (D&#45;Glyceraldehyde)" alt="" coords="144,288,142,281,137,274,128,269,118,265,106,264,94,265,84,269,75,274,70,281,68,288,70,295,75,302,84,307,94,311,106,312,118,311,128,307,137,302,142,295" onmouseover="popupTimer(&quot;C00577&quot;, &quot;C00577 (D&#45;Glyceraldehyde)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="poly" id="node6" href="/dbget-bin/www_bget?C00022" title="C00022 (Pyruvate)" alt="" coords="242,288,240,281,235,274,226,269,216,265,205,264,193,265,183,269,175,274,169,281,168,288,169,295,175,302,183,307,193,311,205,312,216,311,226,307,235,302,240,295" onmouseover="popupTimer(&quot;C00022&quot;, &quot;C00022 (Pyruvate)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node11_0" href="/dbget-bin/www_bget?R10324" title="R10324" alt="" coords="17,352,77,379"/>
+<area shape="rect" id="node11_1" href="/dbget-bin/www_bget?R10615" title="R10615" alt="" coords="77,352,137,379"/>
+<area shape="rect" id="node11_2" href="/dbget-bin/www_bget?R08571" title="R08571" alt="" coords="137,352,197,379"/>
+<area shape="poly" id="node7" href="/dbget-bin/www_bget?C00880" title="C00880 (D&#45;Galactonate)" alt="" coords="243,29,241,22,236,15,228,10,217,7,206,5,195,7,184,10,176,15,171,22,169,29,171,37,176,43,184,49,195,52,206,53,217,52,228,49,236,43,241,37" onmouseover="popupTimer(&quot;C00880&quot;, &quot;C00880 (D&#45;Galactonate)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node8" href="/dbget-bin/www_bget?R03033" title="R03033" alt="" coords="167,83,245,105"/>
+<area shape="poly" id="node9" href="/dbget-bin/www_bget?C01216" title="C01216 (2&#45;Dehydro&#45;3&#45;deoxy&#45;D&#45;galactonate)" alt="" coords="242,159,241,151,235,145,227,139,217,136,206,135,195,136,185,139,177,145,171,151,170,159,171,166,177,173,185,178,195,181,206,183,217,181,227,178,235,173,241,166" onmouseover="popupTimer(&quot;C01216&quot;, &quot;C01216 (2&#45;Dehydro&#45;3&#45;deoxy&#45;D&#45;galactonate)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node10" href="/dbget-bin/www_bget?R10616" title="R10616" alt="" coords="167,212,245,235"/>
+<area shape="poly" id="node12" href="/dbget-bin/www_bget?C00258" title="C00258 (D&#45;Glycerate)" alt="" coords="144,443,142,435,137,429,128,423,118,420,106,419,94,420,84,423,75,429,70,435,68,443,70,450,75,457,84,462,94,465,106,467,118,465,128,462,137,457,142,450" onmouseover="popupTimer(&quot;C00258&quot;, &quot;C00258 (D&#45;Glycerate)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+</map>
+</div>
+
+</form>
+<form name="taxonomy" method="post" action="/kegg-bin/get_htext">
+ <input type="hidden" name="htext" value="br08601.keg">
+ <input type="hidden" name="option" value="-a">
+ <input type="hidden" name="query" value="tvo pto fac sso sol ssoa ssol ssof sto sai sacn sacr sacs sis sia sim sid siy sin sii sih sir sic sula mse mcn aho pyr tuz ttn">
+</form>
+<div id="poplay" class="poplay"></div>
+</body>
+</html>

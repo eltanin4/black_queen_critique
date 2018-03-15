@@ -1,0 +1,126 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00370'>M00370</a></td>
+ <td>Glucosinolate biosynthesis, tryptophan =&gt; glucobrassicin</td>
+ <!--td>Glucosinolate biosynthesis, tryptophan =&gt; glucobrassicin</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K11812' target='_blank'>K11812</a></td>
+    <td>CYP79B1_2; tryptophan N-monooxygenase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.14.13.125">1.14.13.125</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K11813' target='_blank'>K11813</a></td>
+    <td>CYP79B3; tryptophan N-monooxygenase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.14.13.125">1.14.13.125</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K11818' target='_blank'>K11818</a></td>
+    <td>CYP83B1; aromatic aldoxime N-monooxygenase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.14.14.45">1.14.14.45</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K11819' target='_blank'>K11819</a></td>
+    <td>SUR1, RTY; S-alkyl-thiohydroximate lyase SUR1 [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:4.4.1.-">4.4.1.-</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K11820' target='_blank'>K11820</a></td>
+    <td>UGT74B1; N-hydroxythioamide S-beta-glucosyltransferase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.4.1.195">2.4.1.195</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K11821' target='_blank'>K11821</a></td>
+    <td>ST5A, SOT16; aromatic desulfoglucosinolate sulfotransferase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.8.2.24">2.8.2.24</a>]</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00078' target='_blank'>C00078</a></td>
+    <td>L-Tryptophan</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C02937' target='_blank'>C02937</a></td>
+    <td>Indole-3-acetaldehyde oxime</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C16518' target='_blank'>C16518</a></td>
+    <td>S-(Indolylmethylthiohydroximoyl)-L-cysteine</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C16516' target='_blank'>C16516</a></td>
+    <td>Indolylmethylthiohydroximate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C16517' target='_blank'>C16517</a></td>
+    <td>Indolylmethyl-desulfoglucosinolate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C05837' target='_blank'>C05837</a></td>
+    <td>Glucobrassicin</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

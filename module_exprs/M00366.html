@@ -1,0 +1,372 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>KEGG MODULE: M00366</title>
+<link rel="stylesheet" href="/css/kegg.css" type="text/css">
+<style type="text/css">
+td
+{
+  font-size:12px;
+  font-family:verdana,arial,helvetica,sans-serif;
+  vertical-align: top;
+}
+
+div#definition
+{
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+div#definition table tr td {
+  padding-right: 10px;
+}
+
+div.poplay {
+  position: absolute;
+  padding: 2px;
+  background-color: #ffff99;
+  border-top: solid 1px #c0c0c0;
+  border-left: solid 1px #c0c0c0;
+  border-bottom: solid 1px #808080;
+  border-right: solid 1px #808080;
+  visibility: hidden;
+}
+
+span.popup
+{
+  font-weight: bold;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+</style>
+<script language="JavaScript" type="text/javascript" src="/js/dhtml.js"></script>
+<script language="javascript" type="text/javascript">
+<!--
+
+function SubmitForm(theForm)
+{
+  var org = theForm.select_org.value;
+
+  if(org == "set_cookie")
+  {
+    window.open('/kegg/misc/kegg2_select.html','sel_org','toolbar=no,location=no,directories=no,width=500,height=320,resizable=yes');
+    return false;
+  }
+  else if(org.indexOf(".sort_alp") > 0)
+  {
+    var dt = new Date();
+    dt.setTime(dt.getTime() + (30 * 24 * 60 * 60));
+    var c = "KEGG_MapMenu_Sorted=alp;path=/;expires=" + dt.toGMTString();
+    document.cookie = c;
+  }
+  else if(org.indexOf(".sort_org") > 0)
+  {
+    // delete cookie
+    var dt = new Date();
+    dt.setTime(dt.getTime() - 100);
+    var c = "KEGG_MapMenu_Sorted=alp;path=/;expires=" + dt.toGMTString();
+    document.cookie = c;
+  }
+  else
+  {
+    theForm.org.value = org;
+  }
+
+  return true;
+}
+
+function btn(bobj, img)
+{
+  bobj.src = "/Fig/bget/button_" + img + ".gif";
+}
+
+
+function open_ko_list()
+{
+	var win = window.open('module_ko_list?map=M00366&org=ko','_md','toolbar=no,location=no,directories=no,width=700,height=400,resizable=yes,scrollbars=yes,status=no');
+  win.focus();
+}
+
+var timer = 0;
+var p_entry, p_title, p_bgcolor;
+function popupTimer(entry, title, bgcolor)
+{
+  p_entry = entry;
+  p_title = title;
+  p_bgcolor = bgcolor;
+
+  if(timer == 0){
+    var func = "showThumbnail()";
+    timer = setTimeout(func, 1200);
+  }
+}
+
+
+function showThumbnail()
+{
+
+  var url = "";
+  if(p_entry.match(/^[A-Z]+\d+$/))
+  {
+    url = "/kegg/misc/thumbnail/" + p_entry + ".gif";
+  }
+  else if(p_entry.match(/(\d+)$/))
+  {
+    url = "/kegg/misc/thumbnail/map" + RegExp.$1 + ".gif";
+  }
+
+  var html = "";
+
+  if(p_bgcolor != "#ffffff")
+  {
+    html += "<span class=\"popup\">" + p_entry + "</span><br />";
+  }
+
+  html += "<img src=\"" + url + "\" alt=\"Loading...\">";
+
+  var x = getCurrentMouseX();
+  var y = getCurrentMouseY();
+
+  var layer = new Component("poplay");
+  layer.backgroundColor(p_bgcolor);
+  layer.HTML(html);
+  layer.move(x, y+40);
+  layer.visible(true);
+
+  timer = 0;
+}
+
+
+function hideMapTn(){
+  var layer = new Component("poplay");
+  layer.visible(false);
+
+  if(timer != 0){
+    clearTimeout(timer);
+    timer = 0;
+  }
+}
+
+
+// -->
+</script>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+ <tr>
+  <td>
+    <a href="/kegg/kegg2.html"><img align="middle" border="0" src="/Fig/bget/kegg3.gif" alt="KEGG"></a>
+    &nbsp;&nbsp;&nbsp;<a name="module:M00366"></a><font class="title3"><b>C10-C20 isoprenoid biosynthesis, plants</b></font>
+  </td>
+  <td align="right" valign="bottom"><a href="javascript:void(window.open('/kegg/document/help_module.html','KEGG_Help','toolbar=no,location=no,directories=no,width=720,height=640,resizable=yes,scrollbars=yes'))"><img onmouseup="btn(this,'Hb')" align="middle" onmouseout="btn(this,'Hb')" onmousedown="btn(this,'Hbd')" onmouseover="btn(this,'Hbh')" alt="Help" name="help" border="0" src="/Fig/bget/button_Hb.gif"></a></td>
+ </tr>
+</table>
+
+[
+<a href="/kegg-bin/get_htext?htext=ko00002.keg&amp;query=M00366&amp;option=-a">Module menu</a> |
+
+<a href="/kegg-bin/get_htext?htext=br08601_M00366.keg&amp;hier=5">Organism menu</a> |
+
+
+<a href="/dbget-bin/www_bget?M00366">Module entry</a> |
+<a href="javascript:void(open_ko_list())">KO/Compound list</a>
+
+]
+
+<div id="definition">
+ <table>
+  <tr>
+   <td>Entry</td>
+   <td>
+   M00366
+   
+   </td>
+  </tr>
+  <tr>
+   <td>Name</td>
+   <td>C10-C20 isoprenoid biosynthesis, plants</td>
+  </tr>
+  <tr>
+   <td>Definition</td>
+   <td>
+    <a href="/dbget-bin/www_bget?K01823">K01823</a> <a href="/dbget-bin/www_bget?K14066">K14066</a> <a href="/dbget-bin/www_bget?K00787">K00787</a> <a href="/dbget-bin/www_bget?K13789">K13789</a><br />
+    <a href="http://www.kegg.jp/kegg-bin/view_ortholog_table?md=M00366"><img onmouseup="btn(this,'OTb')" align="middle" onmouseout="btn(this,'OTb')" onmousedown="btn(this,'OTbd')" onmouseover="btn(this,'OTbh')" alt="Ortholog table" name="OT" border="0" src="/Fig/bget/button_OTb.gif"></a>
+    
+    <a href="javascript:void(document.forms['taxonomy'].submit())"><img onmouseup="btn(this,'Taxb')" align="middle" onmouseout="btn(this,'Taxb')" onmousedown="btn(this,'Taxbd')" onmouseover="btn(this,'Taxbh')" alt="Taxonomy" name="Taxonomy" border="0" src="/Fig/bget/button_Taxb.gif"></a>
+    
+   </td>
+  </tr>
+  <tr>
+   <td>Type</td>
+   <td>Pathway module</td>
+  </tr>
+  
+  
+  <tr>
+   <td>Pathway</td>
+   <td>
+    
+    <span style="margin-right:5px;">
+    <a href="/kegg-bin/show_pathway?map00900+M00366">map00900</a>
+    </span>
+    
+   </td>
+  </tr>
+  
+  
+  
+  <tr>
+   <td>Reaction</td>
+   <td><a href="/dbget-bin/www_bget?R01123">R01123</a>  <a href="/dbget-bin/www_bget?C00129">C00129</a> &lt;-&gt; <a href="/dbget-bin/www_bget?C00235">C00235</a><br><a href="/dbget-bin/www_bget?R01658">R01658</a>  <a href="/dbget-bin/www_bget?C00235">C00235</a> + <a href="/dbget-bin/www_bget?C00129">C00129</a> -&gt; <a href="/dbget-bin/www_bget?C00341">C00341</a><br><a href="/dbget-bin/www_bget?R02003">R02003</a>  <a href="/dbget-bin/www_bget?C00341">C00341</a> + <a href="/dbget-bin/www_bget?C00129">C00129</a> -&gt; <a href="/dbget-bin/www_bget?C00448">C00448</a><br><a href="/dbget-bin/www_bget?R02061">R02061</a>  <a href="/dbget-bin/www_bget?C00448">C00448</a> + <a href="/dbget-bin/www_bget?C00129">C00129</a> -&gt; <a href="/dbget-bin/www_bget?C00353">C00353</a></td>
+  </tr>
+  
+  
+  
+  <tr>
+   <td>Comment</td>
+   <td>Diatoms have both plant and animal types of GGPS [KO:<a href="/dbget-bin/www_bget?K13789">K13789</a> <a href="/dbget-bin/www_bget?K00804">K00804</a>].</td>
+  </tr>
+  
+ </table>
+</div>
+
+<form action="/kegg-bin/show_module" onsubmit="return SubmitForm(this)">
+<input type="hidden" name="map" value="M00366">
+<input type="hidden" name="org" value="ko">
+
+<div style="margin-top:10px;">
+
+<div>
+<select name="select_org">
+<option value="ko">Reference module (KO)</option>
+<option value="set_cookie">-----&lt; Set personalized menu &gt;-----</option>
+<option value="ko.sort_alp">-----&lt; Sort below by alphabet &gt;-----</option>
+<option value="ath" >Arabidopsis thaliana (thale cress)</option>
+<option value="aly" >Arabidopsis lyrata (lyrate rockcress)</option>
+<option value="crb" >Capsella rubella</option>
+<option value="csat" >Camelina sativa (false flax)</option>
+<option value="eus" >Eutrema salsugineum</option>
+<option value="brp" >Brassica rapa (field mustard)</option>
+<option value="bna" >Brassica napus (rape)</option>
+<option value="boe" >Brassica oleracea (wild cabbage)</option>
+<option value="thj" >Tarenaya hassleriana (spider flower)</option>
+<option value="cpap" >Carica papaya (papaya)</option>
+<option value="cit" >Citrus sinensis (Valencia orange)</option>
+<option value="cic" >Citrus clementina (mandarin orange)</option>
+<option value="tcc" >Theobroma cacao (cacao)</option>
+<option value="gra" >Gossypium raimondii</option>
+<option value="dzi" >Durio zibethinus (durian)</option>
+<option value="egr" >Eucalyptus grandis (rose gum)</option>
+<option value="gmx" >Glycine max (soybean)</option>
+<option value="pvu" >Phaseolus vulgaris (common bean)</option>
+<option value="vra" >Vigna radiata (mung bean)</option>
+<option value="var" >Vigna angularis (adzuki bean)</option>
+<option value="ccaj" >Cajanus cajan (pigeon pea)</option>
+<option value="mtr" >Medicago truncatula (barrel medic)</option>
+<option value="cam" >Cicer arietinum (chickpea)</option>
+<option value="adu" >Arachis duranensis</option>
+<option value="aip" >Arachis ipaensis</option>
+<option value="lja" >Lotus japonicus</option>
+<option value="lang" >Lupinus angustifolius (narrow-leaved blue lupine)</option>
+<option value="fve" >Fragaria vesca (woodland strawberry)</option>
+<option value="pper" >Prunus persica (peach)</option>
+<option value="pmum" >Prunus mume (Japanese apricot)</option>
+<option value="pavi" >Prunus avium (sweet cherry)</option>
+<option value="mdm" >Malus domestica (apple)</option>
+<option value="zju" >Ziziphus jujuba (Chinese jujube)</option>
+<option value="csv" >Cucumis sativus (cucumber)</option>
+<option value="cmo" >Cucumis melo (muskmelon)</option>
+<option value="mcha" >Momordica charantia (bitter melon)</option>
+<option value="cmax" >Cucurbita maxima (winter squash)</option>
+<option value="cmos" >Cucurbita moschata (crookneck pumpkin)</option>
+<option value="rcu" >Ricinus communis (castor bean)</option>
+<option value="jcu" >Jatropha curcas</option>
+<option value="hbr" >Hevea brasiliensis (rubber tree)</option>
+<option value="pop" >Populus trichocarpa (black cottonwood)</option>
+<option value="jre" >Juglans regia (English walnut)</option>
+<option value="vvi" >Vitis vinifera (wine grape)</option>
+<option value="sly" >Solanum lycopersicum (tomato)</option>
+<option value="spen" >Solanum pennellii</option>
+<option value="sot" >Solanum tuberosum (potato)</option>
+<option value="cann" >Capsicum annuum</option>
+<option value="nta" >Nicotiana tabacum (common tobacco)</option>
+<option value="nsy" >Nicotiana sylvestris</option>
+<option value="nto" >Nicotiana tomentosiformis</option>
+<option value="ini" >Ipomoea nil (Japanese morning glory)</option>
+<option value="sind" >Sesamum indicum (sesame)</option>
+<option value="oeu" >Olea europaea var. sylvestris (wild olive)</option>
+<option value="han" >Helianthus annuus (common sunflower)</option>
+<option value="bvg" >Beta vulgaris (sugar beet)</option>
+<option value="soe" >Spinacia oleracea (spinach)</option>
+<option value="nnu" >Nelumbo nucifera (sacred lotus)</option>
+<option value="osa" >Oryza sativa japonica (Japanese rice) (RefSeq)</option>
+<option value="dosa" >Oryza sativa japonica (Japanese rice) (RAPDB)</option>
+<option value="obr" >Oryza brachyantha (malo sina)</option>
+<option value="bdi" >Brachypodium distachyon</option>
+<option value="ats" >Aegilops tauschii (wheat D)</option>
+<option value="sbi" >Sorghum bicolor (sorghum)</option>
+<option value="zma" >Zea mays (maize)</option>
+<option value="sita" >Setaria italica (foxtail millet)</option>
+<option value="pda" >Phoenix dactylifera (date palm)</option>
+<option value="egu" >Elaeis guineensis (African oil palm)</option>
+<option value="mus" >Musa acuminata (wild Malaysian banana)</option>
+<option value="dct" >Dendrobium officinale</option>
+<option value="aof" >Asparagus officinalis (garden asparagus)</option>
+<option value="atr" >Amborella trichopoda</option>
+<option value="smo" >Selaginella moellendorffii</option>
+<option value="ppp" >Physcomitrella patens subsp. patens</option>
+<option value="cre" >Chlamydomonas reinhardtii</option>
+<option value="vcn" >Volvox carteri f. nagariensis</option>
+<option value="mng" >Monoraphidium neglectum</option>
+<option value="olu" >Ostreococcus lucimarinus</option>
+<option value="ota" >Ostreococcus tauri</option>
+<option value="bpg" >Bathycoccus prasinos</option>
+<option value="mis" >Micromonas commoda</option>
+<option value="mpp" >Micromonas pusilla</option>
+<option value="csl" >Coccomyxa subellipsoidea</option>
+<option value="cvr" >Chlorella variabilis</option>
+<option value="gsl" >Galdieria sulphuraria</option>
+
+</select>
+<input type="submit" value="Go">
+</div>
+
+<table cellpadding="10">
+ <tr>
+  <td><img src="/tmp/pathway_thumbnail/ko_M00366.png?1521114688" usemap="#module" border="0" alt="MODULE IMAGE"></td>
+  
+  <td><img src="/tmp/pathway_thumbnail/M00366_reaction.png?1521114688" usemap="#reaction" border="0" alt="MODULE-REACTION IMAGE"></td>
+  
+ </tr>
+</table>
+<map id="module" name="module">
+<area shape="rect" id="node1_0" href="http://www.kegg.jp/dbget-bin/www_bget?K01823" title="K01823 (idi)" alt="" coords="17,19,90,41"/>
+<area shape="rect" id="node2_1" href="http://www.kegg.jp/dbget-bin/www_bget?K14066" title="K14066 (GPS)" alt="" coords="17,77,90,100"/>
+<area shape="rect" id="node3_2" href="http://www.kegg.jp/dbget-bin/www_bget?K00787" title="K00787 (FDPS)" alt="" coords="17,136,90,159"/>
+<area shape="rect" id="node4_3" href="http://www.kegg.jp/dbget-bin/www_bget?K13789" title="K13789 (GGPS)" alt="" coords="17,195,90,217"/>
+</map>
+
+<map id="reaction" name="reaction">
+<area shape="poly" id="node1" href="/dbget-bin/www_bget?C00129" title="C00129 (Isopentenyl diphosphate)" alt="" coords="182,29,181,22,175,15,167,10,157,7,145,5,134,7,124,10,115,15,110,22,108,29,110,37,115,43,124,49,134,52,145,53,157,52,167,49,175,43,181,37" onmouseover="popupTimer(&quot;C00129&quot;, &quot;C00129 (Isopentenyl diphosphate)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node2" href="/dbget-bin/www_bget?R01123" title="R01123" alt="" coords="5,83,83,105"/>
+<area shape="rect" id="node4" href="/dbget-bin/www_bget?R01658" title="R01658" alt="" coords="56,212,133,235"/>
+<area shape="rect" id="node6" href="/dbget-bin/www_bget?R02003" title="R02003" alt="" coords="107,341,184,364"/>
+<area shape="rect" id="node8" href="/dbget-bin/www_bget?R02061" title="R02061" alt="" coords="145,471,223,493"/>
+<area shape="poly" id="node3" href="/dbget-bin/www_bget?C00235" title="C00235 (Dimethylallyl diphosphate)" alt="" coords="83,159,81,151,76,145,68,139,57,136,45,135,34,136,23,139,15,145,9,151,8,159,9,166,15,173,23,178,34,181,45,183,57,181,68,178,76,173,81,166" onmouseover="popupTimer(&quot;C00235&quot;, &quot;C00235 (Dimethylallyl diphosphate)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="poly" id="node5" href="/dbget-bin/www_bget?C00341" title="C00341 (Geranyl diphosphate)" alt="" coords="133,288,131,281,126,274,118,269,107,265,96,264,85,265,74,269,66,274,61,281,59,288,61,295,66,302,74,307,85,311,96,312,107,311,118,307,126,302,131,295" onmouseover="popupTimer(&quot;C00341&quot;, &quot;C00341 (Geranyl diphosphate)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="poly" id="node7" href="/dbget-bin/www_bget?C00448" title="C00448 (trans,trans&#45;Farnesyl diphosphate)" alt="" coords="184,417,182,410,177,403,168,398,158,395,147,393,135,395,125,398,117,403,111,410,110,417,111,425,117,431,125,437,135,440,147,441,158,440,168,437,177,431,182,425" onmouseover="popupTimer(&quot;C00448&quot;, &quot;C00448 (trans,trans&#45;Farnesyl diphosphate)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="poly" id="node9" href="/dbget-bin/www_bget?C00353" title="C00353 (Geranylgeranyl diphosphate)" alt="" coords="222,547,220,539,215,533,206,527,196,524,184,523,172,524,162,527,153,533,148,539,146,547,148,554,153,561,162,566,172,569,184,571,196,569,206,566,215,561,220,554" onmouseover="popupTimer(&quot;C00353&quot;, &quot;C00353 (Geranylgeranyl diphosphate)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+</map>
+</div>
+
+</form>
+<form name="taxonomy" method="post" action="/kegg-bin/get_htext">
+ <input type="hidden" name="htext" value="br08601.keg">
+ <input type="hidden" name="option" value="-a">
+ <input type="hidden" name="query" value="ath aly crb csat eus brp bna boe thj cpap cit cic tcc gra dzi egr gmx pvu vra var ccaj mtr cam adu aip lja lang fve pper pmum pavi mdm zju csv cmo mcha cmax cmos rcu jcu hbr pop jre vvi sly spen sot cann nta nsy nto ini sind oeu han bvg soe nnu osa dosa obr bdi ats sbi zma sita pda egu mus dct aof atr smo ppp cre vcn mng olu ota bpg mis mpp csl cvr gsl">
+</form>
+<div id="poplay" class="poplay"></div>
+</body>
+</html>

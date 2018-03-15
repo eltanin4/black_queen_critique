@@ -1,0 +1,136 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00356'>M00356</a></td>
+ <td>Methanogenesis, methanol =&gt; methane</td>
+ <!--td>Methanogenesis, methanol =&gt; methane</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K14080' target='_blank'>K14080</a></td>
+    <td>mtaA; [methyl-Co(III) methanol-specific corrinoid protein]:coenzyme M methyltransferase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.1.1.246">2.1.1.246</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K04480' target='_blank'>K04480</a></td>
+    <td>mtaB; methanol---5-hydroxybenzimidazolylcobamide Co-methyltransferase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.1.1.90">2.1.1.90</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K14081' target='_blank'>K14081</a></td>
+    <td>mtaC; methanol corrinoid protein</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00399' target='_blank'>K00399</a></td>
+    <td>mcrA; methyl-coenzyme M reductase alpha subunit [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.8.4.1">2.8.4.1</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00401' target='_blank'>K00401</a></td>
+    <td>mcrB; methyl-coenzyme M reductase beta subunit [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.8.4.1">2.8.4.1</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00402' target='_blank'>K00402</a></td>
+    <td>mcrG; methyl-coenzyme M reductase gamma subunit [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.8.4.1">2.8.4.1</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K03388' target='_blank'>K03388</a></td>
+    <td>hdrA2; heterodisulfide reductase subunit A2 [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.8.7.3">1.8.7.3</a> <a target="_blank" href="/dbget-bin/www_bget?ec:1.8.98.4">1.8.98.4</a> <a target="_blank" href="/dbget-bin/www_bget?ec:1.8.98.5">1.8.98.5</a> <a target="_blank" href="/dbget-bin/www_bget?ec:1.8.98.6">1.8.98.6</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K03389' target='_blank'>K03389</a></td>
+    <td>hdrB2; heterodisulfide reductase subunit B2 [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.8.7.3">1.8.7.3</a> <a target="_blank" href="/dbget-bin/www_bget?ec:1.8.98.4">1.8.98.4</a> <a target="_blank" href="/dbget-bin/www_bget?ec:1.8.98.5">1.8.98.5</a> <a target="_blank" href="/dbget-bin/www_bget?ec:1.8.98.6">1.8.98.6</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K03390' target='_blank'>K03390</a></td>
+    <td>hdrC2; heterodisulfide reductase subunit C2 [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.8.7.3">1.8.7.3</a> <a target="_blank" href="/dbget-bin/www_bget?ec:1.8.98.4">1.8.98.4</a> <a target="_blank" href="/dbget-bin/www_bget?ec:1.8.98.5">1.8.98.5</a> <a target="_blank" href="/dbget-bin/www_bget?ec:1.8.98.6">1.8.98.6</a>]</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00132' target='_blank'>C00132</a></td>
+    <td>Methanol</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C03920' target='_blank'>C03920</a></td>
+    <td>2-(Methylthio)ethanesulfonate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C04628' target='_blank'>C04628</a></td>
+    <td>N-(7-Mercaptoheptanoyl)threonine 3-O-phosphate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C01438' target='_blank'>C01438</a></td>
+    <td>Methane</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C04832' target='_blank'>C04832</a></td>
+    <td>Coenzyme M 7-mercaptoheptanoylthreonine-phosphate heterodisulfide</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

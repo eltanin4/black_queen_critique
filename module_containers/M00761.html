@@ -1,0 +1,116 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00761'>M00761</a></td>
+ <td>Undecaprenylphosphate alpha-L-Ara4N biosynthesis, UDP-GlcA =&gt; undecaprenyl phosphate alpha-L-Ara4N</td>
+ <!--td>Undecaprenylphosphate alpha-L-Ara4N biosynthesis, UDP-GlcA =&gt; undecaprenyl phosphate alpha-L-Ara4N</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K10011' target='_blank'>K10011</a></td>
+    <td>arnA, pmrI; UDP-4-amino-4-deoxy-L-arabinose formyltransferase / UDP-glucuronic acid dehydrogenase (UDP-4-keto-hexauronic acid decarboxylating) [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.1.2.13">2.1.2.13</a> <a target="_blank" href="/dbget-bin/www_bget?ec:1.1.1.305">1.1.1.305</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K07806' target='_blank'>K07806</a></td>
+    <td>arnB, pmrH; UDP-4-amino-4-deoxy-L-arabinose-oxoglutarate aminotransferase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.6.1.87">2.6.1.87</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K10012' target='_blank'>K10012</a></td>
+    <td>arnC, pmrF; undecaprenyl-phosphate 4-deoxy-4-formamido-L-arabinose transferase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.4.2.53">2.4.2.53</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K13014' target='_blank'>K13014</a></td>
+    <td>arnD; undecaprenyl phosphate-alpha-L-ara4FN deformylase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:3.5.1.-">3.5.1.-</a>]</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00167' target='_blank'>C00167</a></td>
+    <td>UDP-glucuronate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C16155' target='_blank'>C16155</a></td>
+    <td>UDP-L-Ara4O</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C16153' target='_blank'>C16153</a></td>
+    <td>UDP-L-Ara4N</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C16154' target='_blank'>C16154</a></td>
+    <td>UDP-L-Ara4FN</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C16156' target='_blank'>C16156</a></td>
+    <td>Undecaprenyl phosphate alpha-L-Ara4FN</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C16157' target='_blank'>C16157</a></td>
+    <td>Undecaprenyl phosphate alpha-L-Ara4N</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

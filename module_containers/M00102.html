@@ -1,0 +1,126 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00102'>M00102</a></td>
+ <td>Ergocalciferol biosynthesis</td>
+ <!--td>Ergocalciferol biosynthesis</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00559' target='_blank'>K00559</a></td>
+    <td>E2.1.1.41, SMT1, ERG6; sterol 24-C-methyltransferase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.1.1.41">2.1.1.41</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K09829' target='_blank'>K09829</a></td>
+    <td>ERG2; C-8 sterol isomerase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:5.-.-.-">5.-.-.-</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00227' target='_blank'>K00227</a></td>
+    <td>SC5DL, ERG3; Delta7-sterol 5-desaturase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.14.19.20">1.14.19.20</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K09831' target='_blank'>K09831</a></td>
+    <td>ERG5, CYP61A; sterol 22-desaturase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.14.19.41">1.14.19.41</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00223' target='_blank'>K00223</a></td>
+    <td>ERG4; Delta24(24(1))-sterol reductase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.3.1.71">1.3.1.71</a>]</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C05437' target='_blank'>C05437</a></td>
+    <td>Zymosterol</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C04525' target='_blank'>C04525</a></td>
+    <td>Fecosterol</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C15777' target='_blank'>C15777</a></td>
+    <td>Episterol</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C15778' target='_blank'>C15778</a></td>
+    <td>5,7,24(28)-Ergostatrienol</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C05440' target='_blank'>C05440</a></td>
+    <td>Ergosta-5,7,22,24(28)-tetraen-3beta-ol</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C01694' target='_blank'>C01694</a></td>
+    <td>Ergosterol</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C05441' target='_blank'>C05441</a></td>
+    <td>Vitamin D2</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

@@ -1,0 +1,365 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>KEGG MODULE: M00778</title>
+<link rel="stylesheet" href="/css/kegg.css" type="text/css">
+<style type="text/css">
+td
+{
+  font-size:12px;
+  font-family:verdana,arial,helvetica,sans-serif;
+  vertical-align: top;
+}
+
+div#definition
+{
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+div#definition table tr td {
+  padding-right: 10px;
+}
+
+div.poplay {
+  position: absolute;
+  padding: 2px;
+  background-color: #ffff99;
+  border-top: solid 1px #c0c0c0;
+  border-left: solid 1px #c0c0c0;
+  border-bottom: solid 1px #808080;
+  border-right: solid 1px #808080;
+  visibility: hidden;
+}
+
+span.popup
+{
+  font-weight: bold;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+</style>
+<script language="JavaScript" type="text/javascript" src="/js/dhtml.js"></script>
+<script language="javascript" type="text/javascript">
+<!--
+
+function SubmitForm(theForm)
+{
+  var org = theForm.select_org.value;
+
+  if(org == "set_cookie")
+  {
+    window.open('/kegg/misc/kegg2_select.html','sel_org','toolbar=no,location=no,directories=no,width=500,height=320,resizable=yes');
+    return false;
+  }
+  else if(org.indexOf(".sort_alp") > 0)
+  {
+    var dt = new Date();
+    dt.setTime(dt.getTime() + (30 * 24 * 60 * 60));
+    var c = "KEGG_MapMenu_Sorted=alp;path=/;expires=" + dt.toGMTString();
+    document.cookie = c;
+  }
+  else if(org.indexOf(".sort_org") > 0)
+  {
+    // delete cookie
+    var dt = new Date();
+    dt.setTime(dt.getTime() - 100);
+    var c = "KEGG_MapMenu_Sorted=alp;path=/;expires=" + dt.toGMTString();
+    document.cookie = c;
+  }
+  else
+  {
+    theForm.org.value = org;
+  }
+
+  return true;
+}
+
+function btn(bobj, img)
+{
+  bobj.src = "/Fig/bget/button_" + img + ".gif";
+}
+
+
+function open_ko_list()
+{
+	var win = window.open('module_ko_list?map=M00778&org=ko','_md','toolbar=no,location=no,directories=no,width=700,height=400,resizable=yes,scrollbars=yes,status=no');
+  win.focus();
+}
+
+var timer = 0;
+var p_entry, p_title, p_bgcolor;
+function popupTimer(entry, title, bgcolor)
+{
+  p_entry = entry;
+  p_title = title;
+  p_bgcolor = bgcolor;
+
+  if(timer == 0){
+    var func = "showThumbnail()";
+    timer = setTimeout(func, 1200);
+  }
+}
+
+
+function showThumbnail()
+{
+
+  var url = "";
+  if(p_entry.match(/^[A-Z]+\d+$/))
+  {
+    url = "/kegg/misc/thumbnail/" + p_entry + ".gif";
+  }
+  else if(p_entry.match(/(\d+)$/))
+  {
+    url = "/kegg/misc/thumbnail/map" + RegExp.$1 + ".gif";
+  }
+
+  var html = "";
+
+  if(p_bgcolor != "#ffffff")
+  {
+    html += "<span class=\"popup\">" + p_entry + "</span><br />";
+  }
+
+  html += "<img src=\"" + url + "\" alt=\"Loading...\">";
+
+  var x = getCurrentMouseX();
+  var y = getCurrentMouseY();
+
+  var layer = new Component("poplay");
+  layer.backgroundColor(p_bgcolor);
+  layer.HTML(html);
+  layer.move(x, y+40);
+  layer.visible(true);
+
+  timer = 0;
+}
+
+
+function hideMapTn(){
+  var layer = new Component("poplay");
+  layer.visible(false);
+
+  if(timer != 0){
+    clearTimeout(timer);
+    timer = 0;
+  }
+}
+
+
+// -->
+</script>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+ <tr>
+  <td>
+    <a href="/kegg/kegg2.html"><img align="middle" border="0" src="/Fig/bget/kegg3.gif" alt="KEGG"></a>
+    &nbsp;&nbsp;&nbsp;<a name="module:M00778"></a><font class="title3"><b>Type II polyketide backbone biosynthesis, acyl-CoA + malonyl-CoA =&gt; polyketide</b></font>
+  </td>
+  <td align="right" valign="bottom"><a href="javascript:void(window.open('/kegg/document/help_module.html','KEGG_Help','toolbar=no,location=no,directories=no,width=720,height=640,resizable=yes,scrollbars=yes'))"><img onmouseup="btn(this,'Hb')" align="middle" onmouseout="btn(this,'Hb')" onmousedown="btn(this,'Hbd')" onmouseover="btn(this,'Hbh')" alt="Help" name="help" border="0" src="/Fig/bget/button_Hb.gif"></a></td>
+ </tr>
+</table>
+
+[
+<a href="/kegg-bin/get_htext?htext=ko00002.keg&amp;query=M00778&amp;option=-a">Module menu</a> |
+
+<a href="/kegg-bin/get_htext?htext=br08601_M00778.keg&amp;hier=5">Organism menu</a> |
+
+
+<a href="/dbget-bin/www_bget?M00778">Module entry</a> |
+<a href="javascript:void(open_ko_list())">KO/Compound list</a>
+
+]
+
+<div id="definition">
+ <table>
+  <tr>
+   <td>Entry</td>
+   <td>
+   M00778
+   
+   </td>
+  </tr>
+  <tr>
+   <td>Name</td>
+   <td>Type II polyketide backbone biosynthesis, acyl-CoA + malonyl-CoA =&gt; polyketide</td>
+  </tr>
+  <tr>
+   <td>Definition</td>
+   <td>
+    <a href="/dbget-bin/www_bget?K05551">K05551</a>+<a href="/dbget-bin/www_bget?K05552">K05552</a>+<a href="/dbget-bin/www_bget?K05553">K05553</a> -<a href="/dbget-bin/www_bget?K12420">K12420</a> ((<a href="/dbget-bin/www_bget?K05554">K05554</a>,<a href="/dbget-bin/www_bget?K14249">K14249</a>,<a href="/dbget-bin/www_bget?K15884">K15884</a>,<a href="/dbget-bin/www_bget?K15885">K15885</a>) (<a href="/dbget-bin/www_bget?K05555">K05555</a>,<a href="/dbget-bin/www_bget?K14250">K14250</a>),<a href="/dbget-bin/www_bget?K15886">K15886</a>)<br />
+    <a href="http://www.kegg.jp/kegg-bin/view_ortholog_table?md=M00778"><img onmouseup="btn(this,'OTb')" align="middle" onmouseout="btn(this,'OTb')" onmousedown="btn(this,'OTbd')" onmouseover="btn(this,'OTbh')" alt="Ortholog table" name="OT" border="0" src="/Fig/bget/button_OTb.gif"></a>
+    
+    <a href="javascript:void(document.forms['taxonomy'].submit())"><img onmouseup="btn(this,'Taxb')" align="middle" onmouseout="btn(this,'Taxb')" onmousedown="btn(this,'Taxbd')" onmouseover="btn(this,'Taxbh')" alt="Taxonomy" name="Taxonomy" border="0" src="/Fig/bget/button_Taxb.gif"></a>
+    
+   </td>
+  </tr>
+  <tr>
+   <td>Type</td>
+   <td>Pathway module</td>
+  </tr>
+  
+  
+  <tr>
+   <td>Pathway</td>
+   <td>
+    
+    <span style="margin-right:5px;">
+    <a href="/kegg-bin/show_pathway?map01056+M00778">map01056</a>
+    </span>
+    
+    <span style="margin-right:5px;">
+    <a href="/kegg-bin/show_pathway?map00253+M00778">map00253</a>
+    </span>
+    
+   </td>
+  </tr>
+  
+  
+  
+  <tr>
+   <td>Reaction</td>
+   <td><a href="/dbget-bin/www_bget?R09258">R09258</a>  <a href="/dbget-bin/www_bget?C00083">C00083</a> -&gt; <a href="/dbget-bin/www_bget?C12348">C12348</a><br><a href="/dbget-bin/www_bget?R09259">R09259</a>  <a href="/dbget-bin/www_bget?C12348">C12348</a> -&gt; <a href="/dbget-bin/www_bget?C18327">C18327</a><br><a href="/dbget-bin/www_bget?R09262">R09262</a>  <a href="/dbget-bin/www_bget?C18327">C18327</a> -&gt; <a href="/dbget-bin/www_bget?C18328">C18328</a><br><a href="/dbget-bin/www_bget?R09265">R09265</a>  <a href="/dbget-bin/www_bget?C18328">C18328</a> -&gt; <a href="/dbget-bin/www_bget?C18329">C18329</a><br><a href="/dbget-bin/www_bget?R09305">R09305</a>  <a href="/dbget-bin/www_bget?C18329">C18329</a> -&gt; <a href="/dbget-bin/www_bget?C18353">C18353</a><br><a href="/dbget-bin/www_bget?R11516">R11516</a>  <a href="/dbget-bin/www_bget?C21430">C21430</a> + <a href="/dbget-bin/www_bget?C00083">C00083</a> -&gt; <a href="/dbget-bin/www_bget?C12441">C12441</a><br><a href="/dbget-bin/www_bget?R06642">R06642</a>  <a href="/dbget-bin/www_bget?C12441">C12441</a> -&gt; <a href="/dbget-bin/www_bget?C12442">C12442</a><br><a href="/dbget-bin/www_bget?R09187">R09187</a>  <a href="/dbget-bin/www_bget?C12442">C12442</a> -&gt; <a href="/dbget-bin/www_bget?C18293">C18293</a><br><a href="/dbget-bin/www_bget?R09188">R09188</a>  <a href="/dbget-bin/www_bget?C18293">C18293</a> -&gt; <a href="/dbget-bin/www_bget?C18294">C18294</a><br><a href="/dbget-bin/www_bget?R06643">R06643</a>  <a href="/dbget-bin/www_bget?C00083">C00083</a> -&gt; <a href="/dbget-bin/www_bget?C12354">C12354</a><br><a href="/dbget-bin/www_bget?R09260">R09260</a>  <a href="/dbget-bin/www_bget?C12354">C12354</a> -&gt; <a href="/dbget-bin/www_bget?C18330">C18330</a><br><a href="/dbget-bin/www_bget?R09263">R09263</a>  <a href="/dbget-bin/www_bget?C18330">C18330</a> -&gt; <a href="/dbget-bin/www_bget?C18331">C18331</a><br><a href="/dbget-bin/www_bget?R09266">R09266</a>  <a href="/dbget-bin/www_bget?C18331">C18331</a> -&gt; <a href="/dbget-bin/www_bget?C18332">C18332</a><br><a href="/dbget-bin/www_bget?R09325">R09325</a>  <a href="/dbget-bin/www_bget?C18332">C18332</a> -&gt; <a href="/dbget-bin/www_bget?C18629">C18629</a><br><a href="/dbget-bin/www_bget?R09268">R09268</a>  <a href="/dbget-bin/www_bget?C12354">C12354</a> -&gt; <a href="/dbget-bin/www_bget?C18336">C18336</a><br><a href="/dbget-bin/www_bget?R09350">R09350</a>  <a href="/dbget-bin/www_bget?C18336">C18336</a> -&gt; <a href="/dbget-bin/www_bget?C18709">C18709</a><br><a href="/dbget-bin/www_bget?R09269">R09269</a>  <a href="/dbget-bin/www_bget?C12354">C12354</a> -&gt; <a href="/dbget-bin/www_bget?C18337">C18337</a><br><a href="/dbget-bin/www_bget?R09355">R09355</a>  <a href="/dbget-bin/www_bget?C18337">C18337</a> -&gt; <a href="/dbget-bin/www_bget?C12366">C12366</a></td>
+  </tr>
+  
+  
+  
+ </table>
+</div>
+
+<form action="/kegg-bin/show_module" onsubmit="return SubmitForm(this)">
+<input type="hidden" name="map" value="M00778">
+<input type="hidden" name="org" value="ko">
+
+<div style="margin-top:10px;">
+
+<div>
+<select name="select_org">
+<option value="ko">Reference module (KO)</option>
+<option value="set_cookie">-----&lt; Set personalized menu &gt;-----</option>
+<option value="ko.sort_alp">-----&lt; Sort below by alphabet &gt;-----</option>
+<option value="nno" >Nocardia nova</option>
+<option value="ntp" >Nocardia terpenica</option>
+<option value="sco" >Streptomyces coelicolor</option>
+<option value="sma" >Streptomyces avermitilis</option>
+<option value="sfa" >Streptomyces pratensis</option>
+<option value="sbh" >Streptomyces bingchenggensis</option>
+<option value="shy" >Streptomyces hygroscopicus subsp. jinggangensis 5008</option>
+<option value="sho" >Streptomyces hygroscopicus subsp. jinggangensis TL01</option>
+<option value="sve" >Streptomyces venezuelae</option>
+<option value="sdv" >Streptomyces davaonensis</option>
+<option value="strp" >Streptomyces sp. PAMC 26508</option>
+<option value="sci" >Streptomyces collinus</option>
+<option value="salu" >Streptomyces albulus NK660</option>
+<option value="sall" >Streptomyces albulus ZPM</option>
+<option value="slv" >Streptomyces lividans</option>
+<option value="sgu" >Streptomyces glaucescens</option>
+<option value="svt" >Streptomyces vietnamensis</option>
+<option value="stre" >Streptomyces sp. 769</option>
+<option value="sld" >Streptomyces sp. A02</option>
+<option value="sxi" >Streptomyces xiamenensis</option>
+<option value="strc" >Streptomyces sp. CNQ-509</option>
+<option value="spri" >Streptomyces pristinaespiralis</option>
+<option value="srw" >Streptomyces reticuli</option>
+<option value="strf" >Streptomyces sp. 4F</option>
+<option value="spav" >Streptomyces parvulus</option>
+<option value="sgs" >Streptomyces griseochromogenes</option>
+<option value="spun" >Streptomyces puniciscabiei</option>
+<option value="slau" >Streptomyces laurentii</option>
+<option value="salj" >Streptomyces albireticuli</option>
+<option value="slx" >Streptomyces lavendulae</option>
+<option value="kab" >Kitasatospora albolonga</option>
+<option value="tcu" >Thermomonospora curvata</option>
+<option value="fra" >Frankia sp. CcI3</option>
+<option value="fri" >Frankia sp. EuI1c</option>
+<option value="pseq" >Pseudonocardia sp. EC080610-09</option>
+<option value="pecq" >Pseudonocardia sp EC080619-01</option>
+<option value="kal" >Kutzneria albida</option>
+<option value="led" >Lentzea guizhouensis</option>
+<option value="pmad" >Prauserella marina</option>
+<option value="mau" >Micromonospora aurantiaca</option>
+<option value="mil" >Micromonospora sp. L5</option>
+<option value="ams" >Actinoplanes missouriensis</option>
+<option value="cai" >Catenulispora acidiphila</option>
+
+</select>
+<input type="submit" value="Go">
+</div>
+
+<table cellpadding="10">
+ <tr>
+  <td><img src="/tmp/pathway_thumbnail/ko_M00778.png?1521114855" usemap="#module" border="0" alt="MODULE IMAGE"></td>
+  
+  <td><img src="/tmp/pathway_thumbnail/M00778_reaction.png?1521114855" usemap="#reaction" border="0" alt="MODULE-REACTION IMAGE"></td>
+  
+ </tr>
+</table>
+<map id="module" name="module">
+<area shape="rect" id="node1_0" href="http://www.kegg.jp/dbget-bin/www_bget?K05551" title="K05551 (actI1)" alt="" coords="171,11,245,34"/>
+<area shape="rect" id="node1_1" href="http://www.kegg.jp/dbget-bin/www_bget?K05552" title="K05552 (actI2)" alt="" coords="171,34,245,57"/>
+<area shape="rect" id="node1_2" href="http://www.kegg.jp/dbget-bin/www_bget?K05553" title="K05553 (actI3)" alt="" coords="171,57,245,79"/>
+<area shape="rect" id="node2_3" href="http://www.kegg.jp/dbget-bin/www_bget?K12420" title="K12420 (actIII)" alt="" coords="171,108,245,131"/>
+<area shape="rect" id="node3_4" href="http://www.kegg.jp/dbget-bin/www_bget?K05554" title="K05554 (actVII)" alt="" coords="17,159,90,182"/>
+<area shape="rect" id="node3_5" href="http://www.kegg.jp/dbget-bin/www_bget?K14249" title="K14249 (oxyK)" alt="" coords="94,159,167,182"/>
+<area shape="rect" id="node3_6" href="http://www.kegg.jp/dbget-bin/www_bget?K15884" title="K15884 (snoaE)" alt="" coords="171,159,245,182"/>
+<area shape="rect" id="node3_7" href="http://www.kegg.jp/dbget-bin/www_bget?K15885" title="K15885 (mtmQ)" alt="" coords="249,159,322,182"/>
+<area shape="rect" id="node3_8" href="http://www.kegg.jp/dbget-bin/www_bget?K05555" title="K05555 (actIV)" alt="" coords="17,205,142,227"/>
+<area shape="rect" id="node3_9" href="http://www.kegg.jp/dbget-bin/www_bget?K14250" title="K14250 (oxyN)" alt="" coords="198,205,322,227"/>
+<area shape="rect" id="node3_10" href="http://www.kegg.jp/dbget-bin/www_bget?K15886" title="K15886 (tcmN)" alt="" coords="326,159,399,227"/>
+</map>
+
+<map id="reaction" name="reaction">
+<area shape="poly" id="node1" href="/dbget-bin/www_bget?C00083" title="C00083 (Malonyl&#45;CoA)" alt="" coords="284,29,282,22,277,15,268,10,258,7,247,5,235,7,225,10,217,15,211,22,210,29,211,37,217,43,225,49,235,52,247,53,258,52,268,49,277,43,282,37" onmouseover="popupTimer(&quot;C00083&quot;, &quot;C00083 (Malonyl&#45;CoA)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node2" href="/dbget-bin/www_bget?R09258" title="R09258" alt="" coords="81,83,159,105"/>
+<area shape="rect" id="node13" href="/dbget-bin/www_bget?R11516" title="R11516" alt="" coords="335,83,412,105"/>
+<area shape="rect" id="node21" href="/dbget-bin/www_bget?R06643" title="R06643" alt="" coords="208,83,285,105"/>
+<area shape="poly" id="node3" href="/dbget-bin/www_bget?C12348" title="C12348 (3,5,7,9,11,13,15&#45;Heptaoxo&#45;hexadecanoyl&#45;[acp])" alt="" coords="106,159,105,151,99,145,91,139,81,136,69,135,58,136,48,139,39,145,34,151,32,159,34,166,39,173,48,178,58,181,69,183,81,181,91,178,99,173,105,166" onmouseover="popupTimer(&quot;C12348&quot;, &quot;C12348 (3,5,7,9,11,13,15&#45;Heptaoxo&#45;hexadecanoyl&#45;[acp])&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node4" href="/dbget-bin/www_bget?R09259" title="R09259" alt="" coords="5,212,83,235"/>
+<area shape="poly" id="node5" href="/dbget-bin/www_bget?C18327" title="C18327 (7,9,12&#45;Octaketide intermediate 1)" alt="" coords="81,288,79,281,74,274,66,269,55,265,44,264,33,265,22,269,14,274,9,281,7,288,9,295,14,302,22,307,33,311,44,312,55,311,66,307,74,302,79,295" onmouseover="popupTimer(&quot;C18327&quot;, &quot;C18327 (7,9,12&#45;Octaketide intermediate 1)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node6" href="/dbget-bin/www_bget?R09262" title="R09262" alt="" coords="5,341,83,364"/>
+<area shape="poly" id="node7" href="/dbget-bin/www_bget?C18328" title="C18328 (7,9,12&#45;Octaketide intermediate 2)" alt="" coords="81,417,79,410,74,403,66,398,55,395,44,393,33,395,22,398,14,403,9,410,7,417,9,425,14,431,22,437,33,440,44,441,55,440,66,437,74,431,79,425" onmouseover="popupTimer(&quot;C18328&quot;, &quot;C18328 (7,9,12&#45;Octaketide intermediate 2)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node8" href="/dbget-bin/www_bget?R09265" title="R09265" alt="" coords="5,471,83,493"/>
+<area shape="poly" id="node9" href="/dbget-bin/www_bget?C18329" title="C18329 (7,9,12&#45;Octaketide intermediate 3)" alt="" coords="81,547,79,539,74,533,66,527,55,524,44,523,33,524,22,527,14,533,9,539,7,547,9,554,14,561,22,566,33,569,44,571,55,569,66,566,74,561,79,554" onmouseover="popupTimer(&quot;C18329&quot;, &quot;C18329 (7,9,12&#45;Octaketide intermediate 3)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node10" href="/dbget-bin/www_bget?R09305" title="R09305" alt="" coords="5,600,83,623"/>
+<area shape="poly" id="node11" href="/dbget-bin/www_bget?C18353" title="C18353 (Octaketide bicyclic intermediate)" alt="" coords="82,676,80,669,75,662,66,657,56,653,44,652,32,653,22,657,13,662,8,669,6,676,8,683,13,690,22,695,32,699,44,700,56,699,66,695,75,690,80,683" onmouseover="popupTimer(&quot;C18353&quot;, &quot;C18353 (Octaketide bicyclic intermediate)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="poly" id="node12" href="/dbget-bin/www_bget?C21430" title="C21430 (Malonamoyl&#45;[acyl&#45;carrier protein])" alt="" coords="410,29,409,22,403,15,395,10,385,7,373,5,362,7,352,10,343,15,338,22,336,29,338,37,343,43,352,49,362,52,373,53,385,52,395,49,403,43,409,37" onmouseover="popupTimer(&quot;C21430&quot;, &quot;C21430 (Malonamoyl&#45;[acyl&#45;carrier protein])&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="poly" id="node14" href="/dbget-bin/www_bget?C12441" title="C12441 (18&#45;Carbamoyl&#45;3,5,7,9,11,13,15,17&#45;octaoxooctadecanoyl&#45;[acp])" alt="" coords="461,159,459,151,454,145,446,139,435,136,424,135,413,136,402,139,394,145,389,151,387,159,389,166,394,173,402,178,413,181,424,183,435,181,446,178,454,173,459,166" onmouseover="popupTimer(&quot;C12441&quot;, &quot;C12441 (18&#45;Carbamoyl&#45;3,5,7,9,11,13,15,17&#45;octaoxooctadecanoyl&#45;[acp])&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node15" href="/dbget-bin/www_bget?R06642" title="R06642" alt="" coords="411,212,488,235"/>
+<area shape="poly" id="node16" href="/dbget-bin/www_bget?C12442" title="C12442 (C&#45;9 Reduced nonaketamide)" alt="" coords="486,288,485,281,479,274,471,269,461,265,449,264,438,265,428,269,419,274,414,281,412,288,414,295,419,302,428,307,438,311,449,312,461,311,471,307,479,302,485,295" onmouseover="popupTimer(&quot;C12442&quot;, &quot;C12442 (C&#45;9 Reduced nonaketamide)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node17" href="/dbget-bin/www_bget?R09187" title="R09187" alt="" coords="411,341,488,364"/>
+<area shape="poly" id="node18" href="/dbget-bin/www_bget?C18293" title="C18293 (Nonaketamide monocyclic intermediate)" alt="" coords="486,417,485,410,479,403,471,398,461,395,449,393,438,395,428,398,419,403,414,410,412,417,414,425,419,431,428,437,438,440,449,441,461,440,471,437,479,431,485,425" onmouseover="popupTimer(&quot;C18293&quot;, &quot;C18293 (Nonaketamide monocyclic intermediate)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node19" href="/dbget-bin/www_bget?R09188" title="R09188" alt="" coords="411,471,488,493"/>
+<area shape="poly" id="node20" href="/dbget-bin/www_bget?C18294" title="C18294 (Nonaketamide tricyclic intermediate)" alt="" coords="486,547,485,539,479,533,471,527,461,524,449,523,438,524,428,527,419,533,414,539,412,547,414,554,419,561,428,566,438,569,449,571,461,569,471,566,479,561,485,554" onmouseover="popupTimer(&quot;C18294&quot;, &quot;C18294 (Nonaketamide tricyclic intermediate)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="poly" id="node22" href="/dbget-bin/www_bget?C12354" title="C12354 (3,5,7,9,11,13,15,17,19&#45;Nonaoxo&#45;eicosanoyl&#45;[acp])" alt="" coords="284,159,283,151,277,145,269,139,258,136,247,135,235,136,224,139,216,145,211,151,209,159,211,166,216,173,224,178,235,181,247,183,258,181,269,178,277,173,283,166" onmouseover="popupTimer(&quot;C12354&quot;, &quot;C12354 (3,5,7,9,11,13,15,17,19&#45;Nonaoxo&#45;eicosanoyl&#45;[acp])&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node23" href="/dbget-bin/www_bget?R09260" title="R09260" alt="" coords="309,212,387,235"/>
+<area shape="rect" id="node31" href="/dbget-bin/www_bget?R09268" title="R09268" alt="" coords="107,212,184,235"/>
+<area shape="rect" id="node35" href="/dbget-bin/www_bget?R09269" title="R09269" alt="" coords="208,212,285,235"/>
+<area shape="poly" id="node24" href="/dbget-bin/www_bget?C18330" title="C18330 (7,9,12&#45;Decaketide intermediate 1)" alt="" coords="385,288,383,281,378,274,370,269,359,265,348,264,337,265,326,269,318,274,313,281,311,288,313,295,318,302,326,307,337,311,348,312,359,311,370,307,378,302,383,295" onmouseover="popupTimer(&quot;C18330&quot;, &quot;C18330 (7,9,12&#45;Decaketide intermediate 1)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node25" href="/dbget-bin/www_bget?R09263" title="R09263" alt="" coords="309,341,387,364"/>
+<area shape="poly" id="node26" href="/dbget-bin/www_bget?C18331" title="C18331 (7,9,12&#45;Decaketide intermediate 2)" alt="" coords="385,417,383,410,378,403,370,398,359,395,348,393,337,395,326,398,318,403,313,410,311,417,313,425,318,431,326,437,337,440,348,441,359,440,370,437,378,431,383,425" onmouseover="popupTimer(&quot;C18331&quot;, &quot;C18331 (7,9,12&#45;Decaketide intermediate 2)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node27" href="/dbget-bin/www_bget?R09266" title="R09266" alt="" coords="309,471,387,493"/>
+<area shape="poly" id="node28" href="/dbget-bin/www_bget?C18332" title="C18332 (7,9,12&#45;Decaketide intermediate 3)" alt="" coords="385,547,383,539,378,533,370,527,359,524,348,523,337,524,326,527,318,533,313,539,311,547,313,554,318,561,326,566,337,569,348,571,359,569,370,566,378,561,383,554" onmouseover="popupTimer(&quot;C18332&quot;, &quot;C18332 (7,9,12&#45;Decaketide intermediate 3)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node29" href="/dbget-bin/www_bget?R09325" title="R09325" alt="" coords="309,600,387,623"/>
+<area shape="poly" id="node30" href="/dbget-bin/www_bget?C18629" title="C18629 (Deoxynogalonate)" alt="" coords="384,676,383,669,377,662,369,657,359,653,348,652,337,653,327,657,319,662,313,669,312,676,313,683,319,690,327,695,337,699,348,700,359,699,369,695,377,690,383,683" onmouseover="popupTimer(&quot;C18629&quot;, &quot;C18629 (Deoxynogalonate)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="poly" id="node32" href="/dbget-bin/www_bget?C18336" title="C18336 (7,12&#45;Decaketide intermediate 1)" alt="" coords="182,288,180,281,175,274,167,269,157,265,145,264,134,265,124,269,116,274,111,281,109,288,111,295,116,302,124,307,134,311,145,312,157,311,167,307,175,302,180,295" onmouseover="popupTimer(&quot;C18336&quot;, &quot;C18336 (7,12&#45;Decaketide intermediate 1)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node33" href="/dbget-bin/www_bget?R09350" title="R09350" alt="" coords="107,341,184,364"/>
+<area shape="poly" id="node34" href="/dbget-bin/www_bget?C18709" title="C18709 (Decaketide tricyclic intermediate)" alt="" coords="182,417,181,410,175,403,167,398,157,395,145,393,134,395,124,398,115,403,110,410,108,417,110,425,115,431,124,437,134,440,145,441,157,440,167,437,175,431,181,425" onmouseover="popupTimer(&quot;C18709&quot;, &quot;C18709 (Decaketide tricyclic intermediate)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="poly" id="node36" href="/dbget-bin/www_bget?C18337" title="C18337 (9,14&#45;Decaketide intermediate 1)" alt="" coords="284,288,282,281,277,274,268,269,258,265,247,264,235,265,225,269,217,274,211,281,210,288,211,295,217,302,225,307,235,311,247,312,258,311,268,307,277,302,282,295" onmouseover="popupTimer(&quot;C18337&quot;, &quot;C18337 (9,14&#45;Decaketide intermediate 1)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node37" href="/dbget-bin/www_bget?R09355" title="R09355" alt="" coords="208,341,285,364"/>
+<area shape="poly" id="node38" href="/dbget-bin/www_bget?C12366" title="C12366 (Tetracenomycin F2)" alt="" coords="283,417,281,410,276,403,268,398,258,395,247,393,236,395,226,398,218,403,212,410,211,417,212,425,218,431,226,437,236,440,247,441,258,440,268,437,276,431,281,425" onmouseover="popupTimer(&quot;C12366&quot;, &quot;C12366 (Tetracenomycin F2)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+</map>
+</div>
+
+</form>
+<form name="taxonomy" method="post" action="/kegg-bin/get_htext">
+ <input type="hidden" name="htext" value="br08601.keg">
+ <input type="hidden" name="option" value="-a">
+ <input type="hidden" name="query" value="nno ntp sco sma sfa sbh shy sho sve sdv strp sci salu sall slv sgu svt stre sld sxi strc spri srw strf spav sgs spun slau salj slx kab tcu fra fri pseq pecq kal led pmad mau mil ams cai">
+</form>
+<div id="poplay" class="poplay"></div>
+</body>
+</html>

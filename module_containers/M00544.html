@@ -1,0 +1,121 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00544'>M00544</a></td>
+ <td>Carbazole degradation, carbazole =&gt; 2-oxopent-4-enoate + anthranilate</td>
+ <!--td>Carbazole degradation, carbazole =&gt; 2-oxopent-4-enoate + anthranilate</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K15751' target='_blank'>K15751</a></td>
+    <td>carAa; carbazole 1,9a-dioxygenase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.14.12.22">1.14.12.22</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K15752' target='_blank'>K15752</a></td>
+    <td>carAc; carbazole 1,9a-dioxygenase ferredoxin component</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K15753' target='_blank'>K15753</a></td>
+    <td>carAd; carbazole 1,9a-dioxygenase ferredoxin reductase component</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K15754' target='_blank'>K15754</a></td>
+    <td>carBa; 2'-aminobiphenyl-2,3-diol 1,2-dioxygenase, small subunit [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.13.11.-">1.13.11.-</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K15755' target='_blank'>K15755</a></td>
+    <td>carBb; 2'-aminobiphenyl-2,3-diol 1,2-dioxygenase, large subunit [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.13.11.-">1.13.11.-</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K15756' target='_blank'>K15756</a></td>
+    <td>carC; 2-hydroxy-6-oxo-6-(2'-aminophenyl)hexa-2,4-dienoate hydrolase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:3.7.1.13">3.7.1.13</a>]</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C08060' target='_blank'>C08060</a></td>
+    <td>Carbazole</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C08061' target='_blank'>C08061</a></td>
+    <td>2'-Aminobiphenyl-2,3-diol</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C08062' target='_blank'>C08062</a></td>
+    <td>2-Hydroxy-6-oxo-(2'-aminophenyl)-hexa-2,4-dienoate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00108' target='_blank'>C00108</a></td>
+    <td>Anthranilate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00596' target='_blank'>C00596</a></td>
+    <td>2-Hydroxy-2,4-pentadienoate</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

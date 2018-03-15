@@ -1,0 +1,527 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>KEGG MODULE: M00013</title>
+<link rel="stylesheet" href="/css/kegg.css" type="text/css">
+<style type="text/css">
+td
+{
+  font-size:12px;
+  font-family:verdana,arial,helvetica,sans-serif;
+  vertical-align: top;
+}
+
+div#definition
+{
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+div#definition table tr td {
+  padding-right: 10px;
+}
+
+div.poplay {
+  position: absolute;
+  padding: 2px;
+  background-color: #ffff99;
+  border-top: solid 1px #c0c0c0;
+  border-left: solid 1px #c0c0c0;
+  border-bottom: solid 1px #808080;
+  border-right: solid 1px #808080;
+  visibility: hidden;
+}
+
+span.popup
+{
+  font-weight: bold;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+</style>
+<script language="JavaScript" type="text/javascript" src="/js/dhtml.js"></script>
+<script language="javascript" type="text/javascript">
+<!--
+
+function SubmitForm(theForm)
+{
+  var org = theForm.select_org.value;
+
+  if(org == "set_cookie")
+  {
+    window.open('/kegg/misc/kegg2_select.html','sel_org','toolbar=no,location=no,directories=no,width=500,height=320,resizable=yes');
+    return false;
+  }
+  else if(org.indexOf(".sort_alp") > 0)
+  {
+    var dt = new Date();
+    dt.setTime(dt.getTime() + (30 * 24 * 60 * 60));
+    var c = "KEGG_MapMenu_Sorted=alp;path=/;expires=" + dt.toGMTString();
+    document.cookie = c;
+  }
+  else if(org.indexOf(".sort_org") > 0)
+  {
+    // delete cookie
+    var dt = new Date();
+    dt.setTime(dt.getTime() - 100);
+    var c = "KEGG_MapMenu_Sorted=alp;path=/;expires=" + dt.toGMTString();
+    document.cookie = c;
+  }
+  else
+  {
+    theForm.org.value = org;
+  }
+
+  return true;
+}
+
+function btn(bobj, img)
+{
+  bobj.src = "/Fig/bget/button_" + img + ".gif";
+}
+
+
+function open_ko_list()
+{
+	var win = window.open('module_ko_list?map=M00013&org=ko','_md','toolbar=no,location=no,directories=no,width=700,height=400,resizable=yes,scrollbars=yes,status=no');
+  win.focus();
+}
+
+var timer = 0;
+var p_entry, p_title, p_bgcolor;
+function popupTimer(entry, title, bgcolor)
+{
+  p_entry = entry;
+  p_title = title;
+  p_bgcolor = bgcolor;
+
+  if(timer == 0){
+    var func = "showThumbnail()";
+    timer = setTimeout(func, 1200);
+  }
+}
+
+
+function showThumbnail()
+{
+
+  var url = "";
+  if(p_entry.match(/^[A-Z]+\d+$/))
+  {
+    url = "/kegg/misc/thumbnail/" + p_entry + ".gif";
+  }
+  else if(p_entry.match(/(\d+)$/))
+  {
+    url = "/kegg/misc/thumbnail/map" + RegExp.$1 + ".gif";
+  }
+
+  var html = "";
+
+  if(p_bgcolor != "#ffffff")
+  {
+    html += "<span class=\"popup\">" + p_entry + "</span><br />";
+  }
+
+  html += "<img src=\"" + url + "\" alt=\"Loading...\">";
+
+  var x = getCurrentMouseX();
+  var y = getCurrentMouseY();
+
+  var layer = new Component("poplay");
+  layer.backgroundColor(p_bgcolor);
+  layer.HTML(html);
+  layer.move(x, y+40);
+  layer.visible(true);
+
+  timer = 0;
+}
+
+
+function hideMapTn(){
+  var layer = new Component("poplay");
+  layer.visible(false);
+
+  if(timer != 0){
+    clearTimeout(timer);
+    timer = 0;
+  }
+}
+
+
+// -->
+</script>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+ <tr>
+  <td>
+    <a href="/kegg/kegg2.html"><img align="middle" border="0" src="/Fig/bget/kegg3.gif" alt="KEGG"></a>
+    &nbsp;&nbsp;&nbsp;<a name="module:M00013"></a><font class="title3"><b>Malonate semialdehyde pathway, propanoyl-CoA =&gt; acetyl-CoA</b></font>
+  </td>
+  <td align="right" valign="bottom"><a href="javascript:void(window.open('/kegg/document/help_module.html','KEGG_Help','toolbar=no,location=no,directories=no,width=720,height=640,resizable=yes,scrollbars=yes'))"><img onmouseup="btn(this,'Hb')" align="middle" onmouseout="btn(this,'Hb')" onmousedown="btn(this,'Hbd')" onmouseover="btn(this,'Hbh')" alt="Help" name="help" border="0" src="/Fig/bget/button_Hb.gif"></a></td>
+ </tr>
+</table>
+
+[
+<a href="/kegg-bin/get_htext?htext=ko00002.keg&amp;query=M00013&amp;option=-a">Module menu</a> |
+
+<a href="/kegg-bin/get_htext?htext=br08601_M00013.keg&amp;hier=5">Organism menu</a> |
+
+
+<a href="/dbget-bin/www_bget?M00013">Module entry</a> |
+<a href="javascript:void(open_ko_list())">KO/Compound list</a>
+
+]
+
+<div id="definition">
+ <table>
+  <tr>
+   <td>Entry</td>
+   <td>
+   M00013
+   
+   </td>
+  </tr>
+  <tr>
+   <td>Name</td>
+   <td>Malonate semialdehyde pathway, propanoyl-CoA =&gt; acetyl-CoA</td>
+  </tr>
+  <tr>
+   <td>Definition</td>
+   <td>
+    <a href="/dbget-bin/www_bget?K00249">K00249</a> (<a href="/dbget-bin/www_bget?K07511">K07511</a>,<a href="/dbget-bin/www_bget?K07514">K07514</a>,<a href="/dbget-bin/www_bget?K07515">K07515</a>) <a href="/dbget-bin/www_bget?K05605">K05605</a> -- <a href="/dbget-bin/www_bget?K00140">K00140</a><br />
+    <a href="http://www.kegg.jp/kegg-bin/view_ortholog_table?md=M00013"><img onmouseup="btn(this,'OTb')" align="middle" onmouseout="btn(this,'OTb')" onmousedown="btn(this,'OTbd')" onmouseover="btn(this,'OTbh')" alt="Ortholog table" name="OT" border="0" src="/Fig/bget/button_OTb.gif"></a>
+    
+    <a href="javascript:void(document.forms['taxonomy'].submit())"><img onmouseup="btn(this,'Taxb')" align="middle" onmouseout="btn(this,'Taxb')" onmousedown="btn(this,'Taxbd')" onmouseover="btn(this,'Taxbh')" alt="Taxonomy" name="Taxonomy" border="0" src="/Fig/bget/button_Taxb.gif"></a>
+    
+   </td>
+  </tr>
+  <tr>
+   <td>Type</td>
+   <td>Pathway module</td>
+  </tr>
+  
+  
+  <tr>
+   <td>Pathway</td>
+   <td>
+    
+    <span style="margin-right:5px;">
+    <a href="/kegg-bin/show_pathway?map01200+M00013">map01200</a>
+    </span>
+    
+    <span style="margin-right:5px;">
+    <a href="/kegg-bin/show_pathway?map00640+M00013">map00640</a>
+    </span>
+    
+   </td>
+  </tr>
+  
+  
+  
+  <tr>
+   <td>Reaction</td>
+   <td><a href="/dbget-bin/www_bget?R04432">R04432</a>  <a href="/dbget-bin/www_bget?C00100">C00100</a> -&gt; <a href="/dbget-bin/www_bget?C00894">C00894</a><br><a href="/dbget-bin/www_bget?R03045">R03045</a>  <a href="/dbget-bin/www_bget?C00894">C00894</a> -&gt; <a href="/dbget-bin/www_bget?C05668">C05668</a><br><a href="/dbget-bin/www_bget?R03158">R03158</a>  <a href="/dbget-bin/www_bget?C05668">C05668</a> -&gt; <a href="/dbget-bin/www_bget?C01013">C01013</a><br><a href="/dbget-bin/www_bget?R01608">R01608</a>  <a href="/dbget-bin/www_bget?C01013">C01013</a> -&gt; <a href="/dbget-bin/www_bget?C00222">C00222</a><br><a href="/dbget-bin/www_bget?R00705">R00705</a>,<a href="/dbget-bin/www_bget?R00706">R00706</a>  <a href="/dbget-bin/www_bget?C00222">C00222</a> -&gt; <a href="/dbget-bin/www_bget?C00024">C00024</a></td>
+  </tr>
+  
+  
+  <tr>
+   <td>RModule</td>
+   <td><a href="/kegg/reaction/rm019.html">RM019</A>  Acyl-CoA conversion via dicarboxylate semialdehyde</td>
+  </tr>
+  
+  
+ </table>
+</div>
+
+<form action="/kegg-bin/show_module" onsubmit="return SubmitForm(this)">
+<input type="hidden" name="map" value="M00013">
+<input type="hidden" name="org" value="ko">
+
+<div style="margin-top:10px;">
+
+<div>
+<select name="select_org">
+<option value="ko">Reference module (KO)</option>
+<option value="set_cookie">-----&lt; Set personalized menu &gt;-----</option>
+<option value="ko.sort_alp">-----&lt; Sort below by alphabet &gt;-----</option>
+<option value="hsa" >Homo sapiens (human)</option>
+<option value="ptr" >Pan troglodytes (chimpanzee)</option>
+<option value="pps" >Pan paniscus (bonobo)</option>
+<option value="ggo" >Gorilla gorilla gorilla (western lowland gorilla)</option>
+<option value="pon" >Pongo abelii (Sumatran orangutan)</option>
+<option value="nle" >Nomascus leucogenys (northern white-cheeked gibbon)</option>
+<option value="mcc" >Macaca mulatta (rhesus monkey)</option>
+<option value="mcf" >Macaca fascicularis (crab-eating macaque)</option>
+<option value="csab" >Chlorocebus sabaeus (green monkey)</option>
+<option value="rro" >Rhinopithecus roxellana (golden snub-nosed monkey)</option>
+<option value="rbb" >Rhinopithecus bieti (black snub-nosed monkey)</option>
+<option value="cjc" >Callithrix jacchus (white-tufted-ear marmoset)</option>
+<option value="sbq" >Saimiri boliviensis boliviensis (Bolivian squirrel monkey)</option>
+<option value="mmu" >Mus musculus (mouse)</option>
+<option value="rno" >Rattus norvegicus (rat)</option>
+<option value="cge" >Cricetulus griseus (Chinese hamster)</option>
+<option value="ngi" >Nannospalax galili (Upper Galilee mountains blind mole rat)</option>
+<option value="hgl" >Heterocephalus glaber (naked mole rat)</option>
+<option value="ccan" >Castor canadensis (American beaver)</option>
+<option value="ocu" >Oryctolagus cuniculus (rabbit)</option>
+<option value="tup" >Tupaia chinensis (Chinese tree shrew)</option>
+<option value="cfa" >Canis familiaris (dog)</option>
+<option value="aml" >Ailuropoda melanoleuca (giant panda)</option>
+<option value="umr" >Ursus maritimus (polar bear)</option>
+<option value="oro" >Odobenus rosmarus divergens (Pacific walrus)</option>
+<option value="fca" >Felis catus (domestic cat)</option>
+<option value="ptg" >Panthera tigris altaica (Amur tiger)</option>
+<option value="aju" >Acinonyx jubatus (cheetah)</option>
+<option value="bta" >Bos taurus (cow)</option>
+<option value="bom" >Bos mutus (wild yak)</option>
+<option value="biu" >Bos indicus (zebu cattle)</option>
+<option value="phd" >Pantholops hodgsonii (chiru)</option>
+<option value="chx" >Capra hircus (goat)</option>
+<option value="ssc" >Sus scrofa (pig)</option>
+<option value="cfr" >Camelus ferus (Wild Bactrian camel)</option>
+<option value="cdk" >Camelus dromedarius (Arabian camel)</option>
+<option value="bacu" >Balaenoptera acutorostrata scammoni (minke whale)</option>
+<option value="lve" >Lipotes vexillifer (Yangtze River dolphin)</option>
+<option value="oor" >Orcinus orca (killer whale)</option>
+<option value="ecb" >Equus caballus (horse)</option>
+<option value="epz" >Equus przewalskii (Przewalski's horse)</option>
+<option value="eai" >Equus asinus (ass)</option>
+<option value="myb" >Myotis brandtii (Brandt's bat)</option>
+<option value="myd" >Myotis davidii</option>
+<option value="hai" >Hipposideros armiger (great roundleaf bat)</option>
+<option value="rss" >Rhinolophus sinicus (Chinese rufous horseshoe bat)</option>
+<option value="pale" >Pteropus alecto (black flying fox)</option>
+<option value="lav" >Loxodonta africana (African savanna elephant)</option>
+<option value="tmu" >Trichechus manatus latirostris (Florida manatee)</option>
+<option value="mdo" >Monodelphis domestica (opossum)</option>
+<option value="shr" >Sarcophilus harrisii (Tasmanian devil)</option>
+<option value="oaa" >Ornithorhynchus anatinus (platypus)</option>
+<option value="mgp" >Meleagris gallopavo (turkey)</option>
+<option value="cjo" >Coturnix japonica (Japanese quail)</option>
+<option value="apla" >Anas platyrhynchos (mallard)</option>
+<option value="acyg" >Anser cygnoides domesticus (swan goose)</option>
+<option value="tgu" >Taeniopygia guttata (zebra finch)</option>
+<option value="gfr" >Geospiza fortis (medium ground-finch)</option>
+<option value="fab" >Ficedula albicollis (collared flycatcher)</option>
+<option value="phi" >Pseudopodoces humilis (Tibetan ground-tit)</option>
+<option value="pmaj" >Parus major (Great Tit)</option>
+<option value="ccw" >Corvus cornix (hooded crow)</option>
+<option value="fpg" >Falco peregrinus (peregrine falcon)</option>
+<option value="fch" >Falco cherrug (Saker falcon)</option>
+<option value="clv" >Columba livia (rock pigeon)</option>
+<option value="aam" >Apteryx australis mantelli (brown kiwi)</option>
+<option value="asn" >Alligator sinensis (Chinese alligator)</option>
+<option value="amj" >Alligator mississippiensis (American alligator)</option>
+<option value="pss" >Pelodiscus sinensis (Chinese soft-shelled turtle)</option>
+<option value="cmy" >Chelonia mydas (green sea turtle)</option>
+<option value="cpic" >Chrysemys picta (western painted turtle)</option>
+<option value="acs" >Anolis carolinensis (green anole)</option>
+<option value="pvt" >Pogona vitticeps (central bearded dragon)</option>
+<option value="pbi" >Python bivittatus (Burmese python)</option>
+<option value="gja" >Gekko japonicus</option>
+<option value="xla" >Xenopus laevis (African clawed frog)</option>
+<option value="xtr" >Xenopus tropicalis (western clawed frog)</option>
+<option value="npr" >Nanorana parkeri</option>
+<option value="dre" >Danio rerio (zebrafish)</option>
+<option value="srx" >Sinocyclocheilus rhinocerous</option>
+<option value="sanh" >Sinocyclocheilus anshuiensis</option>
+<option value="sgh" >Sinocyclocheilus grahami</option>
+<option value="ipu" >Ictalurus punctatus (channel catfish)</option>
+<option value="tru" >Takifugu rubripes (torafugu)</option>
+<option value="tng" >Tetraodon nigroviridis (spotted green pufferfish)</option>
+<option value="lco" >Larimichthys crocea (large yellow croaker)</option>
+<option value="ncc" >Notothenia coriiceps (black rockcod)</option>
+<option value="mze" >Maylandia zebra (zebra mbuna)</option>
+<option value="ola" >Oryzias latipes (Japanese medaka)</option>
+<option value="xma" >Xiphophorus maculatus (southern platyfish)</option>
+<option value="pret" >Poecilia reticulata (guppy)</option>
+<option value="csem" >Cynoglossus semilaevis (tongue sole)</option>
+<option value="lcf" >Lates calcarifer (barramundi perch)</option>
+<option value="hcq" >Hippocampus comes (tiger tail seahorse)</option>
+<option value="bpec" >Boleophthalmus pectinirostris (great blue-spotted mudskipper)</option>
+<option value="sasa" >Salmo salar (Atlantic salmon)</option>
+<option value="els" >Esox lucius (northern pike)</option>
+<option value="sfm" >Scleropages formosus (Asian bonytongue)</option>
+<option value="lcm" >Latimeria chalumnae (coelacanth)</option>
+<option value="cmk" >Callorhinchus milii (elephant shark)</option>
+<option value="bfo" >Branchiostoma floridae (Florida lancelet)</option>
+<option value="spu" >Strongylocentrotus purpuratus (purple sea urchin)</option>
+<option value="aplc" >Acanthaster planci (crown-of-thorns starfish)</option>
+<option value="sko" >Saccoglossus kowalevskii (acorn worm)</option>
+<option value="dme" >Drosophila melanogaster (fruit fly)</option>
+<option value="dpo" >Drosophila pseudoobscura pseudoobscura</option>
+<option value="dan" >Drosophila ananassae</option>
+<option value="der" >Drosophila erecta</option>
+<option value="dpe" >Drosophila persimilis</option>
+<option value="dse" >Drosophila sechellia</option>
+<option value="dsi" >Drosophila simulans</option>
+<option value="dwi" >Drosophila willistoni</option>
+<option value="dya" >Drosophila yakuba</option>
+<option value="dgr" >Drosophila grimshawi</option>
+<option value="dmo" >Drosophila mojavensis</option>
+<option value="dvi" >Drosophila virilis</option>
+<option value="mde" >Musca domestica (house fly)</option>
+<option value="aga" >Anopheles gambiae (mosquito)</option>
+<option value="aag" >Aedes aegypti (yellow fever mosquito)</option>
+<option value="cqu" >Culex quinquefasciatus (southern house mosquito)</option>
+<option value="ame" >Apis mellifera (honey bee)</option>
+<option value="bim" >Bombus impatiens (common eastern bumble bee)</option>
+<option value="bter" >Bombus terrestris (buff-tailed bumblebee)</option>
+<option value="soc" >Solenopsis invicta (red fire ant)</option>
+<option value="aec" >Acromyrmex echinatior (Panamanian leafcutter ant)</option>
+<option value="acep" >Atta cephalotes (leaf cutting ant)</option>
+<option value="hst" >Harpegnathos saltator (Jerdon's jumping ant)</option>
+<option value="cfo" >Camponotus floridanus (Florida carpenter ant)</option>
+<option value="nvi" >Nasonia vitripennis (jewel wasp)</option>
+<option value="tca" >Tribolium castaneum (red flour beetle)</option>
+<option value="dpa" >Dendroctonus ponderosae (mountain pine beetle)</option>
+<option value="nvl" >Nicrophorus vespilloides</option>
+<option value="bmor" >Bombyx mori (domestic silkworm)</option>
+<option value="dpl" >Danaus plexippus (monarch butterfly)</option>
+<option value="pxy" >Plutella xylostella (diamondback moth)</option>
+<option value="api" >Acyrthosiphon pisum (pea aphid)</option>
+<option value="phu" >Pediculus humanus corporis (human body louse)</option>
+<option value="zne" >Zootermopsis nevadensis</option>
+<option value="dpx" >Daphnia pulex (common water flea)</option>
+<option value="isc" >Ixodes scapularis (black-legged tick)</option>
+<option value="cel" >Caenorhabditis elegans (nematode)</option>
+<option value="cbr" >Caenorhabditis briggsae</option>
+<option value="nai" >Necator americanus</option>
+<option value="tsp" >Trichinella spiralis</option>
+<option value="lgi" >Lottia gigantea (owl limpet)</option>
+<option value="crg" >Crassostrea gigas (Pacific oyster)</option>
+<option value="myi" >Mizuhopecten yessoensis (Yesso scallop)</option>
+<option value="obi" >Octopus bimaculoides</option>
+<option value="nve" >Nematostella vectensis (sea anemone)</option>
+<option value="epa" >Exaiptasia pallida</option>
+<option value="hmg" >Hydra vulgaris</option>
+<option value="aqu" >Amphimedon queenslandica (sponge)</option>
+<option value="smo" >Selaginella moellendorffii</option>
+<option value="ppp" >Physcomitrella patens subsp. patens</option>
+<option value="ncr" >Neurospora crassa</option>
+<option value="nte" >Neurospora tetrasperma</option>
+<option value="smp" >Sordaria macrospora</option>
+<option value="pan" >Podospora anserina</option>
+<option value="ttt" >Thielavia terrestris</option>
+<option value="mtm" >Thermothelomyces thermophila</option>
+<option value="cthr" >Chaetomium thermophilum</option>
+<option value="mgr" >Magnaporthe oryzae</option>
+<option value="tmn" >Phaeoacremonium minimum</option>
+<option value="fgr" >Fusarium graminearum</option>
+<option value="fpu" >Fusarium pseudograminearum</option>
+<option value="fox" >Fusarium oxysporum</option>
+<option value="nhe" >Nectria haematococca</option>
+<option value="tre" >Trichoderma reesei</option>
+<option value="maw" >Metarhizium acridum</option>
+<option value="maj" >Metarhizium robertsii</option>
+<option value="cmt" >Cordyceps militaris</option>
+<option value="val" >Verticillium alfalfae</option>
+<option value="vda" >Verticillium dahliae</option>
+<option value="ela" >Eutypa lata</option>
+<option value="ssl" >Sclerotinia sclerotiorum</option>
+<option value="bfu" >Botrytis cinerea</option>
+<option value="ani" >Aspergillus nidulans</option>
+<option value="afm" >Aspergillus fumigatus</option>
+<option value="aor" >Aspergillus oryzae</option>
+<option value="ang" >Aspergillus niger</option>
+<option value="afv" >Aspergillus flavus</option>
+<option value="act" >Aspergillus clavatus</option>
+<option value="nfi" >Aspergillus fischeri</option>
+<option value="pcs" >Penicillium rubens</option>
+<option value="cim" >Coccidioides immitis</option>
+<option value="cpw" >Coccidioides posadasii</option>
+<option value="pbl" >Paracoccidioides lutzii Pb01</option>
+<option value="pbn" >Paracoccidioides brasiliensis Pb18</option>
+<option value="ure" >Uncinocarpus reesii</option>
+<option value="abe" >Trichophyton benhamiae</option>
+<option value="tve" >Trichophyton verrucosum</option>
+<option value="aje" >Histoplasma capsulatum</option>
+<option value="pno" >Parastagonospora nodorum</option>
+<option value="pte" >Pyrenophora teres</option>
+<option value="bze" >Bipolaris zeicola</option>
+<option value="bsc" >Bipolaris sorokiniana</option>
+<option value="bor" >Bipolaris oryzae</option>
+<option value="ztr" >Zymoseptoria tritici</option>
+<option value="pfj" >Pseudocercospora fijiensis</option>
+<option value="bcom" >Baudoinia panamericana</option>
+<option value="npa" >Neofusicoccum parvum</option>
+<option value="tml" >Tuber melanosporum</option>
+<option value="cne" >Cryptococcus neoformans var. neoformans JEC21</option>
+<option value="cnb" >Cryptococcus neoformans var. neoformans B-3501A</option>
+<option value="cgi" >Cryptococcus gattii</option>
+<option value="tms" >Tremella mesenterica</option>
+<option value="dsq" >Dichomitus squalens</option>
+<option value="pco" >Phanerochaete carnosa</option>
+<option value="shs" >Stereum hirsutum</option>
+<option value="hir" >Heterobasidion irregulare</option>
+<option value="psq" >Punctularia strigosozonata</option>
+<option value="adl" >Auricularia subglabra</option>
+<option value="fme" >Fomitiporia mediterranea</option>
+<option value="gtr" >Gloeophyllum trabeum</option>
+<option value="lbc" >Laccaria bicolor</option>
+<option value="mrr" >Moniliophthora roreri</option>
+<option value="cci" >Coprinopsis cinerea</option>
+<option value="scm" >Schizophyllum commune</option>
+<option value="abp" >Agaricus bisporus var. burnettii JB137-S8</option>
+<option value="abv" >Agaricus bisporus var. bisporus H97</option>
+<option value="cput" >Coniophora puteana</option>
+<option value="sla" >Serpula lacrymans</option>
+<option value="uma" >Ustilago maydis</option>
+<option value="pfp" >Anthracocystis flocculosa</option>
+<option value="pgr" >Puccinia graminis</option>
+<option value="mlr" >Melampsora larici-populina</option>
+<option value="mbr" >Monosiga brevicollis</option>
+<option value="sre" >Salpingoeca rosetta</option>
+<option value="pif" >Phytophthora infestans</option>
+<option value="psoj" >Phytophthora sojae</option>
+<option value="spar" >Saprolegnia parasitica</option>
+
+</select>
+<input type="submit" value="Go">
+</div>
+
+<table cellpadding="10">
+ <tr>
+  <td><img src="/tmp/pathway_thumbnail/ko_M00013.png?1521114615" usemap="#module" border="0" alt="MODULE IMAGE"></td>
+  
+  <td><img src="/tmp/pathway_thumbnail/M00013_reaction.png?1521114615" usemap="#reaction" border="0" alt="MODULE-REACTION IMAGE"></td>
+  
+ </tr>
+</table>
+<map id="module" name="module">
+<area shape="rect" id="node1_0" href="http://www.kegg.jp/dbget-bin/www_bget?K00249" title="K00249 (ACADM)" alt="" coords="94,19,167,41"/>
+<area shape="rect" id="node2_1" href="http://www.kegg.jp/dbget-bin/www_bget?K07511" title="K07511 (ECHS1)" alt="" coords="17,77,90,100"/>
+<area shape="rect" id="node2_2" href="http://www.kegg.jp/dbget-bin/www_bget?K07514" title="K07514 (EHHADH)" alt="" coords="94,77,167,100"/>
+<area shape="rect" id="node2_3" href="http://www.kegg.jp/dbget-bin/www_bget?K07515" title="K07515 (HADHA)" alt="" coords="171,77,245,100"/>
+<area shape="rect" id="node3_4" href="http://www.kegg.jp/dbget-bin/www_bget?K05605" title="K05605 (HIBCH)" alt="" coords="94,136,167,159"/>
+<area shape="rect" id="node4_5" href="http://www.kegg.jp/dbget-bin/www_bget?K00140" title="K00140 (mmsA)" alt="" coords="94,195,167,217"/>
+</map>
+
+<map id="reaction" name="reaction">
+<area shape="poly" id="node1" href="/dbget-bin/www_bget?C00100" title="C00100 (Propanoyl&#45;CoA)" alt="" coords="113,29,111,22,106,15,98,10,87,7,76,5,65,7,54,10,46,15,41,22,39,29,41,37,46,43,54,49,65,52,76,53,87,52,98,49,106,43,111,37" onmouseover="popupTimer(&quot;C00100&quot;, &quot;C00100 (Propanoyl&#45;CoA)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node2" href="/dbget-bin/www_bget?R04432" title="R04432" alt="" coords="37,83,115,105"/>
+<area shape="poly" id="node3" href="/dbget-bin/www_bget?C00894" title="C00894 (Propenoyl&#45;CoA)" alt="" coords="113,159,111,151,106,145,98,139,87,136,76,135,65,136,54,139,46,145,41,151,39,159,41,166,46,173,54,178,65,181,76,183,87,181,98,178,106,173,111,166" onmouseover="popupTimer(&quot;C00894&quot;, &quot;C00894 (Propenoyl&#45;CoA)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node4" href="/dbget-bin/www_bget?R03045" title="R03045" alt="" coords="37,212,115,235"/>
+<area shape="poly" id="node5" href="/dbget-bin/www_bget?C05668" title="C05668 (3&#45;Hydroxypropionyl&#45;CoA)" alt="" coords="112,288,111,281,105,274,97,269,87,265,76,264,65,265,55,269,47,274,41,281,40,288,41,295,47,302,55,307,65,311,76,312,87,311,97,307,105,302,111,295" onmouseover="popupTimer(&quot;C05668&quot;, &quot;C05668 (3&#45;Hydroxypropionyl&#45;CoA)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node6" href="/dbget-bin/www_bget?R03158" title="R03158" alt="" coords="37,341,115,364"/>
+<area shape="poly" id="node7" href="/dbget-bin/www_bget?C01013" title="C01013 (3&#45;Hydroxypropanoate)" alt="" coords="113,417,111,410,106,403,98,398,87,395,76,393,65,395,54,398,46,403,41,410,39,417,41,425,46,431,54,437,65,440,76,441,87,440,98,437,106,431,111,425" onmouseover="popupTimer(&quot;C01013&quot;, &quot;C01013 (3&#45;Hydroxypropanoate)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node8" href="/dbget-bin/www_bget?R01608" title="R01608" alt="" coords="37,471,115,493"/>
+<area shape="poly" id="node9" href="/dbget-bin/www_bget?C00222" title="C00222 (3&#45;Oxopropanoate)" alt="" coords="113,547,111,539,106,533,98,527,87,524,76,523,65,524,54,527,46,533,41,539,39,547,41,554,46,561,54,566,65,569,76,571,87,569,98,566,106,561,111,554" onmouseover="popupTimer(&quot;C00222&quot;, &quot;C00222 (3&#45;Oxopropanoate)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node10_0" href="/dbget-bin/www_bget?R00705" title="R00705" alt="" coords="16,611,76,637"/>
+<area shape="rect" id="node10_1" href="/dbget-bin/www_bget?R00706" title="R00706" alt="" coords="76,611,136,637"/>
+<area shape="poly" id="node11" href="/dbget-bin/www_bget?C00024" title="C00024 (Acetyl&#45;CoA)" alt="" coords="113,701,111,694,106,687,98,682,87,679,76,677,65,679,54,682,46,687,41,694,39,701,41,709,46,715,54,721,65,724,76,725,87,724,98,721,106,715,111,709" onmouseover="popupTimer(&quot;C00024&quot;, &quot;C00024 (Acetyl&#45;CoA)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+</map>
+</div>
+
+</form>
+<form name="taxonomy" method="post" action="/kegg-bin/get_htext">
+ <input type="hidden" name="htext" value="br08601.keg">
+ <input type="hidden" name="option" value="-a">
+ <input type="hidden" name="query" value="hsa ptr pps ggo pon nle mcc mcf csab rro rbb cjc sbq mmu rno cge ngi hgl ccan ocu tup cfa aml umr oro fca ptg aju bta bom biu phd chx ssc cfr cdk bacu lve oor ecb epz eai myb myd hai rss pale lav tmu mdo shr oaa mgp cjo apla acyg tgu gfr fab phi pmaj ccw fpg fch clv aam asn amj pss cmy cpic acs pvt pbi gja xla xtr npr dre srx sanh sgh ipu tru tng lco ncc mze ola xma pret csem lcf hcq bpec sasa els sfm lcm cmk bfo spu aplc sko dme dpo dan der dpe dse dsi dwi dya dgr dmo dvi mde aga aag cqu ame bim bter soc aec acep hst cfo nvi tca dpa nvl bmor dpl pxy api phu zne dpx isc cel cbr nai tsp lgi crg myi obi nve epa hmg aqu smo ppp ncr nte smp pan ttt mtm cthr mgr tmn fgr fpu fox nhe tre maw maj cmt val vda ela ssl bfu ani afm aor ang afv act nfi pcs cim cpw pbl pbn ure abe tve aje pno pte bze bsc bor ztr pfj bcom npa tml cne cnb cgi tms dsq pco shs hir psq adl fme gtr lbc mrr cci scm abp abv cput sla uma pfp pgr mlr mbr sre pif psoj spar">
+</form>
+<div id="poplay" class="poplay"></div>
+</body>
+</html>

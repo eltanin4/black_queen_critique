@@ -1,0 +1,141 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00631'>M00631</a></td>
+ <td>D-Galacturonate degradation (bacteria), D-galacturonate =&gt; pyruvate + D-glyceraldehyde 3P</td>
+ <!--td>D-Galacturonate degradation (bacteria), D-galacturonate =&gt; pyruvate + D-glyceraldehyde 3P</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K01812' target='_blank'>K01812</a></td>
+    <td>uxaC; glucuronate isomerase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:5.3.1.12">5.3.1.12</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00041' target='_blank'>K00041</a></td>
+    <td>uxaB; tagaturonate reductase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.1.1.58">1.1.1.58</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K01685' target='_blank'>K01685</a></td>
+    <td>uxaA; altronate hydrolase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:4.2.1.7">4.2.1.7</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K16849' target='_blank'>K16849</a></td>
+    <td>uxaA1; altronate dehydratase small subunit [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:4.2.1.7">4.2.1.7</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K16850' target='_blank'>K16850</a></td>
+    <td>uxaA2; altronate dehydratase large subunit [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:4.2.1.7">4.2.1.7</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00874' target='_blank'>K00874</a></td>
+    <td>kdgK; 2-dehydro-3-deoxygluconokinase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.7.1.45">2.7.1.45</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K01625' target='_blank'>K01625</a></td>
+    <td>eda; 2-dehydro-3-deoxyphosphogluconate aldolase / (4S)-4-hydroxy-2-oxoglutarate aldolase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:4.1.2.14">4.1.2.14</a> <a target="_blank" href="/dbget-bin/www_bget?ec:4.1.3.42">4.1.3.42</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K17463' target='_blank'>K17463</a></td>
+    <td>dgaF; 2-dehydro-3-deoxy-phosphogluconate aldolase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:4.1.2.14">4.1.2.14</a>]</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00333' target='_blank'>C00333</a></td>
+    <td>D-Galacturonate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00558' target='_blank'>C00558</a></td>
+    <td>D-Tagaturonate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00817' target='_blank'>C00817</a></td>
+    <td>D-Altronate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00204' target='_blank'>C00204</a></td>
+    <td>2-Dehydro-3-deoxy-D-gluconate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C04442' target='_blank'>C04442</a></td>
+    <td>2-Dehydro-3-deoxy-6-phospho-D-gluconate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00022' target='_blank'>C00022</a></td>
+    <td>Pyruvate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00118' target='_blank'>C00118</a></td>
+    <td>D-Glyceraldehyde 3-phosphate</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

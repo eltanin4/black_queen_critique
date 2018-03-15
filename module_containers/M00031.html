@@ -1,0 +1,126 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00031'>M00031</a></td>
+ <td>Lysine biosynthesis, mediated by LysW, 2-aminoadipate =&gt; lysine</td>
+ <!--td>Lysine biosynthesis, mediated by LysW, 2-aminoadipate =&gt; lysine</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K05826' target='_blank'>K05826</a></td>
+    <td>lysW; alpha-aminoadipate/glutamate carrier protein LysW</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K05827' target='_blank'>K05827</a></td>
+    <td>lysX; [lysine-biosynthesis-protein LysW]---L-2-aminoadipate ligase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:6.3.2.43">6.3.2.43</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K05828' target='_blank'>K05828</a></td>
+    <td>lysZ, argB; LysW-gamma-L-alpha-aminoadipate/LysW-L-glutamate kinase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.7.2.-">2.7.2.-</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K05829' target='_blank'>K05829</a></td>
+    <td>lysY, argC; LysW-gamma-L-alpha-aminoadipyl-6-phosphate/LysW-L-glutamyl-5-phosphate reductase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.2.1.-">1.2.1.-</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K05830' target='_blank'>K05830</a></td>
+    <td>lysJ, argD; LysW-gamma-L-lysine/LysW-L-ornithine aminotransferase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.6.1.-">2.6.1.-</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K05831' target='_blank'>K05831</a></td>
+    <td>lysK, argE; LysW-gamma-L-lysine/LysW-L-ornithine carboxypeptidase</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00956' target='_blank'>C00956</a></td>
+    <td>L-2-Aminoadipate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C19886' target='_blank'>C19886</a></td>
+    <td>LysW-gamma-L-alpha-aminoadipate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C19887' target='_blank'>C19887</a></td>
+    <td>LysW-gamma-L-alpha-aminoadipyl 6-phosphate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C19888' target='_blank'>C19888</a></td>
+    <td>LysW-gamma-L-alpha-aminoadipate 6-semialdehyde</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C19889' target='_blank'>C19889</a></td>
+    <td>LysW-gamma-L-lysine</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00047' target='_blank'>C00047</a></td>
+    <td>L-Lysine</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00175'>M00175</a></td>
+ <td>Nitrogen fixation, nitrogen =&gt; ammonia</td>
+ <!--td>Nitrogen fixation, nitrogen =&gt; ammonia</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K02588' target='_blank'>K02588</a></td>
+    <td>nifH; nitrogenase iron protein NifH [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.18.6.1">1.18.6.1</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K02586' target='_blank'>K02586</a></td>
+    <td>nifD; nitrogenase molybdenum-iron protein alpha chain [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.18.6.1">1.18.6.1</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K02591' target='_blank'>K02591</a></td>
+    <td>nifK; nitrogenase molybdenum-iron protein beta chain [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.18.6.1">1.18.6.1</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00531' target='_blank'>K00531</a></td>
+    <td>anfG; nitrogenase delta subunit [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.18.6.1">1.18.6.1</a>]</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00697' target='_blank'>C00697</a></td>
+    <td>Nitrogen</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00014' target='_blank'>C00014</a></td>
+    <td>NH3</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

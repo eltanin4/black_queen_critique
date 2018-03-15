@@ -1,0 +1,146 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00529'>M00529</a></td>
+ <td>Denitrification, nitrate =&gt; nitrogen</td>
+ <!--td>Denitrification, nitrate =&gt; nitrogen</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00370' target='_blank'>K00370</a></td>
+    <td>narG, narZ, nxrA; nitrate reductase / nitrite oxidoreductase, alpha subunit [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.7.5.1">1.7.5.1</a> <a target="_blank" href="/dbget-bin/www_bget?ec:1.7.99.-">1.7.99.-</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00371' target='_blank'>K00371</a></td>
+    <td>narH, narY, nxrB; nitrate reductase / nitrite oxidoreductase, beta subunit [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.7.5.1">1.7.5.1</a> <a target="_blank" href="/dbget-bin/www_bget?ec:1.7.99.-">1.7.99.-</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00374' target='_blank'>K00374</a></td>
+    <td>narI, narV; nitrate reductase gamma subunit [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.7.5.1">1.7.5.1</a> <a target="_blank" href="/dbget-bin/www_bget?ec:1.7.99.-">1.7.99.-</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K02567' target='_blank'>K02567</a></td>
+    <td>napA; periplasmic nitrate reductase NapA [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.7.99.-">1.7.99.-</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K02568' target='_blank'>K02568</a></td>
+    <td>napB; cytochrome c-type protein NapB</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00368' target='_blank'>K00368</a></td>
+    <td>nirK; nitrite reductase (NO-forming) [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.7.2.1">1.7.2.1</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K15864' target='_blank'>K15864</a></td>
+    <td>nirS; nitrite reductase (NO-forming) / hydroxylamine reductase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.7.2.1">1.7.2.1</a> <a target="_blank" href="/dbget-bin/www_bget?ec:1.7.99.1">1.7.99.1</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K04561' target='_blank'>K04561</a></td>
+    <td>norB; nitric oxide reductase subunit B [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.7.2.5">1.7.2.5</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K02305' target='_blank'>K02305</a></td>
+    <td>norC; nitric oxide reductase subunit C</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K15877' target='_blank'>K15877</a></td>
+    <td>CYP55; fungal nitric oxide reductase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.7.1.14">1.7.1.14</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00376' target='_blank'>K00376</a></td>
+    <td>nosZ; nitrous-oxide reductase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.7.2.4">1.7.2.4</a>]</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00244' target='_blank'>C00244</a></td>
+    <td>Nitrate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00088' target='_blank'>C00088</a></td>
+    <td>Nitrite</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00533' target='_blank'>C00533</a></td>
+    <td>Nitric oxide</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00887' target='_blank'>C00887</a></td>
+    <td>Nitrous oxide</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00697' target='_blank'>C00697</a></td>
+    <td>Nitrogen</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

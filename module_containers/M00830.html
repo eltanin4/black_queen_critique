@@ -1,0 +1,111 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00830'>M00830</a></td>
+ <td>Neocarzinostatin naphthoate moiety biosynthesis, malonyl-CoA =&gt; 2-hydroxy-5-methyl-1-naphthoate =&gt; 2-hydroxy-7-methoxy-5-methyl-1-naphthoyl-CoA</td>
+ <!--td>Neocarzinostatin naphthoate moiety biosynthesis, malonyl-CoA =&gt; 2-hydroxy-5-methyl-1-naphthoate =&gt; 2-hydroxy-7-methoxy-5-methyl-1-naphthoyl-CoA</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K20422' target='_blank'>K20422</a></td>
+    <td>ncsB; neocarzinostatin naphthoate synthase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.3.1.237">2.3.1.237</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K20420' target='_blank'>K20420</a></td>
+    <td>ncsB3; 2-hydroxy-5-methyl-1-naphthoate 7-hydroxylase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.14.99.49">1.14.99.49</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K20421' target='_blank'>K20421</a></td>
+    <td>ncsB1; 2,7-dihydroxy-5-methyl-1-naphthoate 7-O-methyltransferase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.1.1.303">2.1.1.303</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K20423' target='_blank'>K20423</a></td>
+    <td>ncsB2; 2-hydroxy-7-methoxy-5-methyl-1-naphthoate---CoA ligase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:6.2.1.43">6.2.1.43</a>]</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00083' target='_blank'>C00083</a></td>
+    <td>Malonyl-CoA</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C20856' target='_blank'>C20856</a></td>
+    <td>2-Hydroxy-5-methyl-1-naphthoate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C20857' target='_blank'>C20857</a></td>
+    <td>2,7-Dihydroxy-5-methyl-1-naphthoate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C20841' target='_blank'>C20841</a></td>
+    <td>2-Hydroxy-7-methoxy-5-methyl-1-naphthoate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C20842' target='_blank'>C20842</a></td>
+    <td>2-Hydroxy-7-methoxy-5-methyl-1-naphthoyl-CoA</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

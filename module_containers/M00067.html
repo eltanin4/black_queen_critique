@@ -1,0 +1,106 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00067'>M00067</a></td>
+ <td>Sulfoglycolipids biosynthesis, ceramide/1-alkyl-2-acylglycerol =&gt; sulfatide/seminolipid</td>
+ <!--td>Sulfoglycolipids biosynthesis, ceramide/1-alkyl-2-acylglycerol =&gt; sulfatide/seminolipid</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K04628' target='_blank'>K04628</a></td>
+    <td>CGT, UGT8; ceramide galactosyltransferase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.4.1.47">2.4.1.47</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K01019' target='_blank'>K01019</a></td>
+    <td>GAL3ST1; galactosylceramide sulfotransferase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.8.2.11">2.8.2.11</a>]</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00195' target='_blank'>C00195</a></td>
+    <td>N-Acylsphingosine</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C02686' target='_blank'>C02686</a></td>
+    <td>Galactosylceramide</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C06125' target='_blank'>C06125</a></td>
+    <td>Sulfatide</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C03201' target='_blank'>C03201</a></td>
+    <td>1-Alkyl-2-acylglycerol</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C20859' target='_blank'>C20859</a></td>
+    <td>Galactosyl-1-alkyl-2-acylglycerol</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C20825' target='_blank'>C20825</a></td>
+    <td>Seminolipid</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

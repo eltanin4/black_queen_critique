@@ -1,0 +1,111 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00063'>M00063</a></td>
+ <td>CMP-KDO biosynthesis</td>
+ <!--td>CMP-KDO biosynthesis</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K06041' target='_blank'>K06041</a></td>
+    <td>kdsD, kpsF; arabinose-5-phosphate isomerase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:5.3.1.13">5.3.1.13</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K01627' target='_blank'>K01627</a></td>
+    <td>kdsA; 2-dehydro-3-deoxyphosphooctonate aldolase (KDO 8-P synthase) [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.5.1.55">2.5.1.55</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K03270' target='_blank'>K03270</a></td>
+    <td>kdsC; 3-deoxy-D-manno-octulosonate 8-phosphate phosphatase (KDO 8-P phosphatase) [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:3.1.3.45">3.1.3.45</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00979' target='_blank'>K00979</a></td>
+    <td>kdsB; 3-deoxy-manno-octulosonate cytidylyltransferase (CMP-KDO synthetase) [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.7.7.38">2.7.7.38</a>]</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00199' target='_blank'>C00199</a></td>
+    <td>D-Ribulose 5-phosphate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C01112' target='_blank'>C01112</a></td>
+    <td>D-Arabinose 5-phosphate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C04478' target='_blank'>C04478</a></td>
+    <td>3-Deoxy-D-manno-octulosonate 8-phosphate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C01187' target='_blank'>C01187</a></td>
+    <td>3-Deoxy-D-manno-octulosonate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C04121' target='_blank'>C04121</a></td>
+    <td>CMP-3-deoxy-D-manno-octulosonate</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

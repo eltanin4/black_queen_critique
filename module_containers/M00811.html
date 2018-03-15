@@ -1,0 +1,146 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00811'>M00811</a></td>
+ <td>Nicotine degradation, pyrrolidine pathway, nicotine =&gt; succinate semialdehyde</td>
+ <!--td>Nicotine degradation, pyrrolidine pathway, nicotine =&gt; succinate semialdehyde</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K20170' target='_blank'>K20170</a></td>
+    <td>nicA1; nicotine oxidoreductase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.5.3.-">1.5.3.-</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K20169' target='_blank'>K20169</a></td>
+    <td>nox, nicA2; nicotine oxidoreductase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.5.3.-">1.5.3.-</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K20158' target='_blank'>K20158</a></td>
+    <td>pao; pseudooxynicotine oxidase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.4.3.24">1.4.3.24</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K19700' target='_blank'>K19700</a></td>
+    <td>sap; 3-succinoylsemialdehyde-pyridine dehydrogenase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.2.1.83">1.2.1.83</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K20171' target='_blank'>K20171</a></td>
+    <td>spmA; 3-succinoylpyridine monooxygenase subunit A</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K20172' target='_blank'>K20172</a></td>
+    <td>spmC; 3-succinoylpyridine monooxygenase subunit C</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K15359' target='_blank'>K15359</a></td>
+    <td>hspA; 6-hydroxy-3-succinoylpyridine 3-monooxygenase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.14.13.163">1.14.13.163</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K18276' target='_blank'>K18276</a></td>
+    <td>hspB; 6-hydroxy-3-succinoylpyridine 3-monooxygenase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.14.13.163">1.14.13.163</a>]</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C16150' target='_blank'>C16150</a></td>
+    <td>(R,S)-Nicotine</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C21154' target='_blank'>C21154</a></td>
+    <td>N-Methylmyosmine</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C20361' target='_blank'>C20361</a></td>
+    <td>Pseudooxynicotine</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C19569' target='_blank'>C19569</a></td>
+    <td>3-Succinoylpyridine</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C19567' target='_blank'>C19567</a></td>
+    <td>4-Oxo-1-(3-pyridyl)-1-butanone</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C19631' target='_blank'>C19631</a></td>
+    <td>6-Hydroxy-3-succinoylpyridine</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C01059' target='_blank'>C01059</a></td>
+    <td>2,5-Dihydroxypyridine</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00232' target='_blank'>C00232</a></td>
+    <td>Succinate semialdehyde</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

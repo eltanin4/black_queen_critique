@@ -1,0 +1,161 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00112'>M00112</a></td>
+ <td>Tocopherol/tocotorienol biosynthesis</td>
+ <!--td>Tocopherol/tocotorienol biosynthesis</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K09833' target='_blank'>K09833</a></td>
+    <td>HPT, HGGT, ubiA; homogentisate phytyltransferase / homogentisate geranylgeranyltransferase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.5.1.115">2.5.1.115</a> <a target="_blank" href="/dbget-bin/www_bget?ec:2.5.1.116">2.5.1.116</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K12502' target='_blank'>K12502</a></td>
+    <td>VTE3, APG1; MPBQ/MSBQ methyltransferase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.1.1.295">2.1.1.295</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K18534' target='_blank'>K18534</a></td>
+    <td>K18534; MPBQ/MSBQ methyltransferase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.1.1.295">2.1.1.295</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K09834' target='_blank'>K09834</a></td>
+    <td>VTE1, SXD1; tocopherol cyclase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:5.5.1.24">5.5.1.24</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K05928' target='_blank'>K05928</a></td>
+    <td>E2.1.1.95; tocopherol O-methyltransferase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.1.1.95">2.1.1.95</a>]</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C05427' target='_blank'>C05427</a></td>
+    <td>Phytyl diphosphate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C15882' target='_blank'>C15882</a></td>
+    <td>2-Methyl-6-phytylquinol</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C15883' target='_blank'>C15883</a></td>
+    <td>2,3-Dimethyl-5-phytylquinol</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C02483' target='_blank'>C02483</a></td>
+    <td>gamma-Tocopherol</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C02477' target='_blank'>C02477</a></td>
+    <td>alpha-Tocopherol</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C14151' target='_blank'>C14151</a></td>
+    <td>delta-Tocopherol</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C14152' target='_blank'>C14152</a></td>
+    <td>beta-Tocopherol</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00353' target='_blank'>C00353</a></td>
+    <td>Geranylgeranyl diphosphate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C20737' target='_blank'>C20737</a></td>
+    <td>6-Geranylgeranyl-2-methylbenzene-1,4-diol</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C20738' target='_blank'>C20738</a></td>
+    <td>6-Geranylgeranyl-2,3-dimethylbenzene-1,4-diol</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C14155' target='_blank'>C14155</a></td>
+    <td>gamma-Tocotrienol</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C14153' target='_blank'>C14153</a></td>
+    <td>alpha-Tocotrienol</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C14156' target='_blank'>C14156</a></td>
+    <td>delta-Tocotrienol</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C14154' target='_blank'>C14154</a></td>
+    <td>beta-Tocotrienol</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00781'>M00781</a></td>
+ <td>Nogalavinone/aklavinone biosynthesis, deoxynogalonate/deoxyaklanonate =&gt; nogalavinone/aklavinone</td>
+ <!--td>Nogalavinone/aklavinone biosynthesis, deoxynogalonate/deoxyaklanonate =&gt; nogalavinone/aklavinone</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K15941' target='_blank'>K15941</a></td>
+    <td>snoaB, dnrG, aknX; deoxynogalonate / 12-deoxyaklanonic acid monooxygenase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.13.12.22">1.13.12.22</a> <a target="_blank" href="/dbget-bin/www_bget?ec:1.13.12.-">1.13.12.-</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K15942' target='_blank'>K15942</a></td>
+    <td>snoaC, dnrC, dauC, aknG; O-methyltransferase / aklanonic acid methyltransferase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.1.1.-">2.1.1.-</a> <a target="_blank" href="/dbget-bin/www_bget?ec:2.1.1.288">2.1.1.288</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K15943' target='_blank'>K15943</a></td>
+    <td>snoaL, dnrD, dauD, aknH; nogalonic acid methyl ester cyclase / aklanonic acid methyl ester cyclase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:5.5.1.26">5.5.1.26</a> <a target="_blank" href="/dbget-bin/www_bget?ec:5.5.1.23">5.5.1.23</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K15944' target='_blank'>K15944</a></td>
+    <td>snoaF, dnrE, dauE, aknU; nogalaviketone/aklaviketone reductase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.1.1.-">1.1.1.-</a> <a target="_blank" href="/dbget-bin/www_bget?ec:1.1.1.362">1.1.1.362</a>]</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C18629' target='_blank'>C18629</a></td>
+    <td>Deoxynogalonate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C12416' target='_blank'>C12416</a></td>
+    <td>Nogalonate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C12415' target='_blank'>C12415</a></td>
+    <td>Methyl nogalonate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C18630' target='_blank'>C18630</a></td>
+    <td>Nogalaviketone</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C18631' target='_blank'>C18631</a></td>
+    <td>Nogalavinone</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C12420' target='_blank'>C12420</a></td>
+    <td>12-Deoxyaklanonic acid</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C12421' target='_blank'>C12421</a></td>
+    <td>Aklanonate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C12422' target='_blank'>C12422</a></td>
+    <td>Methyl aklanonate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C12423' target='_blank'>C12423</a></td>
+    <td>Aklaviketone</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C12424' target='_blank'>C12424</a></td>
+    <td>Aklavinone</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

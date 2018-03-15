@@ -1,0 +1,141 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00736'>M00736</a></td>
+ <td>Nocardicin A biosynthesis, L-pHPG + arginine + serine =&gt; nocardicin A</td>
+ <!--td>Nocardicin A biosynthesis, L-pHPG + arginine + serine =&gt; nocardicin A</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K19102' target='_blank'>K19102</a></td>
+    <td>nocA; nocardicin nonribosomal peptide synthetase NocA</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K19103' target='_blank'>K19103</a></td>
+    <td>nocB; nocardicin nonribosomal peptide synthetase NocB</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K05375' target='_blank'>K05375</a></td>
+    <td>mbtH, nocI; MbtH protein</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K19104' target='_blank'>K19104</a></td>
+    <td>nat; isonocardicin synthase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.5.1.38">2.5.1.38</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K19105' target='_blank'>K19105</a></td>
+    <td>nocJ; nocardicin-A epimerase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:5.1.1.14">5.1.1.14</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K19106' target='_blank'>K19106</a></td>
+    <td>nocL; nocardicin N-oxygenase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.14.13.-">1.14.13.-</a>]</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C12323' target='_blank'>C12323</a></td>
+    <td>L-4-Hydroxyphenylglycine</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00062' target='_blank'>C00062</a></td>
+    <td>L-Arginine</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00065' target='_blank'>C00065</a></td>
+    <td>L-Serine</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C17355' target='_blank'>C17355</a></td>
+    <td>Nocardicin G</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C17352' target='_blank'>C17352</a></td>
+    <td>Isonocardicin C</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C17351' target='_blank'>C17351</a></td>
+    <td>Nocardicin C</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C01941' target='_blank'>C01941</a></td>
+    <td>Nocardicin A</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C01739' target='_blank'>C01739</a></td>
+    <td>Nocardicin E</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00927' target='_blank'>C00927</a></td>
+    <td>Isonocardicin A</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

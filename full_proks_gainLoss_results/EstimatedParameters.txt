@@ -1,0 +1,15 @@
+# Log-likelihood= -118532
+_userAlphaGain 0.914429
+_userBetaGain 1.29565
+#  Gain Expectation = 0.705771
+#  Gain Expectancy = 0.705771
+#  Gain Standard Deviation = 0.738055
+_userAlphaLoss 0.916639
+_userBetaLoss 0.175892
+#  Loss Expectation = 5.21139
+#  Loss Expectancy = 5.21139
+#  Loss Standard Deviation = 5.4432
+# GainLossRatio Expectation 0.135429
+_userGainLossRatio 0.135429
+# Stationary '1' Freq at the root - for each stochastic process g/(g+l), with expectation of 0.191514
+# Total branch lengths:22.2552

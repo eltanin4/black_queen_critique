@@ -1,0 +1,116 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00568'>M00568</a></td>
+ <td>Catechol ortho-cleavage, catechol =&gt; 3-oxoadipate</td>
+ <!--td>Catechol ortho-cleavage, catechol =&gt; 3-oxoadipate</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K03381' target='_blank'>K03381</a></td>
+    <td>catA; catechol 1,2-dioxygenase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.13.11.1">1.13.11.1</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K01856' target='_blank'>K01856</a></td>
+    <td>catB; muconate cycloisomerase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:5.5.1.1">5.5.1.1</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K03464' target='_blank'>K03464</a></td>
+    <td>catC; muconolactone D-isomerase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:5.3.3.4">5.3.3.4</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K01055' target='_blank'>K01055</a></td>
+    <td>pcaD; 3-oxoadipate enol-lactonase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:3.1.1.24">3.1.1.24</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K14727' target='_blank'>K14727</a></td>
+    <td>pcaL; 3-oxoadipate enol-lactonase / 4-carboxymuconolactone decarboxylase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:3.1.1.24">3.1.1.24</a> <a target="_blank" href="/dbget-bin/www_bget?ec:4.1.1.44">4.1.1.44</a>]</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00090' target='_blank'>C00090</a></td>
+    <td>Catechol</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C02480' target='_blank'>C02480</a></td>
+    <td>cis,cis-Muconate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C14610' target='_blank'>C14610</a></td>
+    <td>(S)-5-Oxo-2,5-dihydrofuran-2-acetate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C03586' target='_blank'>C03586</a></td>
+    <td>2-Oxo-2,3-dihydrofuran-5-acetate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00846' target='_blank'>C00846</a></td>
+    <td>3-Oxoadipate</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

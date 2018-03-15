@@ -1,0 +1,394 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>KEGG MODULE: M00608</title>
+<link rel="stylesheet" href="/css/kegg.css" type="text/css">
+<style type="text/css">
+td
+{
+  font-size:12px;
+  font-family:verdana,arial,helvetica,sans-serif;
+  vertical-align: top;
+}
+
+div#definition
+{
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+div#definition table tr td {
+  padding-right: 10px;
+}
+
+div.poplay {
+  position: absolute;
+  padding: 2px;
+  background-color: #ffff99;
+  border-top: solid 1px #c0c0c0;
+  border-left: solid 1px #c0c0c0;
+  border-bottom: solid 1px #808080;
+  border-right: solid 1px #808080;
+  visibility: hidden;
+}
+
+span.popup
+{
+  font-weight: bold;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+</style>
+<script language="JavaScript" type="text/javascript" src="/js/dhtml.js"></script>
+<script language="javascript" type="text/javascript">
+<!--
+
+function SubmitForm(theForm)
+{
+  var org = theForm.select_org.value;
+
+  if(org == "set_cookie")
+  {
+    window.open('/kegg/misc/kegg2_select.html','sel_org','toolbar=no,location=no,directories=no,width=500,height=320,resizable=yes');
+    return false;
+  }
+  else if(org.indexOf(".sort_alp") > 0)
+  {
+    var dt = new Date();
+    dt.setTime(dt.getTime() + (30 * 24 * 60 * 60));
+    var c = "KEGG_MapMenu_Sorted=alp;path=/;expires=" + dt.toGMTString();
+    document.cookie = c;
+  }
+  else if(org.indexOf(".sort_org") > 0)
+  {
+    // delete cookie
+    var dt = new Date();
+    dt.setTime(dt.getTime() - 100);
+    var c = "KEGG_MapMenu_Sorted=alp;path=/;expires=" + dt.toGMTString();
+    document.cookie = c;
+  }
+  else
+  {
+    theForm.org.value = org;
+  }
+
+  return true;
+}
+
+function btn(bobj, img)
+{
+  bobj.src = "/Fig/bget/button_" + img + ".gif";
+}
+
+
+function open_ko_list()
+{
+	var win = window.open('module_ko_list?map=M00608&org=ko','_md','toolbar=no,location=no,directories=no,width=700,height=400,resizable=yes,scrollbars=yes,status=no');
+  win.focus();
+}
+
+var timer = 0;
+var p_entry, p_title, p_bgcolor;
+function popupTimer(entry, title, bgcolor)
+{
+  p_entry = entry;
+  p_title = title;
+  p_bgcolor = bgcolor;
+
+  if(timer == 0){
+    var func = "showThumbnail()";
+    timer = setTimeout(func, 1200);
+  }
+}
+
+
+function showThumbnail()
+{
+
+  var url = "";
+  if(p_entry.match(/^[A-Z]+\d+$/))
+  {
+    url = "/kegg/misc/thumbnail/" + p_entry + ".gif";
+  }
+  else if(p_entry.match(/(\d+)$/))
+  {
+    url = "/kegg/misc/thumbnail/map" + RegExp.$1 + ".gif";
+  }
+
+  var html = "";
+
+  if(p_bgcolor != "#ffffff")
+  {
+    html += "<span class=\"popup\">" + p_entry + "</span><br />";
+  }
+
+  html += "<img src=\"" + url + "\" alt=\"Loading...\">";
+
+  var x = getCurrentMouseX();
+  var y = getCurrentMouseY();
+
+  var layer = new Component("poplay");
+  layer.backgroundColor(p_bgcolor);
+  layer.HTML(html);
+  layer.move(x, y+40);
+  layer.visible(true);
+
+  timer = 0;
+}
+
+
+function hideMapTn(){
+  var layer = new Component("poplay");
+  layer.visible(false);
+
+  if(timer != 0){
+    clearTimeout(timer);
+    timer = 0;
+  }
+}
+
+
+// -->
+</script>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+ <tr>
+  <td>
+    <a href="/kegg/kegg2.html"><img align="middle" border="0" src="/Fig/bget/kegg3.gif" alt="KEGG"></a>
+    &nbsp;&nbsp;&nbsp;<a name="module:M00608"></a><font class="title3"><b>2-Oxocarboxylic acid chain extension, 2-oxoglutarate =&gt; 2-oxoadipate =&gt; 2-oxopimelate =&gt; 2-oxosuberate</b></font>
+  </td>
+  <td align="right" valign="bottom"><a href="javascript:void(window.open('/kegg/document/help_module.html','KEGG_Help','toolbar=no,location=no,directories=no,width=720,height=640,resizable=yes,scrollbars=yes'))"><img onmouseup="btn(this,'Hb')" align="middle" onmouseout="btn(this,'Hb')" onmousedown="btn(this,'Hbd')" onmouseover="btn(this,'Hbh')" alt="Help" name="help" border="0" src="/Fig/bget/button_Hb.gif"></a></td>
+ </tr>
+</table>
+
+[
+<a href="/kegg-bin/get_htext?htext=ko00002.keg&amp;query=M00608&amp;option=-a">Module menu</a> |
+
+<a href="/kegg-bin/get_htext?htext=br08601_M00608.keg&amp;hier=5">Organism menu</a> |
+
+
+<a href="/dbget-bin/www_bget?M00608">Module entry</a> |
+<a href="javascript:void(open_ko_list())">KO/Compound list</a>
+
+]
+
+<div id="definition">
+ <table>
+  <tr>
+   <td>Entry</td>
+   <td>
+   M00608
+   
+   </td>
+  </tr>
+  <tr>
+   <td>Name</td>
+   <td>2-Oxocarboxylic acid chain extension, 2-oxoglutarate =&gt; 2-oxoadipate =&gt; 2-oxopimelate =&gt; 2-oxosuberate</td>
+  </tr>
+  <tr>
+   <td>Definition</td>
+   <td>
+    <a href="/dbget-bin/www_bget?K10977">K10977</a> <a href="/dbget-bin/www_bget?K16792">K16792</a>+<a href="/dbget-bin/www_bget?K16793">K16793</a> <a href="/dbget-bin/www_bget?K10978">K10978</a><br />
+    <a href="http://www.kegg.jp/kegg-bin/view_ortholog_table?md=M00608"><img onmouseup="btn(this,'OTb')" align="middle" onmouseout="btn(this,'OTb')" onmousedown="btn(this,'OTbd')" onmouseover="btn(this,'OTbh')" alt="Ortholog table" name="OT" border="0" src="/Fig/bget/button_OTb.gif"></a>
+    
+    <a href="javascript:void(document.forms['taxonomy'].submit())"><img onmouseup="btn(this,'Taxb')" align="middle" onmouseout="btn(this,'Taxb')" onmousedown="btn(this,'Taxbd')" onmouseover="btn(this,'Taxbh')" alt="Taxonomy" name="Taxonomy" border="0" src="/Fig/bget/button_Taxb.gif"></a>
+    
+   </td>
+  </tr>
+  <tr>
+   <td>Type</td>
+   <td>Pathway module</td>
+  </tr>
+  
+  
+  <tr>
+   <td>Pathway</td>
+   <td>
+    
+    <span style="margin-right:5px;">
+    <a href="/kegg-bin/show_pathway?map01210+M00608">map01210</a>
+    </span>
+    
+    <span style="margin-right:5px;">
+    <a href="/kegg-bin/show_pathway?map00680+M00608">map00680</a>
+    </span>
+    
+   </td>
+  </tr>
+  
+  
+  
+  <tr>
+   <td>Reaction</td>
+   <td><a href="/dbget-bin/www_bget?R00271">R00271</a>  <a href="/dbget-bin/www_bget?C00026">C00026</a> + <a href="/dbget-bin/www_bget?C00024">C00024</a> -&gt; <a href="/dbget-bin/www_bget?C01251">C01251</a><br><a href="/dbget-bin/www_bget?R03444">R03444</a>  <a href="/dbget-bin/www_bget?C01251">C01251</a> -&gt; <a href="/dbget-bin/www_bget?C04002">C04002</a><br><a href="/dbget-bin/www_bget?R04371">R04371</a>  <a href="/dbget-bin/www_bget?C04002">C04002</a> -&gt; <a href="/dbget-bin/www_bget?C05662">C05662</a><br><a href="/dbget-bin/www_bget?R09720">R09720</a>  <a href="/dbget-bin/www_bget?C01251">C01251</a> -&gt; <a href="/dbget-bin/www_bget?C05662">C05662</a><br><a href="/dbget-bin/www_bget?R01934">R01934</a>  <a href="/dbget-bin/www_bget?C05662">C05662</a> -&gt; <a href="/dbget-bin/www_bget?C00322">C00322</a><br><a href="/dbget-bin/www_bget?R08331">R08331</a>  <a href="/dbget-bin/www_bget?C00322">C00322</a> -&gt; <a href="/dbget-bin/www_bget?C16583">C16583</a><br><a href="/dbget-bin/www_bget?R10392">R10392</a>  <a href="/dbget-bin/www_bget?C16583">C16583</a> -&gt; <a href="/dbget-bin/www_bget?C20581">C20581</a><br><a href="/dbget-bin/www_bget?R10393">R10393</a>  <a href="/dbget-bin/www_bget?C20581">C20581</a> -&gt; <a href="/dbget-bin/www_bget?C16597">C16597</a><br><a href="/dbget-bin/www_bget?R10391">R10391</a>  <a href="/dbget-bin/www_bget?C16583">C16583</a> -&gt; <a href="/dbget-bin/www_bget?C16597">C16597</a><br><a href="/dbget-bin/www_bget?R08214">R08214</a>  <a href="/dbget-bin/www_bget?C16597">C16597</a> -&gt; <a href="/dbget-bin/www_bget?C16588">C16588</a><br><a href="/dbget-bin/www_bget?R08332">R08332</a>  <a href="/dbget-bin/www_bget?C16588">C16588</a> -&gt; <a href="/dbget-bin/www_bget?C16598">C16598</a><br><a href="/dbget-bin/www_bget?R10395">R10395</a>  <a href="/dbget-bin/www_bget?C16598">C16598</a> -&gt; <a href="/dbget-bin/www_bget?C20582">C20582</a><br><a href="/dbget-bin/www_bget?R10396">R10396</a>  <a href="/dbget-bin/www_bget?C20582">C20582</a> -&gt; <a href="/dbget-bin/www_bget?C16600">C16600</a><br><a href="/dbget-bin/www_bget?R10394">R10394</a>  <a href="/dbget-bin/www_bget?C16598">C16598</a> -&gt; <a href="/dbget-bin/www_bget?C16600">C16600</a><br><a href="/dbget-bin/www_bget?R08215">R08215</a>  <a href="/dbget-bin/www_bget?C16600">C16600</a> -&gt; <a href="/dbget-bin/www_bget?C16589">C16589</a></td>
+  </tr>
+  
+  
+  <tr>
+   <td>RModule</td>
+   <td><a href="/kegg/reaction/rm001.html">RM001</A>  2-Oxocarboxylic acid chain extension by tricarboxylic acid pathway</td>
+  </tr>
+  
+  
+  <tr>
+   <td>Comment</td>
+   <td>Organism group: methanogenic archaea</td>
+  </tr>
+  
+ </table>
+</div>
+
+<form action="/kegg-bin/show_module" onsubmit="return SubmitForm(this)">
+<input type="hidden" name="map" value="M00608">
+<input type="hidden" name="org" value="ko">
+
+<div style="margin-top:10px;">
+
+<div>
+<select name="select_org">
+<option value="ko">Reference module (KO)</option>
+<option value="set_cookie">-----&lt; Set personalized menu &gt;-----</option>
+<option value="ko.sort_alp">-----&lt; Sort below by alphabet &gt;-----</option>
+<option value="mja" >Methanocaldococcus jannaschii</option>
+<option value="mfe" >Methanocaldococcus fervens</option>
+<option value="mvu" >Methanocaldococcus vulcanius</option>
+<option value="mfs" >Methanocaldococcus sp. FS406-22</option>
+<option value="mif" >Methanocaldococcus infernus</option>
+<option value="mjh" >Methanocaldococcus bathoardescens</option>
+<option value="mig" >Methanotorris igneus</option>
+<option value="mmp" >Methanococcus maripaludis S2</option>
+<option value="mmq" >Methanococcus maripaludis C5</option>
+<option value="mmx" >Methanococcus maripaludis C6</option>
+<option value="mmz" >Methanococcus maripaludis C7</option>
+<option value="mae" >Methanococcus aeolicus</option>
+<option value="mvn" >Methanococcus vannielii</option>
+<option value="mvo" >Methanococcus voltae</option>
+<option value="mok" >Methanothermococcus okinawensis</option>
+<option value="mac" >Methanosarcina acetivorans</option>
+<option value="mba" >Methanosarcina barkeri Fusaro</option>
+<option value="mby" >Methanosarcina barkeri MS</option>
+<option value="mbw" >Methanosarcina barkeri Wiesmoor</option>
+<option value="mbar" >Methanosarcina barkeri 227</option>
+<option value="mbak" >Methanosarcina barkeri 3</option>
+<option value="mma" >Methanosarcina mazei Go1</option>
+<option value="mmaz" >Methanosarcina mazei Tuc01</option>
+<option value="mmj" >Methanosarcina mazei S-6</option>
+<option value="mmac" >Methanosarcina mazei C16</option>
+<option value="mvc" >Methanosarcina vacuolata</option>
+<option value="mek" >Methanosarcina sp. Kolksee</option>
+<option value="mls" >Methanosarcina lacustris</option>
+<option value="metm" >Methanosarcina sp. MTP4</option>
+<option value="mef" >Methanosarcina sp. WH1</option>
+<option value="meq" >Methanosarcina sp. WWM596</option>
+<option value="msj" >Methanosarcina siciliae C2J</option>
+<option value="msz" >Methanosarcina siciliae HI350</option>
+<option value="msw" >Methanosarcina siciliae T4/M</option>
+<option value="mthe" >Methanosarcina thermophila CHTI-55</option>
+<option value="mthr" >Methanosarcina thermophila TM-1</option>
+<option value="mhor" >Methanosarcina horonobensis</option>
+<option value="mmet" >Methanococcoides methylutens</option>
+<option value="mmh" >Methanohalophilus mahii</option>
+<option value="mhaz" >Methanohalophilus halophilus</option>
+<option value="mev" >Methanohalobium evestigatum</option>
+<option value="mzh" >Methanosalsum zhilinae</option>
+<option value="mpy" >Methanolobus psychrophilus</option>
+<option value="mhz" >Methanomethylovorans hollandica</option>
+<option value="mtp" >Methanosaeta thermophila</option>
+<option value="mcj" >Methanosaeta concilii</option>
+<option value="mhi" >Methanosaeta harundinacea</option>
+<option value="mhu" >Methanospirillum hungatei</option>
+<option value="mla" >Methanocorpusculum labreanum</option>
+<option value="mem" >Methanoculleus marisnigri</option>
+<option value="mbg" >Methanoculleus bourgensis</option>
+<option value="mpi" >Methanolacinia petrolearia</option>
+<option value="mbn" >Methanoregula boonei</option>
+<option value="mfo" >Methanoregula formicica</option>
+<option value="mpl" >Candidatus Methanosphaerula palustris</option>
+<option value="mpd" >Methanocella paludicola</option>
+<option value="mez" >Methanocella conradii</option>
+<option value="rci" >Methanocella arvoryzae</option>
+<option value="mth" >Methanothermobacter thermautotrophicus</option>
+<option value="mmg" >Methanothermobacter marburgensis</option>
+<option value="metc" >Methanothermobacter sp. CaT2</option>
+<option value="mwo" >Methanothermobacter wolfeii</option>
+<option value="mst" >Methanosphaera stadtmanae</option>
+<option value="msi" >Methanobrevibacter smithii</option>
+<option value="mru" >Methanobrevibacter ruminantium</option>
+<option value="meb" >Methanobrevibacter sp. AbM4</option>
+<option value="mmil" >Methanobrevibacter millerae</option>
+<option value="meye" >Methanobrevibacter sp. YE315</option>
+<option value="mol" >Methanobrevibacter olleyae</option>
+<option value="mel" >Methanobacterium lacus</option>
+<option value="mew" >Methanobacterium paludis</option>
+<option value="meth" >Methanobacterium sp. MB1</option>
+<option value="mfc" >Methanobacterium formicicum BRM9</option>
+<option value="mfi" >Methanobacterium formicicum DSM1535</option>
+<option value="mcub" >Methanobacterium curvum</option>
+<option value="msub" >Methanobacterium subterraneum</option>
+<option value="mfv" >Methanothermus fervidus</option>
+<option value="mka" >Methanopyrus kandleri</option>
+
+</select>
+<input type="submit" value="Go">
+</div>
+
+<table cellpadding="10">
+ <tr>
+  <td><img src="/tmp/pathway_thumbnail/ko_M00608.png?1521114572" usemap="#module" border="0" alt="MODULE IMAGE"></td>
+  
+  <td><img src="/tmp/pathway_thumbnail/M00608_reaction.png?1521114572" usemap="#reaction" border="0" alt="MODULE-REACTION IMAGE"></td>
+  
+ </tr>
+</table>
+<map id="module" name="module">
+<area shape="rect" id="node1_0" href="http://www.kegg.jp/dbget-bin/www_bget?K10977" title="K10977 (aksA)" alt="" coords="17,19,90,41"/>
+<area shape="rect" id="node2_1" href="http://www.kegg.jp/dbget-bin/www_bget?K16792" title="K16792 (aksD)" alt="" coords="17,69,90,92"/>
+<area shape="rect" id="node2_2" href="http://www.kegg.jp/dbget-bin/www_bget?K16793" title="K16793 (aksE)" alt="" coords="17,92,90,115"/>
+<area shape="rect" id="node3_3" href="http://www.kegg.jp/dbget-bin/www_bget?K10978" title="K10978 (aksF)" alt="" coords="17,144,90,167"/>
+</map>
+
+<map id="reaction" name="reaction">
+<area shape="poly" id="node1" href="/dbget-bin/www_bget?C00026" title="C00026 (2&#45;Oxoglutarate)" alt="" coords="78,29,76,22,71,15,63,10,53,7,42,5,30,7,20,10,12,15,7,22,5,29,7,37,12,43,20,49,30,52,42,53,53,52,63,49,71,43,76,37" onmouseover="popupTimer(&quot;C00026&quot;, &quot;C00026 (2&#45;Oxoglutarate)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node2" href="/dbget-bin/www_bget?R00271" title="R00271" alt="" coords="51,83,128,105"/>
+<area shape="poly" id="node4" href="/dbget-bin/www_bget?C01251" title="C01251 ((R)&#45;2&#45;Hydroxybutane&#45;1,2,4&#45;tricarboxylate)" alt="" coords="127,159,126,151,120,145,112,139,101,136,90,135,78,136,67,139,59,145,54,151,52,159,54,166,59,173,67,178,78,181,90,183,101,181,112,178,120,173,126,166" onmouseover="popupTimer(&quot;C01251&quot;, &quot;C01251 ((R)&#45;2&#45;Hydroxybutane&#45;1,2,4&#45;tricarboxylate)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="poly" id="node3" href="/dbget-bin/www_bget?C00024" title="C00024 (Acetyl&#45;CoA)" alt="" coords="176,29,174,22,169,15,161,10,150,7,139,5,128,7,117,10,109,15,104,22,102,29,104,37,109,43,117,49,128,52,139,53,150,52,161,49,169,43,174,37" onmouseover="popupTimer(&quot;C00024&quot;, &quot;C00024 (Acetyl&#45;CoA)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node5" href="/dbget-bin/www_bget?R03444" title="R03444" alt="" coords="14,212,91,235"/>
+<area shape="rect" id="node9" href="/dbget-bin/www_bget?R09720" title="R09720" alt="" coords="108,277,186,299"/>
+<area shape="poly" id="node6" href="/dbget-bin/www_bget?C04002" title="C04002 ((Z)&#45;But&#45;1&#45;ene&#45;1,2,4&#45;tricarboxylate)" alt="" coords="84,288,82,281,77,274,69,269,58,265,47,264,36,265,25,269,17,274,12,281,10,288,12,295,17,302,25,307,36,311,47,312,58,311,69,307,77,302,82,295" onmouseover="popupTimer(&quot;C04002&quot;, &quot;C04002 ((Z)&#45;But&#45;1&#45;ene&#45;1,2,4&#45;tricarboxylate)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node7" href="/dbget-bin/www_bget?R04371" title="R04371" alt="" coords="20,341,98,364"/>
+<area shape="poly" id="node8" href="/dbget-bin/www_bget?C05662" title="C05662 (Homoisocitrate)" alt="" coords="135,417,133,410,128,403,120,398,110,395,99,393,88,395,78,398,70,403,64,410,63,417,64,425,70,431,78,437,88,440,99,441,110,440,120,437,128,431,133,425" onmouseover="popupTimer(&quot;C05662&quot;, &quot;C05662 (Homoisocitrate)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node10" href="/dbget-bin/www_bget?R01934" title="R01934" alt="" coords="60,471,138,493"/>
+<area shape="poly" id="node11" href="/dbget-bin/www_bget?C00322" title="C00322 (2&#45;Oxoadipate)" alt="" coords="136,547,134,539,129,533,121,527,110,524,99,523,88,524,77,527,69,533,64,539,62,547,64,554,69,561,77,566,88,569,99,571,110,569,121,566,129,561,134,554" onmouseover="popupTimer(&quot;C00322&quot;, &quot;C00322 (2&#45;Oxoadipate)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node12" href="/dbget-bin/www_bget?R08331" title="R08331" alt="" coords="60,600,138,623"/>
+<area shape="poly" id="node13" href="/dbget-bin/www_bget?C16583" title="C16583 ((R)&#45;(Homo)2&#45;citrate)" alt="" coords="136,676,134,669,129,662,121,657,110,653,99,652,88,653,77,657,69,662,64,669,62,676,64,683,69,690,77,695,88,699,99,700,110,699,121,695,129,690,134,683" onmouseover="popupTimer(&quot;C16583&quot;, &quot;C16583 ((R)&#45;(Homo)2&#45;citrate)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node14" href="/dbget-bin/www_bget?R10392" title="R10392" alt="" coords="23,729,100,752"/>
+<area shape="rect" id="node18" href="/dbget-bin/www_bget?R10391" title="R10391" alt="" coords="118,794,195,817"/>
+<area shape="poly" id="node15" href="/dbget-bin/www_bget?C20581" title="C20581 (cis&#45;(Homo)2&#45;aconitate)" alt="" coords="94,805,92,798,87,791,79,786,68,783,56,781,45,783,34,786,26,791,20,798,18,805,20,813,26,819,34,825,45,828,56,829,68,828,79,825,87,819,92,813" onmouseover="popupTimer(&quot;C20581&quot;, &quot;C20581 (cis&#45;(Homo)2&#45;aconitate)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node16" href="/dbget-bin/www_bget?R10393" title="R10393" alt="" coords="30,859,107,881"/>
+<area shape="poly" id="node17" href="/dbget-bin/www_bget?C16597" title="C16597 ((&#45;)&#45;threo&#45;Iso(homo)2&#45;citrate)" alt="" coords="145,935,144,927,138,921,130,915,120,912,108,911,97,912,87,915,78,921,73,927,71,935,73,942,78,949,87,954,97,957,108,959,120,957,130,954,138,949,144,942" onmouseover="popupTimer(&quot;C16597&quot;, &quot;C16597 ((&#45;)&#45;threo&#45;Iso(homo)2&#45;citrate)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node19" href="/dbget-bin/www_bget?R08214" title="R08214" alt="" coords="70,988,147,1011"/>
+<area shape="poly" id="node20" href="/dbget-bin/www_bget?C16588" title="C16588 (2&#45;Oxopimelate)" alt="" coords="145,1064,144,1057,138,1050,130,1045,120,1041,108,1040,97,1041,87,1045,78,1050,73,1057,71,1064,73,1071,78,1078,87,1083,97,1087,108,1088,120,1087,130,1083,138,1078,144,1071" onmouseover="popupTimer(&quot;C16588&quot;, &quot;C16588 (2&#45;Oxopimelate)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node21" href="/dbget-bin/www_bget?R08332" title="R08332" alt="" coords="70,1117,147,1140"/>
+<area shape="poly" id="node22" href="/dbget-bin/www_bget?C16598" title="C16598 ((R)&#45;(Homo)3&#45;citrate)" alt="" coords="145,1193,144,1186,138,1179,130,1174,120,1171,108,1169,97,1171,87,1174,78,1179,73,1186,71,1193,73,1201,78,1207,87,1213,97,1216,108,1217,120,1216,130,1213,138,1207,144,1201" onmouseover="popupTimer(&quot;C16598&quot;, &quot;C16598 ((R)&#45;(Homo)3&#45;citrate)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node23" href="/dbget-bin/www_bget?R10395" title="R10395" alt="" coords="32,1247,110,1269"/>
+<area shape="rect" id="node27" href="/dbget-bin/www_bget?R10394" title="R10394" alt="" coords="127,1311,204,1334"/>
+<area shape="poly" id="node24" href="/dbget-bin/www_bget?C20582" title="C20582 (cis&#45;(Homo)3&#45;aconitate)" alt="" coords="103,1323,102,1315,96,1309,88,1303,77,1300,66,1299,54,1300,43,1303,35,1309,30,1315,28,1323,30,1330,35,1337,43,1342,54,1345,66,1347,77,1345,88,1342,96,1337,102,1330" onmouseover="popupTimer(&quot;C20582&quot;, &quot;C20582 (cis&#45;(Homo)3&#45;aconitate)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node25" href="/dbget-bin/www_bget?R10396" title="R10396" alt="" coords="39,1376,116,1399"/>
+<area shape="poly" id="node26" href="/dbget-bin/www_bget?C16600" title="C16600 ((&#45;)&#45;threo&#45;Iso(homo)3&#45;citrate)" alt="" coords="154,1452,152,1445,147,1438,139,1433,129,1429,118,1428,107,1429,96,1433,89,1438,83,1445,82,1452,83,1459,89,1466,96,1471,107,1475,118,1476,129,1475,139,1471,147,1466,152,1459" onmouseover="popupTimer(&quot;C16600&quot;, &quot;C16600 ((&#45;)&#45;threo&#45;Iso(homo)3&#45;citrate)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node28" href="/dbget-bin/www_bget?R08215" title="R08215" alt="" coords="79,1505,156,1528"/>
+<area shape="poly" id="node29" href="/dbget-bin/www_bget?C16589" title="C16589 (2&#45;Oxosuberate)" alt="" coords="155,1581,153,1574,148,1567,139,1562,129,1559,118,1557,106,1559,96,1562,88,1567,82,1574,81,1581,82,1589,88,1595,96,1601,106,1604,118,1605,129,1604,139,1601,148,1595,153,1589" onmouseover="popupTimer(&quot;C16589&quot;, &quot;C16589 (2&#45;Oxosuberate)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+</map>
+</div>
+
+</form>
+<form name="taxonomy" method="post" action="/kegg-bin/get_htext">
+ <input type="hidden" name="htext" value="br08601.keg">
+ <input type="hidden" name="option" value="-a">
+ <input type="hidden" name="query" value="mja mfe mvu mfs mif mjh mig mmp mmq mmx mmz mae mvn mvo mok mac mba mby mbw mbar mbak mma mmaz mmj mmac mvc mek mls metm mef meq msj msz msw mthe mthr mhor mmet mmh mhaz mev mzh mpy mhz mtp mcj mhi mhu mla mem mbg mpi mbn mfo mpl mpd mez rci mth mmg metc mwo mst msi mru meb mmil meye mol mel mew meth mfc mfi mcub msub mfv mka">
+</form>
+<div id="poplay" class="poplay"></div>
+</body>
+</html>

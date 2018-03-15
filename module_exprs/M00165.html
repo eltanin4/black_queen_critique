@@ -1,0 +1,599 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>KEGG MODULE: M00165</title>
+<link rel="stylesheet" href="/css/kegg.css" type="text/css">
+<style type="text/css">
+td
+{
+  font-size:12px;
+  font-family:verdana,arial,helvetica,sans-serif;
+  vertical-align: top;
+}
+
+div#definition
+{
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+div#definition table tr td {
+  padding-right: 10px;
+}
+
+div.poplay {
+  position: absolute;
+  padding: 2px;
+  background-color: #ffff99;
+  border-top: solid 1px #c0c0c0;
+  border-left: solid 1px #c0c0c0;
+  border-bottom: solid 1px #808080;
+  border-right: solid 1px #808080;
+  visibility: hidden;
+}
+
+span.popup
+{
+  font-weight: bold;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+</style>
+<script language="JavaScript" type="text/javascript" src="/js/dhtml.js"></script>
+<script language="javascript" type="text/javascript">
+<!--
+
+function SubmitForm(theForm)
+{
+  var org = theForm.select_org.value;
+
+  if(org == "set_cookie")
+  {
+    window.open('/kegg/misc/kegg2_select.html','sel_org','toolbar=no,location=no,directories=no,width=500,height=320,resizable=yes');
+    return false;
+  }
+  else if(org.indexOf(".sort_alp") > 0)
+  {
+    var dt = new Date();
+    dt.setTime(dt.getTime() + (30 * 24 * 60 * 60));
+    var c = "KEGG_MapMenu_Sorted=alp;path=/;expires=" + dt.toGMTString();
+    document.cookie = c;
+  }
+  else if(org.indexOf(".sort_org") > 0)
+  {
+    // delete cookie
+    var dt = new Date();
+    dt.setTime(dt.getTime() - 100);
+    var c = "KEGG_MapMenu_Sorted=alp;path=/;expires=" + dt.toGMTString();
+    document.cookie = c;
+  }
+  else
+  {
+    theForm.org.value = org;
+  }
+
+  return true;
+}
+
+function btn(bobj, img)
+{
+  bobj.src = "/Fig/bget/button_" + img + ".gif";
+}
+
+
+function open_ko_list()
+{
+	var win = window.open('module_ko_list?map=M00165&org=ko','_md','toolbar=no,location=no,directories=no,width=700,height=400,resizable=yes,scrollbars=yes,status=no');
+  win.focus();
+}
+
+var timer = 0;
+var p_entry, p_title, p_bgcolor;
+function popupTimer(entry, title, bgcolor)
+{
+  p_entry = entry;
+  p_title = title;
+  p_bgcolor = bgcolor;
+
+  if(timer == 0){
+    var func = "showThumbnail()";
+    timer = setTimeout(func, 1200);
+  }
+}
+
+
+function showThumbnail()
+{
+
+  var url = "";
+  if(p_entry.match(/^[A-Z]+\d+$/))
+  {
+    url = "/kegg/misc/thumbnail/" + p_entry + ".gif";
+  }
+  else if(p_entry.match(/(\d+)$/))
+  {
+    url = "/kegg/misc/thumbnail/map" + RegExp.$1 + ".gif";
+  }
+
+  var html = "";
+
+  if(p_bgcolor != "#ffffff")
+  {
+    html += "<span class=\"popup\">" + p_entry + "</span><br />";
+  }
+
+  html += "<img src=\"" + url + "\" alt=\"Loading...\">";
+
+  var x = getCurrentMouseX();
+  var y = getCurrentMouseY();
+
+  var layer = new Component("poplay");
+  layer.backgroundColor(p_bgcolor);
+  layer.HTML(html);
+  layer.move(x, y+40);
+  layer.visible(true);
+
+  timer = 0;
+}
+
+
+function hideMapTn(){
+  var layer = new Component("poplay");
+  layer.visible(false);
+
+  if(timer != 0){
+    clearTimeout(timer);
+    timer = 0;
+  }
+}
+
+
+// -->
+</script>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+ <tr>
+  <td>
+    <a href="/kegg/kegg2.html"><img align="middle" border="0" src="/Fig/bget/kegg3.gif" alt="KEGG"></a>
+    &nbsp;&nbsp;&nbsp;<a name="module:M00165"></a><font class="title3"><b>Reductive pentose phosphate cycle (Calvin cycle)</b></font>
+  </td>
+  <td align="right" valign="bottom"><a href="javascript:void(window.open('/kegg/document/help_module.html','KEGG_Help','toolbar=no,location=no,directories=no,width=720,height=640,resizable=yes,scrollbars=yes'))"><img onmouseup="btn(this,'Hb')" align="middle" onmouseout="btn(this,'Hb')" onmousedown="btn(this,'Hbd')" onmouseover="btn(this,'Hbh')" alt="Help" name="help" border="0" src="/Fig/bget/button_Hb.gif"></a></td>
+ </tr>
+</table>
+
+[
+<a href="/kegg-bin/get_htext?htext=ko00002.keg&amp;query=M00165&amp;option=-a">Module menu</a> |
+
+<a href="/kegg-bin/get_htext?htext=br08601_M00165.keg&amp;hier=5">Organism menu</a> |
+
+
+<a href="/dbget-bin/www_bget?M00165">Module entry</a> |
+<a href="javascript:void(open_ko_list())">KO/Compound list</a>
+
+]
+
+<div id="definition">
+ <table>
+  <tr>
+   <td>Entry</td>
+   <td>
+   M00165
+   
+   </td>
+  </tr>
+  <tr>
+   <td>Name</td>
+   <td>Reductive pentose phosphate cycle (Calvin cycle)</td>
+  </tr>
+  <tr>
+   <td>Definition</td>
+   <td>
+    <a href="/dbget-bin/www_bget?K00855">K00855</a> (<a href="/dbget-bin/www_bget?K01601">K01601</a>-<a href="/dbget-bin/www_bget?K01602">K01602</a>) <a href="/dbget-bin/www_bget?K00927">K00927</a> (<a href="/dbget-bin/www_bget?K05298">K05298</a>,<a href="/dbget-bin/www_bget?K00150">K00150</a>,<a href="/dbget-bin/www_bget?K00134">K00134</a>) (<a href="/dbget-bin/www_bget?K01623">K01623</a>,<a href="/dbget-bin/www_bget?K01624">K01624</a>) (<a href="/dbget-bin/www_bget?K03841">K03841</a>,<a href="/dbget-bin/www_bget?K02446">K02446</a>,<a href="/dbget-bin/www_bget?K11532">K11532</a>,<a href="/dbget-bin/www_bget?K01086">K01086</a>,<a href="/dbget-bin/www_bget?K04041">K04041</a>) <br><a href="/dbget-bin/www_bget?K00615">K00615</a> (<a href="/dbget-bin/www_bget?K01623">K01623</a>,<a href="/dbget-bin/www_bget?K01624">K01624</a>) (<a href="/dbget-bin/www_bget?K01100">K01100</a>,<a href="/dbget-bin/www_bget?K11532">K11532</a>,<a href="/dbget-bin/www_bget?K01086">K01086</a>) <a href="/dbget-bin/www_bget?K00615">K00615</a> (<a href="/dbget-bin/www_bget?K01807">K01807</a>,<a href="/dbget-bin/www_bget?K01808">K01808</a>)<br />
+    <a href="http://www.kegg.jp/kegg-bin/view_ortholog_table?md=M00165"><img onmouseup="btn(this,'OTb')" align="middle" onmouseout="btn(this,'OTb')" onmousedown="btn(this,'OTbd')" onmouseover="btn(this,'OTbh')" alt="Ortholog table" name="OT" border="0" src="/Fig/bget/button_OTb.gif"></a>
+    
+    <a href="javascript:void(document.forms['taxonomy'].submit())"><img onmouseup="btn(this,'Taxb')" align="middle" onmouseout="btn(this,'Taxb')" onmousedown="btn(this,'Taxbd')" onmouseover="btn(this,'Taxbh')" alt="Taxonomy" name="Taxonomy" border="0" src="/Fig/bget/button_Taxb.gif"></a>
+    
+   </td>
+  </tr>
+  <tr>
+   <td>Type</td>
+   <td>Pathway module</td>
+  </tr>
+  
+  
+  <tr>
+   <td>Pathway</td>
+   <td>
+    
+    <span style="margin-right:5px;">
+    <a href="/kegg-bin/show_pathway?map01200+M00165">map01200</a>
+    </span>
+    
+    <span style="margin-right:5px;">
+    <a href="/kegg-bin/show_pathway?map00710+M00165">map00710</a>
+    </span>
+    
+   </td>
+  </tr>
+  
+  
+  
+  <tr>
+   <td>Reaction</td>
+   <td><a href="/dbget-bin/www_bget?R01523">R01523</a>  <a href="/dbget-bin/www_bget?C00199">C00199</a> -&gt; <a href="/dbget-bin/www_bget?C01182">C01182</a><br><a href="/dbget-bin/www_bget?R00024">R00024</a>  <a href="/dbget-bin/www_bget?C01182">C01182</a> + <a href="/dbget-bin/www_bget?C00011">C00011</a> -&gt; <a href="/dbget-bin/www_bget?C00197">C00197</a><br><a href="/dbget-bin/www_bget?R01512">R01512</a>  <a href="/dbget-bin/www_bget?C00197">C00197</a> -&gt; <a href="/dbget-bin/www_bget?C00236">C00236</a><br><a href="/dbget-bin/www_bget?R01061">R01061</a>,<a href="/dbget-bin/www_bget?R01063">R01063</a>  <a href="/dbget-bin/www_bget?C00236">C00236</a> -&gt; <a href="/dbget-bin/www_bget?C00118">C00118</a><br><a href="/dbget-bin/www_bget?R01068">R01068</a>  <a href="/dbget-bin/www_bget?C00118">C00118</a> -&gt; <a href="/dbget-bin/www_bget?C00354">C00354</a><br><a href="/dbget-bin/www_bget?R00762">R00762</a>  <a href="/dbget-bin/www_bget?C00354">C00354</a> -&gt; <a href="/dbget-bin/www_bget?C00085">C00085</a><br><a href="/dbget-bin/www_bget?R01067">R01067</a>  <a href="/dbget-bin/www_bget?C00085">C00085</a> -&gt; <a href="/dbget-bin/www_bget?C00279">C00279</a><br><a href="/dbget-bin/www_bget?R01829">R01829</a>  <a href="/dbget-bin/www_bget?C00279">C00279</a> -&gt; <a href="/dbget-bin/www_bget?C00447">C00447</a><br><a href="/dbget-bin/www_bget?R01845">R01845</a>  <a href="/dbget-bin/www_bget?C00447">C00447</a> -&gt; <a href="/dbget-bin/www_bget?C05382">C05382</a><br><a href="/dbget-bin/www_bget?R01641">R01641</a>  <a href="/dbget-bin/www_bget?C05382">C05382</a> -&gt; <a href="/dbget-bin/www_bget?C00117">C00117</a><br><a href="/dbget-bin/www_bget?R01056">R01056</a>  <a href="/dbget-bin/www_bget?C00117">C00117</a> -&gt; <a href="/dbget-bin/www_bget?C00199">C00199</a></td>
+  </tr>
+  
+  
+  
+ </table>
+</div>
+
+<form action="/kegg-bin/show_module" onsubmit="return SubmitForm(this)">
+<input type="hidden" name="map" value="M00165">
+<input type="hidden" name="org" value="ko">
+
+<div style="margin-top:10px;">
+
+<div>
+<select name="select_org">
+<option value="ko">Reference module (KO)</option>
+<option value="set_cookie">-----&lt; Set personalized menu &gt;-----</option>
+<option value="ko.sort_alp">-----&lt; Sort below by alphabet &gt;-----</option>
+<option value="ath" >Arabidopsis thaliana (thale cress)</option>
+<option value="aly" >Arabidopsis lyrata (lyrate rockcress)</option>
+<option value="crb" >Capsella rubella</option>
+<option value="csat" >Camelina sativa (false flax)</option>
+<option value="eus" >Eutrema salsugineum</option>
+<option value="bna" >Brassica napus (rape)</option>
+<option value="thj" >Tarenaya hassleriana (spider flower)</option>
+<option value="cpap" >Carica papaya (papaya)</option>
+<option value="cit" >Citrus sinensis (Valencia orange)</option>
+<option value="tcc" >Theobroma cacao (cacao)</option>
+<option value="gra" >Gossypium raimondii</option>
+<option value="ghi" >Gossypium hirsutum (upland cotton)</option>
+<option value="dzi" >Durio zibethinus (durian)</option>
+<option value="egr" >Eucalyptus grandis (rose gum)</option>
+<option value="gmx" >Glycine max (soybean)</option>
+<option value="pvu" >Phaseolus vulgaris (common bean)</option>
+<option value="vra" >Vigna radiata (mung bean)</option>
+<option value="var" >Vigna angularis (adzuki bean)</option>
+<option value="ccaj" >Cajanus cajan (pigeon pea)</option>
+<option value="mtr" >Medicago truncatula (barrel medic)</option>
+<option value="cam" >Cicer arietinum (chickpea)</option>
+<option value="aip" >Arachis ipaensis</option>
+<option value="lja" >Lotus japonicus</option>
+<option value="fve" >Fragaria vesca (woodland strawberry)</option>
+<option value="pper" >Prunus persica (peach)</option>
+<option value="pmum" >Prunus mume (Japanese apricot)</option>
+<option value="mdm" >Malus domestica (apple)</option>
+<option value="zju" >Ziziphus jujuba (Chinese jujube)</option>
+<option value="csv" >Cucumis sativus (cucumber)</option>
+<option value="cmo" >Cucumis melo (muskmelon)</option>
+<option value="cmax" >Cucurbita maxima (winter squash)</option>
+<option value="cmos" >Cucurbita moschata (crookneck pumpkin)</option>
+<option value="rcu" >Ricinus communis (castor bean)</option>
+<option value="jcu" >Jatropha curcas</option>
+<option value="hbr" >Hevea brasiliensis (rubber tree)</option>
+<option value="pop" >Populus trichocarpa (black cottonwood)</option>
+<option value="jre" >Juglans regia (English walnut)</option>
+<option value="vvi" >Vitis vinifera (wine grape)</option>
+<option value="sly" >Solanum lycopersicum (tomato)</option>
+<option value="sot" >Solanum tuberosum (potato)</option>
+<option value="cann" >Capsicum annuum</option>
+<option value="nta" >Nicotiana tabacum (common tobacco)</option>
+<option value="nsy" >Nicotiana sylvestris</option>
+<option value="nto" >Nicotiana tomentosiformis</option>
+<option value="ini" >Ipomoea nil (Japanese morning glory)</option>
+<option value="sind" >Sesamum indicum (sesame)</option>
+<option value="oeu" >Olea europaea var. sylvestris (wild olive)</option>
+<option value="han" >Helianthus annuus (common sunflower)</option>
+<option value="soe" >Spinacia oleracea (spinach)</option>
+<option value="nnu" >Nelumbo nucifera (sacred lotus)</option>
+<option value="osa" >Oryza sativa japonica (Japanese rice) (RefSeq)</option>
+<option value="dosa" >Oryza sativa japonica (Japanese rice) (RAPDB)</option>
+<option value="obr" >Oryza brachyantha (malo sina)</option>
+<option value="bdi" >Brachypodium distachyon</option>
+<option value="sbi" >Sorghum bicolor (sorghum)</option>
+<option value="zma" >Zea mays (maize)</option>
+<option value="sita" >Setaria italica (foxtail millet)</option>
+<option value="pda" >Phoenix dactylifera (date palm)</option>
+<option value="egu" >Elaeis guineensis (African oil palm)</option>
+<option value="mus" >Musa acuminata (wild Malaysian banana)</option>
+<option value="dct" >Dendrobium officinale</option>
+<option value="aof" >Asparagus officinalis (garden asparagus)</option>
+<option value="atr" >Amborella trichopoda</option>
+<option value="smo" >Selaginella moellendorffii</option>
+<option value="ppp" >Physcomitrella patens subsp. patens</option>
+<option value="cre" >Chlamydomonas reinhardtii</option>
+<option value="olu" >Ostreococcus lucimarinus</option>
+<option value="ota" >Ostreococcus tauri</option>
+<option value="bpg" >Bathycoccus prasinos</option>
+<option value="mis" >Micromonas commoda</option>
+<option value="mpp" >Micromonas pusilla</option>
+<option value="csl" >Coccomyxa subellipsoidea</option>
+<option value="cvr" >Chlorella variabilis</option>
+<option value="apro" >Auxenochlorella protothecoides</option>
+<option value="cme" >Cyanidioschyzon merolae</option>
+<option value="gsl" >Galdieria sulphuraria</option>
+<option value="ccp" >Chondrus crispus (carragheen)</option>
+<option value="tps" >Thalassiosira pseudonana</option>
+<option value="vff" >Vitreoscilla filiformis</option>
+<option value="rpj" >Ralstonia pickettii DTP0602</option>
+<option value="reh" >Ralstonia eutropha H16</option>
+<option value="cnc" >Cupriavidus necator N-1</option>
+<option value="rme" >Cupriavidus metallidurans</option>
+<option value="cti" >Cupriavidus taiwanensis</option>
+<option value="cuh" >Cupriavidus sp. NH9</option>
+<option value="aka" >Advenella kashmirensis</option>
+<option value="amim" >Advenella mimigardefordensis</option>
+<option value="rfr" >Rhodoferax ferrireducens</option>
+<option value="rac" >Rhodoferax antarcticus</option>
+<option value="pna" >Polaromonas naphthalenivorans</option>
+<option value="vap" >Variovorax paradoxus S110</option>
+<option value="vpd" >Variovorax paradoxus B4</option>
+<option value="lih" >Limnohabitans sp. 63ED37-2</option>
+<option value="hyr" >Hydrogenophaga sp. RAC07</option>
+<option value="hyl" >Hydrogenophaga sp. LPB0072</option>
+<option value="cbaa" >Comamonadaceae bacterium A1</option>
+<option value="cbab" >Comamonadaceae bacterium B1</option>
+<option value="mpt" >Methylibium petroleiphilum</option>
+<option value="lch" >Leptothrix cholodnii</option>
+<option value="rge" >Rubrivivax gelatinosus</option>
+<option value="rbn" >Rubrivivax benzoatilyticus</option>
+<option value="bbag" >Burkholderiales bacterium GJ-E10</option>
+<option value="metr" >Methyloversatilis sp. RAC08</option>
+<option value="aza" >Azoarcus sp. KH32C</option>
+<option value="thu" >Thauera humireducens</option>
+<option value="thk" >Thauera sp. K11</option>
+<option value="app" >Accumulibacter phosphatis</option>
+<option value="mci" >Mesorhizobium ciceri</option>
+<option value="mop" >Mesorhizobium opportunistum</option>
+<option value="mesw" >Mesorhizobium sp. WSM1497</option>
+<option value="pht" >Phyllobacterium sp. Tri-48</option>
+<option value="bja" >Bradyrhizobium diazoefficiens USDA 110</option>
+<option value="bju" >Bradyrhizobium japonicum USDA 6</option>
+<option value="bjp" >Bradyrhizobium japonicum E109</option>
+<option value="bra" >Bradyrhizobium sp. ORS 278</option>
+<option value="bbt" >Bradyrhizobium sp. BTAi1</option>
+<option value="brs" >Bradyrhizobium sp. S23321</option>
+<option value="aol" >Bradyrhizobium oligotrophicum</option>
+<option value="brc" >Bradyrhizobium sp. CCGE-LA001</option>
+<option value="brad" >Bradyrhizobium sp. BF49</option>
+<option value="bic" >Bradyrhizobium icense</option>
+<option value="bro" >Bradyrhizobium sp. ORS 285</option>
+<option value="rpa" >Rhodopseudomonas palustris CGA009</option>
+<option value="rpb" >Rhodopseudomonas palustris HaA2</option>
+<option value="rpc" >Rhodopseudomonas palustris BisB18</option>
+<option value="rpd" >Rhodopseudomonas palustris BisB5</option>
+<option value="rpe" >Rhodopseudomonas palustris BisA53</option>
+<option value="rpt" >Rhodopseudomonas palustris TIE-1</option>
+<option value="rpx" >Rhodopseudomonas palustris DX-1</option>
+<option value="nwi" >Nitrobacter winogradskyi</option>
+<option value="nha" >Nitrobacter hamburgensis</option>
+<option value="ocg" >Oligotropha carboxidovorans OM5 (Goettingen)</option>
+<option value="oco" >Oligotropha carboxidovorans OM4</option>
+<option value="xau" >Xanthobacter autotrophicus</option>
+<option value="sno" >Starkeya novella</option>
+<option value="met" >Methylobacterium sp. 4-46</option>
+<option value="mno" >Methylobacterium nodulans</option>
+<option value="mee" >Methylobacterium sp. PR1016A</option>
+<option value="rva" >Rhodomicrobium vannielii</option>
+<option value="deq" >Devosia sp. H5989</option>
+<option value="bvr" >Blastochloris viridis</option>
+<option value="hdi" >Hartmannibacter diazotrophicus</option>
+<option value="rsp" >Rhodobacter sphaeroides 2.4.1</option>
+<option value="rsh" >Rhodobacter sphaeroides ATCC 17029</option>
+<option value="rsq" >Rhodobacter sphaeroides ATCC 17025</option>
+<option value="rsk" >Rhodobacter sphaeroides KD131</option>
+<option value="rcp" >Rhodobacter capsulatus</option>
+<option value="pde" >Paracoccus denitrificans</option>
+<option value="pye" >Paracoccus yeei</option>
+<option value="con" >Confluentimicrobium sp. EMB200-NS6</option>
+<option value="rsu" >Rhodovulum sulfidophilum</option>
+<option value="rhm" >Rhodovulum sp. MB263</option>
+<option value="rhc" >Rhodovulum sp. P5</option>
+<option value="pphr" >Pannonibacter phragmitetus</option>
+<option value="daa" >Defluviimonas alba</option>
+<option value="yan" >Yangia sp. CCB-MM3</option>
+<option value="tpro" >Thiobacimonas profunda</option>
+<option value="paby" >Pelagibaca abyssi</option>
+<option value="thw" >Thioclava nitratireducens</option>
+<option value="acr" >Acidiphilium cryptum</option>
+<option value="amv" >Acidiphilium multivorum</option>
+<option value="rru" >Rhodospirillum rubrum ATCC 11170</option>
+<option value="rrf" >Rhodospirillum rubrum F11</option>
+<option value="rce" >Rhodospirillum centenum</option>
+<option value="rpm" >Pararhodospirillum photometricum</option>
+<option value="mag" >Magnetospirillum magneticum</option>
+<option value="mgy" >Magnetospirillum gryphiswaldense</option>
+<option value="magx" >Magnetospirillum sp. XM-1</option>
+<option value="magn" >Magnetospirillum sp. ME-1</option>
+<option value="ali" >Azospirillum lipoferum</option>
+<option value="ati" >Azospirillum thiophilum</option>
+<option value="magq" >Magnetospira sp. QH-2</option>
+<option value="nao" >Nitrospirillum amazonense</option>
+<option value="pgv" >Polymorphum gilvum</option>
+<option value="mchi" >Mycobacterium chimaera</option>
+<option value="mll" >Mycobacterium litorale</option>
+<option value="pdx" >Pseudonocardia dioxanivorans</option>
+<option value="syn" >Synechocystis sp. PCC 6803</option>
+<option value="syz" >Synechocystis sp. PCC 6803</option>
+<option value="syy" >Synechocystis sp. PCC 6803 GT-S</option>
+<option value="syt" >Synechocystis sp. PCC 6803 GT-I</option>
+<option value="sys" >Synechocystis sp. PCC 6803 PCC-N</option>
+<option value="syq" >Synechocystis sp. PCC 6803 PCC-P</option>
+<option value="syj" >Synechocystis sp. PCC 6714</option>
+<option value="syw" >Synechococcus sp. WH8102</option>
+<option value="syc" >Synechococcus elongatus PCC6301</option>
+<option value="syf" >Synechococcus elongatus PCC7942</option>
+<option value="syd" >Synechococcus sp. CC9605</option>
+<option value="sye" >Synechococcus sp. CC9902</option>
+<option value="syg" >Synechococcus sp. CC9311</option>
+<option value="syr" >Synechococcus sp. RCC307</option>
+<option value="syx" >Synechococcus sp. WH7803</option>
+<option value="syp" >Synechococcus sp. PCC7002</option>
+<option value="cya" >Synechococcus sp. JA-3-3Ab</option>
+<option value="cyb" >Synechococcus sp. JA-2-3B'a(2-13)</option>
+<option value="syne" >Synechococcus sp. PCC 6312</option>
+<option value="synp" >Synechococcus sp. PCC 7502</option>
+<option value="synk" >Synechococcus sp. KORDI-100</option>
+<option value="synr" >Synechococcus sp. KORDI-49</option>
+<option value="synd" >Synechococcus sp. KORDI-52</option>
+<option value="syu" >Synechococcus sp. UTEX 2973</option>
+<option value="syh" >Synechococcus sp. WH 8109</option>
+<option value="synw" >Synechococcus sp. WH 8103</option>
+<option value="tel" >Thermosynechococcus elongatus</option>
+<option value="cgc" >Cyanobium gracile</option>
+<option value="cyi" >Cyanobium sp. NIES-981</option>
+<option value="dsl" >Dactylococcopsis salina</option>
+<option value="cmp" >Chamaesiphon minutus</option>
+<option value="lep" >Leptolyngbya sp. PCC 7376</option>
+<option value="len" >Leptolyngbya sp. NIES-3755</option>
+<option value="let" >Leptolyngbya sp. O-77</option>
+<option value="lbo" >Leptolyngbya boryana</option>
+<option value="hhg" >Halomicronema hongdechloris</option>
+<option value="pseu" >Pseudanabaena sp. PCC 7367</option>
+<option value="pma" >Prochlorococcus marinus SS120</option>
+<option value="pmm" >Prochlorococcus marinus MED4</option>
+<option value="pmt" >Prochlorococcus marinus MIT 9313</option>
+<option value="pmn" >Prochlorococcus marinus NATL2A</option>
+<option value="pmi" >Prochlorococcus marinus MIT 9312</option>
+<option value="pmb" >Prochlorococcus marinus AS9601</option>
+<option value="pmc" >Prochlorococcus marinus MIT 9515</option>
+<option value="pmf" >Prochlorococcus marinus MIT 9303</option>
+<option value="pmg" >Prochlorococcus marinus MIT 9301</option>
+<option value="pmh" >Prochlorococcus marinus MIT 9215</option>
+<option value="pmj" >Prochlorococcus marinus MIT 9211</option>
+<option value="pme" >Prochlorococcus marinus NATL1A</option>
+<option value="prc" >Prochlorococcus sp. MIT 0604</option>
+<option value="prm" >Prochlorococcus sp. MIT 0801</option>
+<option value="amr" >Acaryochloris marina</option>
+<option value="mar" >Microcystis aeruginosa</option>
+<option value="mpk" >Microcystis panniformis</option>
+<option value="can" >Cyanobacterium aponinum</option>
+<option value="csn" >Cyanobacterium stanieri</option>
+<option value="cyl" >Cyanobacterium sp. HL-69</option>
+<option value="hao" >Halothece sp. PCC 7418</option>
+<option value="cwa" >Crocosphaera watsonii</option>
+<option value="glp" >Gloeocapsa sp. PCC 7428</option>
+<option value="gen" >Geminocystis sp. NIES-3709</option>
+<option value="gee" >Geminocystis sp. NIES-3708</option>
+<option value="chon" >Chondrocystis sp. NIES-4102</option>
+<option value="cyt" >Cyanothece sp. ATCC 51142</option>
+<option value="cyp" >Cyanothece sp. PCC 8801</option>
+<option value="cyc" >Cyanothece sp. PCC 7424</option>
+<option value="cyn" >Cyanothece sp. PCC 7425</option>
+<option value="cyh" >Cyanothece sp. PCC 8802</option>
+<option value="cyj" >Cyanothece sp. PCC 7822</option>
+<option value="ter" >Trichodesmium erythraeum</option>
+<option value="mic" >Microcoleus sp. PCC 7113</option>
+<option value="arp" >Arthrospira platensis</option>
+<option value="gei" >Geitlerinema sp. PCC 7407</option>
+<option value="oac" >Oscillatoria acuminata</option>
+<option value="oni" >Oscillatoria nigro-viridis</option>
+<option value="mpro" >Moorea producens</option>
+<option value="cep" >Crinalium epipsammum</option>
+<option value="gvi" >Gloeobacter violaceus</option>
+<option value="glj" >Gloeobacter kilaueensis</option>
+<option value="ana" >Nostoc sp. PCC 7120</option>
+<option value="npu" >Nostoc punctiforme</option>
+<option value="nos" >Nostoc sp. PCC 7107</option>
+<option value="nop" >Nostoc sp. PCC 7524</option>
+<option value="non" >Nostoc sp. NIES-3756</option>
+<option value="nfl" >Nostoc flagelliforme</option>
+<option value="noe" >Nostoc sp. CENA543</option>
+<option value="ava" >Trichormus variabilis</option>
+<option value="naz" >'Nostoc azollae' 0708</option>
+<option value="anb" >Anabaena sp. 90</option>
+<option value="acy" >Anabaena cylindrica</option>
+<option value="awa" >Anabaena sp. wa102</option>
+<option value="csg" >Cylindrospermum stagnale</option>
+<option value="calo" >Calothrix sp. PCC 7507</option>
+<option value="calt" >Calothrix sp. PCC 6303</option>
+<option value="calh" >Calothrix sp. 336/3</option>
+<option value="riv" >Rivularia sp. PCC 7116</option>
+<option value="fis" >Fischerella sp. NIES-3754</option>
+<option value="ncn" >Nostocales cyanobacterium HT-58-2</option>
+<option value="cthe" >Chroococcidiopsis thermalis</option>
+<option value="plp" >Pleurocapsa sp. PCC 7327</option>
+<option value="scs" >Stanieria cyanosphaera</option>
+<option value="stan" >Stanieria sp. NIES-3757</option>
+
+</select>
+<input type="submit" value="Go">
+</div>
+
+<table cellpadding="10">
+ <tr>
+  <td><img src="/tmp/pathway_thumbnail/ko_M00165.png?1521114543" usemap="#module" border="0" alt="MODULE IMAGE"></td>
+  
+  <td><img src="/tmp/pathway_thumbnail/M00165_reaction.png?1521114543" usemap="#reaction" border="0" alt="MODULE-REACTION IMAGE"></td>
+  
+ </tr>
+</table>
+<map id="module" name="module">
+<area shape="rect" id="node1_0" href="http://www.kegg.jp/dbget-bin/www_bget?K00855" title="K00855 (PRK)" alt="" coords="171,19,245,41"/>
+<area shape="rect" id="node2_1" href="http://www.kegg.jp/dbget-bin/www_bget?K01601" title="K01601 (rbcL)" alt="" coords="171,69,245,92"/>
+<area shape="rect" id="node2_2" href="http://www.kegg.jp/dbget-bin/www_bget?K01602" title="K01602 (rbcS)" alt="" coords="171,92,245,115"/>
+<area shape="rect" id="node3_3" href="http://www.kegg.jp/dbget-bin/www_bget?K00927" title="K00927 (PGK)" alt="" coords="171,144,245,167"/>
+<area shape="rect" id="node4_4" href="http://www.kegg.jp/dbget-bin/www_bget?K05298" title="K05298 (GAPA)" alt="" coords="94,203,167,225"/>
+<area shape="rect" id="node4_5" href="http://www.kegg.jp/dbget-bin/www_bget?K00150" title="K00150 (gap2)" alt="" coords="171,203,245,225"/>
+<area shape="rect" id="node4_6" href="http://www.kegg.jp/dbget-bin/www_bget?K00134" title="K00134 (GAPDH)" alt="" coords="249,203,322,225"/>
+<area shape="rect" id="node5_7" href="http://www.kegg.jp/dbget-bin/www_bget?K01623" title="K01623 (ALDO)" alt="" coords="133,261,206,284"/>
+<area shape="rect" id="node5_8" href="http://www.kegg.jp/dbget-bin/www_bget?K01624" title="K01624 (FBA)" alt="" coords="210,261,283,284"/>
+<area shape="rect" id="node6_9" href="http://www.kegg.jp/dbget-bin/www_bget?K03841" title="K03841 (FBP)" alt="" coords="17,320,90,343"/>
+<area shape="rect" id="node6_10" href="http://www.kegg.jp/dbget-bin/www_bget?K02446" title="K02446 (glpX)" alt="" coords="94,320,167,343"/>
+<area shape="rect" id="node6_11" href="http://www.kegg.jp/dbget-bin/www_bget?K11532" title="K11532 (glpX&#45;SEBP)" alt="" coords="171,320,245,343"/>
+<area shape="rect" id="node6_12" href="http://www.kegg.jp/dbget-bin/www_bget?K01086" title="K01086 (fbp&#45;SEBP)" alt="" coords="249,320,322,343"/>
+<area shape="rect" id="node6_13" href="http://www.kegg.jp/dbget-bin/www_bget?K04041" title="K04041 (fbp3)" alt="" coords="326,320,399,343"/>
+<area shape="rect" id="node7_14" href="http://www.kegg.jp/dbget-bin/www_bget?K00615" title="K00615 (E2.2.1.1)" alt="" coords="171,379,245,401"/>
+<area shape="rect" id="node8_15" href="http://www.kegg.jp/dbget-bin/www_bget?K01623" title="K01623 (ALDO)" alt="" coords="133,437,206,460"/>
+<area shape="rect" id="node8_16" href="http://www.kegg.jp/dbget-bin/www_bget?K01624" title="K01624 (FBA)" alt="" coords="210,437,283,460"/>
+<area shape="rect" id="node9_17" href="http://www.kegg.jp/dbget-bin/www_bget?K01100" title="K01100 (E3.1.3.37)" alt="" coords="94,496,167,519"/>
+<area shape="rect" id="node9_18" href="http://www.kegg.jp/dbget-bin/www_bget?K11532" title="K11532 (glpX&#45;SEBP)" alt="" coords="171,496,245,519"/>
+<area shape="rect" id="node9_19" href="http://www.kegg.jp/dbget-bin/www_bget?K01086" title="K01086 (fbp&#45;SEBP)" alt="" coords="249,496,322,519"/>
+<area shape="rect" id="node10_20" href="http://www.kegg.jp/dbget-bin/www_bget?K00615" title="K00615 (E2.2.1.1)" alt="" coords="171,555,245,577"/>
+<area shape="rect" id="node11_21" href="http://www.kegg.jp/dbget-bin/www_bget?K01807" title="K01807 (rpiA)" alt="" coords="133,613,206,636"/>
+<area shape="rect" id="node11_22" href="http://www.kegg.jp/dbget-bin/www_bget?K01808" title="K01808 (rpiB)" alt="" coords="210,613,283,636"/>
+</map>
+
+<map id="reaction" name="reaction">
+<area shape="poly" id="node1" href="/dbget-bin/www_bget?C00199" title="C00199 (D&#45;Ribulose 5&#45;phosphate)" alt="" coords="190,29,188,22,183,15,175,10,165,7,153,5,142,7,131,10,123,15,118,22,116,29,118,37,123,43,131,49,142,52,153,53,165,52,175,49,183,43,188,37" onmouseover="popupTimer(&quot;C00199&quot;, &quot;C00199 (D&#45;Ribulose 5&#45;phosphate)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node2" href="/dbget-bin/www_bget?R01523" title="R01523" alt="" coords="53,83,130,105"/>
+<area shape="poly" id="node3" href="/dbget-bin/www_bget?C01182" title="C01182 (D&#45;Ribulose 1,5&#45;bisphosphate)" alt="" coords="79,159,78,151,72,145,64,139,54,136,42,135,31,136,21,139,12,145,7,151,5,159,7,166,12,173,21,178,31,181,42,183,54,181,64,178,72,173,78,166" onmouseover="popupTimer(&quot;C01182&quot;, &quot;C01182 (D&#45;Ribulose 1,5&#45;bisphosphate)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node4" href="/dbget-bin/www_bget?R00024" title="R00024" alt="" coords="69,212,146,235"/>
+<area shape="poly" id="node6" href="/dbget-bin/www_bget?C00197" title="C00197 (3&#45;Phospho&#45;D&#45;glycerate)" alt="" coords="145,288,143,281,138,274,130,269,119,265,108,264,96,265,86,269,78,274,72,281,71,288,72,295,78,302,86,307,96,311,108,312,119,311,130,307,138,302,143,295" onmouseover="popupTimer(&quot;C00197&quot;, &quot;C00197 (3&#45;Phospho&#45;D&#45;glycerate)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="poly" id="node5" href="/dbget-bin/www_bget?C00011" title="C00011 (CO2)" alt="" coords="178,159,176,151,171,145,163,139,153,136,141,135,130,136,119,139,111,145,106,151,104,159,106,166,111,173,119,178,130,181,141,183,153,181,163,178,171,173,176,166" onmouseover="popupTimer(&quot;C00011&quot;, &quot;C00011 (CO2)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node7" href="/dbget-bin/www_bget?R01512" title="R01512" alt="" coords="69,341,146,364"/>
+<area shape="poly" id="node8" href="/dbget-bin/www_bget?C00236" title="C00236 (3&#45;Phospho&#45;D&#45;glyceroyl phosphate)" alt="" coords="144,417,142,410,137,403,129,398,119,395,108,393,97,395,86,398,78,403,73,410,71,417,73,425,78,431,86,437,97,440,108,441,119,440,129,437,137,431,142,425" onmouseover="popupTimer(&quot;C00236&quot;, &quot;C00236 (3&#45;Phospho&#45;D&#45;glyceroyl phosphate)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node9_0" href="/dbget-bin/www_bget?R01061" title="R01061" alt="" coords="48,481,108,508"/>
+<area shape="rect" id="node9_1" href="/dbget-bin/www_bget?R01063" title="R01063" alt="" coords="108,481,168,508"/>
+<area shape="poly" id="node10" href="/dbget-bin/www_bget?C00118" title="C00118 (D&#45;Glyceraldehyde 3&#45;phosphate)" alt="" coords="153,572,151,565,146,558,138,553,127,549,116,548,104,549,94,553,86,558,80,565,79,572,80,579,86,586,94,591,104,595,116,596,127,595,138,591,146,586,151,579" onmouseover="popupTimer(&quot;C00118&quot;, &quot;C00118 (D&#45;Glyceraldehyde 3&#45;phosphate)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node11" href="/dbget-bin/www_bget?R01068" title="R01068" alt="" coords="93,625,170,648"/>
+<area shape="poly" id="node12" href="/dbget-bin/www_bget?C00354" title="C00354 (D&#45;Fructose 1,6&#45;bisphosphate)" alt="" coords="172,701,170,694,165,687,157,682,146,679,134,677,123,679,112,682,104,687,98,694,97,701,98,709,104,715,112,721,123,724,134,725,146,724,157,721,165,715,170,709" onmouseover="popupTimer(&quot;C00354&quot;, &quot;C00354 (D&#45;Fructose 1,6&#45;bisphosphate)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node13" href="/dbget-bin/www_bget?R00762" title="R00762" alt="" coords="100,755,177,777"/>
+<area shape="poly" id="node14" href="/dbget-bin/www_bget?C00085" title="C00085 (D&#45;Fructose 6&#45;phosphate)" alt="" coords="178,831,176,823,170,817,162,811,151,808,140,807,128,808,117,811,109,817,104,823,102,831,104,838,109,845,117,850,128,853,140,855,151,853,162,850,170,845,176,838" onmouseover="popupTimer(&quot;C00085&quot;, &quot;C00085 (D&#45;Fructose 6&#45;phosphate)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node15" href="/dbget-bin/www_bget?R01067" title="R01067" alt="" coords="101,884,178,907"/>
+<area shape="poly" id="node16" href="/dbget-bin/www_bget?C00279" title="C00279 (D&#45;Erythrose 4&#45;phosphate)" alt="" coords="177,960,175,953,170,946,162,941,151,937,140,936,128,937,118,941,110,946,104,953,103,960,104,967,110,974,118,979,128,983,140,984,151,983,162,979,170,974,175,967" onmouseover="popupTimer(&quot;C00279&quot;, &quot;C00279 (D&#45;Erythrose 4&#45;phosphate)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node17" href="/dbget-bin/www_bget?R01829" title="R01829" alt="" coords="101,1013,178,1036"/>
+<area shape="poly" id="node18" href="/dbget-bin/www_bget?C00447" title="C00447 (Sedoheptulose 1,7&#45;bisphosphate)" alt="" coords="177,1089,175,1082,170,1075,162,1070,151,1067,140,1065,128,1067,118,1070,110,1075,104,1082,103,1089,104,1097,110,1103,118,1109,128,1112,140,1113,151,1112,162,1109,170,1103,175,1097" onmouseover="popupTimer(&quot;C00447&quot;, &quot;C00447 (Sedoheptulose 1,7&#45;bisphosphate)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node19" href="/dbget-bin/www_bget?R01845" title="R01845" alt="" coords="101,1143,178,1165"/>
+<area shape="poly" id="node20" href="/dbget-bin/www_bget?C05382" title="C05382 (Sedoheptulose 7&#45;phosphate)" alt="" coords="178,1219,176,1211,170,1205,162,1199,151,1196,140,1195,128,1196,117,1199,109,1205,104,1211,102,1219,104,1226,109,1233,117,1238,128,1241,140,1243,151,1241,162,1238,170,1233,176,1226" onmouseover="popupTimer(&quot;C05382&quot;, &quot;C05382 (Sedoheptulose 7&#45;phosphate)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node21" href="/dbget-bin/www_bget?R01641" title="R01641" alt="" coords="101,1272,178,1295"/>
+<area shape="poly" id="node22" href="/dbget-bin/www_bget?C00117" title="C00117 (D&#45;Ribose 5&#45;phosphate)" alt="" coords="178,1348,176,1341,171,1334,163,1329,153,1325,141,1324,130,1325,119,1329,111,1334,106,1341,104,1348,106,1355,111,1362,119,1367,130,1371,141,1372,153,1371,163,1367,171,1362,176,1355" onmouseover="popupTimer(&quot;C00117&quot;, &quot;C00117 (D&#45;Ribose 5&#45;phosphate)&quot;, &quot;#ffffff&quot;)" onmouseout="hideMapTn()" />
+<area shape="rect" id="node23" href="/dbget-bin/www_bget?R01056" title="R01056" alt="" coords="140,1401,217,1424"/>
+</map>
+</div>
+
+</form>
+<form name="taxonomy" method="post" action="/kegg-bin/get_htext">
+ <input type="hidden" name="htext" value="br08601.keg">
+ <input type="hidden" name="option" value="-a">
+ <input type="hidden" name="query" value="ath aly crb csat eus bna thj cpap cit tcc gra ghi dzi egr gmx pvu vra var ccaj mtr cam aip lja fve pper pmum mdm zju csv cmo cmax cmos rcu jcu hbr pop jre vvi sly sot cann nta nsy nto ini sind oeu han soe nnu osa dosa obr bdi sbi zma sita pda egu mus dct aof atr smo ppp cre olu ota bpg mis mpp csl cvr apro cme gsl ccp tps vff rpj reh cnc rme cti cuh aka amim rfr rac pna vap vpd lih hyr hyl cbaa cbab mpt lch rge rbn bbag metr aza thu thk app mci mop mesw pht bja bju bjp bra bbt brs aol brc brad bic bro rpa rpb rpc rpd rpe rpt rpx nwi nha ocg oco xau sno met mno mee rva deq bvr hdi rsp rsh rsq rsk rcp pde pye con rsu rhm rhc pphr daa yan tpro paby thw acr amv rru rrf rce rpm mag mgy magx magn ali ati magq nao pgv mchi mll pdx syn syz syy syt sys syq syj syw syc syf syd sye syg syr syx syp cya cyb syne synp synk synr synd syu syh synw tel cgc cyi dsl cmp lep len let lbo hhg pseu pma pmm pmt pmn pmi pmb pmc pmf pmg pmh pmj pme prc prm amr mar mpk can csn cyl hao cwa glp gen gee chon cyt cyp cyc cyn cyh cyj ter mic arp gei oac oni mpro cep gvi glj ana npu nos nop non nfl noe ava naz anb acy awa csg calo calt calh riv fis ncn cthe plp scs stan">
+</form>
+<div id="poplay" class="poplay"></div>
+</body>
+</html>

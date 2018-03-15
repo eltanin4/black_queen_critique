@@ -1,0 +1,121 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00076'>M00076</a></td>
+ <td>Dermatan sulfate degradation</td>
+ <!--td>Dermatan sulfate degradation</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K01136' target='_blank'>K01136</a></td>
+    <td>IDS; iduronate 2-sulfatase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:3.1.6.13">3.1.6.13</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K01217' target='_blank'>K01217</a></td>
+    <td>IDUA; L-iduronidase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:3.2.1.76">3.2.1.76</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K01135' target='_blank'>K01135</a></td>
+    <td>ARSB; arylsulfatase B [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:3.1.6.12">3.1.6.12</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K01197' target='_blank'>K01197</a></td>
+    <td>hya; hyaluronoglucosaminidase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:3.2.1.35">3.2.1.35</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K01195' target='_blank'>K01195</a></td>
+    <td>uidA, GUSB; beta-glucuronidase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:3.2.1.31">3.2.1.31</a>]</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00426' target='_blank'>C00426</a></td>
+    <td>Dermatan sulfate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?G13041' target='_blank'>G13041</a></td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?G13042' target='_blank'>G13042</a></td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?G12336' target='_blank'>G12336</a></td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?G13043' target='_blank'>G13043</a></td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?G00872' target='_blank'>G00872</a></td>
+    <td>DWA-2</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

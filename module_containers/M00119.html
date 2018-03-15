@@ -1,0 +1,131 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00119'>M00119</a></td>
+ <td>Pantothenate biosynthesis, valine/L-aspartate =&gt; pantothenate</td>
+ <!--td>Pantothenate biosynthesis, valine/L-aspartate =&gt; pantothenate</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00826' target='_blank'>K00826</a></td>
+    <td>E2.6.1.42, ilvE; branched-chain amino acid aminotransferase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.6.1.42">2.6.1.42</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00606' target='_blank'>K00606</a></td>
+    <td>panB; 3-methyl-2-oxobutanoate hydroxymethyltransferase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.1.2.11">2.1.2.11</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00077' target='_blank'>K00077</a></td>
+    <td>panE, apbA; 2-dehydropantoate 2-reductase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.1.1.169">1.1.1.169</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K01579' target='_blank'>K01579</a></td>
+    <td>panD; aspartate 1-decarboxylase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:4.1.1.11">4.1.1.11</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K01918' target='_blank'>K01918</a></td>
+    <td>panC; pantoate--beta-alanine ligase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:6.3.2.1">6.3.2.1</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K13799' target='_blank'>K13799</a></td>
+    <td>panC-cmk; pantoate ligase / CMP/dCMP kinase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:6.3.2.1">6.3.2.1</a> <a target="_blank" href="/dbget-bin/www_bget?ec:2.7.4.25">2.7.4.25</a>]</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00183' target='_blank'>C00183</a></td>
+    <td>L-Valine</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00141' target='_blank'>C00141</a></td>
+    <td>3-Methyl-2-oxobutanoic acid</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00966' target='_blank'>C00966</a></td>
+    <td>2-Dehydropantoate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00522' target='_blank'>C00522</a></td>
+    <td>(R)-Pantoate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00049' target='_blank'>C00049</a></td>
+    <td>L-Aspartate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00099' target='_blank'>C00099</a></td>
+    <td>beta-Alanine</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00864' target='_blank'>C00864</a></td>
+    <td>Pantothenate</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00358'>M00358</a></td>
+ <td>Coenzyme M biosynthesis</td>
+ <!--td>Coenzyme M biosynthesis</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K08097' target='_blank'>K08097</a></td>
+    <td>comA; phosphosulfolactate synthase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:4.4.1.19">4.4.1.19</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K05979' target='_blank'>K05979</a></td>
+    <td>comB; 2-phosphosulfolactate phosphatase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:3.1.3.71">3.1.3.71</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K05884' target='_blank'>K05884</a></td>
+    <td>comC; L-2-hydroxycarboxylate dehydrogenase (NAD+) [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.1.1.337">1.1.1.337</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K13039' target='_blank'>K13039</a></td>
+    <td>comE; sulfopyruvate decarboxylase subunit beta [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:4.1.1.79">4.1.1.79</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K06034' target='_blank'>K06034</a></td>
+    <td>comD; sulfopyruvate decarboxylase subunit alpha [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:4.1.1.79">4.1.1.79</a>]</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00074' target='_blank'>C00074</a></td>
+    <td>Phosphoenolpyruvate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C11536' target='_blank'>C11536</a></td>
+    <td>(2R)-O-Phospho-3-sulfolactate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C11537' target='_blank'>C11537</a></td>
+    <td>(2R)-3-Sulfolactate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C05528' target='_blank'>C05528</a></td>
+    <td>3-Sulfopyruvate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00593' target='_blank'>C00593</a></td>
+    <td>Sulfoacetaldehyde</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C03576' target='_blank'>C03576</a></td>
+    <td>2-Mercaptoethanesulfonate</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

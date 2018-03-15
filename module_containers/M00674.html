@@ -1,0 +1,126 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00674'>M00674</a></td>
+ <td>Clavaminate biosynthesis, arginine + glyceraldehyde-3P =&gt; clavaminate</td>
+ <!--td>Clavaminate biosynthesis, arginine + glyceraldehyde-3P =&gt; clavaminate</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K12673' target='_blank'>K12673</a></td>
+    <td>ceaS; N2-(2-carboxyethyl)arginine synthase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.5.1.66">2.5.1.66</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K12674' target='_blank'>K12674</a></td>
+    <td>bls; (carboxyethyl)arginine beta-lactam-synthase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:6.3.3.4">6.3.3.4</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K12675' target='_blank'>K12675</a></td>
+    <td>cs; clavaminate synthase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.14.11.21">1.14.11.21</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K12676' target='_blank'>K12676</a></td>
+    <td>pah; proclavaminate amidinohydrolase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:3.5.3.22">3.5.3.22</a>]</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00062' target='_blank'>C00062</a></td>
+    <td>L-Arginine</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00118' target='_blank'>C00118</a></td>
+    <td>D-Glyceraldehyde 3-phosphate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C06655' target='_blank'>C06655</a></td>
+    <td>L-N2-(2-Carboxyethyl)arginine</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C06656' target='_blank'>C06656</a></td>
+    <td>Deoxyguanidinoproclavaminic acid</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C06657' target='_blank'>C06657</a></td>
+    <td>Guanidinoproclavaminic acid</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C06658' target='_blank'>C06658</a></td>
+    <td>Proclavaminic acid</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C06659' target='_blank'>C06659</a></td>
+    <td>Dihydroclavaminic acid</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C06660' target='_blank'>C06660</a></td>
+    <td>Clavaminic acid</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

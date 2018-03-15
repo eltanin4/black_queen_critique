@@ -1,0 +1,131 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00828'>M00828</a></td>
+ <td>Maduropeptin beta-hydroxy acid moiety biosynthesis, tyrosine =&gt; 3-(2-chloro-3-hydroxy-4-methoxyphenyl)-3-hydroxypropanoyl-PCP</td>
+ <!--td>Maduropeptin beta-hydroxy acid moiety biosynthesis, tyrosine =&gt; 3-(2-chloro-3-hydroxy-4-methoxyphenyl)-3-hydroxypropanoyl-PCP</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K21183' target='_blank'>K21183</a></td>
+    <td>sgcC2, mdpC2, kedY2; peptidyl carrier protein</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K21181' target='_blank'>K21181</a></td>
+    <td>sgcC4, mdpC4; MIO-dependent L-tyrosine 2,3-aminomutase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:5.4.3.6">5.4.3.6</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K21182' target='_blank'>K21182</a></td>
+    <td>sgcC1, mdpC1; (S)-beta-tyrosine adenylation enzyme [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:6.2.1.-">6.2.1.-</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K21188' target='_blank'>K21188</a></td>
+    <td>mdpC7; PLP-dependent transaminase</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K16431' target='_blank'>K16431</a></td>
+    <td>cepH, sgcC3, mdpC3, kedY3; FAD-dependent halogenase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.14.19.-">1.14.19.-</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K21184' target='_blank'>K21184</a></td>
+    <td>sgcC, mdpC; two-component FAD-dependent monooxygenase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.14.14.15">1.14.14.15</a> <a target="_blank" href="/dbget-bin/www_bget?ec:1.14.14.-">1.14.14.-</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K21185' target='_blank'>K21185</a></td>
+    <td>sgcE6, mdpE6, kedE6; flavin reductase</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K21189' target='_blank'>K21189</a></td>
+    <td>mdpC6; O-methyltransferase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.1.1.-">2.1.1.-</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K21190' target='_blank'>K21190</a></td>
+    <td>mdpC8; dehydrogenase</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00082' target='_blank'>C00082</a></td>
+    <td>L-Tyrosine</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C21308' target='_blank'>C21308</a></td>
+    <td>(S)-beta-Tyrosine</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C21309' target='_blank'>C21309</a></td>
+    <td>(S)-beta-Tyrosyl-[pcp]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C21311' target='_blank'>C21311</a></td>
+    <td>3-(4-Hydroxyphenyl)-3-oxopropanoyl-[pcp]</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

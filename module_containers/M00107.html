@@ -1,0 +1,111 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00107'>M00107</a></td>
+ <td>Steroid hormone biosynthesis, cholesterol =&gt; prognenolone =&gt; progesterone</td>
+ <!--td>Steroid hormone biosynthesis, cholesterol =&gt; prognenolone =&gt; progesterone</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00498' target='_blank'>K00498</a></td>
+    <td>CYP11A; cholesterol monooxygenase (side-chain-cleaving) [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.14.15.6">1.14.15.6</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00070' target='_blank'>K00070</a></td>
+    <td>HSD3B; 3beta-hydroxy-Delta5-steroid dehydrogenase / steroid Delta-isomerase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.1.1.145">1.1.1.145</a> <a target="_blank" href="/dbget-bin/www_bget?ec:5.3.3.1">5.3.3.1</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K01822' target='_blank'>K01822</a></td>
+    <td>E5.3.3.1; steroid Delta-isomerase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:5.3.3.1">5.3.3.1</a>]</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00187' target='_blank'>C00187</a></td>
+    <td>Cholesterol</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C05500' target='_blank'>C05500</a></td>
+    <td>20alpha-Hydroxycholesterol</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C05501' target='_blank'>C05501</a></td>
+    <td>20alpha,22beta-Dihydroxycholesterol</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C05502' target='_blank'>C05502</a></td>
+    <td>22beta-Hydroxycholesterol</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C01953' target='_blank'>C01953</a></td>
+    <td>Pregnenolone</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00410' target='_blank'>C00410</a></td>
+    <td>Progesterone</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00093'>M00093</a></td>
+ <td>Phosphatidylethanolamine (PE) biosynthesis, PA =&gt; PS =&gt; PE</td>
+ <!--td>Phosphatidylethanolamine (PE) biosynthesis, PA =&gt; PS =&gt; PE</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00981' target='_blank'>K00981</a></td>
+    <td>E2.7.7.41, CDS1, CDS2, cdsA; phosphatidate cytidylyltransferase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.7.7.41">2.7.7.41</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00998' target='_blank'>K00998</a></td>
+    <td>pssA; CDP-diacylglycerol---serine O-phosphatidyltransferase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.7.8.8">2.7.8.8</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K17103' target='_blank'>K17103</a></td>
+    <td>CHO1, pssA; CDP-diacylglycerol---serine O-phosphatidyltransferase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.7.8.8">2.7.8.8</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K01613' target='_blank'>K01613</a></td>
+    <td>psd, PISD; phosphatidylserine decarboxylase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:4.1.1.65">4.1.1.65</a>]</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00416' target='_blank'>C00416</a></td>
+    <td>Phosphatidate</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00269' target='_blank'>C00269</a></td>
+    <td>CDP-diacylglycerol</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C02737' target='_blank'>C02737</a></td>
+    <td>Phosphatidylserine</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00350' target='_blank'>C00350</a></td>
+    <td>Phosphatidylethanolamine</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

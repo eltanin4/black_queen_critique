@@ -1,0 +1,141 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00774'>M00774</a></td>
+ <td>Erythromycin biosynthesis, propanoyl-CoA + methylmalonyl-CoA =&gt; deoxyerythronolide B =&gt; erythromycin A/B</td>
+ <!--td>Erythromycin biosynthesis, propanoyl-CoA + methylmalonyl-CoA =&gt; deoxyerythronolide B =&gt; erythromycin A/B</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K10817' target='_blank'>K10817</a></td>
+    <td>eryA; 6-deoxyerythronolide-B synthase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.3.1.94">2.3.1.94</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K14366' target='_blank'>K14366</a></td>
+    <td>eryF, CYP107A; 6-deoxyerythronolide B hydroxylase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.14.13.188">1.14.13.188</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K14367' target='_blank'>K14367</a></td>
+    <td>eryBV; erythronolide mycarosyltransferase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.4.1.328">2.4.1.328</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K14368' target='_blank'>K14368</a></td>
+    <td>eryCIII; 3-alpha-mycarosylerythronolide B desosaminyl transferase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.4.1.278">2.4.1.278</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K15997' target='_blank'>K15997</a></td>
+    <td>eryCII; 3-alpha-mycarosylerythronolide B desosaminyl transferase auxiliary protein</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K14370' target='_blank'>K14370</a></td>
+    <td>eryK, CYP113A; erythromycin 12 hydroxylase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.14.13.154">1.14.13.154</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K14369' target='_blank'>K14369</a></td>
+    <td>eryG; erythromycin 3''-O-methyltransferase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:2.1.1.254">2.1.1.254</a>]</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00100' target='_blank'>C00100</a></td>
+    <td>Propanoyl-CoA</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00683' target='_blank'>C00683</a></td>
+    <td>(S)-Methylmalonyl-CoA</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C03240' target='_blank'>C03240</a></td>
+    <td>6-Deoxyerythronolide B</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C06635' target='_blank'>C06635</a></td>
+    <td>Erythronolide B</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C06630' target='_blank'>C06630</a></td>
+    <td>3-O-alpha-Mycarosylerythronolide B</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C06633' target='_blank'>C06633</a></td>
+    <td>Erythromycin D</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C06616' target='_blank'>C06616</a></td>
+    <td>Erythromycin C</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C01912' target='_blank'>C01912</a></td>
+    <td>Erythromycin</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>

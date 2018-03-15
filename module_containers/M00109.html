@@ -1,0 +1,121 @@
+<html>
+<head>
+<title>KO and Compound in KEGG module</title>
+<link rel="stylesheet" type="text/css" href="/css/kegg2.css" />
+<script language="javascript">
+<!--
+function display(id){
+	var status = document.getElementById(id).style.display;	
+	var title = id + "_title";
+	if(status == 'none'){
+		document.getElementById(id).style.display = 'inline';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/open.png\' border=0>';
+	}else{
+		document.getElementById(id).style.display = 'none';
+		document.getElementById(title).innerHTML = '<img class=\'arrowimg\' src=\'/Fig/get_htext/close.png\' border=0>';
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<h3 class="title50">KO and Compound in KEGG module</h3>
+<div align="right"><form><input type="button" value="Close" onClick="javascript:window.close()" /></form></div>
+<hr class="frame5">
+<b>KEGG module</b>
+<br>
+<table>
+ <tr valign="top">
+ <td><a target="_blank" href='/dbget-bin/www_bget?md:M00109'>M00109</a></td>
+ <td>C21-Steroid hormone biosynthesis, progesterone =&gt; cortisol/cortisone</td>
+ <!--td>C21-Steroid hormone biosynthesis, progesterone =&gt; cortisol/cortisone</td-->
+ </tr>
+</table>
+<br />
+<a href="javascript:display('ko')">&nbsp;<div id="ko_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;KO list</a><br />
+<div id="ko" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+  <tr>
+    <th align="left">KO</th>
+    <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00512' target='_blank'>K00512</a></td>
+    <td>CYP17A; steroid 17alpha-monooxygenase / 17alpha-hydroxyprogesterone deacetylase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.14.14.19">1.14.14.19</a> <a target="_blank" href="/dbget-bin/www_bget?ec:1.14.14.32">1.14.14.32</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00513' target='_blank'>K00513</a></td>
+    <td>CYP21A; steroid 21-monooxygenase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.14.14.16">1.14.14.16</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00497' target='_blank'>K00497</a></td>
+    <td>CYP11B1; steroid 11beta-monooxygenase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.14.15.4">1.14.15.4</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K07433' target='_blank'>K07433</a></td>
+    <td>CYP11B2; steroid 11beta-monooxygenase / corticosterone 18-monooxygenase [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.14.15.4">1.14.15.4</a> <a target="_blank" href="/dbget-bin/www_bget?ec:1.14.15.5">1.14.15.5</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K00071' target='_blank'>K00071</a></td>
+    <td>HSD11B2; corticosteroid 11-beta-dehydrogenase isozyme 2 [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.1.1.-">1.1.1.-</a>]</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?K15680' target='_blank'>K15680</a></td>
+    <td>HSD11B1; corticosteroid 11-beta-dehydrogenase isozyme 1 [EC:<a target="_blank" href="/dbget-bin/www_bget?ec:1.1.1.146">1.1.1.146</a>]</td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+<br /><a href="javascript:display('cpd')">&nbsp;<div id="cpd_title" style="display:inline"><img class='arrowimg' src='/Fig/get_htext/close.png' border=0></div>&nbsp;Compound list</a>
+<br />
+
+<div id="cpd" class="table" style="display:none">
+<table class="frame5" border="1" cellpadding="2">
+
+  <tr>
+  <th align="left">Compound</th>
+  <th align="left">Name</th>
+  </tr>
+
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00410' target='_blank'>C00410</a></td>
+    <td>Progesterone</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C01176' target='_blank'>C01176</a></td>
+    <td>17alpha-Hydroxyprogesterone</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C05488' target='_blank'>C05488</a></td>
+    <td>11-Deoxycortisol</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00735' target='_blank'>C00735</a></td>
+    <td>Cortisol</td>
+  </tr>
+
+  <tr>
+    <td><a href='/dbget-bin/www_bget?C00762' target='_blank'>C00762</a></td>
+    <td>Cortisone</td>
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>
