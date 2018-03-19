@@ -1,6 +1,6 @@
 from ete3 import Tree
 import numpy as np
-from setup_gloome_njs16 import isIndDict, genotype_dict, good_indices
+from setup_gloome_param_files import isIndDict, genotype_dict, good_indices
 import pandas as pd
 from uniqify import uniqify
 from unlistify import unlistify
@@ -10,7 +10,7 @@ import pickle
 # Getting the tree with internal nodes from gainLoss' ancestral reconstruction.
 # Internal nodes are labeled with 'Nx' where x is a number, the root being
 # '[N1]' and then the numbers increase.
-ancTree_njs16 = Tree( 'njs16_gainLoss_results/RESULTS/TheTree.INodes.ph', format=1 )
+ancTree_njs16 = Tree( 'full_proks_gainLoss_results/TheTree.INodes.ph', format=1 )
 
 # To print the tree.
 print(ancTree_njs16.get_ascii(show_internal=True))
@@ -50,7 +50,7 @@ markNode( ancTree_njs16, root )
 
 # Reading the gainLoss ancestral reconstructions.
 anc_recon_table = pd.read_table( 
-                  'njs16_gainLoss_results/RESULTS/AncestralReconstructPosterior.txt' )
+                  'full_proks_gainLoss_results/AncestralReconstructPosterior.txt' )
 
 # Now to try the alternate 'probability' based way to infer gains and losses 
 # (as in Press et. al., Gen. Res. 2016).
@@ -70,8 +70,7 @@ for thisNode in nodes:
         thisNode.add_feature( 'genotype', reconAncestor( anc_recon_table, thisNode ) )
 
 
-njs16_geneDict = pickle.load( open( 'dict_njs16_gene.dat', 'rb' ) )
-gene_ids = sorted( uniqify( unlistify( list( njs16_geneDict.values() ) ) ) )
+gene_ids = sorted( uniqify( unlistify( list( geneDict.values() ) ) ) )
 gene_ids = list( np.array( gene_ids )[ good_indices ] )
 
 # Using first ancestral genotype inference method to calculate gains and losses.
@@ -98,18 +97,6 @@ def giveGainsAndLosses( parent, child ):
     
     return gainGenes, lostGenes
 
-# Now traversing the tree and inferring each branch's transitions.
-ind_to_dep_list, ind_to_ind_list, dep_to_dep_list = [], [], []
-for thisNode in nodes:
-    for thisChild in thisNode.children:
-        if thisNode.isInd and thisChild.isInd:
-            ind_to_ind_list.append( giveGainsAndLosses( thisNode, thisChild ) )
-        elif not thisNode.isInd and not thisChild.isInd:
-            dep_to_dep_list.append( giveGainsAndLosses( thisNode, thisChild ) )
-        elif thisNode.isInd and not thisChild.isInd:
-            print( thisNode.name, thisChild.name )
-            ind_to_dep_list.append( giveGainsAndLosses( thisNode, thisChild ) )
-
 # Getting gain to loss ratios for each group.
 def giveGLRatio( transitionSet ):
     glRatios = []
@@ -121,9 +108,67 @@ def giveGLRatio( transitionSet ):
 
     return glRatios
 
-# import matplotlib.pyplot as plt
-# fig, ax = plt.subplots(1)
-# plt.hist( giveGLRatio( ind_to_dep_list ), color='dodgerblue' )
-# plt.hist( giveGLRatio( dep_to_dep_list ), color='mediumseagreen' )
-# plt.hist( giveGLRatio( dep_to_dep_list ), color='firebrick' )
-# plt.show()
+# Now traversing the tree and inferring each branch's transitions.
+ind_to_dep_GLS, ind_to_ind_GLS, dep_to_dep_GLS = [], [], []
+ind_to_dep_list, ind_to_ind_list, dep_to_dep_list = [], [], []
+for thisNode in nodes:
+    for thisChild in thisNode.children:
+        if thisNode.isInd and thisChild.isInd:
+            ind_to_ind_list.append( [ thisNode, thisChild ] )
+            ind_to_ind_GLS.append( giveGainsAndLosses( thisNode, thisChild ) )
+        elif not thisNode.isInd and not thisChild.isInd:
+            dep_to_dep_list.append( [ thisNode, thisChild ] )
+            dep_to_dep_GLS.append( giveGainsAndLosses( thisNode, thisChild ) )
+        elif thisNode.isInd and not thisChild.isInd:
+            print( thisNode.name, thisChild.name )
+            ind_to_dep_list.append( [ thisNode, thisChild ] )
+            ind_to_dep_GLS.append( giveGainsAndLosses( thisNode, thisChild ) )
+
+# Saved ind_to_dep_list as a pickle object.
+# Going down subsequent branches of transiting origins and measure gain/loss retention.
+num_retain_trans_list, num_retain_control_list = [], []
+prob_retain_trans, prob_retain_control = [], []
+for tI, thisTrans in enumerate( ind_to_dep_list ):
+    # Getting the gained genes list for this transition.
+    gainsSet = ind_to_dep_GLS[ tI ][ 0 ]
+    if not gainsSet:
+        num_retain_trans_list.append( 0.0 )
+        prob_retain_trans.append( 0.0 )
+        continue
+
+    for thisChild in thisTrans[1].children:
+        thisChildRxns = set( np.nonzero( np.multiply( thisChild.genotype, gene_ids ) )[0] )
+        retainedSet = thisChildRxns & gainsSet
+        num_retain_trans = len( retainedSet )
+        num_retain_trans_list.append( num_retain_trans )
+        prob_retain_trans.append( num_retain_trans / len( gainsSet ) )
+
+for tI, thisTrans in enumerate( ind_to_ind_list ):
+    # Getting the gained genes list for this transition.
+    gainsSet = ind_to_ind_GLS[ tI ][ 0 ]
+    if not gainsSet:
+        num_retain_control_list.append( 0.0 )
+        prob_retain_control.append( 0.0 )
+        continue
+
+    for thisChild in thisTrans[1].children:
+        thisChildRxns = set( np.nonzero( np.multiply( thisChild.genotype, gene_ids ) )[0] )
+        retainedSet = thisChildRxns & gainsSet
+        num_retain_control = len( retainedSet )
+        num_retain_control_list.append( num_retain_control )
+        prob_retain_control.append( num_retain_control / len( gainsSet ) )
+
+for tI, thisTrans in enumerate( dep_to_dep_list ):
+    # Getting the gained genes list for this transition.
+    gainsSet = dep_to_dep_GLS[ tI ][ 0 ]
+    if not gainsSet:
+        num_retain_control_list.append( 0.0 )
+        prob_retain_control.append( 0.0 )
+        continue
+
+    for thisChild in thisTrans[1].children:
+        thisChildRxns = set( np.nonzero( np.multiply( thisChild.genotype, gene_ids ) )[0] )
+        retainedSet = thisChildRxns & gainsSet
+        num_retain_control = len( retainedSet )
+        num_retain_control_list.append( num_retain_control )
+        prob_retain_control.append( num_retain_control / len( gainsSet ) )
