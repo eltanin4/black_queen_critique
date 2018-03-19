@@ -1,6 +1,6 @@
 from ete3 import Tree
 import numpy as np
-from setup_gloome_param_files import isIndDict, genotype_dict, good_indices
+from setup_gloome_param_files import isIndDict, genotype_dict, geneDict, good_indices
 import pandas as pd
 from uniqify import uniqify
 from unlistify import unlistify
@@ -97,6 +97,26 @@ def giveGainsAndLosses( parent, child ):
     
     return gainGenes, lostGenes
 
+# Using first ancestral genotype inference method to calculate gains and losses.
+def isGeneRetained( parent, child, geneID ):
+    indx = gene_ids.index( geneID )
+    parentProb, childProb = parent.genotype[ indx ], child.genotype[ indx ]
+
+    # Order is present, absent, gain and loss.
+    prsnProb = parentProb * childProb
+    absnProb = ( 1 - parentProb ) * ( 1 - childProb )
+    gainProb = ( 1 - parentProb ) * childProb
+    lossProb = parentProb * ( 1 - childProb )
+
+    # Finding most likely event by indexing.
+    probList = [ prsnProb, absnProb, gainProb, lossProb ]
+    mostLikelyEvent = probList.index( max( probList ) )
+
+    # Checking if gain or loss.
+    if mostLikelyEvent == 0:
+        return True
+    return False
+
 # Getting gain to loss ratios for each group.
 def giveGLRatio( transitionSet ):
     glRatios = []
@@ -132,13 +152,12 @@ for tI, thisTrans in enumerate( ind_to_dep_list ):
     # Getting the gained genes list for this transition.
     gainsSet = ind_to_dep_GLS[ tI ][ 0 ]
     if not gainsSet:
-        num_retain_trans_list.append( 0.0 )
-        prob_retain_trans.append( 0.0 )
         continue
 
     for thisChild in thisTrans[1].children:
-        thisChildRxns = set( np.nonzero( np.multiply( thisChild.genotype, gene_ids ) )[0] )
-        retainedSet = thisChildRxns & gainsSet
+        retainedSet = set( [ gID 
+                             for gID in gainsSet
+                             if isGeneRetained( thisTrans[1], thisChild, gID ) ] )
         num_retain_trans = len( retainedSet )
         num_retain_trans_list.append( num_retain_trans )
         prob_retain_trans.append( num_retain_trans / len( gainsSet ) )
@@ -147,13 +166,12 @@ for tI, thisTrans in enumerate( ind_to_ind_list ):
     # Getting the gained genes list for this transition.
     gainsSet = ind_to_ind_GLS[ tI ][ 0 ]
     if not gainsSet:
-        num_retain_control_list.append( 0.0 )
-        prob_retain_control.append( 0.0 )
         continue
 
     for thisChild in thisTrans[1].children:
-        thisChildRxns = set( np.nonzero( np.multiply( thisChild.genotype, gene_ids ) )[0] )
-        retainedSet = thisChildRxns & gainsSet
+        retainedSet = set( [ gID 
+                             for gID in gainsSet
+                             if isGeneRetained( thisTrans[1], thisChild, gID ) ] )
         num_retain_control = len( retainedSet )
         num_retain_control_list.append( num_retain_control )
         prob_retain_control.append( num_retain_control / len( gainsSet ) )
@@ -167,8 +185,9 @@ for tI, thisTrans in enumerate( dep_to_dep_list ):
         continue
 
     for thisChild in thisTrans[1].children:
-        thisChildRxns = set( np.nonzero( np.multiply( thisChild.genotype, gene_ids ) )[0] )
-        retainedSet = thisChildRxns & gainsSet
+        retainedSet = set( [ gID 
+                             for gID in gainsSet
+                             if isGeneRetained( thisTrans[1], thisChild, gID ) ] )
         num_retain_control = len( retainedSet )
         num_retain_control_list.append( num_retain_control )
         prob_retain_control.append( num_retain_control / len( gainsSet ) )
