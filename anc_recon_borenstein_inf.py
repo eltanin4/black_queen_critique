@@ -180,8 +180,6 @@ for tI, thisTrans in enumerate( dep_to_dep_list ):
     # Getting the gained genes list for this transition.
     gainsSet = dep_to_dep_GLS[ tI ][ 0 ]
     if not gainsSet:
-        num_retain_control_list.append( 0.0 )
-        prob_retain_control.append( 0.0 )
         continue
 
     for thisChild in thisTrans[1].children:
@@ -191,3 +189,37 @@ for tI, thisTrans in enumerate( dep_to_dep_list ):
         num_retain_control = len( retainedSet )
         num_retain_control_list.append( num_retain_control )
         prob_retain_control.append( num_retain_control / len( gainsSet ) )
+
+# Getting the pathway representation for the gains.
+isModuleComplete = []
+for theseGains, theseLosses in ind_to_ind_GLS:
+    pr_expr_dict = pickle.load( open( 'module_exprs/pr_expr_dict.dat', 'rb' ) )
+    isModuleComplete.append( np.array( [] ) )
+    for thisMod in pr_expr_dict:
+        for x in re.findall( r'K\d{5}', pr_expr_dict[ thisMod ] ):
+            pr_expr_dict[ thisMod ] = pr_expr_dict[ thisMod ].replace( 
+                                      x, str( int( x[ 1: ] ) in theseGains ) )
+        isModuleComplete[ -1 ] = np.append( isModuleComplete[ -1 ], 
+                                            eval( pr_expr_dict[ thisMod ] ) )
+
+control_modules_complete = unlistify( list(np.where(isModuleComplete[x])[0]) for x in range(len(isModuleComplete)) )
+
+# Getting the pathway representation for the gains.
+isModuleComplete = []
+for theseGains, theseLosses in ind_to_dep_GLS:
+    pr_expr_dict = pickle.load( open( 'module_exprs/pr_expr_dict.dat', 'rb' ) )
+    isModuleComplete.append( np.array( [] ) )
+    for thisMod in pr_expr_dict:
+        for x in re.findall( r'K\d{5}', pr_expr_dict[ thisMod ] ):
+            pr_expr_dict[ thisMod ] = pr_expr_dict[ thisMod ].replace( 
+                                      x, str( int( x[ 1: ] ) in theseGains ) )
+        isModuleComplete[ -1 ] = np.append( isModuleComplete[ -1 ], 
+                                            eval( pr_expr_dict[ thisMod ] ) )
+
+test_modules_complete = unlistify( list(np.where(isModuleComplete[x])[0]) 
+                                      for x in range(len(isModuleComplete)) )
+
+control_num_gains = np.mean( [ len( ind_to_ind_GLS[x][0] ) for x in range(len(ind_to_ind_GLS)) ] )
+test_num_gains = np.mean( [ len( ind_to_dep_GLS[x][0] ) for x in range(len(ind_to_dep_GLS)) ] )
+control_num_losses = np.mean( [ len( ind_to_ind_GLS[x][1] ) for x in range(len(ind_to_ind_GLS)) ] )
+test_num_losses = np.mean( [ len( ind_to_dep_GLS[x][1] ) for x in range(len(ind_to_dep_GLS)) ] )

@@ -120,3 +120,24 @@ for modIndex, modName in enumerate( module_list ):
     compNames = [ t.replace( '-' , '0' ) for t in preproc_str.split() if t.startswith('C') and len(t) == 6 ]
     mod_to_gene_dict[ modName[ : 6 ] ] = geneNames
     mod_to_comp_dict[ modName[ : 6 ] ] = compNames
+
+# Clearing the expr_dict
+import re
+expr_dict = pickle.load( open( 'module_exprs/expr_dict.dat', 'rb' ) )
+old_expr_dict = deepcopy( expr_dict )
+for thisMod in expr_dict:
+    expr_dict[ thisMod ] = expr_dict[ thisMod ].replace( ' K', 'K' ).strip().replace( '  ', ' ' )
+    expr_dict[ thisMod ] = re.sub(r" ", r"", expr_dict[ thisMod ] )
+    expr_dict[ thisMod ] = expr_dict[ thisMod ].replace( '+', 'and' )
+    expr_dict[ thisMod ] = expr_dict[ thisMod ].replace( '-', 'or' )
+    expr_dict[ thisMod ] = expr_dict[ thisMod ].replace( ',', 'or' )
+    expr_dict[ thisMod ] = expr_dict[ thisMod ].strip().replace( '  ', ' ' )
+    expr_dict[ thisMod ] = re.sub(r"(\d)(K)", r"\1 \2", expr_dict[ thisMod ] )
+    expr_dict[ thisMod ] = re.sub(r"(\d)(\()", r"\1 \2", expr_dict[ thisMod ] )
+    expr_dict[ thisMod ] = re.sub(r"\)K", ") K", expr_dict[ thisMod] )
+    expr_dict[ thisMod ] = re.sub(r"\)\(", ") (", expr_dict[ thisMod] )
+    expr_dict[ thisMod ] = expr_dict[ thisMod ].strip().replace( ' ', 'and' )
+    expr_dict[ thisMod ] = expr_dict[ thisMod ].replace( 'and', ' and ' )
+    expr_dict[ thisMod ] = expr_dict[ thisMod ].replace( 'or', ' or ' )
+
+# Saved processed pr_expr_dict in module_exprs
