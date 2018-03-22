@@ -6,6 +6,7 @@ from uniqify import uniqify
 from unlistify import unlistify
 from copy import copy
 import pickle
+import re
 
 # Getting the tree with internal nodes from gainLoss' ancestral reconstruction.
 # Internal nodes are labeled with 'Nx' where x is a number, the root being
@@ -133,20 +134,21 @@ ind_to_dep_GLS, ind_to_ind_GLS, dep_to_dep_GLS = [], [], []
 ind_to_dep_list, ind_to_ind_list, dep_to_dep_list = [], [], []
 for thisNode in nodes:
     for thisChild in thisNode.children:
-        if thisNode.isInd and thisChild.isInd:
-            ind_to_ind_list.append( [ thisNode, thisChild ] )
-            ind_to_ind_GLS.append( giveGainsAndLosses( thisNode, thisChild ) )
-        elif not thisNode.isInd and not thisChild.isInd:
-            dep_to_dep_list.append( [ thisNode, thisChild ] )
-            dep_to_dep_GLS.append( giveGainsAndLosses( thisNode, thisChild ) )
-        elif thisNode.isInd and not thisChild.isInd:
+        if thisNode.isInd and not thisChild.isInd:
             print( thisNode.name, thisChild.name )
             ind_to_dep_list.append( [ thisNode, thisChild ] )
             ind_to_dep_GLS.append( giveGainsAndLosses( thisNode, thisChild ) )
+            
+            # Test if control branch exists.
+            for otherChild in thisNode.children:
+                if otherChild != thisChild and otherChild.isInd:
+                    ind_to_ind_list.append( [ thisNode, otherChild ] )
+                    ind_to_ind_GLS.append( giveGainsAndLosses( thisNode, otherChild ) )
 
 # Saved ind_to_dep_list as a pickle object.
 # Going down subsequent branches of transiting origins and measure gain/loss retention.
 num_retain_trans_list, num_retain_control_list = [], []
+num_gains_trans_list, num_gains_control_list = [], []
 prob_retain_trans, prob_retain_control = [], []
 for tI, thisTrans in enumerate( ind_to_dep_list ):
     # Getting the gained genes list for this transition.
@@ -160,6 +162,7 @@ for tI, thisTrans in enumerate( ind_to_dep_list ):
                              if isGeneRetained( thisTrans[1], thisChild, gID ) ] )
         num_retain_trans = len( retainedSet )
         num_retain_trans_list.append( num_retain_trans )
+        num_gains_trans_list.append( len( gainsSet ) )
         prob_retain_trans.append( num_retain_trans / len( gainsSet ) )
 
 for tI, thisTrans in enumerate( ind_to_ind_list ):
@@ -174,20 +177,7 @@ for tI, thisTrans in enumerate( ind_to_ind_list ):
                              if isGeneRetained( thisTrans[1], thisChild, gID ) ] )
         num_retain_control = len( retainedSet )
         num_retain_control_list.append( num_retain_control )
-        prob_retain_control.append( num_retain_control / len( gainsSet ) )
-
-for tI, thisTrans in enumerate( dep_to_dep_list ):
-    # Getting the gained genes list for this transition.
-    gainsSet = dep_to_dep_GLS[ tI ][ 0 ]
-    if not gainsSet:
-        continue
-
-    for thisChild in thisTrans[1].children:
-        retainedSet = set( [ gID 
-                             for gID in gainsSet
-                             if isGeneRetained( thisTrans[1], thisChild, gID ) ] )
-        num_retain_control = len( retainedSet )
-        num_retain_control_list.append( num_retain_control )
+        num_gains_control_list.append( len( gainsSet ) )
         prob_retain_control.append( num_retain_control / len( gainsSet ) )
 
 # Getting the pathway representation for the gains.
