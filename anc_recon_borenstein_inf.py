@@ -156,7 +156,8 @@ for tI, thisTrans in enumerate( ind_to_dep_list ):
     if not gainsSet:
         continue
 
-    for thisChild in thisTrans[1].children:
+    if thisTrans[1].children:
+        thisChild = (thisTrans[1].children)[0]
         retainedSet = set( [ gID 
                              for gID in gainsSet
                              if isGeneRetained( thisTrans[1], thisChild, gID ) ] )
@@ -168,10 +169,12 @@ for tI, thisTrans in enumerate( ind_to_dep_list ):
 for tI, thisTrans in enumerate( ind_to_ind_list ):
     # Getting the gained genes list for this transition.
     gainsSet = ind_to_ind_GLS[ tI ][ 0 ]
-    if not gainsSet:
+    gainsInDep = bool( ind_to_dep_GLS[ tI ][ 0 ] )
+    if not gainsSet or not gainsInDep:
         continue
 
-    for thisChild in thisTrans[1].children:
+    if thisTrans[1].children:
+        thisChild = (thisTrans[1].children)[0]
         retainedSet = set( [ gID 
                              for gID in gainsSet
                              if isGeneRetained( thisTrans[1], thisChild, gID ) ] )
@@ -209,6 +212,7 @@ for theseGains, theseLosses in ind_to_dep_GLS:
 test_modules_complete = unlistify( list(np.where(isModuleComplete[x])[0]) 
                                       for x in range(len(isModuleComplete)) )
 
+# Getting the number of gains and losses in test and control branches.
 control_num_gains = np.mean( [ len( ind_to_ind_GLS[x][0] ) for x in range(len(ind_to_ind_GLS)) ] )
 test_num_gains = np.mean( [ len( ind_to_dep_GLS[x][0] ) for x in range(len(ind_to_dep_GLS)) ] )
 control_num_losses = np.mean( [ len( ind_to_ind_GLS[x][1] ) for x in range(len(ind_to_ind_GLS)) ] )
