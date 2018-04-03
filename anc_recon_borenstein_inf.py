@@ -213,7 +213,7 @@ test_modules_complete = unlistify( list(np.where(isModuleComplete[x])[0])
                                       for x in range(len(isModuleComplete)) )
 
 # Getting the number of gains and losses in test and control branches.
-control_num_gains = np.mean( [ len( ind_to_ind_GLS[x][0] ) for x in range(len(ind_to_ind_GLS)) ] )
-test_num_gains = np.mean( [ len( ind_to_dep_GLS[x][0] ) for x in range(len(ind_to_dep_GLS)) ] )
-control_num_losses = np.mean( [ len( ind_to_ind_GLS[x][1] ) for x in range(len(ind_to_ind_GLS)) ] )
-test_num_losses = np.mean( [ len( ind_to_dep_GLS[x][1] ) for x in range(len(ind_to_dep_GLS)) ] )
+control_num_gains = [ len( ind_to_ind_GLS[x][0] ) for x in range(len(ind_to_ind_GLS)) ]
+test_num_gains = [ len( ind_to_dep_GLS[x][0] ) for x in range(len(ind_to_dep_GLS)) ]
+control_num_losses = [ len( ind_to_ind_GLS[x][1] ) for x in range(len(ind_to_ind_GLS)) ]
+test_num_losses = [ len( ind_to_dep_GLS[x][1] ) for x in range(len(ind_to_dep_GLS)) ]

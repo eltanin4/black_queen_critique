@@ -11,7 +11,7 @@ from print_progress_bar import *
 import pandas as pd
 
 #-------------------------------------------------------------------------
-# This code extracts all KEGG webpages in the pathway map 01120.
+# This code extracts all KEGG KO pages for a given set of organism abbrs.
 #-------------------------------------------------------------------------
 organism_url_holder = 'http://rest.kegg.jp/link/ko/'
 
@@ -25,18 +25,15 @@ saveDir = 'organism_konums/'
 if not os.path.exists( saveDir ):
     os.mkdir( saveDir )
 
-# Getting the names of the abbrevations from KEGG for KOMODO comparison.
-orgNameDict = {}
-with open('prok_kegg_abbr_with_names_dups_removed.txt', 'r') as f:
-    for thisOrg in range(NUM_ORGS):              
-        thisLine = f.readline()    
-        orgNameDict[ thisLine[:3] ] = thisLine[4:-1]
+# Getting the names of the abbrevations from KEGG.
+orgNames = []
+with open('prok_abbr_kegg.txt', 'r') as f:
+    for thisLine in f.readlines():
+        orgNames.append( thisLine.strip() )
 
-orgNames = prokNames = list( orgNameDict.keys() ) 
-
-# Pulling all organism EC numbers.
+# Pulling all organism KO numbers.
 for orgIndex, orgAbbr in enumerate( orgNames ):
-    print_progress_bar( orgIndex, len( orgNames ), 'Pulling all organism EC numbers')
+    print_progress_bar( orgIndex, len( orgNames ), 'Pulling all organism KO numbers')
     current_url = organism_url_holder + str( orgAbbr )
     path = saveDir + str( orgAbbr ) + '.html'
     if not os.path.isfile(path):
@@ -88,12 +85,13 @@ if not os.path.exists( ko_saveDir ):
     os.mkdir( ko_saveDir )
 
 # Extracting and saving all KEGG reaction IDs.
+num_failed = 0
 for orgIndex, orgAbbr in enumerate( orgNames ):
     print_progress_bar( orgIndex, len( orgNames ), 'Saving reaction IDs for each organism')
     try:
         orgECs = pd.read_table( saveDir + str( orgAbbr ) + '.txt', delimiter=' ', sep='delimiter', header=None, names=['id'] )
     except:
-        continue
+        num_failed += 1
     refDF = pd.read_csv('KOREF.txt', delimiter='\t', sep='delimiter', header=None, names=['id', 'rid'])
 
     def give_number( string ):
