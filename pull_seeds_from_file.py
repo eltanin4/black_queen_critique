@@ -42,11 +42,11 @@ for thisOrg in prokNames:
     rxnDict[ thisOrg ] = list( np.genfromtxt( 'organism_reactions/' + thisOrg + '.txt' ) )
 
 # Get the dependency score distribution and plotting it with some standard organism values.
-# depScores = list( pickle.load( open( 'dict_org_dep_scores.dat', 'rb' ) ).values() )
-# normedDepWeights = np.ones_like( depScores ) / len( depScores )
-# fig, ax = plt.subplots(1)
-# plt.hist( depScores, bins=40, histtype='stepfilled', weights=normedDepWeights )
-# ax.axvline( depScoreDict[ 'eco' ], color='black', linewidth=2.5)
+depScores = list( pickle.load( open( 'dict_org_dep_scores.dat', 'rb' ) ).values() )
+normedDepWeights = np.ones_like( depScores ) / len( depScores )
+fig, ax = plt.subplots(1)
+plt.hist( depScores, bins=40, histtype='stepfilled', weights=normedDepWeights )
+ax.axvline( depScoreDict[ 'eco' ], color='black', linewidth=2.5)
 # plt.savefig( 'dists/init_dep_score_dict_with_eco.svg' )
 # plt.show()
 

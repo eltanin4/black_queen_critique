@@ -10,7 +10,7 @@ from give_scope import giveScope
 
 # Getting the set of bacterial abbreviations for each organism in KEGG.
 orgNames = []
-with open('prok_abbr_kegg.txt', 'r') as f:
+with open('endo_removed_prok_abbr_kegg.txt', 'r') as f:
     for thisLine in f.readlines():
         orgNames.append( thisLine.strip() )
         
@@ -45,11 +45,16 @@ for thisOrg in tqdm(orgNames):
 indep_scores = {thisOrg : len(ind_degree[thisOrg]) for thisOrg in orgNames}
 num_genes = {thisOrg : len(set(np.genfromtxt('organism_kogenes/' + thisOrg + '.txt').astype(int)))
              for thisOrg in orgNames}
+num_rxns = {thisOrg : len(set(np.genfromtxt('organism_reactions/' + thisOrg + '.txt').astype(int)))
+            for thisOrg in orgNames}
 
-genes, indscore = [], []
+# Getting just a list of corresponding gene numbers, reactions numbers and ind_scores
+genes, indscore, reactions = [], [], []
 for thisOrg in orgNames:
-  genes.append(num_genes[thisOrg]) 
+  genes.append(num_genes[thisOrg])
+  reactions.append(num_rxns[thisOrg])
   indscore.append(indep_scores[thisOrg])
-fig, ax = plt.subplots(1)
-ax.scatter(genes, indscore)
-plt.show()
+
+# Normalizing the independence scores between 0 and 1.
+indscore = np.asarray(indscore)
+norm_indscore = (indscore - min(indscore)) / (max(indscore) - min(indscore))
