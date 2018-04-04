@@ -7,7 +7,7 @@ from uniqify import uniqify
 from unlistify import unlistify
 
 
-NUM_ORGS = 1031
+NUM_ORGS = 835
 
 
 # Getting the list of important 'terminal' metabolites.
@@ -23,10 +23,9 @@ terMets.remove('CHPF2;')  # Spurious metabolite being removed. What the fuck is 
 
 # Getting the set of bacterial abbreviations for each organism in KEGG.
 orgNames = []
-with open('prok_abbr_kegg.txt', 'r') as f:
+with open('endo_removed_prok_abbr_kegg.txt', 'r') as f:
     for thisLine in f.readlines():
         orgNames.append( thisLine.strip() )
-
 
 
 # Getting the compound to reaction mapping.

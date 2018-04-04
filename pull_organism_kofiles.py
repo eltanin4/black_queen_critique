@@ -27,7 +27,7 @@ if not os.path.exists( saveDir ):
 
 # Getting the names of the abbrevations from KEGG.
 orgNames = []
-with open('prok_abbr_kegg.txt', 'r') as f:
+with open('endo_removed_prok_abbr_kegg.txt', 'r') as f:
     for thisLine in f.readlines():
         orgNames.append( thisLine.strip() )
 

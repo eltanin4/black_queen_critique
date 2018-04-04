@@ -6,7 +6,7 @@ from tqdm import tqdm
 from uniqify import uniqify
 from unlistify import unlistify
 
-NUM_ORGS = 1031
+NUM_ORGS = 835
 
 
 # Getting the list of important 'terminal' metabolites.
@@ -22,7 +22,7 @@ terMets.remove('CHPF2;')  # Spurious metabolite being removed. What the fuck is 
 
 # Getting the set of bacterial abbreviations for each organism in KEGG.
 orgNames = []
-with open('prok_abbr_kegg.txt', 'r') as f:
+with open('endo_removed_prok_abbr_kegg.txt', 'r') as f:
     for thisLine in f.readlines():
         orgNames.append( thisLine.strip() )
 
@@ -64,21 +64,21 @@ tip_to_name_segata_dict = pickle.load(open('tip_to_name_segata_dict.dat', 'rb'))
 # tip_to_name_segata_dict[kegg_to_tip_name_dict[thisOrg]]
 
 # Writing MSA presence/absence file.
-# num_failed = 0
-# with open( 'all_msa_file.txt', 'w' ) as msaFile:
-#     for thisOrg in orgNames:
-#         try:
-#             msaFile.write( '>' + tip_to_name_segata_dict[kegg_to_tip_name_dict[thisOrg]] + '\n' + all_pa_dict[ thisOrg ] + '\n' )
-#         except:
-#             num_failed += 1
-#             continue
+num_failed = 0
+with open( 'all_msa_file.txt', 'w' ) as msaFile:
+    for thisOrg in orgNames:
+        try:
+            msaFile.write( '>' + tip_to_name_segata_dict[kegg_to_tip_name_dict[thisOrg]] + '\n' + all_pa_dict[ thisOrg ] + '\n' )
+        except:
+            num_failed += 1
+            continue
 
-# running_string = ''
-# for thisOrg in orgNames:
-#     try:
-#         running_string += ' \"' + tip_to_name_segata_dict[kegg_to_tip_name_dict[thisOrg]] + '\",'
-#     except:
-#         continue
+running_string = ''
+for thisOrg in orgNames:
+    try:
+        running_string += ' \"' + tip_to_name_segata_dict[kegg_to_tip_name_dict[thisOrg]] + '\",'
+    except:
+        continue
 
 # isIndDict = {}
 # num_failed = 0

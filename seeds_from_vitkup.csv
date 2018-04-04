@@ -1,0 +1,63 @@
+name,kegg_id
+Dextrin,C00721
+Maltose,C00208
+D-Trehalose,C01083
+D-Cellobiose,C00185
+Gentiobiose,C08240
+Sucrose,C00089
+Stachyose,C01613
+D-Raffinose,C00492
+a-D-Lactose,C00243
+D-Melibiose,C05402
+b-Methyl-D-Glucoside,C03619
+Salicin,C01451
+N-Acetyl-DGlucosamine,C00140
+N-Acetyl-b-D-Mannosamine,C00645
+N-Acetyl-DGalactosamine,C01132
+N-Acetyl-Neuraminic Acid,C00270
+a-D-Glucose,C00267
+D-Mannose,C00159
+D-Fructose,C00095
+D-Galactose,C00124
+D-Fucose,C01018
+L-Fucose,C01019
+L-Rhamnose,C00507
+Inosine,C00294
+D-Sorbitol,C00794
+D-Mannitol,C00392
+D-Arabitol,C01904
+M-Inositol,C00137
+Glycerol,C00116
+Glucose-6-Phosphate,C00668
+Fructose-6-Phosphate,C00085
+D-Aspartic Acid,C00402
+D-Serine,C00740
+Gelatin,C01498
+L-Alanine,C00041
+L-Arginine,C00062
+L-Aspartic Acid,C00049
+L-Glutamic Acid,C00025
+L-Histidine,C00135
+L-PyroglutamicAcid,C01879
+L-Serine,C00065
+Pectin,C00714
+D-GalacturonicAcid,C00333
+L-GalactonicAcid-g-Lactone,C01040
+D-Gluconic Acid,C00257
+D-GlucuronicAcid,C00191
+Mucic Acid,C00879
+Quinic Acid,C00296
+D-Saccharic Acid,C00818
+P-HydroxyPhenyl AceticAcid,C00642
+L-Lactic Acid,C00186
+Citric Acid,C00158
+a-Keto-GlutaricAcid,C00026
+D-Malic Acid,C00497
+L-Malic Acid,C00149
+g-Amino-ButyricAcid,C00334
+a-HydroxyButyric Acid,C05984
+a-Keto-ButyricAcid,C00109
+Acetoacetic Acid,C00164
+Propionic Acid,C00163
+Acetic Acid,C00033
+Formic Acid,C00058
