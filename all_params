@@ -17,7 +17,7 @@ _numberOfGainCategories 3
 _numberOfLossCategories 3                   
 _numberOfRateCategories 3
 _outDir full_black_queen
-#_logFile full_black_queen.txt
+_logFile full_black_queen.txt
 _maxNumOfIterationsManyStarts   3
 _calculateRate4site     1                                                       
 _calculeGainLoss4site   1
@@ -32,3 +32,4 @@ _printPij_t     1
 #_simulateSequences      0
 #_isRootFreqEQstationaryInSimulations    1
 #_printnodesContentSim   1
+

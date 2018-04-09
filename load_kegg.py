@@ -1,7 +1,7 @@
 import numpy as np
 import pickle
 
-NUM_ORGS = 1031
+NUM_ORGS = 835
 # Getting the list of important 'terminal' metabolites.
 mod_to_comp_dict = pickle.load(open('module_containers/mod_to_comp_dict.dat', 'rb'))
 terMets = list(set([ mod_to_comp_dict[thisMod][-1] for thisMod in mod_to_comp_dict 
