@@ -27,7 +27,9 @@ cpd_string_dict = {cpds[e] : names[e] for e in range(len(names))}
 #-------------------------------------------------------------------------
 # Initializing and setting things up.
 #-------------------------------------------------------------------------
-Core = list(set(terMets[:]) & set(cpds))
+# Core = list(set(terMets[:]) & set(cpds))
+with open('bigg_core.txt', 'r') as f:
+    Core = list(set(f.read().splitlines()) & set(cpds))
 Currency = ['C' + (5 - len(str(int(e)))) * '0' + str(int(e)) for e in indices_of_currency_mets]
 
 #-------------------------------------------------------------------------
