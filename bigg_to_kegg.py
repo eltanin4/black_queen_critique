@@ -5,6 +5,7 @@ import urllib3
 import urllib.request
 import shutil
 from tqdm import tqdm
+import re
 
 handler = urllib.request.ProxyHandler({'http': 'proxy.ncbs.res.in:3128'})
 opener = urllib.request.build_opener(handler)
@@ -23,8 +24,8 @@ bigg_df = bigg_df.loc[np.where(hasDatabase)[0], :]
 # Getting all organism models in BiGG and identifying their biomass 
 # reaction strings.
 #-------------------------------------------------------------------------
-# all_bigg_models = open('all_bigg_models.txt', 'r').readline()
-# org_biggids = re.findall(r'\"bigg_id\": \"(.*?)\"', all_bigg_models)
+all_bigg_models = open('all_bigg_models.txt', 'r').readline()
+org_biggids = re.findall(r'\"bigg_id\": \"(.*?)\"', all_bigg_models)
 
 # # Getting all organism reactions.
 # saveDir = 'bigg_orgs/'
@@ -66,11 +67,20 @@ for thisBMname in tqdm(org_bm_list):
             # Finding the relevant KEGG compound strings.
             bmKEGGS.append(re.findall(r'KEGG Compound: http://identifiers.org/kegg.compound/(.*?);', tl)[0])
 
-            # Explicitly removing glycans.
-            if bmKEGGS[-1][0] == 'G':
-                bmKEGGS = bmKEGGS[:-1]
         except:
             pass
 
 # Removing duplicates.
 bmKEGGS = uniqify(bmKEGGS)
+filtbmKEGGS = [e for e in bmKEGGS if e in cpds]
+# 137 such compounds that participate in KEGG reactions.
+
+# with open('bigg_core.txt', 'w') as f:
+#     for n in filtbmKEGGS:
+#         f.write(n + '\n')
+# f.close()
+
+with open('mapped_bigg_core.txt', 'w') as f:
+    for n in filtbmKEGGS:
+        f.write(n + '\t' + cpd_string_dict[n] + '\n')
+f.close()

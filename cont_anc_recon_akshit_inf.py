@@ -63,21 +63,16 @@ for orgName in ind_degree:
 
 # Reading the gainLoss ancestral reconstructions.
 anc_recon_table = pd.read_table( 
-                  'full_proks_gainLoss_results/AncestralReconstructPosterior.txt' )
+                  'full_proks_gainLoss_results/gainLossMP.2.00099.AncestralReconstructSankoff.txt' )
 
-# Only these gene positions should be considered.
-allowed_pos = np.load('full_proks_gainLoss_results/allowed_positions_genotypes.npy')
-
-pos_to_gene_map = {i: gene_ids[i] for i in range(len(gene_ids))}
-# Now to try the alternate 'probability' based way to infer gains and losses 
-# (as in Press et. al., Gen. Res. 2016).
+# Now also reconstructing the most likely ancestral genotypes.
 def reconAncestor( anc_recon_table, node ):
     if node.name == '[N1]':
         tO = anc_recon_table.loc[ anc_recon_table['Node'] == node.name[1:-1] ]
     else:
         tO = anc_recon_table.loc[ anc_recon_table['Node'] == node.name ]
 
-    return tO['Prob'].values
+    return tO['State'].values
 
 # Now traversing the tree and inferring ancestral states for all unmarked nodes.
 for thisNode in nodes:
@@ -85,6 +80,9 @@ for thisNode in nodes:
         thisNode.genotype
     except:
         thisNode.add_feature( 'genotype', reconAncestor( anc_recon_table, thisNode ) )
+
+allowed_pos = np.load('full_proks_gainLoss_results/allowed_positions_genotypes.npy')
+pos_to_gene_map = {i: gene_ids[i] for i in range(len(gene_ids))}
 
 from give_scope import giveScope
 
@@ -95,32 +93,31 @@ media = list(seeds_df['kegg_id'].values)
 media = list(set(media) & set(cpds))
 seedVec[[kegg_to_id[e] for e in Currency + media]] = 1
 
-# def inferIndDegree(genotype):
-#     kos = [pos_to_gene_map[i] for i in np.where((genotype > 0.5) * 1)[0]]
-#     refDF = pd.read_csv('KOREF.txt', delimiter='\t', sep='delimiter', header=None, names=['id', 'rid'])
-#     def give_number( string ):
-#         return int( string[-5:] )
-#     refDF['id'] = refDF['id'].apply( give_number )
-#     refDF['rid'] = refDF['rid'].apply( give_number )
-#     can = refDF.loc[refDF['id'].isin(kos),:]['rid'].values
-#     can = ['R' + (5 - len(str(int(e)))) * '0' + str(int(e)) for e in can]
-#     can = list((set(can)) & set(rxns))
-#     avrxns = [rxn_kegg_to_id[e] for e in can]
-#     scopeMets = giveScope(rxnMat[avrxns], prodMat[avrxns], seedVec, sumRxnVec[avrxns])[0]
-#     return list(set([id_to_kegg[e] for e in set(np.where(scopeMets)[0])]) & set(Core))
+def inferIndDegree(genotype):
+    kos = [pos_to_gene_map[i] for i in np.where((genotype > 0.5) * 1)[0]]
+    refDF = pd.read_csv('KOREF.txt', delimiter='\t', sep='delimiter', header=None, names=['id', 'rid'])
+    def give_number( string ):
+        return int( string[-5:] )
+    refDF['id'] = refDF['id'].apply( give_number )
+    refDF['rid'] = refDF['rid'].apply( give_number )
+    can = refDF.loc[refDF['id'].isin(kos),:]['rid'].values
+    can = ['R' + (5 - len(str(int(e)))) * '0' + str(int(e)) for e in can]
+    can = list((set(can)) & set(rxns))
+    avrxns = [rxn_kegg_to_id[e] for e in can]
+    scopeMets = giveScope(rxnMat[avrxns], prodMat[avrxns], seedVec, sumRxnVec[avrxns])[0]
+    return list(set([id_to_kegg[e] for e in set(np.where(scopeMets)[0])]) & set(Core))
 
+# Writing all internal ancestral states.
+def inferChildren(gl_node, anc_node):
+    gl_node.add_feature('ind_degree', len(inferIndDegree(gl_node.genotype)))
 
-# # Writing all internal ancestral states.
-# def inferChildren(gl_node, anc_node):
-#     gl_node.add_feature('ind_degree', len(inferIndDegree(gl_node.genotype)))
+    for gl_child, anc_child in zip(gl_node.children, anc_node.children):
+        try:
+            gl_child.ind_degree
+        except:
+            inferChildren(gl_child, anc_child)
 
-#     for gl_child, anc_child in zip(gl_node.children, anc_node.children):
-#         try:
-#             gl_child.ind_degree
-#         except:
-#             inferChildren(gl_child, anc_child)
-
-# inferChildren(root, ind_tree)
+inferChildren(root, ind_tree)
 
 # Using first ancestral genotype inference method to calculate gains and losses.
 def giveGainsAndLosses( parent, child ):
@@ -183,20 +180,27 @@ delta_ind_degree = []
 nums_gains, nums_losses = [], []
 list_gains, list_losses = [], []
 gl_ratios, gl_deltas = [], []
+allGains, allLosses = [], []
 full_names = [tip_to_name_segata_dict[kegg_to_tip_name_dict[o]] for o in orgNames]
 for thisNode in nodes:
     for thisChild in thisNode.children:
         gainGenes, lostGenes = giveGainsAndLosses(thisNode, thisChild)
-        if (len(lostGenes) / np.count_nonzero(thisNode.genotype) > 0.01 
-            and len(gainGenes) / np.count_nonzero(thisNode.genotype) > 0.01):
+        allGains.append(gainGenes)
+        allLosses.append(lostGenes)
+        if (len(lostGenes) / np.count_nonzero(thisNode.genotype) >= 0.00 
+            and len(gainGenes) / np.count_nonzero(thisNode.genotype) >= 0.00):
             delta_ind_degree.append(thisChild.ind_degree - thisNode.ind_degree)
             nums_gains.append( len(gainGenes) )
             nums_losses.append( len(lostGenes) )
             list_gains.append(list(gainGenes))
             list_losses.append(list(lostGenes))
             gl_deltas.append(thisChild.ind_degree - thisNode.ind_degree)
-            gl_ratios.append(len(gainGenes) / len(lostGenes))
+            # gl_ratios.append(len(gainGenes) / len(lostGenes))
             
+
+
+
+
 
 import matplotlib.pyplot as plt
 from scipy.interpolate import interp1d
@@ -211,7 +215,7 @@ xnew = np.linspace(min(gl_deltas), max(gl_deltas), 1000)
 ynew = f(xnew)
 ax.plot(xnew, ynew, c='grey', lw=3)
 ax.set_ylim(0.0, max(nums_losses)+10)
-# plt.savefig('dists/anc_inferred_gains_delta_i.svg')
+plt.savefig('dists/mapping_anc_inferred_gains_delta_i.svg')
 plt.show()
 
 fig, ax = plt.subplots(1)
@@ -224,7 +228,7 @@ xnew = np.linspace(min(gl_deltas), max(gl_deltas), 1000)
 ynew = f(xnew)
 ax.plot(xnew, ynew, c='grey', lw=3)
 ax.set_ylim(0.0, max(nums_losses)+10)
-# plt.savefig('dists/anc_inferred_losses_delta_i.svg')
+plt.savefig('dists/mapping_anc_inferred_losses_delta_i.svg')
 plt.show()
 
 fig, ax = plt.subplots(1)
@@ -236,6 +240,108 @@ f = interp1d(lowess_x, lowess_y, bounds_error=False)
 xnew = np.linspace(min(gl_deltas), max(gl_deltas), 1000)
 ynew = f(xnew)
 ax.plot(xnew, ynew, c='grey', lw=3)
-# plt.savefig('dists/anc_inferred_glRatios_full.svg')
+plt.savefig('dists/mapping_anc_inferred_glRatios_full.svg')
 plt.show()
 
+
+# # Saved ind_to_dep_list as a pickle object.
+# # Going down subsequent branches of transiting origins and measure gain/loss retention.
+# num_retain_trans_list, num_retain_control_list = [], []
+# num_gains_trans_list, num_gains_control_list = [], []
+# prob_retain_trans, prob_retain_control = [], []
+# for tI, thisTrans in enumerate( ind_to_dep_list ):
+#     # Getting the gained genes list for this transition.
+#     gainsSet = ind_to_dep_GLS[ tI ][ 0 ]
+#     if not gainsSet:
+#         continue
+
+#     if thisTrans[1].children:
+#         thisChild = (thisTrans[1].children)[0]
+#         retainedSet = set( [ gID 
+#                              for gID in gainsSet
+#                              if isGeneRetained( thisTrans[1], thisChild, gID ) ] )
+#         num_retain_trans = len( retainedSet )
+#         num_retain_trans_list.append( num_retain_trans )
+#         num_gains_trans_list.append( len( gainsSet ) )
+#         prob_retain_trans.append( num_retain_trans / len( gainsSet ) )
+
+# for tI, thisTrans in enumerate( ind_to_ind_list ):
+#     # Getting the gained genes list for this transition.
+#     gainsSet = ind_to_ind_GLS[ tI ][ 0 ]
+#     gainsInDep = bool( ind_to_dep_GLS[ tI ][ 0 ] )
+#     if not gainsSet or not gainsInDep:
+#         continue
+
+#     if thisTrans[1].children:
+#         thisChild = (thisTrans[1].children)[0]
+#         retainedSet = set( [ gID 
+#                              for gID in gainsSet
+#                              if isGeneRetained( thisTrans[1], thisChild, gID ) ] )
+#         num_retain_control = len( retainedSet )
+#         num_retain_control_list.append( num_retain_control )
+#         num_gains_control_list.append( len( gainsSet ) )
+#         prob_retain_control.append( num_retain_control / len( gainsSet ) )
+
+# # Getting the pathway representation for the gains.
+# isModuleComplete = []
+# for theseGains, theseLosses in ind_to_ind_GLS:
+#     pr_expr_dict = pickle.load( open( 'module_exprs/pr_expr_dict.dat', 'rb' ) )
+#     isModuleComplete.append( np.array( [] ) )
+#     for thisMod in pr_expr_dict:
+#         for x in re.findall( r'K\d{5}', pr_expr_dict[ thisMod ] ):
+#             pr_expr_dict[ thisMod ] = pr_expr_dict[ thisMod ].replace( 
+#                                       x, str( int( x[ 1: ] ) in theseGains ) )
+#         isModuleComplete[ -1 ] = np.append( isModuleComplete[ -1 ], 
+#                                             eval( pr_expr_dict[ thisMod ] ) )
+
+# control_modules_complete = unlistify( list(np.where(isModuleComplete[x])[0]) for x in range(len(isModuleComplete)) )
+
+# # Getting the pathway representation for the gains.
+# isModuleComplete = []
+# for theseGains, theseLosses in ind_to_dep_GLS:
+#     pr_expr_dict = pickle.load( open( 'module_exprs/pr_expr_dict.dat', 'rb' ) )
+#     isModuleComplete.append( np.array( [] ) )
+#     for thisMod in pr_expr_dict:
+#         for x in re.findall( r'K\d{5}', pr_expr_dict[ thisMod ] ):
+#             pr_expr_dict[ thisMod ] = pr_expr_dict[ thisMod ].replace( 
+#                                       x, str( int( x[ 1: ] ) in theseGains ) )
+#         isModuleComplete[ -1 ] = np.append( isModuleComplete[ -1 ], 
+#                                             eval( pr_expr_dict[ thisMod ] ) )
+
+# test_modules_complete = unlistify( list(np.where(isModuleComplete[x])[0]) 
+#                                       for x in range(len(isModuleComplete)) )
+
+# # Getting the number of gains and losses in test and control branches.
+# control_num_gains = [ len( ind_to_ind_GLS[x][0] ) for x in range(len(ind_to_ind_GLS)) ]
+# test_num_gains = [ len( ind_to_dep_GLS[x][0] ) for x in range(len(ind_to_dep_GLS)) ]
+# control_num_losses = [ len( ind_to_ind_GLS[x][1] ) for x in range(len(ind_to_ind_GLS)) ]
+# test_num_losses = [ len( ind_to_dep_GLS[x][1] ) for x in range(len(ind_to_dep_GLS)) ]
+
+def inferByps(genotype):
+    allByps = pd.read_csv('secreted_mets_segre.csv')
+    byps = set(allByps.iloc[:, 1].values)
+    ubyps = byps.difference(nuts)
+
+    kos = [pos_to_gene_map[i] for i in np.where((genotype > 0.5) * 1)[0]]
+    refDF = pd.read_csv('KOREF.txt', delimiter='\t', sep='delimiter', header=None, names=['id', 'rid'])
+    def give_number( string ):
+        return int( string[-5:] )
+    refDF['id'] = refDF['id'].apply( give_number )
+    refDF['rid'] = refDF['rid'].apply( give_number )
+    can = refDF.loc[refDF['id'].isin(kos),:]['rid'].values
+    can = ['R' + (5 - len(str(int(e)))) * '0' + str(int(e)) for e in can]
+    can = list((set(can)) & set(rxns))
+    avrxns = [rxn_kegg_to_id[e] for e in can]
+    scopeMets = giveScope(rxnMat[avrxns], prodMat[avrxns], seedVec, sumRxnVec[avrxns])[0]
+    return list(set([id_to_kegg[e] for e in set(np.where(scopeMets)[0])]))
+
+max_diversity = 10
+bypsAtDiv = { e : set([]) for e in range(2, max_diversity + 1)}
+for currDiv in range(2, max_diversity + 1):
+    chosenNodes = random.sample(nodes, currDiv)
+    for thisNode in chosenNodes:
+        thisNodeByps = set(inferByps( thisNode.genotype ))
+        bypsAtDiv[currDiv] = bypsAtDiv[currDiv].union(thisNodeByps)
+
+sns.lineplot(np.array(list(range(2,max_diversity + 1))), list(map(len, list(bypsAtDiv.values()))))
+plt.show()

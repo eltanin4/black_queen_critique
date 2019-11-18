@@ -173,3 +173,111 @@ for this_gene in tqdm(all_genes):
                          last_reactions_dict[this_gene]]))
     gene_categories[this_gene] = occs.index(max(occs))
 
+from ete3 import Tree
+import numpy as np
+import pandas as pd
+from uniqify import uniqify
+from unlistify import unlistify
+from copy import copy
+import pickle
+import re
+from load_kegg import *
+
+# Getting the set of bacterial abbreviations for each organism in KEGG.
+orgNames = []
+with open('endo_removed_prok_abbr_kegg.txt', 'r') as f:
+    for thisLine in f.readlines():
+        orgNames.append( thisLine.strip() )
+
+
+geneDict = {thisOrg : 
+            set(np.genfromtxt('organism_kogenes/' + thisOrg + '.txt').astype(int))
+            for thisOrg in orgNames}
+gene_ids = sorted( uniqify( unlistify( list( geneDict.values() ) ) ) )
+
+# Getting the tree with internal nodes from gainLoss' ancestral reconstruction.
+# Internal nodes are labeled with 'Nx' where x is a number, the root being
+# '[N1]' and then the numbers increase.
+gl_tree = Tree( 'full_proks_gainLoss_results/TheTree.INodes.ph', format=1 )
+ind_tree = Tree('ancs_fastanc_indscores.txt', format = 1)
+
+# # To print the tree.
+# print(gl_tree.get_ascii(show_internal=True))
+
+# Getting the root of the tree.
+root = gl_tree&'[N1]'
+nodes = list( root.traverse() )
+
+gain_positions, loss_positions = [], []
+for thisNode in tqdm(nodes):
+    for thisChild in thisNode.children:
+        gainGenes, lostGenes = giveGainsAndLosses(thisNode, thisChild)
+        gain_kos = ['K' + str(0) * (5 - len(str(g))) + str(g) for g in gainGenes]
+        loss_kos = ['K' + str(0) * (5 - len(str(g))) + str(g) for g in lostGenes]
+
+        gain_positions.append([])
+        loss_positions.append([])
+        for this_gene in gain_kos:
+            if this_gene in gene_categories:
+                gain_positions[-1].append(gene_categories[this_gene])
+
+        for this_gene in loss_kos:
+            if this_gene in gene_categories:
+                loss_positions[-1].append(gene_categories[this_gene])                        
+
+from collections import Counter
+gain_tallies = [Counter(gain_positions[i]) for i in range(len(gain_positions)) 
+                 if gain_positions[i]]
+loss_tallies = [Counter(loss_positions[i]) for i in range(len(loss_positions))
+                if loss_positions[i]]
+
+
+frac_gain_tallies = [{g : (event[g] / sum(event.values())) for g in event} 
+                     for event in gain_tallies]
+frac_loss_tallies = [{g : (event[g] / sum(event.values())) for g in event} 
+                     for event in loss_tallies]
+
+def meanAtPos(frac_tallies, pos):
+    all_fracs = []
+    for i in range(len(frac_tallies)):
+        try:
+            all_fracs.append(frac_tallies[i][pos])
+        except:
+            all_fracs.append(0)
+    return np.mean(all_fracs)
+
+mean_gain_tallies = {pos: meanAtPos(frac_gain_tallies, pos)
+                    for pos in [0, 1, 2]}
+mean_loss_tallies = {pos: meanAtPos(frac_loss_tallies, pos)
+                    for pos in [0, 1, 2]}
+
+gains, losses = [], []
+for thisNode in tqdm(nodes):
+    for thisChild in thisNode.children:
+        gainGenes, lostGenes = giveGainsAndLosses(thisNode, thisChild)
+        gain_kos = ['K' + str(0) * (5 - len(str(g))) + str(g) for g in gainGenes]
+        loss_kos = ['K' + str(0) * (5 - len(str(g))) + str(g) for g in lostGenes]
+
+        gains +=  gain_kos
+        losses += loss_kos
+
+gains, losses = set(gains), set(losses)
+ex_gains, ex_losses = gains - losses, losses - gains
+ex_gains = set([int(e[1:]) for e in ex_gains])
+ex_losses = set([int(e[1:]) for e in ex_losses])
+
+gain_positions, loss_positions = [], []
+for this_gene in gains:
+    if this_gene in gene_categories:
+        gain_positions.append(gene_categories[this_gene])
+
+for this_gene in losses:
+    if this_gene in gene_categories:
+        loss_positions.append(gene_categories[this_gene])
+
+from collections import Counter
+
+gains_tallies = [Counter(gain_positions[i]) for i in range(len(gain_positions)) 
+                 if gain_positions[i]]
+loss_tallies = [Counter(loss_positions[i]) for i in range(len(loss_positions))
+                if loss_positions[i]]
