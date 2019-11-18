@@ -1,0 +1,30 @@
+C00568	4-Aminobenzoate; ABEE; 4-Aminobenzoic acid; p-Aminobenzoate
+C00114	Choline; Bilineurine
+C00504	Folate; Pteroylglutamic acid; Folic acid
+C00378	Thiamine; Thiamin; Vitamin B1; Aneurin; Antiberiberi factor
+C06697	Arsenite; Trisoxylatoarsine
+C01330	Sodium cation; Na+; Sodium(1+); Sodium ion
+C00305	Magnesium cation; Mg2+; Magnesium(2+); Magnesium ion
+C00009	Orthophosphate; Phosphate; Phosphoric acid; Orthophosphoric acid
+C00244	Nitrate; Nitric acid
+C00087	Sulfur; S; Elemental sulfur
+C00697	Nitrogen; N2
+C01327	Hydrochloric acid; HCl; Hydrogen chloride; Hydrochloride
+C14818	Fe2+; Fe(II); Ferrous ion; Iron(2+)
+C00059	Sulfate; Sulfuric acid
+C00013	Diphosphate; Diphosphoric acid; Pyrophosphate; Pyrophosphoric acid; PPi
+C00007	Oxygen; O2
+C14819	Fe3+; Fe(III); Ferric ion; Iron(3+)
+C00011	CO2; Carbon dioxide
+C00088	Nitrite
+C19609	Nickel(2+); Ni2+; Ni(II)
+C00080	H+; Hydron
+C00175	Cobalt ion; Cobalt(2+); Co2+; Co(II)
+C19610	Manganese(2+); Mn2+; Mn(II)
+C00001	H2O; Water
+C00002	ATP; Adenosine 5'-triphosphate
+C00003	NAD+; NAD; Nicotinamide adenine dinucleotide; DPN; Diphosphopyridine nucleotide; Nadide; beta-NAD+
+C00004	NADH; DPNH; Reduced nicotinamide adenine dinucleotide
+C00005	NADPH; TPNH; Reduced nicotinamide adenine dinucleotide phosphate
+C00006	NADP+; NADP; Nicotinamide adenine dinucleotide phosphate; beta-Nicotinamide adenine dinucleotide phosphate; TPN; Triphosphopyridine nucleotide; beta-NADP+
+C00008	ADP; Adenosine 5'-diphosphate

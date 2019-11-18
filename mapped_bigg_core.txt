@@ -1,3 +1,137 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0e595365ad112fe544be0b00e717254cf9d94479e02d3e63848771614a5329b0
-size 9597
+C00197	3-Phospho-D-glycerate; D-Glycerate 3-phosphate; 3-Phospho-(R)-glycerate; 3-Phosphoglycerate
+C00024	Acetyl-CoA; Acetyl coenzyme A
+C00008	ADP; Adenosine 5'-diphosphate
+C00026	2-Oxoglutarate; Oxoglutaric acid; 2-Ketoglutaric acid; alpha-Ketoglutaric acid
+C00010	CoA; Coenzyme A; CoA-SH
+C00118	D-Glyceraldehyde 3-phosphate; (2R)-2-Hydroxy-3-(phosphonooxy)-propanal; Glyceraldehyde 3-phosphate
+C00064	L-Glutamine; L-2-Aminoglutaramic acid
+C00025	L-Glutamate; L-Glutamic acid; L-Glutaminic acid; Glutamate
+C00080	H+; Hydron
+C00001	H2O; Water
+C00003	NAD+; NAD; Nicotinamide adenine dinucleotide; DPN; Diphosphopyridine nucleotide; Nadide; beta-NAD+
+C00004	NADH; DPNH; Reduced nicotinamide adenine dinucleotide
+C00036	Oxaloacetate; Oxalacetic acid; Oxaloacetic acid; 2-Oxobutanedioic acid; 2-Oxosuccinic acid; keto-Oxaloacetate
+C00074	Phosphoenolpyruvate; Phosphoenolpyruvic acid; PEP
+C00022	Pyruvate; Pyruvic acid; 2-Oxopropanoate; 2-Oxopropanoic acid; Pyroracemic acid
+C00002	ATP; Adenosine 5'-triphosphate
+C00279	D-Erythrose 4-phosphate
+C00006	NADP+; NADP; Nicotinamide adenine dinucleotide phosphate; beta-Nicotinamide adenine dinucleotide phosphate; TPN; Triphosphopyridine nucleotide; beta-NADP+
+C00005	NADPH; TPNH; Reduced nicotinamide adenine dinucleotide phosphate
+C00009	Orthophosphate; Phosphate; Phosphoric acid; Orthophosphoric acid
+C05345	beta-D-Fructose 6-phosphate
+C00092	D-Glucose 6-phosphate; Glucose 6-phosphate; Robison ester
+C00234	10-Formyltetrahydrofolate; 10-Formyl-THF
+C05811	2-Octaprenyl-6-hydroxyphenol; 3-Octaprenylcatechol
+C00041	L-Alanine; L-2-Aminopropionic acid; L-alpha-Alanine
+C00019	S-Adenosyl-L-methionine; S-Adenosylmethionine; AdoMet; SAM
+C00049	L-Aspartate; L-Aspartic acid; 2-Aminosuccinic acid; L-Asp
+C00698	Cl-; Chloride; Chloride ion
+C00063	CTP; Cytidine 5'-triphosphate; Cytidine triphosphate
+C00097	L-Cysteine; L-2-Amino-3-mercaptopropionic acid
+C00131	dATP; 2'-Deoxyadenosine 5'-triphosphate; Deoxyadenosine 5'-triphosphate; Deoxyadenosine triphosphate
+C00286	dGTP; 2'-Deoxyguanosine 5'-triphosphate; Deoxyguanosine 5'-triphosphate; Deoxyguanosine triphosphate
+C00459	dTTP; Deoxythymidine triphosphate; Deoxythymidine 5'-triphosphate; TTP
+C00016	FAD; Flavin adenine dinucleotide
+C14818	Fe2+; Fe(II); Ferrous ion; Iron(2+)
+C14819	Fe3+; Fe(III); Ferric ion; Iron(3+)
+C00135	L-Histidine; (S)-alpha-Amino-1H-imidazole-4-propionic acid
+C00407	L-Isoleucine; 2-Amino-3-methylvaleric acid
+C00073	L-Methionine; Methionine; L-2-Amino-4methylthiobutyric acid
+C00305	Magnesium cation; Mg2+; Magnesium(2+); Magnesium ion
+C00079	L-Phenylalanine; (S)-alpha-Amino-beta-phenylpropionic acid
+C00148	L-Proline; 2-Pyrrolidinecarboxylic acid
+C00018	Pyridoxal phosphate; Pyridoxal 5-phosphate; Pyridoxal 5'-phosphate; PLP
+C00255	Riboflavin; Lactoflavin; 7,8-Dimethyl-10-ribitylisoalloxazine; Vitamin B2
+C00065	L-Serine; L-2-Amino-3-hydroxypropionic acid; L-3-Hydroxy-alanine; Serine
+C00748	Siroheme
+C00059	Sulfate; Sulfuric acid
+C00188	L-Threonine; 2-Amino-3-hydroxybutyric acid
+C00075	UTP; Uridine 5'-triphosphate; Uridine triphosphate
+C00062	L-Arginine; (S)-2-Amino-5-guanidinovaleric acid; L-Arg
+C00152	L-Asparagine; 2-Aminosuccinamic acid
+C00037	Glycine; Aminoacetic acid; Gly
+C00044	GTP; Guanosine 5'-triphosphate
+C00123	L-Leucine; 2-Amino-4-methylvaleric acid; (2S)-alpha-2-Amino-4-methylvaleric acid; (2S)-alpha-Leucine
+C00047	L-Lysine; Lysine acid; 2,6-Diaminohexanoic acid
+C00143	5,10-Methylenetetrahydrofolate; (6R)-5,10-Methylenetetrahydrofolate; 5,10-Methylene-THF
+C00014	Ammonia; NH3
+C00032	Heme; Haem; Protoheme; Heme B; Protoheme IX
+C00013	Diphosphate; Diphosphoric acid; Pyrophosphate; Pyrophosphoric acid; PPi
+C00101	Tetrahydrofolate; 5,6,7,8-Tetrahydrofolate; Tetrahydrofolic acid; THF; (6S)-Tetrahydrofolate; (6S)-Tetrahydrofolic acid; (6S)-THFA
+C00068	Thiamin diphosphate; Thiamine diphosphate; Thiamin pyrophosphate; TPP; ThPP
+C00078	L-Tryptophan; Tryptophan; (S)-alpha-Amino-beta-(3-indolyl)-propionic acid
+C00082	L-Tyrosine; (S)-3-(p-Hydroxyphenyl)alanine; (S)-2-Amino-3-(p-hydroxyphenyl)propionic acid; Tyrosine
+C00183	L-Valine; 2-Amino-3-methylbutyric acid
+C00458	dCTP; Deoxycytidine 5'-triphosphate; Deoxycytidine triphosphate; 2'-Deoxycytidine 5'-triphosphate
+C00175	Cobalt ion; Cobalt(2+); Co2+; Co(II)
+C06025	Di[3-deoxy-D-manno-octulosonyl]-lipid IV(A); KDO2-lipid IV(A)
+C19610	Manganese(2+); Mn2+; Mn(II)
+C06232	Molybdate
+C00020	AMP; Adenosine 5'-monophosphate; Adenylic acid; Adenylate; 5'-AMP; 5'-Adenylic acid; 5'-Adenosine monophosphate; Adenosine 5'-phosphate
+C00134	Putrescine; 1,4-Butanediamine; 1,4-Diaminobutane; Tetramethylenediamine; Butane-1,4-diamine
+C00091	Succinyl-CoA; Succinyl coenzyme A
+C00876	Coenzyme F420; Oxidized coenzyme F420
+C04628	Coenzyme B; N-(7-Mercaptoheptanoyl)threonine 3-O-phosphate; N-(7-Mercaptoheptanoyl)threonine O3-phosphate; HTP; CoB
+C03576	Coenzyme M; 2-Mercaptoethanesulfonate; Reduced coenzyme M; HS-CoM; CoM
+C05777	Coenzyme F430; Factor F430
+C18802	Tetrahydrosarcinapterin; H4SPT; 5,6,7,8-Tetrahydrosarcinapterin
+C06366	sym-Homospermidine; Homospermidine
+C00120	Biotin; D-Biotin; Vitamin H; Coenzyme R
+C00083	Malonyl-CoA; Malonyl coenzyme A
+C00440	5-Methyltetrahydrofolate
+C00194	Cobamide coenzyme; Adenosylcobalamin; Adenosylcob(III)alamin; Deoxyadenosylcobalamin; Cobamamide; Vitamin B12 coenzyme; 5,6-Dimethylbenzimidazolyl-5-deoxyadenosyl-cobamide; (5'-Deoxy-5'-adenosyl)cobamide coenzyme; (5,6-Dimethylbenzimidazolyl)cobamide coenzyme; alpha-(5,6-Dimethylbenzimidazolyl)cobamide coenzyme; 5'-Deoxy-5'-adenosylcobalamin; 5'-Deoxy-5'-adenosyl vitamin B12; 5'-Deoxy-5'-adenosyl-5,6-dimethylbenzimidazolylcobamide; 5,6-Dimethylbenzimidazolyl-Co-5'-deoxy-5'-adenosylcobamide; Calomide; Cobalamin coenzyme; Coenzyme B12; DMBC coenzyme; Dibencozide; Funacomide
+C00251	Chorismate; Chorismic acid; (3R,4R)-3-[(1-Carboxyethenyl)oxy]-4-hydroxycyclohexa-1,5-diene-1-carboxylate
+C00315	Spermidine; N-(3-Aminopropyl)-1,4-butane-diamine
+C00029	UDP-glucose; UDPglucose; UDP-D-glucose; Uridine diphosphate glucose; UDP-alpha-D-glucose
+C00378	Thiamine; Thiamin; Vitamin B1; Aneurin; Antiberiberi factor
+C04932	Lipid A disaccharide; Tetraacyldisaccharide 1-phosphate; [2-N,3-O-Bis(3-hydroxytetradecanoyl)-beta-D-glucosaminyl]-(1->6)-[2-N,3-O-bis(3-hydroxytetradecanoyl)-alpha-D-glucosaminyl phosphate]; 2,3-Bis[(3R)-3-hydroxytetradecanoyl]-beta-D-glucosaminyl-(1->6)-2,3-bis[(3R)-3-hydroxytetradecanoyl]-alpha-D-glucosaminyl 1-phosphate
+C00051	Glutathione; 5-L-Glutamyl-L-cysteinylglycine; N-(N-gamma-L-Glutamyl-L-cysteinyl)glycine; gamma-L-Glutamyl-L-cysteinyl-glycine; GSH; Reduced glutathione
+C15670	Heme A
+C15672	Heme O
+C02094	beta-Carotene; all-trans-beta-Carotene
+C08592	Echinenone
+C14152	beta-Tocopherol
+C01330	Sodium cation; Na+; Sodium(1+); Sodium ion
+C02477	alpha-Tocopherol; Vitamin E
+C14151	delta-Tocopherol
+C05435	gamma-Carotene
+C02483	gamma-Tocopherol
+C06098	Zeaxanthin; (3R,3'R)-beta,beta-Carotene-3,3'-diol
+C02059	Phylloquinone; Vitamin K1; Phytonadione; 2-Methyl-3-phytyl-1,4-naphthoquinone
+C00055	CMP; Cytidine-5'-monophosphate; Cytidylic acid
+C00362	dGMP; 2'-Deoxyguanosine 5'-monophosphate; 2'-Deoxyguanosine 5'-phosphate; Deoxyguanylic acid; Deoxyguanosine monophosphate
+C00364	dTMP; Thymidine 5'-phosphate; Deoxythymidine 5'-phosphate; Thymidylic acid; 5'-Thymidylic acid; Thymidine monophosphate; Deoxythymidylic acid; Thymidylate
+C00031	D-Glucose; Grape sugar; Dextrose; Glucose; D-Glucopyranose
+C00116	Glycerol; Glycerin; 1,2,3-Trihydroxypropane; 1,2,3-Propanetriol
+C00249	Hexadecanoic acid; Hexadecanoate; Hexadecylic acid; Palmitic acid; Palmitate; Cetylic acid
+C00712	(9Z)-Octadecenoic acid; (Z)-Octadec-9-enoic acid; Oleate; Oleic acid
+C00121	D-Ribose
+C01083	alpha,alpha-Trehalose; alpha,alpha'-Trehalose; Trehalose
+C01050	UDP-N-acetylmuramate; UDP-N-acetyl-alpha-D-muramate; UDP-N-acetylmuramic acid; UDP-MurNAc
+C00105	UMP; Uridylic acid; Uridine monophosphate; Uridine 5'-monophosphate; 5'Uridylic acid
+C00144	GMP; Guanosine 5'-phosphate; Guanosine monophosphate; Guanosine 5'-monophosphate; Guanylic acid
+C00159	D-Mannose; Mannose; Seminose; Carubinose
+C00360	dAMP; 2'-Deoxyadenosine 5'-phosphate; 2'-Deoxyadenosine 5'-monophosphate; Deoxyadenylic acid; Deoxyadenosine monophosphate
+C00239	dCMP; Deoxycytidylic acid; Deoxycytidine monophosphate; Deoxycytidylate; 2'-Deoxycytidine 5'-monophosphate
+C00124	D-Galactose; D-Galactopyranose
+C01530	Octadecanoic acid; Stearate; Stearic acid
+C00689	alpha,alpha'-Trehalose 6-phosphate; Trehalose 6-phosphate
+C06425	Icosanoic acid; Eicosanoic acid; Arachidic acid
+G10553	(GlcNAc)1 (MurNAc)1 (D-Ala-D-Ala-Lys-gamma-D-Glu-Ala)1 (PP-Und)1
+C00033	Acetate; Acetic acid; Ethanoic acid
+C05433	alpha-Carotene
+C08579	Antheraxanthin
+C08614	Violaxanthin; all-trans-Violaxanthin
+C08606	Neoxanthin; all-trans-Neoxanthin
+C05307	Chlorophyll b
+C08601	Lutein; Xanthophyll
+C00011	CO2; Carbon dioxide
+C00636	D-Mannose 1-phosphate; alpha-D-Mannose 1-phosphate
+C00052	UDP-alpha-D-galactose; UDP-D-galactose; UDP-galactose; UDP-D-galactopyranose; UDP-alpha-D-galactopyranose
+C06398	ADP-L-glycero-beta-D-manno-heptose
+C03319	dTDP-L-rhamnose; dTDP-6-deoxy-L-mannose; dTDP-6-deoxy-beta-L-mannose; dTDP-beta-L-rhamnose
+C00352	D-Glucosamine 6-phosphate; D-Glucosamine phosphate
+C04919	2,3,2'3'-Tetrakis(3-hydroxytetradecanoyl)-D-glucosaminyl-1,6-beta-D-glucosamine 1,4'-bisphosphate; 2,3,2'3'-Tetrakis(beta-hydroxymyristoyl)-D-glucosaminyl-1,6-beta-D-glucosamine 1,4'-bisphosphate; Lipid A disaccharide bisphosphate; Lipid IV(A); 2-Deoxy-2-{[(3R)-3-hydroxytetradecanoyl]amino}-3-O-[(3R)-3-hydroxytetradecanoyl]-4-O-phospho-beta-D-glucopyranosyl-(1->6)-2-deoxy-3-O-[(3R)-3-hydroxytetradecanoyl]-2-{[(3R)-3-hydroxytetradecanoyl]amino}-1-O-phospho-alpha-D-glucopyranose
+G11110	UDP-D-galacturonate; UDP-D-galacturonic acid
+C00035	GDP; Guanosine 5'-diphosphate; Guanosine diphosphate
+C00112	CDP; Cytidine 5'-diphosphate; Cytidine diphosphate
